@@ -99,15 +99,18 @@ def test_only_native_text_models_become_entries() -> None:
                 "glm-5-embed": model("Embed", type="embedding"),
                 "glm-image": model("Image", modalities={"input": ["text"], "output": ["image"]}),
                 "kimi-k3": model("Kimi", canonical_model_id="moonshotai/kimi-k3"),  # 代售的其他厂商模型
+                "kimi-k2.5": model("Moonshot Kimi K2.5"),  # 代售但上游没标 canonical_model_id
                 "glm-old": model("Old", status="deprecated"),
+                "glm-alias": model("GLM Alias (latest)"),
             }
         }
     }
 
-    entries = by_name(build_catalog([upstream], rules(ZHIPU), [], {}))
+    entries = by_name(build_catalog([upstream], rules({**ZHIPU, "exclude": ["^kimi-"]}), [], {}))
 
-    assert set(entries) == {"glm-5", "glm-old"}
+    assert set(entries) == {"glm-5", "glm-old", "glm-alias"}
     assert entries["glm-old"]["discontinued"] is True
+    assert entries["glm-alias"]["display_name"] == "GLM Alias"
 
 
 def test_dated_snapshot_with_same_price_becomes_alias_otherwise_its_own_entry() -> None:

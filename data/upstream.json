@@ -59,7 +59,12 @@
       "provider": "alibaba-cn",
       "maker": "alibaba",
       "currency": "CNY",
-      "canonical": "alibaba"
+      "canonical": "alibaba",
+      "exclude": [
+        "^deepseek-",
+        "^kimi-",
+        "^moonshot-"
+      ]
     }
   ],
   "listing_min_release_date": "2026-01-01",

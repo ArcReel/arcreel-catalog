@@ -126,7 +126,8 @@ def convert_model(source: Mapping, model_id: str, model: Mapping) -> tuple[dict,
         "maker": source["maker"],
         "name": model_id,
         "media_type": "text",
-        "display_name": model.get("name") or model_id,
+        # 上游给别名型 ID（如 claude-opus-4-5）的显示名带「(latest)」，不是模型名的一部分
+        "display_name": re.sub(r"\s*\(latest\)$", "", model.get("name") or model_id),
     }
     if model.get("status") == "deprecated":
         entry["discontinued"] = True
@@ -156,7 +157,12 @@ def text_candidates(upstreams: list[Mapping], source: Mapping, warnings: list[st
     for model_id, model in models.items():
         canonical = model.get("canonical_model_id")
         # 厂商平台上代售的其他厂商模型（如百炼上的 glm-5）归那家厂商，不在这里建条目
-        if not is_text_model(model_id, model) or (canonical and not canonical.startswith(f"{source['canonical']}/")):
+        if (
+            not is_text_model(model_id, model)
+            or (canonical and not canonical.startswith(f"{source['canonical']}/"))
+            # 上游没标 canonical_model_id 的代售模型，由来源配置的 exclude 按名字排除
+            or any(re.search(pattern, model_id) for pattern in source.get("exclude", []))
+        ):
             continue
         entry, problem = convert_model(source, model_id, model)
         if problem:
@@ -184,7 +190,7 @@ def relay_names(upstreams: Iterable[Mapping]) -> dict[str, list[str]]:
         for provider in source.values():
             for model_id, model in provider.get("models", {}).items():
                 canonical = model.get("canonical_model_id")
-                # 带 :free 一类后缀的是另一个计价变体，不是同一模型的别名（docs/adr/0105）
+                # 带 :free 一类后缀的是另一个计价变体，不是同一模型的别名
                 if canonical and ":" not in model_id:
                     index[canonical].append(model_id.rpartition("/")[2])
     return index

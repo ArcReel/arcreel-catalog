@@ -228,6 +228,9 @@
     "upstream": [
       "openai"
     ],
+    "exclude": [
+      "codex-spark"
+    ],
     "models": [
       {
         "api_model_name": "gpt-5.4-mini",
@@ -282,6 +285,10 @@
   "dashscope": {
     "upstream": [
       "alibaba-cn"
+    ],
+    "exclude": [
+      "-omni",
+      "^qwen[0-9.]+-[0-9]+b(-a[0-9]+b)?$"
     ],
     "models": [
       {
