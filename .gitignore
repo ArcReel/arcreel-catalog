@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+# 不锁定：arcreel-catalog-core 始终取 ArcReel main 上的最新版本
+uv.lock

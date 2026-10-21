@@ -1,0 +1,31 @@
+[project]
+name = "arcreel-catalog-build"
+version = "0.0.0"
+description = "Build pipeline for the ArcReel model catalog data"
+requires-python = ">=3.12"
+# 校验器只有一份：始终取 ArcReel main 上的 arcreel-catalog-core（不提交 uv.lock，CI 每次重新解析）
+dependencies = [
+    "arcreel-catalog-core @ git+https://github.com/ArcReel/ArcReel@main#subdirectory=packages/arcreel-catalog-core",
+]
+
+[dependency-groups]
+dev = ["pytest>=9.0.2"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "--strict-markers"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "C4", "PIE", "PT", "RET", "PERF", "RUF", "SIM"]
+# RUF001-003：中文注释与文案里的全角标点被判为「易混淆 unicode」，对中文仓库是纯噪音。
+ignore = ["E501", "RUF001", "RUF002", "RUF003"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["catalog_build"]

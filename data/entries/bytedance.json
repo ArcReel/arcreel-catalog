@@ -1,0 +1,990 @@
+[
+  {
+    "maker": "bytedance",
+    "name": "doubao-seed-2.0-pro",
+    "media_type": "text",
+    "display_name": "豆包 Seed 2.0 Pro",
+    "aliases": [
+      "doubao-seed-2-0-pro-260215"
+    ],
+    "facts": {
+      "image_input": true,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 3.2
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 4.8
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 9.6
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.64
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 0.96
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 1.92
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 16.0
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 24.0
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 48.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seed-2.1-lite",
+    "media_type": "text",
+    "display_name": "豆包 Seed 2.1 Lite",
+    "aliases": [
+      "doubao-seed-2-1-lite-260915"
+    ],
+    "facts": {
+      "image_input": true,
+      "max_output_tokens": 262144
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.8
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.16
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.7
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seed-2.0-lite",
+    "media_type": "text",
+    "display_name": "豆包 Seed 2.0 Lite",
+    "aliases": [
+      "doubao-seed-2-0-lite-260215"
+    ],
+    "facts": {
+      "image_input": true,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.6
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 0.9
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 1.8
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.12
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 0.18
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 0.36
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 3.6
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 5.4
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 10.8
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seed-2.0-mini",
+    "media_type": "text",
+    "display_name": "豆包 Seed 2.0 Mini",
+    "aliases": [
+      "doubao-seed-2-0-mini-260215",
+      "doubao-seed-2-0-mini-260428"
+    ],
+    "facts": {
+      "image_input": true,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 0.4
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 0.8
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.04
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 0.08
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 0.16
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 2.0
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 4.0
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 8.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seed-1.8",
+    "media_type": "text",
+    "display_name": "豆包 Seed 1.8",
+    "aliases": [
+      "doubao-seed-1-8-251228"
+    ],
+    "discontinued": true,
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 32768
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.8
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seedream-5-0-lite",
+    "media_type": "image",
+    "display_name": "Seedream 5.0 Lite",
+    "aliases": [
+      "doubao-seedream-5-0-lite-260128",
+      "doubao-seedream-5-0-260128"
+    ],
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.22
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seedream-4-5",
+    "media_type": "image",
+    "display_name": "Seedream 4.5",
+    "aliases": [
+      "doubao-seedream-4-5-251128"
+    ],
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.25
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seedream-4-0",
+    "media_type": "image",
+    "display_name": "Seedream 4.0",
+    "aliases": [
+      "doubao-seedream-4-0-250828"
+    ],
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.2
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seedance-1.5-pro",
+    "media_type": "video",
+    "display_name": "Seedance 1.5 Pro",
+    "aliases": [
+      "doubao-seedance-1-5-pro-251215"
+    ],
+    "discontinued": true,
+    "facts": {
+      "durations": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "resolutions": [
+        "480p",
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "video_tokens",
+          "dims": [
+            "service_tier",
+            "audio"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard",
+                "audio": true
+              },
+              "price": 16.0
+            },
+            {
+              "when": {
+                "service_tier": "standard",
+                "audio": false
+              },
+              "price": 8.0
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "audio": true
+              },
+              "price": 8.0
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "audio": false
+              },
+              "price": 4.0
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard",
+            "audio": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seedance-2.0",
+    "media_type": "video",
+    "display_name": "Seedance 2.0",
+    "aliases": [
+      "doubao-seedance-2-0-260128"
+    ],
+    "facts": {
+      "durations": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "480p",
+        "720p",
+        "1080p",
+        "4k"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "video_tokens",
+          "dims": [
+            "resolution",
+            "input_video"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "480p",
+                "input_video": false
+              },
+              "price": 46.0
+            },
+            {
+              "when": {
+                "resolution": "480p",
+                "input_video": true
+              },
+              "price": 28.0
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "input_video": false
+              },
+              "price": 46.0
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "input_video": true
+              },
+              "price": 28.0
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "input_video": false
+              },
+              "price": 51.0
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "input_video": true
+              },
+              "price": 31.0
+            },
+            {
+              "when": {
+                "resolution": "4k",
+                "input_video": false
+              },
+              "price": 26.0
+            },
+            {
+              "when": {
+                "resolution": "4k",
+                "input_video": true
+              },
+              "price": 16.0
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "input_video": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seedance-2.0-fast",
+    "media_type": "video",
+    "display_name": "Seedance 2.0 Fast",
+    "aliases": [
+      "doubao-seedance-2-0-fast-260128"
+    ],
+    "facts": {
+      "durations": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "480p",
+        "720p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "video_tokens",
+          "dims": [
+            "resolution",
+            "input_video"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "480p",
+                "input_video": false
+              },
+              "price": 37.0
+            },
+            {
+              "when": {
+                "resolution": "480p",
+                "input_video": true
+              },
+              "price": 22.0
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "input_video": false
+              },
+              "price": 37.0
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "input_video": true
+              },
+              "price": 22.0
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "input_video": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seedance-2.0-mini",
+    "media_type": "video",
+    "display_name": "Seedance 2.0 Mini",
+    "aliases": [
+      "doubao-seedance-2-0-mini-260615"
+    ],
+    "facts": {
+      "durations": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "480p",
+        "720p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "video_tokens",
+          "dims": [
+            "resolution",
+            "input_video"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "480p",
+                "input_video": false
+              },
+              "price": 23.0
+            },
+            {
+              "when": {
+                "resolution": "480p",
+                "input_video": true
+              },
+              "price": 14.0
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "input_video": false
+              },
+              "price": 23.0
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "input_video": true
+              },
+              "price": 14.0
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "input_video": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seedance-2.5",
+    "media_type": "video",
+    "display_name": "Seedance 2.5",
+    "aliases": [
+      "doubao-seedance-2-5-260628"
+    ],
+    "facts": {
+      "durations": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "resolutions": [
+        "480p",
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "video_tokens",
+          "dims": [
+            "resolution",
+            "input_video"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "480p",
+                "input_video": false
+              },
+              "price": 70.0
+            },
+            {
+              "when": {
+                "resolution": "480p",
+                "input_video": true
+              },
+              "price": 42.0
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "input_video": false
+              },
+              "price": 70.0
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "input_video": true
+              },
+              "price": 42.0
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "input_video": false
+              },
+              "price": 77.0
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "input_video": true
+              },
+              "price": 46.0
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "input_video": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seed-2.0-code",
+    "media_type": "text",
+    "display_name": "豆包 Seed 2.0 Code",
+    "facts": {
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 3.2
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 4.8
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 9.6
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.64
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 0.96
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 1.92
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 16.0
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 24.0
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 48.0
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

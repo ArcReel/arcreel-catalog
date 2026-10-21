@@ -1,0 +1,61 @@
+# 每周用 LiteLLM 的价格文件比对人工维护的海外媒体条目（Google、OpenAI、xAI 的图片、视频与 TTS）。
+#
+# 只提醒，不发布：有差异时新建或更新一个 issue，由维护者核对官方定价页后修改 data/。
+# arcreel-catalog-bot 没有 issues 权限，这里用工作流自带的 GITHUB_TOKEN。
+name: Compare LiteLLM prices
+
+on:
+  schedule:
+    - cron: "41 2 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    name: Compare LiteLLM prices
+    if: github.repository == 'ArcReel/arcreel-catalog'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      issues: write # 新建或更新提醒 issue
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          python-version: "3.12"
+          enable-cache: false
+
+      - name: Compare
+        run: uv run python -m catalog_build compare-litellm > "${RUNNER_TEMP}/diff.md"
+
+      - name: Open or update issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: LiteLLM 海外媒体价格与人工数据不一致
+        run: |
+          diff="${RUNNER_TEMP}/diff.md"
+          if [ ! -s "$diff" ]; then
+            echo "No differences."
+            exit 0
+          fi
+          body="${RUNNER_TEMP}/body.md"
+          {
+            echo "LiteLLM 原厂渠道的以下单价不在人工数据对应计量项的各档单价之中。请对照官方定价页核对，需要时修改 \`data/entries/\`；LiteLLM 有误时忽略即可。"
+            echo
+            cat "$diff"
+            echo
+            echo "由 [Compare LiteLLM prices](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}) 生成。"
+          } > "$body"
+          number="$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "\"${TITLE}\" in:title" --json number --jq '.[0].number // empty')"
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --repo "$GITHUB_REPOSITORY" --body-file "$body"
+          else
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$TITLE" --body-file "$body"
+          fi

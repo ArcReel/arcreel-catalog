@@ -1,0 +1,38 @@
+# PR 校验：构建脚本的测试，加上一次不写文件的完整构建。
+#
+# 完整构建抓取当前的第三方数据，叠加 PR 里的人工数据，过 ArcReel main 上的目录数据校验器，
+# 判定这份 PR 合入后能否发布。job 名「Check catalog」是 main ruleset 的必需检查，改名须同步 ruleset。
+name: Check catalog
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-catalog-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Check catalog
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          python-version: "3.12"
+          # 不缓存：每次重新解析 arcreel-catalog-core，校验器始终是 ArcReel main 上的那一份
+          enable-cache: false
+
+      - name: Test build scripts
+        run: uv run python -m pytest -q
+
+      - name: Build and validate (dry run)
+        run: uv run python -m catalog_build build --check-only

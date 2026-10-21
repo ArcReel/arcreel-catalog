@@ -1,0 +1,423 @@
+[
+  {
+    "maker": "kuaishou",
+    "name": "kling-v2-5-turbo",
+    "media_type": "video",
+    "display_name": "可灵 2.5 Turbo",
+    "facts": {
+      "durations": [
+        5,
+        10
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.3
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 0.5
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "kuaishou",
+    "name": "kling-image-o1",
+    "media_type": "image",
+    "display_name": "可灵图像 O1",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.2
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "kuaishou",
+    "name": "kling-v3-omni",
+    "media_type": "image",
+    "display_name": "可灵 V3-Omni（图像）",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K",
+        "4K"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "1K"
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "resolution": "2K"
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "resolution": "4K"
+              },
+              "price": 0.4
+            }
+          ],
+          "defaults": {
+            "resolution": "1K"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "kuaishou",
+    "name": "kling-v3",
+    "media_type": "video",
+    "display_name": "可灵 v3",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "720p",
+        "1080p",
+        "4k"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution",
+            "audio"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": false
+              },
+              "price": 0.6
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": true
+              },
+              "price": 0.9
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": false
+              },
+              "price": 0.8
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": true
+              },
+              "price": 1.2
+            },
+            {
+              "when": {
+                "resolution": "4k"
+              },
+              "price": 3.0
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "audio": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "kuaishou",
+    "name": "kling-v3-omni",
+    "media_type": "video",
+    "display_name": "可灵 v3 Omni",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "720p",
+        "1080p",
+        "4k"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution",
+            "audio",
+            "input_video"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": false,
+                "input_video": false
+              },
+              "price": 0.6
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": true,
+                "input_video": false
+              },
+              "price": 0.8
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": false,
+                "input_video": false
+              },
+              "price": 0.8
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": true,
+                "input_video": false
+              },
+              "price": 1.0
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": false,
+                "input_video": true
+              },
+              "price": 0.9
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": false,
+                "input_video": true
+              },
+              "price": 1.2
+            },
+            {
+              "when": {
+                "resolution": "4k"
+              },
+              "price": 3.0
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "audio": false,
+            "input_video": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "kuaishou",
+    "name": "kling-v2-6",
+    "media_type": "video",
+    "display_name": "可灵 v2.6",
+    "facts": {
+      "durations": [
+        5,
+        10
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution",
+            "audio"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": false
+              },
+              "price": 0.3
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": false
+              },
+              "price": 0.5
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": true
+              },
+              "price": 1.0
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "audio": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "kuaishou",
+    "name": "kling-video-o1",
+    "media_type": "video",
+    "display_name": "可灵 Video O1",
+    "facts": {
+      "durations": [
+        5,
+        10
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution",
+            "input_video"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p",
+                "input_video": false
+              },
+              "price": 0.6
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "input_video": false
+              },
+              "price": 0.8
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "input_video": true
+              },
+              "price": 0.9
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "input_video": true
+              },
+              "price": 1.2
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "input_video": false
+          }
+        }
+      ]
+    }
+  }
+]

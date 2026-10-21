@@ -1,0 +1,1242 @@
+[
+  {
+    "maker": "alibaba",
+    "name": "qwen-plus",
+    "media_type": "text",
+    "display_name": "Qwen Plus",
+    "facts": {
+      "structured_output": true,
+      "max_output_tokens": 32768
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.8
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 2.4
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 4.8
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.16
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 0.48
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 0.96
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 1.0
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 3.0
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 6.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 2.0
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 20.0
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 48.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3.6-plus",
+    "media_type": "text",
+    "display_name": "Qwen3.6 Plus",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 65536
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 2.0
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 8.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 0.8
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 2.5
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 10.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 12.0
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 48.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3-max",
+    "media_type": "text",
+    "display_name": "Qwen3 Max",
+    "facts": {
+      "structured_output": true,
+      "max_output_tokens": 32768
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 10.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3.7-max",
+    "media_type": "text",
+    "display_name": "Qwen3.7 Max",
+    "facts": {
+      "structured_output": true,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 12.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.4
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 15.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 36.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3.6-flash",
+    "media_type": "text",
+    "display_name": "Qwen3.6 Flash",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 65536
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 1.2
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 4.8
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.12
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 0.48
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 1.5
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 6.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 7.2
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 28.8
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen-long",
+    "media_type": "text",
+    "display_name": "Qwen Long",
+    "facts": {
+      "max_output_tokens": 8192
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.5
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen-image-2.0",
+    "media_type": "image",
+    "display_name": "Qwen Image 2.0",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "2048*2048",
+        "2688*1536",
+        "1536*2688",
+        "2368*1728",
+        "1728*2368"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.2
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen-image-2.0-pro",
+    "media_type": "image",
+    "display_name": "Qwen Image 2.0 Pro",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "2048*2048",
+        "2688*1536",
+        "1536*2688",
+        "2368*1728",
+        "1728*2368"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen-image-edit-plus",
+    "media_type": "image",
+    "display_name": "Qwen Image Edit Plus",
+    "facts": {
+      "image_to_image": true,
+      "resolutions": [
+        "2048*2048",
+        "2048*1152",
+        "1152*2048",
+        "2048*1536",
+        "1536*2048"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.2
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen-image-edit-max",
+    "media_type": "image",
+    "display_name": "Qwen Image Edit Max",
+    "facts": {
+      "image_to_image": true,
+      "resolutions": [
+        "2048*2048",
+        "2048*1152",
+        "1152*2048",
+        "2048*1536",
+        "1536*2048"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "wan2.7-image",
+    "media_type": "image",
+    "display_name": "万相 2.7 图像",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.2
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "wan2.7-image-pro",
+    "media_type": "image",
+    "display_name": "万相 2.7 图像 Pro",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K",
+        "4K"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "happyhorse-1.1-i2v",
+    "media_type": "video",
+    "display_name": "HappyHorse 1.1 图生视频",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "480p",
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "480p"
+              },
+              "price": 0.45
+            },
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.9
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 1.2
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "happyhorse-1.1-t2v",
+    "media_type": "video",
+    "display_name": "HappyHorse 1.1 文生视频",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "480p",
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "480p"
+              },
+              "price": 0.45
+            },
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.9
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 1.2
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "happyhorse-1.1-r2v",
+    "media_type": "video",
+    "display_name": "HappyHorse 1.1 参考生视频",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "480p",
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "480p"
+              },
+              "price": 0.45
+            },
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.9
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 1.2
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "happyhorse-1.0-i2v",
+    "media_type": "video",
+    "display_name": "HappyHorse 1.0 图生视频",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.9
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 1.6
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "happyhorse-1.0-t2v",
+    "media_type": "video",
+    "display_name": "HappyHorse 1.0 文生视频",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.9
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 1.6
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "happyhorse-1.0-r2v",
+    "media_type": "video",
+    "display_name": "HappyHorse 1.0 参考生视频",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.9
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 1.6
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "wan2.7-i2v",
+    "media_type": "video",
+    "display_name": "万相 2.7 图生视频",
+    "facts": {
+      "durations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.6
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 1.0
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "wan2.7-t2v",
+    "media_type": "video",
+    "display_name": "万相 2.7 文生视频",
+    "facts": {
+      "durations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.6
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 1.0
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "wan2.7-r2v",
+    "media_type": "video",
+    "display_name": "万相 2.7 参考生视频",
+    "facts": {
+      "durations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.6
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 1.0
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "wan3.0-video",
+    "media_type": "video",
+    "display_name": "万相 3.0 视频",
+    "facts": {
+      "durations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "resolutions": [
+        "480p",
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "480p"
+              },
+              "price": 0.3
+            },
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.6
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 1.2
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3-tts-flash",
+    "media_type": "audio",
+    "display_name": "Qwen3 TTS Flash",
+    "facts": {},
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "characters",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.8
+            }
+          ],
+          "cjk_double": true
+        }
+      ]
+    }
+  }
+]

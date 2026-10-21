@@ -1,0 +1,510 @@
+{
+  "gemini-aistudio": {
+    "upstream": [
+      "google"
+    ],
+    "models": [
+      {
+        "api_model_name": "gemini-3-flash-preview",
+        "entry": "google/gemini-3-flash-preview"
+      },
+      {
+        "api_model_name": "gemini-3-pro-image",
+        "entry": "google/gemini-3-pro-image"
+      },
+      {
+        "api_model_name": "gemini-3.1-flash-image",
+        "entry": "google/gemini-3.1-flash-image"
+      },
+      {
+        "api_model_name": "veo-3.1-generate-preview",
+        "entry": "google/veo-3.1-generate-preview"
+      },
+      {
+        "api_model_name": "veo-3.1-fast-generate-preview",
+        "entry": "google/veo-3.1-fast-generate-preview"
+      },
+      {
+        "api_model_name": "veo-3.1-lite-generate-preview",
+        "entry": "google/veo-3.1-lite-generate-preview"
+      },
+      {
+        "api_model_name": "gemini-3.8-flash-tts",
+        "entry": "google/gemini-3.8-flash-tts"
+      },
+      {
+        "api_model_name": "gemini-3.8-flash-lite-tts",
+        "entry": "google/gemini-3.8-flash-lite-tts"
+      }
+    ],
+    "defaults": {
+      "text": "gemini-3-flash-preview",
+      "image": "gemini-3.1-flash-image",
+      "video": "veo-3.1-lite-generate-preview",
+      "audio": "gemini-3.8-flash-tts"
+    }
+  },
+  "gemini-vertex": {
+    "upstream": [
+      "google"
+    ],
+    "exclude": [
+      "^gemma-"
+    ],
+    "models": [
+      {
+        "api_model_name": "gemini-3-flash-preview",
+        "entry": "google/gemini-3-flash-preview"
+      },
+      {
+        "api_model_name": "gemini-3-pro-image",
+        "entry": "google/gemini-3-pro-image"
+      },
+      {
+        "api_model_name": "gemini-3.1-flash-image",
+        "entry": "google/gemini-3.1-flash-image"
+      },
+      {
+        "api_model_name": "veo-3.1-generate-001",
+        "entry": "google/veo-3.1-generate-001"
+      },
+      {
+        "api_model_name": "veo-3.1-fast-generate-001",
+        "entry": "google/veo-3.1-fast-generate-001"
+      },
+      {
+        "api_model_name": "gemini-3.8-flash-tts",
+        "entry": "google/gemini-3.8-flash-tts"
+      },
+      {
+        "api_model_name": "gemini-3.8-flash-lite-tts",
+        "entry": "google/gemini-3.8-flash-lite-tts"
+      }
+    ],
+    "defaults": {
+      "text": "gemini-3-flash-preview",
+      "image": "gemini-3.1-flash-image",
+      "video": "veo-3.1-fast-generate-001",
+      "audio": "gemini-3.8-flash-tts"
+    }
+  },
+  "ark": {
+    "upstream": [
+      "volcengine"
+    ],
+    "models": [
+      {
+        "api_model_name": "doubao-seed-2-1-lite-260915",
+        "entry": "bytedance/doubao-seed-2.1-lite"
+      },
+      {
+        "api_model_name": "doubao-seedream-5-0-lite-260128",
+        "entry": "bytedance/doubao-seedream-5-0-lite"
+      },
+      {
+        "api_model_name": "doubao-seedream-5-0-260128",
+        "entry": "bytedance/doubao-seedream-5-0-lite"
+      },
+      {
+        "api_model_name": "doubao-seedream-4-5-251128",
+        "entry": "bytedance/doubao-seedream-4-5"
+      },
+      {
+        "api_model_name": "doubao-seedream-4-0-250828",
+        "entry": "bytedance/doubao-seedream-4-0"
+      },
+      {
+        "api_model_name": "doubao-seedance-2-0-260128",
+        "entry": "bytedance/doubao-seedance-2.0"
+      },
+      {
+        "api_model_name": "doubao-seedance-2-0-fast-260128",
+        "entry": "bytedance/doubao-seedance-2.0-fast"
+      },
+      {
+        "api_model_name": "doubao-seedance-2-0-mini-260615",
+        "entry": "bytedance/doubao-seedance-2.0-mini"
+      },
+      {
+        "api_model_name": "doubao-seedance-2-5-260628",
+        "entry": "bytedance/doubao-seedance-2.5"
+      }
+    ],
+    "defaults": {
+      "text": "doubao-seed-2-1-lite-260915",
+      "image": "doubao-seedream-5-0-lite-260128",
+      "video": "doubao-seedance-2-0-mini-260615"
+    }
+  },
+  "ark-agent-plan": {
+    "upstream": [
+      "volcengine-coding-plan"
+    ],
+    "models": [
+      {
+        "api_model_name": "doubao-seed-2.0-mini",
+        "entry": "bytedance/doubao-seed-2.0-mini"
+      },
+      {
+        "api_model_name": "doubao-seed-2.0-lite",
+        "entry": "bytedance/doubao-seed-2.0-lite"
+      },
+      {
+        "api_model_name": "doubao-seed-2.0-pro",
+        "entry": "bytedance/doubao-seed-2.0-pro"
+      },
+      {
+        "api_model_name": "doubao-seed-2.0-code",
+        "entry": "bytedance/doubao-seed-2.0-code"
+      },
+      {
+        "api_model_name": "glm-5.1",
+        "entry": "zhipu/glm-5.1"
+      },
+      {
+        "api_model_name": "kimi-k2.6",
+        "entry": "moonshot/kimi-k2.6"
+      },
+      {
+        "api_model_name": "minimax-m2.7",
+        "entry": "minimax/MiniMax-M2.7"
+      },
+      {
+        "api_model_name": "doubao-seedream-5.0-lite",
+        "entry": "bytedance/doubao-seedream-5-0-lite"
+      },
+      {
+        "api_model_name": "doubao-seedance-2.0",
+        "entry": "bytedance/doubao-seedance-2.0"
+      },
+      {
+        "api_model_name": "doubao-seedance-2.0-fast",
+        "entry": "bytedance/doubao-seedance-2.0-fast"
+      },
+      {
+        "api_model_name": "doubao-seedance-2.0-mini",
+        "entry": "bytedance/doubao-seedance-2.0-mini"
+      }
+    ],
+    "defaults": {
+      "text": "doubao-seed-2.0-lite",
+      "image": "doubao-seedream-5.0-lite",
+      "video": "doubao-seedance-2.0-mini"
+    }
+  },
+  "grok": {
+    "upstream": [
+      "xai"
+    ],
+    "models": [
+      {
+        "api_model_name": "grok-4.3",
+        "entry": "xai/grok-4.3"
+      },
+      {
+        "api_model_name": "grok-imagine-image",
+        "entry": "xai/grok-imagine-image"
+      },
+      {
+        "api_model_name": "grok-imagine-video",
+        "entry": "xai/grok-imagine-video"
+      },
+      {
+        "api_model_name": "grok-imagine-video-1.5",
+        "entry": "xai/grok-imagine-video-1.5"
+      },
+      {
+        "api_model_name": "grok-imagine-video-1.5-lite",
+        "entry": "xai/grok-imagine-video-1.5-lite"
+      }
+    ],
+    "defaults": {
+      "text": "grok-4.3",
+      "image": "grok-imagine-image",
+      "video": "grok-imagine-video"
+    }
+  },
+  "openai": {
+    "upstream": [
+      "openai"
+    ],
+    "exclude": [
+      "codex-spark"
+    ],
+    "models": [
+      {
+        "api_model_name": "gpt-5.4-mini",
+        "entry": "openai/gpt-5.4-mini"
+      },
+      {
+        "api_model_name": "o3-pro",
+        "entry": "openai/o3-pro"
+      },
+      {
+        "api_model_name": "gpt-image-2",
+        "entry": "openai/gpt-image-2"
+      }
+    ],
+    "defaults": {
+      "text": "gpt-5.4-mini",
+      "image": "gpt-image-2"
+    }
+  },
+  "vidu": {
+    "models": [
+      {
+        "api_model_name": "viduq2",
+        "entry": "shengshu/viduq2"
+      },
+      {
+        "api_model_name": "viduq1",
+        "entry": "shengshu/viduq1"
+      },
+      {
+        "api_model_name": "viduq3-turbo",
+        "entry": "shengshu/viduq3-turbo"
+      },
+      {
+        "api_model_name": "viduq3-pro",
+        "entry": "shengshu/viduq3-pro"
+      },
+      {
+        "api_model_name": "viduq3",
+        "entry": "shengshu/viduq3"
+      },
+      {
+        "api_model_name": "vidu2.0",
+        "entry": "shengshu/vidu2.0"
+      }
+    ],
+    "defaults": {
+      "image": "viduq2",
+      "video": "viduq3-turbo"
+    }
+  },
+  "dashscope": {
+    "upstream": [
+      "alibaba-cn"
+    ],
+    "exclude": [
+      "-omni",
+      "^qwen[0-9.]+-[0-9]+b(-a[0-9]+b)?$"
+    ],
+    "models": [
+      {
+        "api_model_name": "qwen-plus",
+        "entry": "alibaba/qwen-plus"
+      },
+      {
+        "api_model_name": "qwen3-max",
+        "entry": "alibaba/qwen3-max"
+      },
+      {
+        "api_model_name": "qwen-long",
+        "entry": "alibaba/qwen-long"
+      },
+      {
+        "api_model_name": "qwen-image-2.0",
+        "entry": "alibaba/qwen-image-2.0"
+      },
+      {
+        "api_model_name": "qwen-image-2.0-pro",
+        "entry": "alibaba/qwen-image-2.0-pro"
+      },
+      {
+        "api_model_name": "qwen-image-edit-plus",
+        "entry": "alibaba/qwen-image-edit-plus"
+      },
+      {
+        "api_model_name": "qwen-image-edit-max",
+        "entry": "alibaba/qwen-image-edit-max"
+      },
+      {
+        "api_model_name": "wan2.7-image",
+        "entry": "alibaba/wan2.7-image"
+      },
+      {
+        "api_model_name": "wan2.7-image-pro",
+        "entry": "alibaba/wan2.7-image-pro"
+      },
+      {
+        "api_model_name": "happyhorse-1.1-i2v",
+        "entry": "alibaba/happyhorse-1.1-i2v"
+      },
+      {
+        "api_model_name": "happyhorse-1.1-t2v",
+        "entry": "alibaba/happyhorse-1.1-t2v"
+      },
+      {
+        "api_model_name": "happyhorse-1.1-r2v",
+        "entry": "alibaba/happyhorse-1.1-r2v"
+      },
+      {
+        "api_model_name": "happyhorse-1.0-i2v",
+        "entry": "alibaba/happyhorse-1.0-i2v"
+      },
+      {
+        "api_model_name": "happyhorse-1.0-t2v",
+        "entry": "alibaba/happyhorse-1.0-t2v"
+      },
+      {
+        "api_model_name": "happyhorse-1.0-r2v",
+        "entry": "alibaba/happyhorse-1.0-r2v"
+      },
+      {
+        "api_model_name": "wan2.7-i2v",
+        "entry": "alibaba/wan2.7-i2v"
+      },
+      {
+        "api_model_name": "wan2.7-t2v",
+        "entry": "alibaba/wan2.7-t2v"
+      },
+      {
+        "api_model_name": "wan2.7-r2v",
+        "entry": "alibaba/wan2.7-r2v"
+      },
+      {
+        "api_model_name": "wan3.0-video",
+        "entry": "alibaba/wan3.0-video"
+      },
+      {
+        "api_model_name": "qwen3-tts-flash",
+        "entry": "alibaba/qwen3-tts-flash"
+      }
+    ],
+    "defaults": {
+      "text": "qwen-plus",
+      "image": "qwen-image-2.0",
+      "video": "happyhorse-1.1-i2v",
+      "audio": "qwen3-tts-flash"
+    }
+  },
+  "minimax": {
+    "upstream": [
+      "minimax-cn"
+    ],
+    "models": [
+      {
+        "api_model_name": "MiniMax-M3",
+        "entry": "minimax/MiniMax-M3"
+      },
+      {
+        "api_model_name": "MiniMax-M2.7",
+        "entry": "minimax/MiniMax-M2.7"
+      },
+      {
+        "api_model_name": "image-01",
+        "entry": "minimax/image-01"
+      },
+      {
+        "api_model_name": "MiniMax-H3",
+        "entry": "minimax/MiniMax-H3"
+      },
+      {
+        "api_model_name": "MiniMax-Hailuo-2.3",
+        "entry": "minimax/MiniMax-Hailuo-2.3"
+      },
+      {
+        "api_model_name": "MiniMax-Hailuo-2.3-Fast",
+        "entry": "minimax/MiniMax-Hailuo-2.3-Fast"
+      },
+      {
+        "api_model_name": "speech-2.8-hd",
+        "entry": "minimax/speech-2.8-hd"
+      },
+      {
+        "api_model_name": "speech-2.8-turbo",
+        "entry": "minimax/speech-2.8-turbo"
+      }
+    ],
+    "defaults": {
+      "text": "MiniMax-M3",
+      "image": "image-01",
+      "video": "MiniMax-H3",
+      "audio": "speech-2.8-hd"
+    }
+  },
+  "kling": {
+    "models": [
+      {
+        "api_model_name": "kling-v2-5-turbo",
+        "entry": "kuaishou/kling-v2-5-turbo"
+      },
+      {
+        "api_model_name": "kling-image-o1",
+        "entry": "kuaishou/kling-image-o1"
+      },
+      {
+        "api_model_name": "kling-v3-omni",
+        "entry": "kuaishou/kling-v3-omni",
+        "media_type": "image"
+      },
+      {
+        "api_model_name": "kling-v3",
+        "entry": "kuaishou/kling-v3"
+      },
+      {
+        "api_model_name": "kling-v3-omni",
+        "entry": "kuaishou/kling-v3-omni",
+        "media_type": "video"
+      },
+      {
+        "api_model_name": "kling-v2-6",
+        "entry": "kuaishou/kling-v2-6"
+      },
+      {
+        "api_model_name": "kling-video-o1",
+        "entry": "kuaishou/kling-video-o1"
+      }
+    ],
+    "defaults": {
+      "video": "kling-v2-5-turbo",
+      "image": "kling-image-o1"
+    }
+  },
+  "agnes": {
+    "models": [
+      {
+        "api_model_name": "agnes-3.0-flash",
+        "entry": "agnes/agnes-3.0-flash"
+      },
+      {
+        "api_model_name": "agnes-2.5-flash",
+        "entry": "agnes/agnes-2.5-flash"
+      },
+      {
+        "api_model_name": "agnes-2.5-pro",
+        "entry": "agnes/agnes-2.5-pro"
+      },
+      {
+        "api_model_name": "agnes-2.0-flash",
+        "entry": "agnes/agnes-2.0-flash"
+      },
+      {
+        "api_model_name": "agnes-image-2.5-flash",
+        "entry": "agnes/agnes-image-2.5-flash"
+      },
+      {
+        "api_model_name": "agnes-image-2.1-flash",
+        "entry": "agnes/agnes-image-2.1-flash"
+      },
+      {
+        "api_model_name": "agnes-video-2.5-flash",
+        "entry": "agnes/agnes-video-2.5-flash"
+      },
+      {
+        "api_model_name": "agnes-video-2.5",
+        "entry": "agnes/agnes-video-2.5"
+      },
+      {
+        "api_model_name": "agnes-video-v2.0",
+        "entry": "agnes/agnes-video-v2.0"
+      }
+    ],
+    "defaults": {
+      "text": "agnes-3.0-flash",
+      "image": "agnes-image-2.5-flash",
+      "video": "agnes-video-2.5-flash"
+    }
+  }
+}
