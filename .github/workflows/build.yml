@@ -1,0 +1,86 @@
+# 定时构建目录数据并发布到 main。
+#
+# 从第三方数据源抓取文本模型，叠加 data/ 下人工维护的数据，过 ArcReel main 上的目录数据校验器
+# （arcreel-catalog-core）。校验失败时这次不发布；内容有变化时以 arcreel-catalog-bot 的身份直接提交
+# catalog.json 与 manifest.json 到 main，不经 PR（该 App 是 main ruleset 的 bypass actor）。
+#
+# 触发：每天一次；人工数据或构建脚本合入 main 后立即一次；也可手动触发。bot 的提交只改两个发布文件，
+# 不在 paths 内，不会再次触发。
+name: Build catalog
+
+on:
+  schedule:
+    - cron: "23 1 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "catalog_build/**"
+      - "pyproject.toml"
+      - ".github/workflows/build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-catalog
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build and publish
+    # fork 没有 bot 凭证，不跑
+    if: github.repository == 'ArcReel/arcreel-catalog'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # 取运行时 main 的最新提交：排队的运行看得到上一次的 bot 提交
+          ref: main
+          persist-credentials: false
+
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          python-version: "3.12"
+          # 不缓存：每次重新解析 arcreel-catalog-core，校验器始终是 ArcReel main 上的那一份
+          enable-cache: false
+
+      - name: Test build scripts
+        run: uv run python -m pytest -q
+
+      - name: Build and validate
+        id: build
+        run: |
+          uv run python -m catalog_build build
+          if git status --porcelain -- catalog.json manifest.json | grep -q .; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create App token
+        id: app-token
+        if: steps.build.outputs.changed == 'true'
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        with:
+          client-id: ${{ secrets.CATALOG_APP_CLIENT_ID }}
+          private-key: ${{ secrets.CATALOG_APP_PRIVATE_KEY }}
+          owner: ArcReel
+          repositories: arcreel-catalog
+          permission-contents: write
+
+      - name: Commit and push
+        if: steps.build.outputs.changed == 'true'
+        env:
+          PUSH_TOKEN: ${{ steps.app-token.outputs.token }}
+          APP_SLUG: ${{ steps.app-token.outputs.app-slug }}
+        run: |
+          bot_name="${APP_SLUG}[bot]"
+          bot_id="$(GH_TOKEN="$PUSH_TOKEN" gh api "/users/${bot_name}" --jq .id)"
+          git config user.name "$bot_name"
+          git config user.email "${bot_id}+${bot_name}@users.noreply.github.com"
+          version="$(jq -r .dataset_version manifest.json)"
+          git add catalog.json manifest.json
+          git commit -m "chore(data): 发布数据集 ${version}"
+          git push "https://x-access-token:${PUSH_TOKEN}@${GITHUB_SERVER_URL#https://}/${GITHUB_REPOSITORY}.git" HEAD:main

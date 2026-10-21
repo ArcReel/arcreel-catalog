@@ -1,0 +1,93 @@
+[
+  {
+    "maker": "deepseek",
+    "name": "deepseek-v4-flash",
+    "media_type": "text",
+    "display_name": "DeepSeek V4 Flash",
+    "aliases": [
+      "deepseek-flash"
+    ],
+    "facts": {
+      "max_output_tokens": 393216
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.04
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 8.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "deepseek",
+    "name": "deepseek-v4-pro",
+    "media_type": "text",
+    "display_name": "DeepSeek V4 Pro",
+    "facts": {
+      "max_output_tokens": 393216
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 9.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.3
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 27.0
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

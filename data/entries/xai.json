@@ -1,0 +1,638 @@
+[
+  {
+    "maker": "xai",
+    "name": "grok-4.3",
+    "media_type": "text",
+    "display_name": "Grok 4.3",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 0.4
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 2.5
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 5.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "xai",
+    "name": "grok-4.20-0309-reasoning",
+    "media_type": "text",
+    "display_name": "Grok 4.20 Reasoning",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 0.4
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 2.5
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 5.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "xai",
+    "name": "grok-4.20-0309-non-reasoning",
+    "media_type": "text",
+    "display_name": "Grok 4.20 Non-Reasoning",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 0.4
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 2.5
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 5.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "xai",
+    "name": "grok-4-1-fast-reasoning",
+    "media_type": "text",
+    "display_name": "Grok 4.1 Fast Reasoning",
+    "discontinued": true,
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 0.4
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 2.5
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 5.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "xai",
+    "name": "grok-4-1-fast-non-reasoning",
+    "media_type": "text",
+    "display_name": "Grok 4.1 Fast (Non-Reasoning)",
+    "discontinued": true,
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 0.4
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 2.5
+            },
+            {
+              "when": {
+                "context_tier": 199999
+              },
+              "price": 5.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "xai",
+    "name": "grok-imagine-image-pro",
+    "media_type": "image",
+    "display_name": "Grok Imagine Image Pro",
+    "discontinued": true,
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.07
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "xai",
+    "name": "grok-imagine-image",
+    "media_type": "image",
+    "display_name": "Grok Imagine Image",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.02
+            }
+          ]
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.002
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "xai",
+    "name": "grok-imagine-video",
+    "media_type": "video",
+    "display_name": "Grok Imagine Video",
+    "facts": {
+      "durations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "480p",
+        "720p"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "480p"
+              },
+              "price": 0.05
+            },
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.07
+            }
+          ],
+          "defaults": {
+            "resolution": "480p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "xai",
+    "name": "grok-imagine-video-1.5",
+    "media_type": "video",
+    "display_name": "Grok Imagine Video 1.5",
+    "facts": {
+      "durations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "480p",
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "480p"
+              },
+              "price": 0.08
+            },
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.14
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 0.25
+            }
+          ],
+          "defaults": {
+            "resolution": "480p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "xai",
+    "name": "grok-imagine-video-1.5-lite",
+    "media_type": "video",
+    "display_name": "Grok Imagine Video 1.5 Lite",
+    "facts": {
+      "durations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "480p",
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "480p"
+              },
+              "price": 0.02
+            },
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.03
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 0.14
+            }
+          ],
+          "defaults": {
+            "resolution": "480p"
+          }
+        }
+      ]
+    }
+  }
+]

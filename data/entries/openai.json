@@ -1,0 +1,875 @@
+[
+  {
+    "maker": "openai",
+    "name": "gpt-5.5",
+    "media_type": "text",
+    "display_name": "GPT-5.5",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 128000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "service_tier",
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 0
+              },
+              "price": 5.0
+            },
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 272000
+              },
+              "price": 10.0
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 0
+              },
+              "price": 2.5
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 272000
+              },
+              "price": 5.0
+            },
+            {
+              "when": {
+                "service_tier": "fast",
+                "context_tier": 0
+              },
+              "price": 12.5
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "service_tier",
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 0
+              },
+              "price": 0.5
+            },
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 272000
+              },
+              "price": 1.0
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 0
+              },
+              "price": 0.25
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 272000
+              },
+              "price": 0.5
+            },
+            {
+              "when": {
+                "service_tier": "fast",
+                "context_tier": 0
+              },
+              "price": 1.25
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "service_tier",
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 0
+              },
+              "price": 30.0
+            },
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 272000
+              },
+              "price": 45.0
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 0
+              },
+              "price": 15.0
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 272000
+              },
+              "price": 22.5
+            },
+            {
+              "when": {
+                "service_tier": "fast",
+                "context_tier": 0
+              },
+              "price": 75.0
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "gpt-5.4",
+    "media_type": "text",
+    "display_name": "GPT-5.4",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 128000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "service_tier",
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 0
+              },
+              "price": 2.5
+            },
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 272000
+              },
+              "price": 5.0
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 0
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 272000
+              },
+              "price": 2.5
+            },
+            {
+              "when": {
+                "service_tier": "fast",
+                "context_tier": 0
+              },
+              "price": 5.0
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "service_tier",
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 0
+              },
+              "price": 0.25
+            },
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 272000
+              },
+              "price": 0.5
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 0
+              },
+              "price": 0.13
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 272000
+              },
+              "price": 0.25
+            },
+            {
+              "when": {
+                "service_tier": "fast",
+                "context_tier": 0
+              },
+              "price": 0.5
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "service_tier",
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 0
+              },
+              "price": 15.0
+            },
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 272000
+              },
+              "price": 22.5
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 0
+              },
+              "price": 7.5
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 272000
+              },
+              "price": 11.25
+            },
+            {
+              "when": {
+                "service_tier": "fast",
+                "context_tier": 0
+              },
+              "price": 30.0
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "gpt-5.4-mini",
+    "media_type": "text",
+    "display_name": "GPT-5.4 Mini",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 128000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "service_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard"
+              },
+              "price": 0.75
+            },
+            {
+              "when": {
+                "service_tier": "flex"
+              },
+              "price": 0.375
+            },
+            {
+              "when": {
+                "service_tier": "fast"
+              },
+              "price": 1.5
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "service_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard"
+              },
+              "price": 0.075
+            },
+            {
+              "when": {
+                "service_tier": "flex"
+              },
+              "price": 0.0375
+            },
+            {
+              "when": {
+                "service_tier": "fast"
+              },
+              "price": 0.15
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "service_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard"
+              },
+              "price": 4.5
+            },
+            {
+              "when": {
+                "service_tier": "flex"
+              },
+              "price": 2.25
+            },
+            {
+              "when": {
+                "service_tier": "fast"
+              },
+              "price": 9.0
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "gpt-5.4-nano",
+    "media_type": "text",
+    "display_name": "GPT-5.4 Nano",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 128000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "service_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard"
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "service_tier": "flex"
+              },
+              "price": 0.1
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "service_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard"
+              },
+              "price": 0.02
+            },
+            {
+              "when": {
+                "service_tier": "flex"
+              },
+              "price": 0.01
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "service_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard"
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "service_tier": "flex"
+              },
+              "price": 0.625
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "gpt-5.5-pro",
+    "media_type": "text",
+    "display_name": "GPT-5.5 Pro",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 128000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "service_tier",
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 0
+              },
+              "price": 30.0
+            },
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 272000
+              },
+              "price": 60.0
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 0
+              },
+              "price": 15.0
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "service_tier",
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 0
+              },
+              "price": 30.0
+            },
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 272000
+              },
+              "price": 60.0
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 0
+              },
+              "price": 15.0
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "service_tier",
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 0
+              },
+              "price": 180.0
+            },
+            {
+              "when": {
+                "service_tier": "standard",
+                "context_tier": 272000
+              },
+              "price": 270.0
+            },
+            {
+              "when": {
+                "service_tier": "flex",
+                "context_tier": 0
+              },
+              "price": 90.0
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "gpt-5.3-codex",
+    "media_type": "text",
+    "display_name": "GPT-5.3-Codex",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 128000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "service_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard"
+              },
+              "price": 1.75
+            },
+            {
+              "when": {
+                "service_tier": "fast"
+              },
+              "price": 3.5
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "service_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard"
+              },
+              "price": 0.175
+            },
+            {
+              "when": {
+                "service_tier": "fast"
+              },
+              "price": 0.35
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "service_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "service_tier": "standard"
+              },
+              "price": 14.0
+            },
+            {
+              "when": {
+                "service_tier": "fast"
+              },
+              "price": 28.0
+            }
+          ],
+          "defaults": {
+            "service_tier": "standard"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "gpt-image-2",
+    "media_type": "image",
+    "display_name": "GPT Image 2",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "512px",
+        "1K",
+        "2K"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 5.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 1.25
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.0
+            }
+          ]
+        },
+        {
+          "meter": "uncached_image_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 8.0
+            }
+          ]
+        },
+        {
+          "meter": "image_cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.0
+            }
+          ]
+        },
+        {
+          "meter": "image_output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 30.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "sora-2",
+    "media_type": "video",
+    "display_name": "Sora 2",
+    "discontinued": true,
+    "facts": {
+      "durations": [
+        4,
+        8,
+        12
+      ],
+      "resolutions": [
+        "720p"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.1
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "sora-2-pro",
+    "media_type": "video",
+    "display_name": "Sora 2 Pro",
+    "discontinued": true,
+    "facts": {
+      "durations": [
+        4,
+        8,
+        12
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.3
+            },
+            {
+              "when": {
+                "resolution": "1024p"
+              },
+              "price": 0.5
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 0.7
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "maker": "moonshot",
+    "name": "kimi-k2.6",
+    "media_type": "text",
+    "display_name": "Kimi K2.6",
+    "facts": {
+      "max_output_tokens": 32768
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 6.5
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 1.1
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 27.0
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

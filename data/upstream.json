@@ -1,0 +1,72 @@
+{
+  "makers": [
+    {
+      "provider": "openai",
+      "maker": "openai",
+      "currency": "USD",
+      "canonical": "openai"
+    },
+    {
+      "provider": "anthropic",
+      "maker": "anthropic",
+      "currency": "USD",
+      "canonical": "anthropic",
+      "cache_write_1h_input_multiple": 2
+    },
+    {
+      "provider": "google",
+      "maker": "google",
+      "currency": "USD",
+      "canonical": "google"
+    },
+    {
+      "provider": "xai",
+      "maker": "xai",
+      "currency": "USD",
+      "canonical": "xai"
+    },
+    {
+      "provider": "deepseek",
+      "maker": "deepseek",
+      "currency": "CNY",
+      "canonical": "deepseek"
+    },
+    {
+      "provider": "zhipuai",
+      "maker": "zhipu",
+      "currency": "CNY",
+      "canonical": "zhipuai"
+    },
+    {
+      "provider": "moonshotai-cn",
+      "maker": "moonshot",
+      "currency": "CNY",
+      "canonical": "moonshotai"
+    },
+    {
+      "provider": "minimax-cn",
+      "maker": "minimax",
+      "currency": "CNY",
+      "canonical": "minimax"
+    },
+    {
+      "provider": "volcengine",
+      "maker": "bytedance",
+      "currency": "CNY",
+      "canonical": "bytedance-seed"
+    },
+    {
+      "provider": "alibaba-cn",
+      "maker": "alibaba",
+      "currency": "CNY",
+      "canonical": "alibaba"
+    }
+  ],
+  "listing_min_release_date": "2026-01-01",
+  "listing_exclude": [
+    "-latest$",
+    "customtools",
+    "computer-use",
+    "deep-research"
+  ]
+}

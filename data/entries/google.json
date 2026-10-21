@@ -1,0 +1,595 @@
+[
+  {
+    "maker": "google",
+    "name": "gemini-3-pro-image",
+    "media_type": "image",
+    "display_name": "Gemini 3 Pro Image",
+    "aliases": [
+      "gemini-3-pro-image-preview"
+    ],
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K",
+        "4K"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "1K"
+              },
+              "price": 0.134
+            },
+            {
+              "when": {
+                "resolution": "2K"
+              },
+              "price": 0.134
+            },
+            {
+              "when": {
+                "resolution": "4K"
+              },
+              "price": 0.24
+            }
+          ],
+          "defaults": {
+            "resolution": "1K"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "gemini-3.1-flash-image",
+    "media_type": "image",
+    "display_name": "Gemini 3.1 Flash Image",
+    "aliases": [
+      "gemini-3.1-flash-image-preview"
+    ],
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K",
+        "4K"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "512PX"
+              },
+              "price": 0.045
+            },
+            {
+              "when": {
+                "resolution": "1K"
+              },
+              "price": 0.067
+            },
+            {
+              "when": {
+                "resolution": "2K"
+              },
+              "price": 0.101
+            },
+            {
+              "when": {
+                "resolution": "4K"
+              },
+              "price": 0.151
+            }
+          ],
+          "defaults": {
+            "resolution": "1K"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "veo-3.1-generate-preview",
+    "media_type": "video",
+    "display_name": "Veo 3.1",
+    "facts": {
+      "durations": [
+        4,
+        6,
+        8
+      ],
+      "resolutions": [
+        "720p",
+        "1080p",
+        "4k"
+      ],
+      "duration_constraints": {
+        "by_resolution": {
+          "1080p": [
+            8
+          ],
+          "4k": [
+            8
+          ]
+        },
+        "with_reference_images": [
+          8
+        ]
+      }
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution",
+            "audio"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": true
+              },
+              "price": 0.4
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": false
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": true
+              },
+              "price": 0.4
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": false
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "resolution": "4k",
+                "audio": true
+              },
+              "price": 0.6
+            },
+            {
+              "when": {
+                "resolution": "4k",
+                "audio": false
+              },
+              "price": 0.4
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "audio": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "veo-3.1-fast-generate-preview",
+    "media_type": "video",
+    "display_name": "Veo 3.1 Fast",
+    "facts": {
+      "durations": [
+        4,
+        6,
+        8
+      ],
+      "resolutions": [
+        "720p",
+        "1080p",
+        "4k"
+      ],
+      "duration_constraints": {
+        "by_resolution": {
+          "1080p": [
+            8
+          ],
+          "4k": [
+            8
+          ]
+        },
+        "with_reference_images": [
+          8
+        ]
+      }
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution",
+            "audio"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": true
+              },
+              "price": 0.1
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": false
+              },
+              "price": 0.08
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": true
+              },
+              "price": 0.12
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": false
+              },
+              "price": 0.1
+            },
+            {
+              "when": {
+                "resolution": "4k",
+                "audio": true
+              },
+              "price": 0.3
+            },
+            {
+              "when": {
+                "resolution": "4k",
+                "audio": false
+              },
+              "price": 0.25
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "audio": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "veo-3.1-lite-generate-preview",
+    "media_type": "video",
+    "display_name": "Veo 3.1 Lite",
+    "facts": {
+      "durations": [
+        4,
+        6,
+        8
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ],
+      "duration_constraints": {
+        "by_resolution": {
+          "1080p": [
+            8
+          ]
+        },
+        "with_reference_images": [
+          8
+        ]
+      }
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution",
+            "audio"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": true
+              },
+              "price": 0.05
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": false
+              },
+              "price": 0.03
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": true
+              },
+              "price": 0.08
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": false
+              },
+              "price": 0.05
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "audio": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "veo-3.1-generate-001",
+    "media_type": "video",
+    "display_name": "Veo 3.1",
+    "facts": {
+      "durations": [
+        4,
+        6,
+        8
+      ],
+      "resolutions": [
+        "720p",
+        "1080p",
+        "4k"
+      ],
+      "duration_constraints": {
+        "by_resolution": {
+          "1080p": [
+            8
+          ],
+          "4k": [
+            8
+          ]
+        },
+        "with_reference_images": [
+          8
+        ]
+      }
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution",
+            "audio"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": true
+              },
+              "price": 0.4
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": false
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": true
+              },
+              "price": 0.4
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": false
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "resolution": "4k",
+                "audio": true
+              },
+              "price": 0.6
+            },
+            {
+              "when": {
+                "resolution": "4k",
+                "audio": false
+              },
+              "price": 0.4
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "audio": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "veo-3.1-fast-generate-001",
+    "media_type": "video",
+    "display_name": "Veo 3.1 Fast",
+    "facts": {
+      "durations": [
+        4,
+        6,
+        8
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ],
+      "duration_constraints": {
+        "by_resolution": {
+          "1080p": [
+            8
+          ]
+        },
+        "with_reference_images": [
+          8
+        ]
+      }
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution",
+            "audio"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": true
+              },
+              "price": 0.1
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": false
+              },
+              "price": 0.08
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": true
+              },
+              "price": 0.12
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": false
+              },
+              "price": 0.1
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "audio": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "gemini-3.8-flash-tts",
+    "media_type": "audio",
+    "display_name": "Gemini 3.8 Flash TTS",
+    "facts": {},
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.5
+            }
+          ]
+        },
+        {
+          "meter": "audio_output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 9.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "gemini-3.8-flash-lite-tts",
+    "media_type": "audio",
+    "display_name": "Gemini 3.8 Flash-Lite TTS",
+    "facts": {},
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.5
+            }
+          ]
+        },
+        {
+          "meter": "audio_output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 6.0
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

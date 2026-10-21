@@ -1,0 +1,437 @@
+[
+  {
+    "maker": "shengshu",
+    "name": "viduq2",
+    "media_type": "image",
+    "display_name": "Vidu Q2 Image",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1080p",
+        "2K",
+        "4K"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 0.1875
+            },
+            {
+              "when": {
+                "resolution": "2K"
+              },
+              "price": 0.25
+            },
+            {
+              "when": {
+                "resolution": "4K"
+              },
+              "price": 0.3125
+            }
+          ],
+          "defaults": {
+            "resolution": "1080p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "shengshu",
+    "name": "viduq1",
+    "media_type": "image",
+    "display_name": "Vidu Q1 Image",
+    "facts": {
+      "image_to_image": true,
+      "resolutions": [
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 0.625
+            }
+          ],
+          "defaults": {
+            "resolution": "1080p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "shengshu",
+    "name": "viduq3-turbo",
+    "media_type": "video",
+    "display_name": "Vidu Q3 Turbo",
+    "facts": {
+      "durations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "resolutions": [
+        "540p",
+        "720p",
+        "1080p"
+      ],
+      "duration_constraints": {
+        "with_reference_images": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      }
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution",
+            "reference_to_video"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "540p",
+                "reference_to_video": false
+              },
+              "price": 0.21875
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "reference_to_video": true
+              },
+              "price": 0.125
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "reference_to_video": false
+              },
+              "price": 0.375
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "reference_to_video": true
+              },
+              "price": 0.3125
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "reference_to_video": false
+              },
+              "price": 0.40625
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "reference_to_video": true
+              },
+              "price": 0.40625
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "reference_to_video": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "shengshu",
+    "name": "viduq3-pro",
+    "media_type": "video",
+    "display_name": "Vidu Q3 Pro",
+    "facts": {
+      "durations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "resolutions": [
+        "540p",
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "540p"
+              },
+              "price": 0.28125
+            },
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.625
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 0.75
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "shengshu",
+    "name": "viduq3",
+    "media_type": "video",
+    "display_name": "Vidu Q3 (Reference)",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "resolutions": [
+        "540p",
+        "720p",
+        "1080p"
+      ],
+      "duration_constraints": {
+        "with_reference_images": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      }
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "540p"
+              },
+              "price": 0.21875
+            },
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.375
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 0.46875
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "shengshu",
+    "name": "vidu2.0",
+    "media_type": "video",
+    "display_name": "Vidu 2.0",
+    "facts": {
+      "durations": [
+        4,
+        8
+      ],
+      "resolutions": [
+        "360p",
+        "720p",
+        "1080p"
+      ],
+      "duration_constraints": {
+        "by_resolution": {
+          "360p": [
+            4
+          ],
+          "1080p": [
+            4
+          ]
+        },
+        "with_reference_images": [
+          4
+        ]
+      }
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "requests",
+          "dims": [
+            "resolution",
+            "duration",
+            "reference_to_video"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "360p",
+                "duration": 4,
+                "reference_to_video": false
+              },
+              "price": 0.625
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 4,
+                "reference_to_video": false
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 4,
+                "reference_to_video": false
+              },
+              "price": 3.125
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 8,
+                "reference_to_video": false
+              },
+              "price": 3.125
+            },
+            {
+              "when": {
+                "resolution": "360p",
+                "duration": 4,
+                "reference_to_video": true
+              },
+              "price": 2.5
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 4,
+                "reference_to_video": true
+              },
+              "price": 2.5
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "reference_to_video": false
+          }
+        }
+      ]
+    }
+  }
+]

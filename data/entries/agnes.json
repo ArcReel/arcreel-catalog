@@ -1,0 +1,457 @@
+[
+  {
+    "maker": "agnes",
+    "name": "agnes-3.0-flash",
+    "media_type": "text",
+    "display_name": "Agnes 3.0 Flash",
+    "facts": {
+      "structured_output": true,
+      "max_output_tokens": 65536
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.05
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.005
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.15
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "agnes",
+    "name": "agnes-2.5-flash",
+    "media_type": "text",
+    "display_name": "Agnes 2.5 Flash",
+    "facts": {
+      "structured_output": true,
+      "max_output_tokens": 65536
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.05
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.005
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.15
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "agnes",
+    "name": "agnes-2.5-pro",
+    "media_type": "text",
+    "display_name": "Agnes 2.5 Pro",
+    "facts": {
+      "structured_output": true,
+      "max_output_tokens": 65536
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.45
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.045
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.9
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "agnes",
+    "name": "agnes-2.0-flash",
+    "media_type": "text",
+    "display_name": "Agnes 2.0 Flash",
+    "discontinued": true,
+    "facts": {
+      "structured_output": true,
+      "max_output_tokens": 65536
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.03
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.15
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "agnes",
+    "name": "agnes-image-2.5-flash",
+    "media_type": "image",
+    "display_name": "Agnes Image 2.5 Flash",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K",
+        "3K",
+        "4K"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "1K"
+              },
+              "price": 0.01
+            },
+            {
+              "when": {
+                "resolution": "2K"
+              },
+              "price": 0.018
+            },
+            {
+              "when": {
+                "resolution": "3K"
+              },
+              "price": 0.021
+            },
+            {
+              "when": {
+                "resolution": "4K"
+              },
+              "price": 0.024
+            }
+          ],
+          "defaults": {
+            "resolution": "1K"
+          }
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.003
+            }
+          ],
+          "free_allowance": 3
+        }
+      ]
+    }
+  },
+  {
+    "maker": "agnes",
+    "name": "agnes-image-2.1-flash",
+    "media_type": "image",
+    "display_name": "Agnes Image 2.1 Flash",
+    "discontinued": true,
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "1K"
+              },
+              "price": 0.01
+            },
+            {
+              "when": {
+                "resolution": "2K"
+              },
+              "price": 0.018
+            },
+            {
+              "when": {
+                "resolution": "3K"
+              },
+              "price": 0.021
+            },
+            {
+              "when": {
+                "resolution": "4K"
+              },
+              "price": 0.024
+            }
+          ],
+          "defaults": {
+            "resolution": "1K"
+          }
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.003
+            }
+          ],
+          "free_allowance": 3
+        }
+      ]
+    }
+  },
+  {
+    "maker": "agnes",
+    "name": "agnes-video-2.5-flash",
+    "media_type": "video",
+    "display_name": "Agnes Video 2.5 Flash",
+    "facts": {
+      "durations": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "resolutions": [
+        "720p"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.025
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "agnes",
+    "name": "agnes-video-2.5",
+    "media_type": "video",
+    "display_name": "Agnes Video 2.5",
+    "facts": {
+      "durations": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "resolutions": [
+        "720p",
+        "1080p",
+        "2K"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.025
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 0.04
+            },
+            {
+              "when": {
+                "resolution": "2K"
+              },
+              "price": 0.055
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "agnes",
+    "name": "agnes-video-v2.0",
+    "media_type": "video",
+    "display_name": "Agnes Video 2.0",
+    "discontinued": true,
+    "facts": {
+      "durations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "resolutions": [
+        "480p",
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.005
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,426 @@
+[
+  {
+    "maker": "minimax",
+    "name": "MiniMax-M2.7",
+    "media_type": "text",
+    "display_name": "MiniMax M2.7",
+    "facts": {
+      "structured_output": true,
+      "max_output_tokens": 204800
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.42
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.625
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 8.4
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "MiniMax-M3",
+    "media_type": "text",
+    "display_name": "MiniMax M3",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 524288
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 2.1
+            },
+            {
+              "when": {
+                "context_tier": 512000
+              },
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.42
+            },
+            {
+              "when": {
+                "context_tier": 512000
+              },
+              "price": 0.84
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 8.4
+            },
+            {
+              "when": {
+                "context_tier": 512000
+              },
+              "price": 16.8
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "image-01",
+    "media_type": "image",
+    "display_name": "MiniMax Image 01",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.025
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "MiniMax-H3",
+    "media_type": "video",
+    "display_name": "MiniMax H3",
+    "facts": {
+      "durations": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "768p",
+        "2k"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "768p"
+              },
+              "price": 0.5
+            },
+            {
+              "when": {
+                "resolution": "2k"
+              },
+              "price": 0.8
+            }
+          ],
+          "defaults": {
+            "resolution": "768p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "MiniMax-Hailuo-2.3",
+    "media_type": "video",
+    "display_name": "MiniMax Hailuo 2.3",
+    "facts": {
+      "durations": [
+        6,
+        10
+      ],
+      "resolutions": [
+        "768p",
+        "1080p"
+      ],
+      "duration_constraints": {
+        "by_resolution": {
+          "1080p": [
+            6
+          ]
+        }
+      }
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "requests",
+          "dims": [
+            "resolution",
+            "duration"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "768p",
+                "duration": 6
+              },
+              "price": 2.0
+            },
+            {
+              "when": {
+                "resolution": "768p",
+                "duration": 10
+              },
+              "price": 4.0
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 6
+              },
+              "price": 3.5
+            }
+          ],
+          "defaults": {
+            "resolution": "768p",
+            "duration": 6
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "MiniMax-Hailuo-2.3-Fast",
+    "media_type": "video",
+    "display_name": "MiniMax Hailuo 2.3 Fast",
+    "facts": {
+      "durations": [
+        6,
+        10
+      ],
+      "resolutions": [
+        "768p",
+        "1080p"
+      ],
+      "duration_constraints": {
+        "by_resolution": {
+          "1080p": [
+            6
+          ]
+        }
+      }
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "requests",
+          "dims": [
+            "resolution",
+            "duration"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "768p",
+                "duration": 6
+              },
+              "price": 1.35
+            },
+            {
+              "when": {
+                "resolution": "768p",
+                "duration": 10
+              },
+              "price": 2.25
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 6
+              },
+              "price": 2.31
+            }
+          ],
+          "defaults": {
+            "resolution": "768p",
+            "duration": 6
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "S2V-01",
+    "media_type": "video",
+    "display_name": "MiniMax S2V-01",
+    "discontinued": true,
+    "facts": {
+      "durations": [
+        6
+      ],
+      "resolutions": [
+        "768p"
+      ]
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "requests",
+          "dims": [
+            "resolution",
+            "duration"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "768p",
+                "duration": 6
+              },
+              "price": 3.0
+            }
+          ],
+          "defaults": {
+            "resolution": "768p",
+            "duration": 6
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "speech-2.8-hd",
+    "media_type": "audio",
+    "display_name": "MiniMax Speech 2.8 HD",
+    "facts": {},
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "characters",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 3.5
+            }
+          ],
+          "cjk_double": true
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "speech-2.8-turbo",
+    "media_type": "audio",
+    "display_name": "MiniMax Speech 2.8 Turbo",
+    "facts": {},
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "characters",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.0
+            }
+          ],
+          "cjk_double": true
+        }
+      ]
+    }
+  }
+]
