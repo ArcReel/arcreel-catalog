@@ -1,0 +1,31 @@
+[
+  {
+    "maker": "higgsfield",
+    "name": "soul-2",
+    "media_type": "image",
+    "display_name": "Soul 2",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": false,
+      "resolutions": [
+        "720p",
+        "1080p"
+      ]
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.0032
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
