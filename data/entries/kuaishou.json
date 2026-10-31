@@ -419,5 +419,33 @@
         }
       ]
     }
+  },
+  {
+    "maker": "kuaishou",
+    "name": "kling-o3",
+    "media_type": "video",
+    "display_name": "可灵 O3",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "720p",
+        "1080p",
+        "4k"
+      ]
+    }
   }
 ]

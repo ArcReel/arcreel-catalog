@@ -1238,5 +1238,19 @@
         }
       ]
     }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen-image-3",
+    "media_type": "image",
+    "display_name": "Qwen Image 3",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1k",
+        "2k"
+      ]
+    }
   }
 ]
