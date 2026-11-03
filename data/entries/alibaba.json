@@ -436,6 +436,260 @@
   },
   {
     "maker": "alibaba",
+    "name": "qvq-max",
+    "media_type": "text",
+    "display_name": "QVQ Max",
+    "context_length": 131072,
+    "release_date": "2025-03-25",
+    "shutdown_date": "2026-10-10",
+    "facts": {
+      "image_input": true,
+      "structured_output": false,
+      "max_output_tokens": 8192
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen-math-plus",
+    "media_type": "text",
+    "display_name": "Qwen Math Plus",
+    "context_length": 4096,
+    "release_date": "2024-08-16",
+    "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen3.7-plus",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 3072
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen-math-turbo",
+    "media_type": "text",
+    "display_name": "Qwen Math Turbo",
+    "context_length": 4096,
+    "release_date": "2024-09-19",
+    "shutdown_date": "2026-10-10",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 3072
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen-mt-turbo",
+    "media_type": "text",
+    "display_name": "Qwen-MT Turbo",
+    "context_length": 16384,
+    "shutdown_date": "2026-10-10",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 8192
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen-turbo",
+    "media_type": "text",
+    "display_name": "Qwen Turbo",
+    "context_length": 1000000,
+    "release_date": "2024-11-01",
+    "shutdown_date": "2026-10-10",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 16384
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen-vl-max",
+    "media_type": "text",
+    "display_name": "Qwen-VL Max",
+    "context_length": 131072,
+    "release_date": "2024-04-08",
+    "shutdown_date": "2026-10-10",
+    "facts": {
+      "image_input": true,
+      "structured_output": false,
+      "max_output_tokens": 8192
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen-vl-plus",
+    "media_type": "text",
+    "display_name": "Qwen-VL Plus",
+    "context_length": 131072,
+    "release_date": "2024-01-25",
+    "shutdown_date": "2026-10-10",
+    "facts": {
+      "image_input": true,
+      "structured_output": false,
+      "max_output_tokens": 8192
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3-14b",
+    "media_type": "text",
+    "display_name": "Qwen3 14B",
+    "context_length": 131072,
+    "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen3.6-flash",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 8192
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3-235b-a22b",
+    "media_type": "text",
+    "display_name": "Qwen3 235B-A22B",
+    "context_length": 131072,
+    "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen3.7-plus",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 16384
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3-32b",
+    "media_type": "text",
+    "display_name": "Qwen3 32B",
+    "context_length": 131072,
+    "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen3.7-plus",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 16384
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3-8b",
+    "media_type": "text",
+    "display_name": "Qwen3 8B",
+    "context_length": 131072,
+    "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen3.6-flash",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 8192
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3-coder-30b-a3b-instruct",
+    "media_type": "text",
+    "display_name": "Qwen3-Coder 30B-A3B Instruct",
+    "context_length": 262144,
+    "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen3.7-plus",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 65536
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3-coder-480b-a35b-instruct",
+    "media_type": "text",
+    "display_name": "Qwen3-Coder 480B-A35B Instruct",
+    "context_length": 262144,
+    "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen3.7-plus",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 65536
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3-coder-plus",
+    "media_type": "text",
+    "display_name": "Qwen3 Coder Plus",
+    "context_length": 1048576,
+    "release_date": "2025-07-23",
+    "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen3.7-plus",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 65536
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3-next-80b-a3b-instruct",
+    "media_type": "text",
+    "display_name": "Qwen3-Next 80B-A3B Instruct",
+    "context_length": 131072,
+    "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen3.7-plus",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 32768
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3-next-80b-a3b-thinking",
+    "media_type": "text",
+    "display_name": "Qwen3-Next 80B-A3B (Thinking)",
+    "context_length": 131072,
+    "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen3.7-plus",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 32768
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3.6-max-preview",
+    "media_type": "text",
+    "display_name": "Qwen3.6 Max Preview",
+    "context_length": 245800,
+    "release_date": "2026-04-20",
+    "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen3.7-max",
+    "facts": {
+      "image_input": false,
+      "structured_output": true,
+      "max_output_tokens": 65536
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwq-plus",
+    "media_type": "text",
+    "display_name": "QwQ Plus",
+    "context_length": 131072,
+    "release_date": "2025-03-05",
+    "shutdown_date": "2026-10-10",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 8192
+    }
+  },
+  {
+    "maker": "alibaba",
     "name": "qwen-image-2.0",
     "media_type": "image",
     "display_name": "Qwen Image 2.0",

@@ -4,6 +4,7 @@
     "name": "MiniMax-M2.7",
     "media_type": "text",
     "display_name": "MiniMax M2.7",
+    "shutdown_date": "2026-11-18",
     "facts": {
       "structured_output": true,
       "max_output_tokens": 204800
@@ -123,6 +124,360 @@
               "when": {
                 "context_tier": 512000
               },
+              "price": 16.8
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "MiniMax-M2.5",
+    "media_type": "text",
+    "display_name": "MiniMax-M2.5",
+    "context_length": 204800,
+    "release_date": "2026-02-12",
+    "shutdown_date": "2026-11-18",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.21
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.625
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 8.4
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "MiniMax-M2.5-highspeed",
+    "media_type": "text",
+    "display_name": "MiniMax-M2.5-highspeed",
+    "context_length": 204800,
+    "release_date": "2026-02-13",
+    "shutdown_date": "2026-11-18",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.21
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.625
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 16.8
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "MiniMax-M2.7-highspeed",
+    "media_type": "text",
+    "display_name": "MiniMax-M2.7-highspeed",
+    "context_length": 204800,
+    "release_date": "2026-03-18",
+    "shutdown_date": "2026-11-18",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.42
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.625
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 16.8
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "MiniMax-M2",
+    "media_type": "text",
+    "display_name": "MiniMax-M2",
+    "discontinued": true,
+    "context_length": 204800,
+    "release_date": "2025-10-27",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.21
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.625
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 8.4
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "MiniMax-M2.1",
+    "media_type": "text",
+    "display_name": "MiniMax-M2.1",
+    "discontinued": true,
+    "context_length": 204800,
+    "release_date": "2025-12-22",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.1
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.21
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.625
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 8.4
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "MiniMax-M2.1-highspeed",
+    "media_type": "text",
+    "display_name": "MiniMax-M2.1-highspeed",
+    "discontinued": true,
+    "context_length": 204800,
+    "release_date": "2025-12-22",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 4.2
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.21
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.625
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
               "price": 16.8
             }
           ]

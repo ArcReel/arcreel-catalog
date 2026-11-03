@@ -102,11 +102,11 @@
       },
       {
         "api_model_name": "doubao-seedream-5-0-lite-260128",
-        "entry": "bytedance/doubao-seedream-5-0-lite"
+        "entry": "bytedance/doubao-seedream-5-0-lite-260128"
       },
       {
         "api_model_name": "doubao-seedream-5-0-260128",
-        "entry": "bytedance/doubao-seedream-5-0-lite"
+        "entry": "bytedance/doubao-seedream-5-0-lite-260128"
       },
       {
         "api_model_name": "doubao-seedream-4-5-251128",
@@ -131,6 +131,14 @@
       {
         "api_model_name": "doubao-seedance-2-5-260628",
         "entry": "bytedance/doubao-seedance-2.5"
+      },
+      {
+        "api_model_name": "doubao-seed-2-0-pro-260215",
+        "entry": "bytedance/doubao-seed-2-0-pro-260215"
+      },
+      {
+        "api_model_name": "doubao-seed-2-0-code-preview-260215",
+        "entry": "bytedance/doubao-seed-2-0-code-preview-260215"
       }
     ],
     "defaults": {
@@ -142,6 +150,10 @@
   "ark-agent-plan": {
     "upstream": [
       "volcengine-coding-plan"
+    ],
+    "exclude": [
+      "^kimi-k2\\.7-code$",
+      "^minimax-m3$"
     ],
     "models": [
       {
@@ -190,8 +202,6 @@
       }
     ],
     "defaults": {
-      "text": "doubao-seed-2.0-lite",
-      "image": "doubao-seedream-5.0-lite",
       "video": "doubao-seedance-2.0-mini"
     }
   },
@@ -299,7 +309,8 @@
     ],
     "exclude": [
       "-omni",
-      "^qwen[0-9.]+-[0-9]+b(-a[0-9]+b)?$"
+      "^qwen[0-9.]+-[0-9]+b(-a[0-9]+b)?$",
+      "^deepseek-v4-flash$"
     ],
     "models": [
       {
@@ -381,6 +392,14 @@
       {
         "api_model_name": "qwen3-tts-flash",
         "entry": "alibaba/qwen3-tts-flash"
+      },
+      {
+        "api_model_name": "qwen3.6-max-preview",
+        "entry": "alibaba/qwen3.6-max-preview"
+      },
+      {
+        "api_model_name": "MiniMax-M2.5",
+        "entry": "minimax/MiniMax-M2.5"
       }
     ],
     "defaults": {
@@ -426,6 +445,18 @@
       {
         "api_model_name": "speech-2.8-turbo",
         "entry": "minimax/speech-2.8-turbo"
+      },
+      {
+        "api_model_name": "MiniMax-M2.5",
+        "entry": "minimax/MiniMax-M2.5"
+      },
+      {
+        "api_model_name": "MiniMax-M2.5-highspeed",
+        "entry": "minimax/MiniMax-M2.5-highspeed"
+      },
+      {
+        "api_model_name": "MiniMax-M2.7-highspeed",
+        "entry": "minimax/MiniMax-M2.7-highspeed"
       }
     ],
     "defaults": {

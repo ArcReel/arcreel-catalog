@@ -703,6 +703,506 @@
   },
   {
     "maker": "openai",
+    "name": "o3-pro",
+    "media_type": "text",
+    "display_name": "o3-pro",
+    "context_length": 200000,
+    "release_date": "2025-06-10",
+    "shutdown_date": "2026-12-11",
+    "successor": "openai/gpt-5.6-sol",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 100000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 20.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 20.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 80.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "gpt-3.5-turbo",
+    "media_type": "text",
+    "display_name": "GPT-3.5-turbo",
+    "context_length": 16385,
+    "release_date": "2023-03-01",
+    "shutdown_date": "2026-10-23",
+    "successor": "openai/gpt-5.6-terra",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 4096
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.5
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 1.5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "gpt-4",
+    "media_type": "text",
+    "display_name": "GPT-4",
+    "context_length": 8192,
+    "release_date": "2023-11-06",
+    "shutdown_date": "2026-10-23",
+    "successor": "openai/gpt-5.6-sol",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 8192
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 30.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 30.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 60.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "gpt-4-turbo",
+    "media_type": "text",
+    "display_name": "GPT-4 Turbo",
+    "context_length": 128000,
+    "release_date": "2023-11-06",
+    "shutdown_date": "2026-10-23",
+    "successor": "openai/gpt-5.6-sol",
+    "facts": {
+      "image_input": true,
+      "structured_output": false,
+      "max_output_tokens": 4096
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 10.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 10.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 30.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "gpt-4.1-nano",
+    "media_type": "text",
+    "display_name": "GPT-4.1 nano",
+    "context_length": 1047576,
+    "release_date": "2025-04-14",
+    "shutdown_date": "2026-10-23",
+    "successor": "openai/gpt-5.6-luna",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 32768
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.1
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.025
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.4
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "gpt-4o-2024-05-13",
+    "media_type": "text",
+    "display_name": "GPT-4o (2024-05-13)",
+    "context_length": 128000,
+    "release_date": "2024-05-13",
+    "shutdown_date": "2026-10-23",
+    "successor": "openai/gpt-5.6-sol",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 4096
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 5.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 5.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 15.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "o1",
+    "media_type": "text",
+    "display_name": "o1",
+    "context_length": 200000,
+    "release_date": "2024-12-05",
+    "shutdown_date": "2026-10-23",
+    "successor": "openai/gpt-5.6-sol",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 100000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 15.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 7.5
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 60.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "o1-pro",
+    "media_type": "text",
+    "display_name": "o1-pro",
+    "context_length": 200000,
+    "release_date": "2025-03-19",
+    "shutdown_date": "2026-10-23",
+    "successor": "openai/gpt-5.6-sol",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 100000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 150.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 150.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 600.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "o3-mini",
+    "media_type": "text",
+    "display_name": "o3-mini",
+    "context_length": 200000,
+    "release_date": "2024-12-20",
+    "shutdown_date": "2026-10-23",
+    "successor": "openai/gpt-5.6-sol",
+    "facts": {
+      "image_input": false,
+      "structured_output": true,
+      "max_output_tokens": 100000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 1.1
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.55
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 4.4
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "o4-mini",
+    "media_type": "text",
+    "display_name": "o4-mini",
+    "context_length": 200000,
+    "release_date": "2025-04-16",
+    "shutdown_date": "2026-10-23",
+    "successor": "openai/gpt-5.6-terra",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 100000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 1.1
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.275
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 4.4
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
     "name": "gpt-image-2.5-sunburst",
     "media_type": "image",
     "display_name": "GPT Image 2.5 Sunburst",
