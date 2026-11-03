@@ -713,7 +713,14 @@
         "512px",
         "1K",
         "2K"
-      ]
+      ],
+      "output_token_bases": {
+        "low": 16,
+        "medium": 24,
+        "high": 48,
+        "xhigh": 64,
+        "max": 96
+      }
     },
     "price": {
       "currency": "USD",
@@ -793,7 +800,14 @@
         "512px",
         "1K",
         "2K"
-      ]
+      ],
+      "output_token_bases": {
+        "low": 16,
+        "medium": 24,
+        "high": 48,
+        "xhigh": 64,
+        "max": 96
+      }
     },
     "price": {
       "currency": "USD",
@@ -873,7 +887,12 @@
         "512px",
         "1K",
         "2K"
-      ]
+      ],
+      "output_token_bases": {
+        "low": 16,
+        "medium": 48,
+        "high": 96
+      }
     },
     "price": {
       "currency": "USD",
@@ -955,7 +974,10 @@
       ],
       "resolutions": [
         "720p"
-      ]
+      ],
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": false
     },
     "price": {
       "currency": "USD",
@@ -995,7 +1017,10 @@
       "resolutions": [
         "720p",
         "1080p"
-      ]
+      ],
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": false
     },
     "price": {
       "currency": "USD",

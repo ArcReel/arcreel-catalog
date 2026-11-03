@@ -182,7 +182,14 @@
       "resolutions": [
         "768p",
         "2k"
-      ]
+      ],
+      "max_reference_images": 9,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": true,
+      "max_reference_audio_count": 3,
+      "max_reference_audio_total_seconds": 15.0
     },
     "price": {
       "currency": "CNY",
@@ -233,7 +240,12 @@
             6
           ]
         }
-      }
+      },
+      "max_reference_images": 0,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": false,
+      "reference_audio": false
     },
     "price": {
       "currency": "CNY",
@@ -295,7 +307,12 @@
             6
           ]
         }
-      }
+      },
+      "max_reference_images": 0,
+      "text_to_video": false,
+      "first_frame": true,
+      "last_frame": false,
+      "reference_audio": false
     },
     "price": {
       "currency": "CNY",
@@ -349,7 +366,12 @@
       ],
       "resolutions": [
         "768p"
-      ]
+      ],
+      "max_reference_images": 1,
+      "text_to_video": false,
+      "first_frame": false,
+      "last_frame": false,
+      "reference_audio": false
     },
     "price": {
       "currency": "CNY",
