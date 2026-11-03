@@ -393,6 +393,7 @@
         "1080p"
       ],
       "max_reference_images": 7,
+      "text_to_video": false,
       "first_frame": true,
       "last_frame": true,
       "reference_audio": false
