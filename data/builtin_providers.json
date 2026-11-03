@@ -237,8 +237,12 @@
         "entry": "openai/gpt-5.4-mini"
       },
       {
-        "api_model_name": "o3-pro",
-        "entry": "openai/o3-pro"
+        "api_model_name": "gpt-image-2.5-sunburst",
+        "entry": "openai/gpt-image-2.5-sunburst"
+      },
+      {
+        "api_model_name": "gpt-image-2.5-flare",
+        "entry": "openai/gpt-image-2.5-flare"
       },
       {
         "api_model_name": "gpt-image-2",
