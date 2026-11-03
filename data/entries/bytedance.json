@@ -387,7 +387,8 @@
     ],
     "facts": {
       "text_to_image": true,
-      "image_to_image": true
+      "image_to_image": true,
+      "max_reference_images": 14
     },
     "price": {
       "currency": "CNY",
@@ -415,7 +416,8 @@
     ],
     "facts": {
       "text_to_image": true,
-      "image_to_image": true
+      "image_to_image": true,
+      "max_reference_images": 14
     },
     "price": {
       "currency": "CNY",
@@ -443,7 +445,8 @@
     ],
     "facts": {
       "text_to_image": true,
-      "image_to_image": true
+      "image_to_image": true,
+      "max_reference_images": 14
     },
     "price": {
       "currency": "CNY",
@@ -486,7 +489,11 @@
         "480p",
         "720p",
         "1080p"
-      ]
+      ],
+      "max_reference_images": 0,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true
     },
     "price": {
       "currency": "CNY",
@@ -563,7 +570,14 @@
         "720p",
         "1080p",
         "4k"
-      ]
+      ],
+      "max_reference_images": 9,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": true,
+      "max_reference_audio_count": 3,
+      "max_reference_audio_total_seconds": 15.0
     },
     "price": {
       "currency": "CNY",
@@ -666,7 +680,14 @@
       "resolutions": [
         "480p",
         "720p"
-      ]
+      ],
+      "max_reference_images": 9,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": true,
+      "max_reference_audio_count": 3,
+      "max_reference_audio_total_seconds": 15.0
     },
     "price": {
       "currency": "CNY",
@@ -741,7 +762,14 @@
       "resolutions": [
         "480p",
         "720p"
-      ]
+      ],
+      "max_reference_images": 9,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": true,
+      "max_reference_audio_count": 3,
+      "max_reference_audio_total_seconds": 15.0
     },
     "price": {
       "currency": "CNY",
@@ -832,7 +860,14 @@
         "480p",
         "720p",
         "1080p"
-      ]
+      ],
+      "max_reference_images": 30,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": true,
+      "max_reference_audio_count": 10,
+      "max_reference_audio_total_seconds": 30.0
     },
     "price": {
       "currency": "CNY",

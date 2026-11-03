@@ -322,7 +322,11 @@
       ],
       "resolutions": [
         "720p"
-      ]
+      ],
+      "max_reference_images": 5,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true
     },
     "price": {
       "currency": "USD",
@@ -368,7 +372,11 @@
         "720p",
         "1080p",
         "2K"
-      ]
+      ],
+      "max_reference_images": 8,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true
     },
     "price": {
       "currency": "USD",
@@ -436,7 +444,11 @@
         "480p",
         "720p",
         "1080p"
-      ]
+      ],
+      "max_reference_images": 4,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true
     },
     "price": {
       "currency": "USD",

@@ -14,7 +14,8 @@
         "1K",
         "2K",
         "4K"
-      ]
+      ],
+      "max_reference_images": 14
     },
     "price": {
       "currency": "USD",
@@ -66,7 +67,8 @@
         "1K",
         "2K",
         "4K"
-      ]
+      ],
+      "max_reference_images": 14
     },
     "price": {
       "currency": "USD",
@@ -137,7 +139,12 @@
         "with_reference_images": [
           8
         ]
-      }
+      },
+      "max_reference_images": 3,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": false
     },
     "price": {
       "currency": "USD",
@@ -228,7 +235,12 @@
         "with_reference_images": [
           8
         ]
-      }
+      },
+      "max_reference_images": 3,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": false
     },
     "price": {
       "currency": "USD",
@@ -315,7 +327,12 @@
         "with_reference_images": [
           8
         ]
-      }
+      },
+      "max_reference_images": 0,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": false
     },
     "price": {
       "currency": "USD",
@@ -392,7 +409,12 @@
         "with_reference_images": [
           8
         ]
-      }
+      },
+      "max_reference_images": 3,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": false
     },
     "price": {
       "currency": "USD",
@@ -479,7 +501,12 @@
         "with_reference_images": [
           8
         ]
-      }
+      },
+      "max_reference_images": 3,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": false
     },
     "price": {
       "currency": "USD",
