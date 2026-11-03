@@ -102,11 +102,11 @@
       },
       {
         "api_model_name": "doubao-seedream-5-0-lite-260128",
-        "entry": "bytedance/doubao-seedream-5-0-lite-260128"
+        "entry": "bytedance/doubao-seedream-5-0-lite"
       },
       {
         "api_model_name": "doubao-seedream-5-0-260128",
-        "entry": "bytedance/doubao-seedream-5-0-lite-260128"
+        "entry": "bytedance/doubao-seedream-5-0-lite"
       },
       {
         "api_model_name": "doubao-seedream-4-5-251128",
@@ -134,7 +134,7 @@
       },
       {
         "api_model_name": "doubao-seed-2-0-pro-260215",
-        "entry": "bytedance/doubao-seed-2-0-pro-260215"
+        "entry": "bytedance/doubao-seed-2.0-pro"
       },
       {
         "api_model_name": "doubao-seed-2-0-code-preview-260215",

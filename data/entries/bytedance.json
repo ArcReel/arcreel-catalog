@@ -4,100 +4,9 @@
     "name": "doubao-seed-2.0-pro",
     "media_type": "text",
     "display_name": "豆包 Seed 2.0 Pro",
-    "shutdown_date": "2026-08-08",
-    "facts": {
-      "image_input": true,
-      "max_output_tokens": 131072
-    },
-    "price": {
-      "currency": "CNY",
-      "meters": [
-        {
-          "meter": "uncached_input_tokens",
-          "dims": [
-            "context_tier"
-          ],
-          "rows": [
-            {
-              "when": {
-                "context_tier": 0
-              },
-              "price": 3.2
-            },
-            {
-              "when": {
-                "context_tier": 32000
-              },
-              "price": 4.8
-            },
-            {
-              "when": {
-                "context_tier": 128000
-              },
-              "price": 9.6
-            }
-          ]
-        },
-        {
-          "meter": "cache_read_tokens",
-          "dims": [
-            "context_tier"
-          ],
-          "rows": [
-            {
-              "when": {
-                "context_tier": 0
-              },
-              "price": 0.64
-            },
-            {
-              "when": {
-                "context_tier": 32000
-              },
-              "price": 0.96
-            },
-            {
-              "when": {
-                "context_tier": 128000
-              },
-              "price": 1.92
-            }
-          ]
-        },
-        {
-          "meter": "output_tokens",
-          "dims": [
-            "context_tier"
-          ],
-          "rows": [
-            {
-              "when": {
-                "context_tier": 0
-              },
-              "price": 16.0
-            },
-            {
-              "when": {
-                "context_tier": 32000
-              },
-              "price": 24.0
-            },
-            {
-              "when": {
-                "context_tier": 128000
-              },
-              "price": 48.0
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "maker": "bytedance",
-    "name": "doubao-seed-2-0-pro-260215",
-    "media_type": "text",
-    "display_name": "豆包 Seed 2.0 Pro 260215",
+    "aliases": [
+      "doubao-seed-2-0-pro-260215"
+    ],
     "shutdown_date": "2026-11-24",
     "successor": "bytedance/doubao-seed-2.1-lite",
     "facts": {
@@ -998,35 +907,8 @@
     "name": "doubao-seedream-5-0-lite",
     "media_type": "image",
     "display_name": "Seedream 5.0 Lite",
-    "shutdown_date": "2026-10-12",
-    "successor": "bytedance/doubao-seedream-5-0-pro",
-    "facts": {
-      "text_to_image": true,
-      "image_to_image": true,
-      "max_reference_images": 14
-    },
-    "price": {
-      "currency": "CNY",
-      "meters": [
-        {
-          "meter": "output_images",
-          "dims": [],
-          "rows": [
-            {
-              "when": {},
-              "price": 0.22
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "maker": "bytedance",
-    "name": "doubao-seedream-5-0-lite-260128",
-    "media_type": "image",
-    "display_name": "Seedream 5.0 Lite 260128",
     "aliases": [
+      "doubao-seedream-5-0-lite-260128",
       "doubao-seedream-5-0-260128"
     ],
     "shutdown_date": "2026-11-24",

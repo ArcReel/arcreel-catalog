@@ -219,6 +219,8 @@
     "name": "qwen3-max",
     "media_type": "text",
     "display_name": "Qwen3 Max",
+    "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen3.7-max",
     "facts": {
       "structured_output": true,
       "max_output_tokens": 32768
@@ -759,6 +761,7 @@
     "name": "qwen-image-edit-plus",
     "media_type": "image",
     "display_name": "Qwen Image Edit Plus",
+    "shutdown_date": "2026-10-10",
     "facts": {
       "image_to_image": true,
       "resolutions": [
@@ -791,6 +794,7 @@
     "name": "qwen-image-edit-max",
     "media_type": "image",
     "display_name": "Qwen Image Edit Max",
+    "shutdown_date": "2026-10-10",
     "facts": {
       "image_to_image": true,
       "resolutions": [

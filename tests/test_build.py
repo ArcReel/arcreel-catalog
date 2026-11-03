@@ -307,3 +307,48 @@ def test_retired_models_stay_published_for_90_days_and_upstream_cannot_bring_the
         "gpt-recent",
     ]
     assert not any("gpt-expired" in warning for warning in result.warnings)
+
+
+def test_split_off_snapshot_is_not_folded_back_into_the_live_entry() -> None:
+    # 旧快照与现役条目下线时间不同，人工拆成独立条目；上游的日期快照折叠不能把它并回现役条目
+    # 现役型号有人工条目（排在拆出的条目之后）或只有自动条目（gpt-c、gpt-d），拆出的条目以快照为名
+    # 或以快照为模型别名（gpt-d-legacy），都要成立
+    names = (
+        *("gpt-a", "gpt-a-20260101", "gpt-a-20260601", "gpt-b", "gpt-b-20260101"),
+        *("gpt-c", "gpt-c-20260101", "gpt-d", "gpt-d-20260101"),
+    )
+    upstream = {"openai": {"models": {name: model(name) for name in names}}}
+    for name in ("gpt-a-20260101", "gpt-c-20260101"):
+        upstream["openai"]["models"][name]["release_date"] = "2026-01-01"
+    humans = [
+        human("gpt-a-20260101", shutdown_date="2026-10-01"),
+        human("gpt-a", aliases=["gpt-a-20260601"]),
+        human("gpt-b"),
+        human("gpt-b-20260101", shutdown_date="2026-08-01"),  # 关停满 90 天
+        human("gpt-c-20260101", shutdown_date="2026-10-01"),
+        human("gpt-d-legacy", aliases=["gpt-d-20260101"], shutdown_date="2026-10-01"),
+    ]
+    providers = {"openai": {"upstream": ["openai"]}}
+
+    result = build_catalog([upstream], rules(OPENAI), humans, providers, today=TODAY)
+
+    entries = by_name(result)
+    assert set(entries) == {"gpt-a", "gpt-a-20260101", "gpt-b", "gpt-c", "gpt-c-20260101", "gpt-d", "gpt-d-legacy"}
+    assert entries["gpt-a"]["aliases"] == ["gpt-a-20260601"]
+    for name in ("gpt-b", "gpt-c", "gpt-c-20260101", "gpt-d"):
+        assert "aliases" not in entries[name]
+    assert entries["gpt-d-legacy"]["aliases"] == ["gpt-d-20260101"]
+    assert "discontinued" not in entries["gpt-c"]
+    assert "discontinued" not in entries["gpt-d"]
+    assert entries["gpt-a-20260101"]["discontinued"] is True
+    # 上线日期各取同名上游模型的
+    assert entries["gpt-a"]["release_date"] == entries["gpt-c"]["release_date"] == "2026-03-01"
+    assert entries["gpt-a-20260101"]["release_date"] == entries["gpt-c-20260101"]["release_date"] == "2026-01-01"
+    # 拆出的旧型号与其他退役模型一样，保留期内照常列入，并引用它自己的条目
+    listed = {
+        model["api_model_name"]: model["entry"] for model in result.catalog["builtin_providers"]["openai"]["models"]
+    }
+    assert listed == {
+        **{name: f"openai/{name}" for name in ("gpt-a", "gpt-a-20260101", "gpt-b", "gpt-c", "gpt-c-20260101", "gpt-d")},
+        "gpt-d-20260101": "openai/gpt-d-legacy",
+    }

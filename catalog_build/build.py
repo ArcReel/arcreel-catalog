@@ -162,8 +162,14 @@ def _same_model(a: Mapping, b: Mapping) -> bool:
     return all(a.get(key) == b.get(key) for key in ("facts", "price", "context_length"))
 
 
-def text_candidates(upstreams: list[Mapping], source: Mapping, warnings: list[str]) -> list[_Candidate]:
-    """一个模型厂商来源的自动条目；与主名同价同能力的日期快照并入主名。"""
+def text_candidates(
+    upstreams: list[Mapping], source: Mapping, human_owners: Mapping[str, int], warnings: list[str]
+) -> list[_Candidate]:
+    """一个模型厂商来源的自动条目；与主名同价同能力的日期快照并入主名。
+
+    ``human_owners`` 是人工文本条目的名字与模型别名（归一化）→ 条目下标。快照被人工条目认领、而主名不归
+    同一个条目时，它是拆出的旧型号，不并入主名。
+    """
     provider = source["provider"]
     models = merged_models(upstreams, provider)
     if not models:
@@ -192,7 +198,12 @@ def text_candidates(upstreams: list[Mapping], source: Mapping, warnings: list[st
     for model_id in list(candidates):
         match = DATE_SUFFIX.match(model_id)
         base = candidates.get(match["base"]) if match else None
-        if base is not None and _same_model(base.entry, candidates[model_id].entry):
+        owner = human_owners.get(normalize_model_name(model_id))
+        if (
+            base is not None
+            and owner in (None, human_owners.get(normalize_model_name(match["base"])))
+            and _same_model(base.entry, candidates[model_id].entry)
+        ):
             folded = candidates.pop(model_id)
             base.dated.append(model_id)
             base.canonical |= folded.canonical
@@ -348,7 +359,8 @@ def compose_listings(
 ) -> dict[str, dict]:
     """``expired`` 是过了保留期、不再发布的条目：引用它们的清单项一并去掉，上游的同名模型也不再列入。"""
     lookup = _text_lookup(entries)
-    retired = set(_text_lookup(expired)) - set(lookup)
+    # 过了保留期、又没有被继续发布的条目占用的名字：上游的同名模型不再列入
+    expired_names = set(_text_lookup(expired)) - set(lookup)
     patterns = [re.compile(pattern) for pattern in rules.get("listing_exclude", [])]
     min_release = rules["listing_min_release_date"]
     listings: dict[str, dict] = {}
@@ -372,8 +384,9 @@ def compose_listings(
                     or any(pattern.search(model_id) for pattern in excludes)
                 ):
                     continue
-                entry = lookup.get(normalize_model_name(model_id))
-                if entry is None and normalize_model_name(model_id) in retired:
+                normalized = normalize_model_name(model_id)
+                entry = lookup.get(normalized)
+                if entry is None and normalized in expired_names:
                     continue
                 if entry is None:
                     warnings.append(f"{provider_id}: {upstream}/{model_id} 没有对应的条目，不列入清单")
@@ -399,8 +412,13 @@ def build_catalog(
     warnings: list[str] = []
     candidates: list[_Candidate] = []
     folded: set[tuple[str, str]] = set()
+    human_owners: dict[str, int] = {}
+    for index, entry in enumerate(human_entries):
+        if entry["media_type"] == "text":
+            for name in [entry["name"], *entry.get("aliases", [])]:
+                human_owners.setdefault(normalize_model_name(name), index)
     for source in rules["makers"]:
-        found = text_candidates(upstreams, source, warnings)
+        found = text_candidates(upstreams, source, human_owners, warnings)
         candidates += found
         folded |= {(source["provider"], dated) for candidate in found for dated in candidate.dated}
     entries, expired = apply_lifecycle(
