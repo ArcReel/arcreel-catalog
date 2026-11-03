@@ -1,5 +1,5 @@
 {
-  "dataset_version": "2026-11-03T08:02:19Z",
+  "dataset_version": "2026-11-03T12:42:27Z",
   "entries": [
     {
       "maker": "agnes",
@@ -326,7 +326,11 @@
           "720p",
           "1080p",
           "2K"
-        ]
+        ],
+        "max_reference_images": 8,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true
       },
       "price": {
         "currency": "USD",
@@ -382,7 +386,11 @@
         ],
         "resolutions": [
           "720p"
-        ]
+        ],
+        "max_reference_images": 5,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true
       },
       "price": {
         "currency": "USD",
@@ -438,7 +446,11 @@
           "480p",
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 4,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true
       },
       "price": {
         "currency": "USD",
@@ -480,7 +492,12 @@
         "resolutions": [
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 0,
+        "text_to_video": false,
+        "first_frame": true,
+        "last_frame": false,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -535,7 +552,12 @@
         "resolutions": [
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 9,
+        "text_to_video": false,
+        "first_frame": false,
+        "last_frame": false,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -590,7 +612,12 @@
         "resolutions": [
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 0,
+        "text_to_video": true,
+        "first_frame": false,
+        "last_frame": false,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -646,7 +673,12 @@
           "480p",
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 0,
+        "text_to_video": false,
+        "first_frame": true,
+        "last_frame": false,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -708,7 +740,12 @@
           "480p",
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 9,
+        "text_to_video": false,
+        "first_frame": false,
+        "last_frame": false,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -770,7 +807,12 @@
           "480p",
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 0,
+        "text_to_video": true,
+        "first_frame": false,
+        "last_frame": false,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -870,7 +912,8 @@
           "1536*2688",
           "2368*1728",
           "1728*2368"
-        ]
+        ],
+        "max_reference_images": 3
       },
       "price": {
         "currency": "CNY",
@@ -902,7 +945,8 @@
           "1536*2688",
           "2368*1728",
           "1728*2368"
-        ]
+        ],
+        "max_reference_images": 3
       },
       "price": {
         "currency": "CNY",
@@ -933,7 +977,8 @@
           "1152*2048",
           "2048*1536",
           "1536*2048"
-        ]
+        ],
+        "max_reference_images": 3
       },
       "price": {
         "currency": "CNY",
@@ -964,7 +1009,8 @@
           "1152*2048",
           "2048*1536",
           "1536*2048"
-        ]
+        ],
+        "max_reference_images": 3
       },
       "price": {
         "currency": "CNY",
@@ -1646,7 +1692,7 @@
       "media_type": "text",
       "display_name": "Qwen3.6 Plus",
       "aliases": [
-        "qwen-3-6-plus"
+        "qwen-3.6-plus"
       ],
       "facts": {
         "image_input": true,
@@ -1913,7 +1959,12 @@
         "resolutions": [
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 0,
+        "text_to_video": false,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -1955,7 +2006,8 @@
         "resolutions": [
           "1K",
           "2K"
-        ]
+        ],
+        "max_reference_images": 9
       },
       "price": {
         "currency": "CNY",
@@ -1985,7 +2037,8 @@
           "1K",
           "2K",
           "4K"
-        ]
+        ],
+        "max_reference_images": 9
       },
       "price": {
         "currency": "CNY",
@@ -2028,7 +2081,13 @@
         "resolutions": [
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 5,
+        "text_to_video": false,
+        "first_frame": true,
+        "last_frame": false,
+        "reference_audio": true,
+        "max_reference_audio_count": 5
       },
       "price": {
         "currency": "CNY",
@@ -2084,7 +2143,12 @@
         "resolutions": [
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 0,
+        "text_to_video": true,
+        "first_frame": false,
+        "last_frame": false,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -2156,7 +2220,14 @@
           "480p",
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 10,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": true,
+        "max_reference_audio_count": 5,
+        "max_reference_audio_total_seconds": 15.0
       },
       "price": {
         "currency": "CNY",
@@ -2200,9 +2271,9 @@
       "display_name": "Claude Fable 5",
       "aliases": [
         "anthropic-claude-fable-5",
+        "eu.anthropic.claude-fable-5",
         "global.anthropic.claude-fable-5",
-        "us.anthropic.claude-fable-5",
-        "eu.anthropic.claude-fable-5"
+        "us.anthropic.claude-fable-5"
       ],
       "context_length": 1000000,
       "facts": {
@@ -2273,8 +2344,8 @@
       "display_name": "Claude Fable 5.1",
       "aliases": [
         "anthropic-claude-fable-5.1",
-        "us.anthropic.claude-fable-5-1",
-        "global.anthropic.claude-fable-5-1"
+        "global.anthropic.claude-fable-5-1",
+        "us.anthropic.claude-fable-5-1"
       ],
       "context_length": 1000000,
       "facts": {
@@ -2416,12 +2487,12 @@
       "media_type": "text",
       "display_name": "Claude Haiku 5.5",
       "aliases": [
-        "anthropic.claude-haiku-5-5",
-        "eu.anthropic.claude-haiku-5-5",
         "jp.anthropic.claude-haiku-5-5",
-        "global.anthropic.claude-haiku-5-5",
         "au.anthropic.claude-haiku-5-5",
-        "us.anthropic.claude-haiku-5-5"
+        "global.anthropic.claude-haiku-5-5",
+        "us.anthropic.claude-haiku-5-5",
+        "eu.anthropic.claude-haiku-5-5",
+        "anthropic.claude-haiku-5-5"
       ],
       "context_length": 1000000,
       "facts": {
@@ -2542,9 +2613,9 @@
       "display_name": "Claude Opus 4.5",
       "aliases": [
         "claude-opus-4-5-20251101",
+        "claude-opus4-5",
         "databricks-claude-opus-4-5",
-        "anthropic-claude-opus-4.5",
-        "claude-opus4-5"
+        "anthropic-claude-opus-4.5"
       ],
       "context_length": 200000,
       "facts": {
@@ -2614,9 +2685,9 @@
       "media_type": "text",
       "display_name": "Claude Opus 4.6",
       "aliases": [
+        "claude-opus4-6",
         "databricks-claude-opus-4-6",
-        "anthropic-claude-opus-4.6",
-        "claude-opus4-6"
+        "anthropic-claude-opus-4.6"
       ],
       "context_length": 1000000,
       "facts": {
@@ -2686,14 +2757,14 @@
       "media_type": "text",
       "display_name": "Claude Opus 4.7",
       "aliases": [
+        "claude-opus4-7",
         "databricks-claude-opus-4-7",
         "anthropic-claude-opus-4.7",
-        "jp.anthropic.claude-opus-4-7",
-        "global.anthropic.claude-opus-4-7",
-        "us.anthropic.claude-opus-4-7",
         "eu.anthropic.claude-opus-4-7",
         "au.anthropic.claude-opus-4-7",
-        "claude-opus4-7"
+        "us.anthropic.claude-opus-4-7",
+        "jp.anthropic.claude-opus-4-7",
+        "global.anthropic.claude-opus-4-7"
       ],
       "context_length": 1000000,
       "facts": {
@@ -2763,13 +2834,13 @@
       "media_type": "text",
       "display_name": "Claude Opus 4.8",
       "aliases": [
+        "claude-opus4-8",
         "anthropic-claude-opus-4.8",
-        "global.anthropic.claude-opus-4-8",
-        "au.anthropic.claude-opus-4-8",
         "jp.anthropic.claude-opus-4-8",
-        "eu.anthropic.claude-opus-4-8",
+        "global.anthropic.claude-opus-4-8",
         "us.anthropic.claude-opus-4-8",
-        "claude-opus4-8"
+        "au.anthropic.claude-opus-4-8",
+        "eu.anthropic.claude-opus-4-8"
       ],
       "context_length": 1000000,
       "facts": {
@@ -2840,12 +2911,12 @@
       "display_name": "Claude Opus 5",
       "aliases": [
         "anthropic-claude-opus-5",
+        "global.anthropic.claude-opus-5",
+        "eu.anthropic.claude-opus-5",
+        "in.anthropic.claude-opus-5",
         "au.anthropic.claude-opus-5",
         "us.anthropic.claude-opus-5",
-        "jp.anthropic.claude-opus-5",
-        "in.anthropic.claude-opus-5",
-        "eu.anthropic.claude-opus-5",
-        "global.anthropic.claude-opus-5"
+        "jp.anthropic.claude-opus-5"
       ],
       "context_length": 1000000,
       "facts": {
@@ -2916,10 +2987,10 @@
       "display_name": "Claude Opus 5.5",
       "aliases": [
         "anthropic-claude-opus-5.5",
-        "au.anthropic.claude-opus-5-5",
-        "jp.anthropic.claude-opus-5-5",
         "eu.anthropic.claude-opus-5-5",
         "us.anthropic.claude-opus-5-5",
+        "jp.anthropic.claude-opus-5-5",
+        "au.anthropic.claude-opus-5-5",
         "global.anthropic.claude-opus-5-5"
       ],
       "context_length": 1000000,
@@ -3062,11 +3133,11 @@
       "display_name": "Claude Sonnet 4.6",
       "aliases": [
         "databricks-claude-sonnet-4-6",
-        "au.anthropic.claude-sonnet-4-6",
-        "jp.anthropic.claude-sonnet-4-6",
-        "eu.anthropic.claude-sonnet-4-6",
-        "anthropic.claude-sonnet-4-6",
         "us.anthropic.claude-sonnet-4-6",
+        "jp.anthropic.claude-sonnet-4-6",
+        "au.anthropic.claude-sonnet-4-6",
+        "anthropic.claude-sonnet-4-6",
+        "eu.anthropic.claude-sonnet-4-6",
         "global.anthropic.claude-sonnet-4-6"
       ],
       "context_length": 1000000,
@@ -3139,11 +3210,11 @@
       "aliases": [
         "jp.anthropic.claude-sonnet-5",
         "eu.anthropic.claude-sonnet-5",
-        "anthropic.claude-sonnet-5",
-        "us.anthropic.claude-sonnet-5",
+        "global.anthropic.claude-sonnet-5",
         "in.anthropic.claude-sonnet-5",
-        "au.anthropic.claude-sonnet-5",
-        "global.anthropic.claude-sonnet-5"
+        "us.anthropic.claude-sonnet-5",
+        "anthropic.claude-sonnet-5",
+        "au.anthropic.claude-sonnet-5"
       ],
       "context_length": 1000000,
       "facts": {
@@ -3214,10 +3285,10 @@
       "display_name": "Claude Sonnet 5.5",
       "aliases": [
         "anthropic-claude-sonnet-5.5",
-        "us.anthropic.claude-sonnet-5-5",
         "global.anthropic.claude-sonnet-5-5",
-        "eu.anthropic.claude-sonnet-5-5",
-        "au.anthropic.claude-sonnet-5-5"
+        "us.anthropic.claude-sonnet-5-5",
+        "au.anthropic.claude-sonnet-5-5",
+        "eu.anthropic.claude-sonnet-5-5"
       ],
       "context_length": 1000000,
       "facts": {
@@ -4472,7 +4543,11 @@
           "480p",
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 0,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true
       },
       "price": {
         "currency": "CNY",
@@ -4549,7 +4624,14 @@
           "720p",
           "1080p",
           "4k"
-        ]
+        ],
+        "max_reference_images": 9,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": true,
+        "max_reference_audio_count": 3,
+        "max_reference_audio_total_seconds": 15.0
       },
       "price": {
         "currency": "CNY",
@@ -4652,7 +4734,14 @@
         "resolutions": [
           "480p",
           "720p"
-        ]
+        ],
+        "max_reference_images": 9,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": true,
+        "max_reference_audio_count": 3,
+        "max_reference_audio_total_seconds": 15.0
       },
       "price": {
         "currency": "CNY",
@@ -4727,7 +4816,14 @@
         "resolutions": [
           "480p",
           "720p"
-        ]
+        ],
+        "max_reference_images": 9,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": true,
+        "max_reference_audio_count": 3,
+        "max_reference_audio_total_seconds": 15.0
       },
       "price": {
         "currency": "CNY",
@@ -4818,7 +4914,14 @@
           "480p",
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 30,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": true,
+        "max_reference_audio_count": 10,
+        "max_reference_audio_total_seconds": 30.0
       },
       "price": {
         "currency": "CNY",
@@ -4891,7 +4994,8 @@
       ],
       "facts": {
         "text_to_image": true,
-        "image_to_image": true
+        "image_to_image": true,
+        "max_reference_images": 14
       },
       "price": {
         "currency": "CNY",
@@ -4919,7 +5023,8 @@
       ],
       "facts": {
         "text_to_image": true,
-        "image_to_image": true
+        "image_to_image": true,
+        "max_reference_images": 14
       },
       "price": {
         "currency": "CNY",
@@ -4948,7 +5053,8 @@
       ],
       "facts": {
         "text_to_image": true,
-        "image_to_image": true
+        "image_to_image": true,
+        "max_reference_images": 14
       },
       "price": {
         "currency": "CNY",
@@ -4973,8 +5079,8 @@
       "display_name": "DeepSeek V4 Flash",
       "aliases": [
         "deepseek-flash",
-        "deep-deepseek-v4-flash",
-        "alicloud-deepseek-v4-flash"
+        "alicloud-deepseek-v4-flash",
+        "deep-deepseek-v4-flash"
       ],
       "facts": {
         "max_output_tokens": 393216
@@ -5422,7 +5528,8 @@
           "1K",
           "2K",
           "4K"
-        ]
+        ],
+        "max_reference_images": 14
       },
       "price": {
         "currency": "USD",
@@ -5474,7 +5581,8 @@
           "1K",
           "2K",
           "4K"
-        ]
+        ],
+        "max_reference_images": 14
       },
       "price": {
         "currency": "USD",
@@ -6420,7 +6528,12 @@
           "with_reference_images": [
             8
           ]
-        }
+        },
+        "max_reference_images": 3,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": false
       },
       "price": {
         "currency": "USD",
@@ -6497,7 +6610,12 @@
           "with_reference_images": [
             8
           ]
-        }
+        },
+        "max_reference_images": 3,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": false
       },
       "price": {
         "currency": "USD",
@@ -6588,7 +6706,12 @@
           "with_reference_images": [
             8
           ]
-        }
+        },
+        "max_reference_images": 3,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": false
       },
       "price": {
         "currency": "USD",
@@ -6679,7 +6802,12 @@
           "with_reference_images": [
             8
           ]
-        }
+        },
+        "max_reference_images": 3,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": false
       },
       "price": {
         "currency": "USD",
@@ -6766,7 +6894,12 @@
           "with_reference_images": [
             8
           ]
-        }
+        },
+        "max_reference_images": 0,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": false
       },
       "price": {
         "currency": "USD",
@@ -6826,7 +6959,8 @@
         "resolutions": [
           "1K",
           "2K"
-        ]
+        ],
+        "max_reference_images": 10
       },
       "price": {
         "currency": "CNY",
@@ -6857,7 +6991,12 @@
         "resolutions": [
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 0,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -6901,7 +7040,11 @@
         "resolutions": [
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 0,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true
       },
       "price": {
         "currency": "CNY",
@@ -6968,7 +7111,12 @@
           "720p",
           "1080p",
           "4k"
-        ]
+        ],
+        "max_reference_images": 0,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -7035,7 +7183,8 @@
           "1K",
           "2K",
           "4K"
-        ]
+        ],
+        "max_reference_images": 10
       },
       "price": {
         "currency": "CNY",
@@ -7097,7 +7246,11 @@
           "720p",
           "1080p",
           "4k"
-        ]
+        ],
+        "max_reference_images": 7,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true
       },
       "price": {
         "currency": "CNY",
@@ -7187,7 +7340,12 @@
         "resolutions": [
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 7,
+        "text_to_video": false,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -7259,7 +7417,14 @@
         "resolutions": [
           "768p",
           "2k"
-        ]
+        ],
+        "max_reference_images": 9,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": true,
+        "max_reference_audio_count": 3,
+        "max_reference_audio_total_seconds": 15.0
       },
       "price": {
         "currency": "CNY",
@@ -7310,7 +7475,12 @@
               6
             ]
           }
-        }
+        },
+        "max_reference_images": 0,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": false,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -7372,7 +7542,12 @@
               6
             ]
           }
-        }
+        },
+        "max_reference_images": 0,
+        "text_to_video": false,
+        "first_frame": true,
+        "last_frame": false,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -7933,7 +8108,12 @@
         ],
         "resolutions": [
           "768p"
-        ]
+        ],
+        "max_reference_images": 1,
+        "text_to_video": false,
+        "first_frame": false,
+        "last_frame": false,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -8188,8 +8368,8 @@
       "aliases": [
         "morph-kimik3",
         "umans-kimi-k3",
-        "us.moonshotai.kimi-k3",
-        "global.moonshotai.kimi-k3"
+        "global.moonshotai.kimi-k3",
+        "us.moonshotai.kimi-k3"
       ],
       "context_length": 1048576,
       "facts": {
@@ -8763,9 +8943,9 @@
       "media_type": "text",
       "display_name": "GPT-5 Mini",
       "aliases": [
+        "duo-chat-gpt-5-mini",
         "databricks-gpt-5-mini",
-        "openai-gpt-5-mini",
-        "duo-chat-gpt-5-mini"
+        "openai-gpt-5-mini"
       ],
       "context_length": 400000,
       "facts": {
@@ -8913,9 +9093,9 @@
       "media_type": "text",
       "display_name": "GPT-5.1",
       "aliases": [
+        "duo-chat-gpt-5-1",
         "databricks-gpt-5-1",
-        "openai-gpt-5.1",
-        "duo-chat-gpt-5-1"
+        "openai-gpt-5.1"
       ],
       "context_length": 400000,
       "facts": {
@@ -8965,10 +9145,10 @@
       "media_type": "text",
       "display_name": "GPT-5.2",
       "aliases": [
+        "duo-chat-gpt-5-2",
         "databricks-gpt-5-2",
-        "openai-gpt-52",
         "openai-gpt-5.2",
-        "duo-chat-gpt-5-2"
+        "openai-gpt-52"
       ],
       "context_length": 400000,
       "facts": {
@@ -9068,9 +9248,9 @@
       "media_type": "text",
       "display_name": "GPT-5.3-Codex",
       "aliases": [
+        "duo-chat-gpt-5-3-codex",
         "openai-gpt-53-codex",
-        "openai-gpt-5.3-codex",
-        "duo-chat-gpt-5-3-codex"
+        "openai-gpt-5.3-codex"
       ],
       "facts": {
         "image_input": true,
@@ -9205,10 +9385,10 @@
       "media_type": "text",
       "display_name": "GPT-5.4",
       "aliases": [
+        "duo-chat-gpt-5-4",
         "databricks-gpt-5-4",
-        "openai-gpt-54",
         "openai-gpt-5.4",
-        "duo-chat-gpt-5-4"
+        "openai-gpt-54"
       ],
       "facts": {
         "image_input": true,
@@ -9368,10 +9548,10 @@
       "media_type": "text",
       "display_name": "GPT-5.4 Mini",
       "aliases": [
+        "duo-chat-gpt-5-4-mini",
         "databricks-gpt-5-4-mini",
         "openai-gpt-54-mini",
-        "openai-gpt-5.4-mini",
-        "duo-chat-gpt-5-4-mini"
+        "openai-gpt-5.4-mini"
       ],
       "facts": {
         "image_input": true,
@@ -9477,9 +9657,9 @@
       "media_type": "text",
       "display_name": "GPT-5.4 Nano",
       "aliases": [
+        "duo-chat-gpt-5-4-nano",
         "databricks-gpt-5-4-nano",
-        "openai-gpt-5.4-nano",
-        "duo-chat-gpt-5-4-nano"
+        "openai-gpt-5.4-nano"
       ],
       "facts": {
         "image_input": true,
@@ -9648,11 +9828,11 @@
       "media_type": "text",
       "display_name": "GPT-5.5",
       "aliases": [
+        "duo-chat-gpt-5-5",
         "databricks-gpt-5-5",
-        "openai-gpt-55",
         "openai-gpt-5.5",
-        "xpersona-gpt-5.5",
-        "duo-chat-gpt-5-5"
+        "openai-gpt-55",
+        "xpersona-gpt-5.5"
       ],
       "facts": {
         "image_input": true,
@@ -10027,13 +10207,13 @@
       "media_type": "text",
       "display_name": "GPT-5.6 Luna",
       "aliases": [
+        "duo-chat-gpt-5-6-luna",
         "databricks-gpt-5-6-luna",
-        "openai-gpt-56-luna",
         "openai-gpt-5.6-luna",
-        "global.openai.gpt-5.6-luna",
-        "in.openai.gpt-5.6-luna",
+        "openai-gpt-56-luna",
         "us.openai.gpt-5.6-luna",
-        "duo-chat-gpt-5-6-luna"
+        "global.openai.gpt-5.6-luna",
+        "in.openai.gpt-5.6-luna"
       ],
       "context_length": 1050000,
       "facts": {
@@ -10133,12 +10313,12 @@
       "media_type": "text",
       "display_name": "GPT-5.6 Sol",
       "aliases": [
+        "duo-chat-gpt-5-6-sol",
         "databricks-gpt-5-6-sol",
-        "openai-gpt-56-sol",
         "openai-gpt-5.6-sol",
+        "openai-gpt-56-sol",
         "global.openai.gpt-5.6-sol",
-        "us.openai.gpt-5.6-sol",
-        "duo-chat-gpt-5-6-sol"
+        "us.openai.gpt-5.6-sol"
       ],
       "context_length": 1050000,
       "facts": {
@@ -10238,13 +10418,13 @@
       "media_type": "text",
       "display_name": "GPT-5.6 Terra",
       "aliases": [
+        "duo-chat-gpt-5-6-terra",
         "databricks-gpt-5-6-terra",
-        "openai-gpt-56-terra",
         "openai-gpt-5.6-terra",
+        "openai-gpt-56-terra",
         "us.openai.gpt-5.6-terra",
         "in.openai.gpt-5.6-terra",
-        "global.openai.gpt-5.6-terra",
-        "duo-chat-gpt-5-6-terra"
+        "global.openai.gpt-5.6-terra"
       ],
       "context_length": 1050000,
       "facts": {
@@ -10344,10 +10524,10 @@
       "media_type": "text",
       "display_name": "GPT-6 Astra",
       "aliases": [
+        "duo-chat-gpt-6-astra",
         "openai-gpt-6-astra",
         "us.openai.gpt-6-astra",
-        "global.openai.gpt-6-astra",
-        "duo-chat-gpt-6-astra"
+        "global.openai.gpt-6-astra"
       ],
       "context_length": 1050000,
       "facts": {
@@ -10447,10 +10627,10 @@
       "media_type": "text",
       "display_name": "GPT-6 Luna",
       "aliases": [
+        "duo-chat-gpt-6-luna",
         "openai-gpt-6-luna",
-        "us.openai.gpt-6-luna",
         "global.openai.gpt-6-luna",
-        "duo-chat-gpt-6-luna"
+        "us.openai.gpt-6-luna"
       ],
       "context_length": 1050000,
       "facts": {
@@ -10550,10 +10730,10 @@
       "media_type": "text",
       "display_name": "GPT-6 Sol",
       "aliases": [
+        "duo-chat-gpt-6-sol",
         "openai-gpt-6-sol",
-        "us.openai.gpt-6-sol",
         "global.openai.gpt-6-sol",
-        "duo-chat-gpt-6-sol"
+        "us.openai.gpt-6-sol"
       ],
       "context_length": 1050000,
       "facts": {
@@ -10653,11 +10833,11 @@
       "media_type": "text",
       "display_name": "GPT-6.1 Sol",
       "aliases": [
+        "duo-chat-gpt-6-1-sol",
         "openai-gpt-61-sol",
         "openai-gpt-6-1-sol",
         "global.openai.gpt-6.1-sol",
-        "us.openai.gpt-6.1-sol",
-        "duo-chat-gpt-6-1-sol"
+        "us.openai.gpt-6.1-sol"
       ],
       "context_length": 1050000,
       "facts": {
@@ -10759,8 +10939,8 @@
       "aliases": [
         "openai-gpt-61-terra",
         "openai-gpt-6.1-terra",
-        "global.openai.gpt-6.1-terra",
-        "us.openai.gpt-6.1-terra"
+        "us.openai.gpt-6.1-terra",
+        "global.openai.gpt-6.1-terra"
       ],
       "context_length": 1050000,
       "facts": {
@@ -11020,7 +11200,12 @@
           "512px",
           "1K",
           "2K"
-        ]
+        ],
+        "output_token_bases": {
+          "low": 16,
+          "medium": 48,
+          "high": 96
+        }
       },
       "price": {
         "currency": "USD",
@@ -11100,7 +11285,14 @@
           "512px",
           "1K",
           "2K"
-        ]
+        ],
+        "output_token_bases": {
+          "low": 16,
+          "medium": 24,
+          "high": 48,
+          "xhigh": 64,
+          "max": 96
+        }
       },
       "price": {
         "currency": "USD",
@@ -11180,7 +11372,14 @@
           "512px",
           "1K",
           "2K"
-        ]
+        ],
+        "output_token_bases": {
+          "low": 16,
+          "medium": 24,
+          "high": 48,
+          "xhigh": 64,
+          "max": 96
+        }
       },
       "price": {
         "currency": "USD",
@@ -11557,7 +11756,10 @@
         ],
         "resolutions": [
           "720p"
-        ]
+        ],
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": false
       },
       "price": {
         "currency": "USD",
@@ -11597,7 +11799,10 @@
         "resolutions": [
           "720p",
           "1080p"
-        ]
+        ],
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": false
       },
       "price": {
         "currency": "USD",
@@ -11661,7 +11866,11 @@
           "with_reference_images": [
             4
           ]
-        }
+        },
+        "max_reference_images": 7,
+        "text_to_video": false,
+        "first_frame": true,
+        "last_frame": true
       },
       "price": {
         "currency": "CNY",
@@ -11858,7 +12067,12 @@
             15,
             16
           ]
-        }
+        },
+        "max_reference_images": 7,
+        "text_to_video": false,
+        "first_frame": false,
+        "last_frame": false,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -11923,7 +12137,12 @@
           "540p",
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 0,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -12006,7 +12225,12 @@
             15,
             16
           ]
-        }
+        },
+        "max_reference_images": 7,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": false
       },
       "price": {
         "currency": "CNY",
@@ -12615,8 +12839,8 @@
       "display_name": "Grok 4.6",
       "aliases": [
         "xai.grok-4.6",
-        "global.xai.grok-4.6",
-        "us.xai.grok-4.6"
+        "us.xai.grok-4.6",
+        "global.xai.grok-4.6"
       ],
       "context_length": 500000,
       "facts": {
@@ -12943,7 +13167,12 @@
         "resolutions": [
           "480p",
           "720p"
-        ]
+        ],
+        "max_reference_images": 7,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": false,
+        "reference_audio": false
       },
       "price": {
         "currency": "USD",
@@ -13001,7 +13230,11 @@
           "480p",
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 14,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true
       },
       "price": {
         "currency": "USD",
@@ -13065,7 +13298,12 @@
           "480p",
           "720p",
           "1080p"
-        ]
+        ],
+        "max_reference_images": 0,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": false,
+        "reference_audio": false
       },
       "price": {
         "currency": "USD",
@@ -13984,8 +14222,8 @@
         "umans-glm-5.3",
         "z-ai-glm-5-3",
         "glm5.3",
-        "us.zai.glm-5.3",
-        "global.zai.glm-5.3"
+        "global.zai.glm-5.3",
+        "us.zai.glm-5.3"
       ],
       "context_length": 1000000,
       "facts": {
@@ -14538,20 +14776,20 @@
           "entry": "zhipu/glm-5.3"
         },
         {
-          "api_model_name": "deepseek-v4-pro",
-          "entry": "deepseek/deepseek-v4-pro"
-        },
-        {
-          "api_model_name": "kimi-k3",
-          "entry": "moonshot/kimi-k3"
-        },
-        {
           "api_model_name": "glm-5.3-flash",
           "entry": "zhipu/glm-5.3-flash"
         },
         {
           "api_model_name": "deepseek-v4-flash",
           "entry": "deepseek/deepseek-v4-flash"
+        },
+        {
+          "api_model_name": "deepseek-v4-pro",
+          "entry": "deepseek/deepseek-v4-pro"
+        },
+        {
+          "api_model_name": "kimi-k3",
+          "entry": "moonshot/kimi-k3"
         }
       ],
       "defaults": {
@@ -14860,24 +15098,24 @@
           "entry": "moonshot/kimi-k2.6"
         },
         {
-          "api_model_name": "glm-5.1",
-          "entry": "zhipu/glm-5.1"
+          "api_model_name": "glm-5",
+          "entry": "zhipu/glm-5"
         },
         {
           "api_model_name": "deepseek-v4-pro",
           "entry": "deepseek/deepseek-v4-pro"
         },
         {
-          "api_model_name": "kimi-k3",
-          "entry": "moonshot/kimi-k3"
-        },
-        {
-          "api_model_name": "glm-5",
-          "entry": "zhipu/glm-5"
+          "api_model_name": "glm-5.1",
+          "entry": "zhipu/glm-5.1"
         },
         {
           "api_model_name": "glm-5.2",
           "entry": "zhipu/glm-5.2"
+        },
+        {
+          "api_model_name": "kimi-k3",
+          "entry": "moonshot/kimi-k3"
         }
       ],
       "defaults": {
