@@ -110,11 +110,13 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 0
 
     rules, entries, providers = load_human_data(args.data)
-    result = build_catalog([read_json(args.basellm), read_json(args.models_dev)], rules, entries, providers)
+    now = datetime.now(UTC)
+    upstreams = [read_json(args.basellm), read_json(args.models_dev)]
+    result = build_catalog(upstreams, rules, entries, providers, today=now.date())
     for warning in result.warnings:
         print(f"warning: {warning}", file=sys.stderr)
     try:
-        changed = publish(args.out, result.catalog, datetime.now(UTC), write=not args.check_only)
+        changed = publish(args.out, result.catalog, now, write=not args.check_only)
     except PublishError as exc:
         print(exc, file=sys.stderr)
         return 1

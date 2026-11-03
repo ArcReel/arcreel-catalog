@@ -10,6 +10,8 @@
   ``canonical_model_id`` 指向该模型、形如「前缀 + 原名」的命名。生成的别名与其他条目冲突时丢弃。
 - 内置供应商清单 = 人工清单 + 按「上游供应商 → 内置供应商」映射、过滤后自动生成的文本模型；
   同一 API 模型名以人工清单为准。
+- 生命周期按构建当天（UTC）落实：关停日期已到的条目置真 ``discontinued``；关停满保留期的条目与引用它的
+  清单项不再发布，上游的同名模型也不再列入。上游的 ``deprecated`` 标记不影响条目与清单。
 """
 
 from __future__ import annotations
@@ -18,6 +20,7 @@ import re
 from collections import defaultdict
 from collections.abc import Iterable, Mapping
 from dataclasses import dataclass, field
+from datetime import date, timedelta
 
 from arcreel_catalog_core import normalize_model_name
 
@@ -32,6 +35,9 @@ COST_METERS = {
 # context_over_200k 是上游由 tiers 派生的旧式副本；reasoning 只在与 output 同价时可以表达。
 _KNOWN_COST_KEYS = {*COST_METERS, "currency", "tiers", "context_over_200k", "reasoning"}
 
+ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
+# 退役模型关停后继续发布的天数：关停满这么多天，条目与清单项都不再发布
+RETENTION = timedelta(days=90)
 DATE_SUFFIX = re.compile(r"^(?P<base>.+)-(?:\d{4}-\d{2}-\d{2}|\d{8}|\d{6}|\d{4})$")
 
 
@@ -113,6 +119,16 @@ def convert_price(cost: Mapping, source: Mapping) -> tuple[dict | None, str | No
     return {"currency": currency, "meters": meters}, None
 
 
+def parse_date(value: object) -> date | None:
+    """``YYYY-MM-DD`` 日期；其他形状（如只到月份）返回 None。"""
+    if not isinstance(value, str) or not ISO_DATE.fullmatch(value):
+        return None
+    try:
+        return date.fromisoformat(value)
+    except ValueError:
+        return None
+
+
 def convert_model(source: Mapping, model_id: str, model: Mapping) -> tuple[dict, str | None]:
     """上游文本模型 → 模型条目。第二项是价格无法表达的原因。"""
     limit = model.get("limit", {})
@@ -129,10 +145,10 @@ def convert_model(source: Mapping, model_id: str, model: Mapping) -> tuple[dict,
         # 上游给别名型 ID（如 claude-opus-4-5）的显示名带「(latest)」，不是模型名的一部分
         "display_name": re.sub(r"\s*\(latest\)$", "", model.get("name") or model_id),
     }
-    if model.get("status") == "deprecated":
-        entry["discontinued"] = True
     if isinstance(limit.get("context"), int) and limit["context"] > 0:
         entry["context_length"] = limit["context"]
+    if parse_date(model.get("release_date")):
+        entry["release_date"] = model["release_date"]
     entry["facts"] = facts
     problem = None
     if model.get("cost"):
@@ -146,8 +162,14 @@ def _same_model(a: Mapping, b: Mapping) -> bool:
     return all(a.get(key) == b.get(key) for key in ("facts", "price", "context_length"))
 
 
-def text_candidates(upstreams: list[Mapping], source: Mapping, warnings: list[str]) -> list[_Candidate]:
-    """一个模型厂商来源的自动条目；与主名同价同能力的日期快照并入主名。"""
+def text_candidates(
+    upstreams: list[Mapping], source: Mapping, human_owners: Mapping[str, int], warnings: list[str]
+) -> list[_Candidate]:
+    """一个模型厂商来源的自动条目；与主名同价同能力的日期快照并入主名。
+
+    ``human_owners`` 是人工文本条目的名字与模型别名（归一化）→ 条目下标。快照被人工条目认领、而主名不归
+    同一个条目时，它是拆出的旧型号，不并入主名。
+    """
     provider = source["provider"]
     models = merged_models(upstreams, provider)
     if not models:
@@ -176,7 +198,12 @@ def text_candidates(upstreams: list[Mapping], source: Mapping, warnings: list[st
     for model_id in list(candidates):
         match = DATE_SUFFIX.match(model_id)
         base = candidates.get(match["base"]) if match else None
-        if base is not None and _same_model(base.entry, candidates[model_id].entry):
+        owner = human_owners.get(normalize_model_name(model_id))
+        if (
+            base is not None
+            and owner in (None, human_owners.get(normalize_model_name(match["base"])))
+            and _same_model(base.entry, candidates[model_id].entry)
+        ):
             folded = candidates.pop(model_id)
             base.dated.append(model_id)
             base.canonical |= folded.canonical
@@ -222,6 +249,11 @@ def compose_entries(
         covering = [owner for owner in owners if owner < human_count]
         if covering:
             owner = min(covering)
+            target = entries[owner]
+            same_name = _slot(target, target["name"]) == _slot(entry, entry["name"])
+            # 人工条目没写上线日期时，取同名自动条目的
+            if same_name and "release_date" in entry and "release_date" not in target:
+                entries[owner] = _ordered({**target, "release_date": entry["release_date"]})
         elif owners:
             warnings.append(f"{entry['maker']}/{entry['name']}: 与已有条目同名，跳过")
             continue
@@ -259,13 +291,52 @@ def compose_entries(
     return sorted(entries, key=lambda entry: (entry["maker"], entry["name"], entry["media_type"]))
 
 
-_FIELD_ORDER = ("maker", "name", "media_type", "display_name", "aliases", "discontinued", "context_length", "facts")
+_FIELD_ORDER = (
+    "maker",
+    "name",
+    "media_type",
+    "display_name",
+    "aliases",
+    "discontinued",
+    "context_length",
+    "release_date",
+    "shutdown_date",
+    "successor",
+    "facts",
+)
 
 
 def _ordered(entry: Mapping) -> dict:
     """字段按 ``arcreel_catalog_core.dump_entry`` 的顺序排列。"""
     head = {key: entry[key] for key in _FIELD_ORDER if key in entry}
     return {**head, **{key: value for key, value in entry.items() if key not in head}}
+
+
+def apply_lifecycle(entries: list[dict], today: date) -> tuple[list[dict], list[dict]]:
+    """按关停日期落实生命周期，返回 ``(继续发布的条目, 过了保留期的条目)``。
+
+    关停日期不晚于 ``today`` 的置真 ``discontinued``；关停满 ``RETENTION`` 的不再发布，人工条目也一样。
+    没有关停日期的条目原样发布；关停日期格式不对的也原样发布，由校验器拒绝。
+    """
+    kept: list[dict] = []
+    expired: list[dict] = []
+    for entry in entries:
+        shutdown = parse_date(entry.get("shutdown_date"))
+        if shutdown is None or shutdown > today:
+            kept.append(entry)
+        elif today - shutdown >= RETENTION:
+            expired.append(entry)
+        else:
+            kept.append(entry if entry.get("discontinued") else _ordered({**entry, "discontinued": True}))
+    return kept, expired
+
+
+def _refers_to(model: Mapping, entry: Mapping) -> bool:
+    """清单项是否引用这个条目，与 ``arcreel_catalog_core`` 的引用解析一致。"""
+    return model["entry"] == f"{entry['maker']}/{entry['name']}" and model.get("media_type") in (
+        None,
+        entry["media_type"],
+    )
 
 
 def _text_lookup(entries: list[dict]) -> dict[str, dict]:
@@ -281,16 +352,26 @@ def compose_listings(
     providers: Mapping[str, Mapping],
     upstreams: list[Mapping],
     entries: list[dict],
+    expired: list[dict],
     rules: Mapping,
     folded: set[tuple[str, str]],
     warnings: list[str],
 ) -> dict[str, dict]:
+    """``expired`` 是过了保留期、不再发布的条目：引用它们的清单项一并去掉，上游的同名模型也不再列入。"""
     lookup = _text_lookup(entries)
+    # 过了保留期、又没有被继续发布的条目占用的名字：上游的同名模型不再列入
+    expired_names = set(_text_lookup(expired)) - set(lookup)
     patterns = [re.compile(pattern) for pattern in rules.get("listing_exclude", [])]
     min_release = rules["listing_min_release_date"]
     listings: dict[str, dict] = {}
     for provider_id, config in providers.items():
-        models = [dict(model) for model in config.get("models", [])]
+        # 人工清单项只引用过了保留期的条目时去掉
+        models = [
+            dict(model)
+            for model in config.get("models", [])
+            if any(_refers_to(model, entry) for entry in entries)
+            or not any(_refers_to(model, entry) for entry in expired)
+        ]
         taken = {model["api_model_name"] for model in models}
         excludes = patterns + [re.compile(pattern) for pattern in config.get("exclude", [])]
         for upstream in config.get("upstream", []):
@@ -299,16 +380,19 @@ def compose_listings(
                     model_id in taken
                     or (upstream, model_id) in folded
                     or not is_text_model(model_id, model)
-                    or model.get("status") == "deprecated"
                     or (model.get("release_date") or "") < min_release
                     or any(pattern.search(model_id) for pattern in excludes)
                 ):
                     continue
-                entry = lookup.get(normalize_model_name(model_id))
+                normalized = normalize_model_name(model_id)
+                entry = lookup.get(normalized)
+                if entry is None and normalized in expired_names:
+                    continue
                 if entry is None:
                     warnings.append(f"{provider_id}: {upstream}/{model_id} 没有对应的条目，不列入清单")
                     continue
-                if entry.get("discontinued"):
+                # 有关停日期的已下线模型在保留期内照常列入；没有关停日期的历史下线条目不列入
+                if entry.get("discontinued") and not entry.get("shutdown_date"):
                     continue
                 taken.add(model_id)
                 models.append({"api_model_name": model_id, "entry": f"{entry['maker']}/{entry['name']}"})
@@ -321,15 +405,24 @@ def build_catalog(
     rules: Mapping,
     human_entries: list[dict],
     providers: Mapping[str, Mapping],
+    *,
+    today: date,
 ) -> BuildResult:
-    """``upstreams`` 按优先级排列（basellm 在前、models.dev 在后）。"""
+    """``upstreams`` 按优先级排列（basellm 在前、models.dev 在后）；``today`` 是构建当天（UTC）。"""
     warnings: list[str] = []
     candidates: list[_Candidate] = []
     folded: set[tuple[str, str]] = set()
+    human_owners: dict[str, int] = {}
+    for index, entry in enumerate(human_entries):
+        if entry["media_type"] == "text":
+            for name in [entry["name"], *entry.get("aliases", [])]:
+                human_owners.setdefault(normalize_model_name(name), index)
     for source in rules["makers"]:
-        found = text_candidates(upstreams, source, warnings)
+        found = text_candidates(upstreams, source, human_owners, warnings)
         candidates += found
         folded |= {(source["provider"], dated) for candidate in found for dated in candidate.dated}
-    entries = compose_entries(human_entries, candidates, relay_names(upstreams), warnings)
-    listings = compose_listings(providers, upstreams, entries, rules, folded, warnings)
+    entries, expired = apply_lifecycle(
+        compose_entries(human_entries, candidates, relay_names(upstreams), warnings), today
+    )
+    listings = compose_listings(providers, upstreams, entries, expired, rules, folded, warnings)
     return BuildResult({"entries": entries, "builtin_providers": listings}, warnings)

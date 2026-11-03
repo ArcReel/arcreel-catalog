@@ -89,5 +89,19 @@
         }
       ]
     }
+  },
+  {
+    "maker": "deepseek",
+    "name": "deepseek-v4-flash-vision-exp",
+    "media_type": "text",
+    "display_name": "DeepSeek V4 Flash Vision Exp",
+    "discontinued": true,
+    "context_length": 1048576,
+    "release_date": "2026-10-17",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 393216
+    }
   }
 ]

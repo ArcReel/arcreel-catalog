@@ -7,6 +7,8 @@
     "aliases": [
       "doubao-seed-2-0-pro-260215"
     ],
+    "shutdown_date": "2026-11-24",
+    "successor": "bytedance/doubao-seed-2.1-lite",
     "facts": {
       "image_input": true,
       "max_output_tokens": 131072
@@ -148,9 +150,103 @@
     "name": "doubao-seed-2.0-lite",
     "media_type": "text",
     "display_name": "豆包 Seed 2.0 Lite",
-    "aliases": [
-      "doubao-seed-2-0-lite-260215"
-    ],
+    "shutdown_date": "2026-10-09",
+    "successor": "bytedance/doubao-seed-2.1-lite",
+    "facts": {
+      "image_input": true,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.6
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 0.9
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 1.8
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.12
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 0.18
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 0.36
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 3.6
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 5.4
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 10.8
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seed-2-0-lite-260215",
+    "media_type": "text",
+    "display_name": "豆包 Seed 2.0 Lite 260215",
+    "shutdown_date": "2026-10-22",
+    "successor": "bytedance/doubao-seed-2.1-lite",
     "facts": {
       "image_input": true,
       "max_output_tokens": 131072
@@ -245,9 +341,103 @@
     "media_type": "text",
     "display_name": "豆包 Seed 2.0 Mini",
     "aliases": [
-      "doubao-seed-2-0-mini-260215",
       "doubao-seed-2-0-mini-260428"
     ],
+    "facts": {
+      "image_input": true,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 0.4
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 0.8
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.04
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 0.08
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 0.16
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 2.0
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 4.0
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 8.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seed-2-0-mini-260215",
+    "media_type": "text",
+    "display_name": "豆包 Seed 2.0 Mini 260215",
+    "shutdown_date": "2026-10-22",
+    "successor": "bytedance/doubao-seed-2.0-mini",
     "facts": {
       "image_input": true,
       "max_output_tokens": 131072
@@ -345,6 +535,8 @@
       "doubao-seed-1-8-251228"
     ],
     "discontinued": true,
+    "shutdown_date": "2026-09-21",
+    "successor": "bytedance/doubao-seed-2-0-lite-260428",
     "facts": {
       "image_input": true,
       "structured_output": true,
@@ -370,6 +562,300 @@
             {
               "when": {},
               "price": 2.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seed-1-6-251015",
+    "media_type": "text",
+    "display_name": "Seed 1.6",
+    "context_length": 256000,
+    "release_date": "2025-10-15",
+    "shutdown_date": "2026-09-21",
+    "successor": "bytedance/doubao-seed-2-0-lite-260428",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 64000
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.8
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 1.2
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 2.4
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.16
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 1.2
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 2.4
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 8.0
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 16.0
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 24.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seed-1-6-flash-250828",
+    "media_type": "text",
+    "display_name": "Seed 1.6 Flash",
+    "context_length": 256000,
+    "release_date": "2025-08-28",
+    "shutdown_date": "2026-09-21",
+    "successor": "bytedance/doubao-seed-2.0-mini",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 32000
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.15
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 0.3
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 0.6
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.03
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 0.3
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 0.6
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 1.5
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 3.0
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 6.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seed-1-6-vision-250815",
+    "media_type": "text",
+    "display_name": "Seed 1.6 Vision",
+    "context_length": 256000,
+    "release_date": "2025-08-15",
+    "shutdown_date": "2026-09-21",
+    "successor": "bytedance/doubao-seed-2-0-lite-260428",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 32000
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.8
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 1.2
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 2.4
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.16
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 1.2
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 2.4
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 8.0
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 16.0
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 24.0
             }
           ]
         }
@@ -425,6 +911,8 @@
       "doubao-seedream-5-0-lite-260128",
       "doubao-seedream-5-0-260128"
     ],
+    "shutdown_date": "2026-11-24",
+    "successor": "bytedance/doubao-seedream-5-0-pro",
     "facts": {
       "text_to_image": true,
       "image_to_image": true,
@@ -454,6 +942,8 @@
     "aliases": [
       "doubao-seedream-4-5-251128"
     ],
+    "shutdown_date": "2026-11-24",
+    "successor": "bytedance/doubao-seedream-5-0-pro",
     "facts": {
       "text_to_image": true,
       "image_to_image": true,
@@ -483,6 +973,7 @@
     "aliases": [
       "doubao-seedream-4-0-250828"
     ],
+    "shutdown_date": "2026-11-24",
     "facts": {
       "text_to_image": true,
       "image_to_image": true,
@@ -513,6 +1004,8 @@
       "doubao-seedance-1-5-pro-251215"
     ],
     "discontinued": true,
+    "shutdown_date": "2026-09-21",
+    "successor": "bytedance/doubao-seedance-2.0-mini",
     "facts": {
       "durations": [
         4,
@@ -975,6 +1468,7 @@
     "name": "doubao-seed-2.0-code",
     "media_type": "text",
     "display_name": "豆包 Seed 2.0 Code",
+    "shutdown_date": "2026-08-08",
     "facts": {
       "max_output_tokens": 131072
     },
@@ -1030,6 +1524,104 @@
                 "context_tier": 128000
               },
               "price": 1.92
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 16.0
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 24.0
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 48.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seed-2-0-code-preview-260215",
+    "media_type": "text",
+    "display_name": "Seed 2.0 Code",
+    "context_length": 262144,
+    "release_date": "2026-02-14",
+    "shutdown_date": "2026-11-24",
+    "successor": "bytedance/doubao-seed-evolving",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 3.2
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 4.8
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 9.6
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.64
+            },
+            {
+              "when": {
+                "context_tier": 32000
+              },
+              "price": 4.8
+            },
+            {
+              "when": {
+                "context_tier": 128000
+              },
+              "price": 9.6
             }
           ]
         },

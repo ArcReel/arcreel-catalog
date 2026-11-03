@@ -233,6 +233,8 @@
     "media_type": "text",
     "display_name": "Grok 4.1 Fast Reasoning",
     "discontinued": true,
+    "shutdown_date": "2026-05-15",
+    "successor": "xai/grok-4.3",
     "facts": {
       "image_input": true,
       "structured_output": true,
@@ -310,6 +312,8 @@
     "media_type": "text",
     "display_name": "Grok 4.1 Fast (Non-Reasoning)",
     "discontinued": true,
+    "shutdown_date": "2026-05-15",
+    "successor": "xai/grok-4.3",
     "facts": {
       "image_input": true,
       "structured_output": true,
