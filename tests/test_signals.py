@@ -61,7 +61,7 @@ def signals(*, upstream: dict | None = None, human: list | None = None, litellm:
     return grouped
 
 
-def test_litellm_price_on_native_channel_missing_from_catalog_is_reported() -> None:
+def test_litellm_price_on_native_channel_differing_from_entry_rows_is_reported() -> None:
     litellm = {
         "gemini/veo-x": {"litellm_provider": "gemini", "output_cost_per_second": 0.4, "output_cost_per_second_4k": 0.6},
         "vertex_ai/veo-x": {"litellm_provider": "vertex_ai-video-models", "output_cost_per_second_1080p": 0.5},
@@ -78,14 +78,21 @@ def test_litellm_price_on_native_channel_missing_from_catalog_is_reported() -> N
     assert "0.5" in prices[0].detail
 
 
-def test_litellm_price_skips_retired_and_domestic_entries() -> None:
-    litellm = {"gemini/veo-x": {"litellm_provider": "gemini", "output_cost_per_second": 1.0}}
+def test_litellm_price_skips_retired_text_and_non_usd_entries_and_other_makers_keys() -> None:
+    litellm = {
+        "gemini/veo-x": {"litellm_provider": "gemini", "output_cost_per_second": 1.0},
+        "gemini/veo-y": {"litellm_provider": "gemini", "output_cost_per_second": 1.0},
+        "gemini/gpt-t": {"litellm_provider": "gemini", "input_cost_per_token": 1.0},
+        "volcengine/seed-x": {"litellm_provider": "volcengine", "output_cost_per_second": 1.0},
+        "dashscope/veo-z": {"litellm_provider": "dashscope", "output_cost_per_second": 1.0},  # 其他厂商的同名模型
+    }
     human = [
         {**VEO, "discontinued": True},
         {**VEO, "name": "veo-y", "shutdown_date": "2026-10-01"},
-        {**VEO, "maker": "bytedance"},
+        {**VEO, "maker": "google", "name": "gpt-t", "media_type": "text"},
+        {**VEO, "maker": "bytedance", "name": "seed-x", "price": {**VEO["price"], "currency": "CNY"}},
+        {**VEO, "name": "veo-z"},
     ]
-    litellm["gemini/veo-y"] = {"litellm_provider": "gemini", "output_cost_per_second": 1.0}
 
     assert "litellm-price" not in signals(human=human, litellm=litellm)
 
@@ -136,13 +143,24 @@ def test_expired_human_entry_is_a_cleanup_candidate_only_when_upstream_dropped_t
     assert signals(upstream=upstream, human=human)["expired-cleanup"] == ["openai/gpt-gone"]
 
 
-def test_upcoming_shutdown_auto_successor_and_missing_release_date_are_reported() -> None:
-    upstream = {"gpt-auto": text_model("gpt-auto")}
+def test_shutdown_within_30_days_is_reported() -> None:
+    human = [text_entry("gpt-a", shutdown_date="2026-11-20"), text_entry("gpt-b", shutdown_date="2027-01-01")]
+
+    assert signals(human=human)["shutdown-soon"] == ["openai/gpt-a"]
+
+
+def test_successor_pointing_at_auto_entry_is_reported() -> None:
+    upstream = {"gpt-auto": text_model("gpt-auto"), "gpt-new": text_model("gpt-new")}
+    human = [
+        text_entry("gpt-old", successor="openai/gpt-auto"),
+        text_entry("gpt-new"),
+        text_entry("gpt-mid", successor="openai/gpt-new"),
+    ]
+
+    assert signals(upstream=upstream, human=human)["auto-successor"] == ["openai/gpt-old"]
+
+
+def test_human_entry_without_release_date_is_reported() -> None:
     undated = {key: value for key, value in VEO.items() if key != "release_date"}
-    human = [text_entry("gpt-old", shutdown_date="2026-11-20", successor="openai/gpt-auto"), undated]
 
-    found = signals(upstream=upstream, human=human)
-
-    assert found["shutdown-soon"] == ["openai/gpt-old"]
-    assert found["auto-successor"] == ["openai/gpt-old"]
-    assert found["missing-release-date"] == ["google/veo-x"]
+    assert signals(human=[VEO, undated | {"name": "veo-u"}])["missing-release-date"] == ["google/veo-u"]

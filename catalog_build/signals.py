@@ -30,8 +30,6 @@ KINDS = {
     "expired-cleanup": "过了保留期、上游也不再有同名模型的人工条目，可以从 data/ 删除",
 }
 SHUTDOWN_SOON = timedelta(days=30)
-# 只比价格的模型厂商：LiteLLM 原厂渠道与目录同为美元计价
-PRICE_MAKERS = ("google", "openai", "xai")
 # LiteLLM 原厂渠道 → 模型厂商；带后缀的 vertex_ai 渠道（vertex_ai-video-models 等）也归 google
 _NATIVE = {
     "openai": "openai",
@@ -92,21 +90,23 @@ def _price_meter(field: str) -> tuple[str, int] | None:
 
 
 def _litellm_prices(human: Iterable[Mapping], litellm: Mapping) -> Iterable[Signal]:
-    by_name: dict[str, list[tuple[str, Mapping]]] = {}
+    # LiteLLM 以美元计价，只与同一模型厂商、同为美元计价的条目比
+    by_name: dict[tuple[str, str], list[tuple[str, Mapping]]] = {}
     for key, item in litellm.items():
-        if _native_maker(item) is not None:
-            by_name.setdefault(key.rpartition("/")[2], []).append((key, item))
+        maker = _native_maker(item)
+        if maker is not None:
+            by_name.setdefault((maker, key.rpartition("/")[2]), []).append((key, item))
     for entry in human:
         if (
-            entry["maker"] not in PRICE_MAKERS
-            or entry["media_type"] == "text"
+            entry["media_type"] == "text"
             or entry.get("discontinued")
             or "price" not in entry
+            or entry["price"]["currency"] != "USD"
         ):
             continue
         prices = {meter["meter"]: [row["price"] for row in meter["rows"]] for meter in entry["price"]["meters"]}
         for name in _names(entry):
-            for key, item in by_name.get(name, []):
+            for key, item in by_name.get((entry["maker"], name), []):
                 for field, value in item.items():
                     spec = _price_meter(field)
                     if spec is None or spec[0] not in prices or not isinstance(value, int | float):
