@@ -695,6 +695,7 @@
     "name": "qwen-image-2.0",
     "media_type": "image",
     "display_name": "Qwen Image 2.0",
+    "release_date": "2026-03-03",
     "facts": {
       "text_to_image": true,
       "image_to_image": true,
@@ -758,10 +759,55 @@
   },
   {
     "maker": "alibaba",
+    "name": "qwen-image-3.0",
+    "media_type": "image",
+    "display_name": "Qwen Image 3.0",
+    "release_date": "2026-08-04",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "2048*2048",
+        "2688*1536",
+        "1536*2688",
+        "2368*1728",
+        "1728*2368"
+      ],
+      "max_reference_images": 3
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.18
+            }
+          ]
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.02
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
     "name": "qwen-image-edit-plus",
     "media_type": "image",
     "display_name": "Qwen Image Edit Plus",
     "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen-image-3.0",
     "facts": {
       "image_to_image": true,
       "resolutions": [
@@ -795,6 +841,7 @@
     "media_type": "image",
     "display_name": "Qwen Image Edit Max",
     "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen-image-3.0",
     "facts": {
       "image_to_image": true,
       "resolutions": [
@@ -827,6 +874,7 @@
     "name": "wan2.7-image",
     "media_type": "image",
     "display_name": "万相 2.7 图像",
+    "release_date": "2026-04-01",
     "facts": {
       "text_to_image": true,
       "image_to_image": true,
@@ -857,6 +905,7 @@
     "name": "wan2.7-image-pro",
     "media_type": "image",
     "display_name": "万相 2.7 图像 Pro",
+    "release_date": "2026-04-01",
     "facts": {
       "text_to_image": true,
       "image_to_image": true,
@@ -888,6 +937,7 @@
     "name": "happyhorse-1.1-i2v",
     "media_type": "video",
     "display_name": "HappyHorse 1.1 图生视频",
+    "release_date": "2026-06-16",
     "facts": {
       "durations": [
         3,
@@ -955,6 +1005,7 @@
     "name": "happyhorse-1.1-t2v",
     "media_type": "video",
     "display_name": "HappyHorse 1.1 文生视频",
+    "release_date": "2026-06-16",
     "facts": {
       "durations": [
         3,
@@ -1022,6 +1073,7 @@
     "name": "happyhorse-1.1-r2v",
     "media_type": "video",
     "display_name": "HappyHorse 1.1 参考生视频",
+    "release_date": "2026-06-16",
     "facts": {
       "durations": [
         3,
@@ -1089,6 +1141,7 @@
     "name": "happyhorse-1.0-i2v",
     "media_type": "video",
     "display_name": "HappyHorse 1.0 图生视频",
+    "release_date": "2026-04-22",
     "facts": {
       "durations": [
         3,
@@ -1149,6 +1202,7 @@
     "name": "happyhorse-1.0-t2v",
     "media_type": "video",
     "display_name": "HappyHorse 1.0 文生视频",
+    "release_date": "2026-04-21",
     "facts": {
       "durations": [
         3,
@@ -1209,6 +1263,7 @@
     "name": "happyhorse-1.0-r2v",
     "media_type": "video",
     "display_name": "HappyHorse 1.0 参考生视频",
+    "release_date": "2026-04-26",
     "facts": {
       "durations": [
         3,
@@ -1269,6 +1324,7 @@
     "name": "wan2.7-i2v",
     "media_type": "video",
     "display_name": "万相 2.7 图生视频",
+    "release_date": "2026-04-03",
     "facts": {
       "durations": [
         2,
@@ -1330,6 +1386,7 @@
     "name": "wan2.7-t2v",
     "media_type": "video",
     "display_name": "万相 2.7 文生视频",
+    "release_date": "2026-04-03",
     "facts": {
       "durations": [
         2,
@@ -1391,6 +1448,7 @@
     "name": "wan2.7-r2v",
     "media_type": "video",
     "display_name": "万相 2.7 参考生视频",
+    "release_date": "2026-04-03",
     "facts": {
       "durations": [
         2,
@@ -1453,6 +1511,7 @@
     "name": "wan3.0-video",
     "media_type": "video",
     "display_name": "万相 3.0 视频",
+    "release_date": "2026-08-06",
     "facts": {
       "durations": [
         2,
@@ -1535,6 +1594,92 @@
   },
   {
     "maker": "alibaba",
+    "name": "wan3.0-video-prime",
+    "media_type": "video",
+    "display_name": "万相 3.0 视频 Prime",
+    "release_date": "2026-08-20",
+    "facts": {
+      "durations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "resolutions": [
+        "480p",
+        "720p",
+        "1080p"
+      ],
+      "max_reference_images": 10,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": true,
+      "max_reference_audio_count": 5,
+      "max_reference_audio_total_seconds": 15.0
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "480p"
+              },
+              "price": 0.45
+            },
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.9
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 1.8
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
     "name": "qwen3-tts-flash",
     "media_type": "audio",
     "display_name": "Qwen3 TTS Flash",
@@ -1554,6 +1699,155 @@
           "cjk_double": true
         }
       ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3-vl-235b-a22b",
+    "media_type": "text",
+    "display_name": "Qwen3-VL 235B-A22B",
+    "context_length": 131072,
+    "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen3.7-plus",
+    "facts": {
+      "image_input": true,
+      "structured_output": false,
+      "max_output_tokens": 32768
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3-vl-30b-a3b",
+    "media_type": "text",
+    "display_name": "Qwen3-VL 30B-A3B",
+    "context_length": 131072,
+    "shutdown_date": "2026-10-10",
+    "successor": "alibaba/qwen3.7-plus",
+    "facts": {
+      "image_input": true,
+      "structured_output": false,
+      "max_output_tokens": 32768
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3.7-plus",
+    "media_type": "text",
+    "display_name": "Qwen3.7 Plus",
+    "context_length": 1000000,
+    "release_date": "2026-06-01",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 131072
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 2.0
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 6.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.4
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 1.2
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 8.0
+            },
+            {
+              "when": {
+                "context_tier": 256000
+              },
+              "price": 24.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3.5-plus",
+    "media_type": "text",
+    "display_name": "Qwen3.5 Plus",
+    "context_length": 1000000,
+    "release_date": "2026-02-16",
+    "shutdown_date": "2027-01-19",
+    "successor": "alibaba/qwen3.8-flash",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 65536
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3.5-397b-a17b",
+    "media_type": "text",
+    "display_name": "Qwen3.5 397B-A17B",
+    "context_length": 262144,
+    "release_date": "2026-02-16",
+    "shutdown_date": "2027-01-19",
+    "successor": "alibaba/qwen3.8-flash",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 65536
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3.8-flash",
+    "media_type": "text",
+    "display_name": "Qwen3.8 Flash",
+    "context_length": 1000000,
+    "release_date": "2026-08-26",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 131072
     }
   }
 ]

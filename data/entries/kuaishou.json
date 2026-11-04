@@ -4,6 +4,7 @@
     "name": "kling-v2-5-turbo",
     "media_type": "video",
     "display_name": "可灵 2.5 Turbo",
+    "release_date": "2025-10-20",
     "facts": {
       "durations": [
         5,
@@ -83,6 +84,7 @@
     "name": "kling-v3-omni",
     "media_type": "image",
     "display_name": "可灵 V3-Omni（图像）",
+    "release_date": "2026-02-25",
     "facts": {
       "text_to_image": true,
       "image_to_image": true,
@@ -133,6 +135,7 @@
     "name": "kling-v3",
     "media_type": "video",
     "display_name": "可灵 v3",
+    "release_date": "2026-02-25",
     "facts": {
       "durations": [
         3,
@@ -218,6 +221,7 @@
     "name": "kling-v3-omni",
     "media_type": "video",
     "display_name": "可灵 v3 Omni",
+    "release_date": "2026-02-25",
     "facts": {
       "durations": [
         3,
@@ -324,6 +328,7 @@
     "name": "kling-v2-6",
     "media_type": "video",
     "display_name": "可灵 v2.6",
+    "release_date": "2025-12-15",
     "facts": {
       "durations": [
         5,

@@ -4,7 +4,7 @@
     "name": "MiniMax-M2.7",
     "media_type": "text",
     "display_name": "MiniMax M2.7",
-    "shutdown_date": "2026-11-18",
+    "release_date": "2026-03-18",
     "facts": {
       "structured_output": true,
       "max_output_tokens": 204800
@@ -60,6 +60,7 @@
     "name": "MiniMax-M3",
     "media_type": "text",
     "display_name": "MiniMax M3",
+    "release_date": "2026-06-01",
     "facts": {
       "image_input": true,
       "structured_output": true,
@@ -138,7 +139,6 @@
     "display_name": "MiniMax-M2.5",
     "context_length": 204800,
     "release_date": "2026-02-12",
-    "shutdown_date": "2026-11-18",
     "facts": {
       "image_input": false,
       "structured_output": false,
@@ -519,6 +519,7 @@
     "name": "MiniMax-H3",
     "media_type": "video",
     "display_name": "MiniMax H3",
+    "release_date": "2026-07-31",
     "facts": {
       "durations": [
         4,
@@ -571,6 +572,211 @@
           "defaults": {
             "resolution": "768p"
           }
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.2
+            }
+          ],
+          "free_allowance": 5
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "MiniMax-H3-Highspeed",
+    "media_type": "video",
+    "display_name": "MiniMax H3 Highspeed",
+    "facts": {
+      "durations": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "768p"
+      ],
+      "max_reference_images": 9,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": true,
+      "max_reference_audio_count": 3,
+      "max_reference_audio_total_seconds": 15.0
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "768p"
+              },
+              "price": 0.4
+            }
+          ],
+          "defaults": {
+            "resolution": "768p"
+          }
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.2
+            }
+          ],
+          "free_allowance": 5
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "MiniMax-H3-Lite",
+    "media_type": "video",
+    "display_name": "MiniMax H3 Lite",
+    "facts": {
+      "durations": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "768p"
+      ],
+      "max_reference_images": 9,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": true,
+      "max_reference_audio_count": 3,
+      "max_reference_audio_total_seconds": 15.0
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "768p"
+              },
+              "price": 0.26
+            }
+          ],
+          "defaults": {
+            "resolution": "768p"
+          }
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.13
+            }
+          ],
+          "free_allowance": 5
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "MiniMax-H3-Max",
+    "media_type": "video",
+    "display_name": "MiniMax H3 Max",
+    "facts": {
+      "durations": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "768p"
+      ],
+      "max_reference_images": 9,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": true,
+      "max_reference_audio_count": 3,
+      "max_reference_audio_total_seconds": 15.0
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "768p"
+              },
+              "price": 0.5
+            }
+          ],
+          "defaults": {
+            "resolution": "768p"
+          }
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.5
+            }
+          ],
+          "free_allowance": 2
         }
       ]
     }
@@ -580,6 +786,7 @@
     "name": "MiniMax-Hailuo-2.3",
     "media_type": "video",
     "display_name": "MiniMax Hailuo 2.3",
+    "release_date": "2025-10-28",
     "facts": {
       "durations": [
         6,
@@ -647,6 +854,7 @@
     "name": "MiniMax-Hailuo-2.3-Fast",
     "media_type": "video",
     "display_name": "MiniMax Hailuo 2.3 Fast",
+    "release_date": "2025-10-28",
     "facts": {
       "durations": [
         6,
@@ -759,6 +967,7 @@
     "name": "speech-2.8-hd",
     "media_type": "audio",
     "display_name": "MiniMax Speech 2.8 HD",
+    "release_date": "2026-01-23",
     "facts": {},
     "price": {
       "currency": "CNY",
@@ -782,6 +991,7 @@
     "name": "speech-2.8-turbo",
     "media_type": "audio",
     "display_name": "MiniMax Speech 2.8 Turbo",
+    "release_date": "2026-01-23",
     "facts": {},
     "price": {
       "currency": "CNY",

@@ -229,197 +229,12 @@
   },
   {
     "maker": "xai",
-    "name": "grok-4-1-fast-reasoning",
-    "media_type": "text",
-    "display_name": "Grok 4.1 Fast Reasoning",
-    "discontinued": true,
-    "shutdown_date": "2026-05-15",
-    "successor": "xai/grok-4.3",
-    "facts": {
-      "image_input": true,
-      "structured_output": true,
-      "max_output_tokens": 131072
-    },
-    "price": {
-      "currency": "USD",
-      "meters": [
-        {
-          "meter": "uncached_input_tokens",
-          "dims": [
-            "context_tier"
-          ],
-          "rows": [
-            {
-              "when": {
-                "context_tier": 0
-              },
-              "price": 1.25
-            },
-            {
-              "when": {
-                "context_tier": 199999
-              },
-              "price": 2.5
-            }
-          ]
-        },
-        {
-          "meter": "cache_read_tokens",
-          "dims": [
-            "context_tier"
-          ],
-          "rows": [
-            {
-              "when": {
-                "context_tier": 0
-              },
-              "price": 0.2
-            },
-            {
-              "when": {
-                "context_tier": 199999
-              },
-              "price": 0.4
-            }
-          ]
-        },
-        {
-          "meter": "output_tokens",
-          "dims": [
-            "context_tier"
-          ],
-          "rows": [
-            {
-              "when": {
-                "context_tier": 0
-              },
-              "price": 2.5
-            },
-            {
-              "when": {
-                "context_tier": 199999
-              },
-              "price": 5.0
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "maker": "xai",
-    "name": "grok-4-1-fast-non-reasoning",
-    "media_type": "text",
-    "display_name": "Grok 4.1 Fast (Non-Reasoning)",
-    "discontinued": true,
-    "shutdown_date": "2026-05-15",
-    "successor": "xai/grok-4.3",
-    "facts": {
-      "image_input": true,
-      "structured_output": true,
-      "max_output_tokens": 131072
-    },
-    "price": {
-      "currency": "USD",
-      "meters": [
-        {
-          "meter": "uncached_input_tokens",
-          "dims": [
-            "context_tier"
-          ],
-          "rows": [
-            {
-              "when": {
-                "context_tier": 0
-              },
-              "price": 1.25
-            },
-            {
-              "when": {
-                "context_tier": 199999
-              },
-              "price": 2.5
-            }
-          ]
-        },
-        {
-          "meter": "cache_read_tokens",
-          "dims": [
-            "context_tier"
-          ],
-          "rows": [
-            {
-              "when": {
-                "context_tier": 0
-              },
-              "price": 0.2
-            },
-            {
-              "when": {
-                "context_tier": 199999
-              },
-              "price": 0.4
-            }
-          ]
-        },
-        {
-          "meter": "output_tokens",
-          "dims": [
-            "context_tier"
-          ],
-          "rows": [
-            {
-              "when": {
-                "context_tier": 0
-              },
-              "price": 2.5
-            },
-            {
-              "when": {
-                "context_tier": 199999
-              },
-              "price": 5.0
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "maker": "xai",
-    "name": "grok-imagine-image-pro",
-    "media_type": "image",
-    "display_name": "Grok Imagine Image Pro",
-    "discontinued": true,
-    "facts": {
-      "text_to_image": true,
-      "image_to_image": true,
-      "resolutions": [
-        "1K",
-        "2K"
-      ]
-    },
-    "price": {
-      "currency": "USD",
-      "meters": [
-        {
-          "meter": "output_images",
-          "dims": [],
-          "rows": [
-            {
-              "when": {},
-              "price": 0.07
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "maker": "xai",
     "name": "grok-imagine-image",
     "media_type": "image",
     "display_name": "Grok Imagine Image",
+    "aliases": [
+      "grok-imagine-image-2026-03-02"
+    ],
     "facts": {
       "text_to_image": true,
       "image_to_image": true,
@@ -456,9 +271,82 @@
   },
   {
     "maker": "xai",
+    "name": "grok-imagine-image-2.0",
+    "media_type": "image",
+    "display_name": "Grok Imagine Image 2.0",
+    "release_date": "2026-08-07",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K"
+      ],
+      "max_reference_images": 5
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [
+            "resolution",
+            "quality"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "1K",
+                "quality": "low"
+              },
+              "price": 0.04
+            },
+            {
+              "when": {
+                "resolution": "2K",
+                "quality": "low"
+              },
+              "price": 0.06
+            },
+            {
+              "when": {
+                "resolution": "1K",
+                "quality": "medium"
+              },
+              "price": 0.06
+            },
+            {
+              "when": {
+                "resolution": "2K",
+                "quality": "medium"
+              },
+              "price": 0.08
+            }
+          ],
+          "defaults": {
+            "resolution": "1K",
+            "quality": "medium"
+          }
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.01
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "xai",
     "name": "grok-imagine-video",
     "media_type": "video",
     "display_name": "Grok Imagine Video",
+    "release_date": "2026-01-28",
     "facts": {
       "durations": [
         1,
@@ -512,6 +400,16 @@
           "defaults": {
             "resolution": "480p"
           }
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.002
+            }
+          ]
         }
       ]
     }
@@ -521,6 +419,11 @@
     "name": "grok-imagine-video-1.5",
     "media_type": "video",
     "display_name": "Grok Imagine Video 1.5",
+    "aliases": [
+      "grok-imagine-video-1.5-preview",
+      "grok-imagine-video-1.5-2026-05-30"
+    ],
+    "release_date": "2026-06-16",
     "facts": {
       "durations": [
         1,
@@ -580,6 +483,16 @@
           "defaults": {
             "resolution": "480p"
           }
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.01
+            }
+          ]
         }
       ]
     }
@@ -649,6 +562,16 @@
           "defaults": {
             "resolution": "480p"
           }
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.01
+            }
+          ]
         }
       ]
     }

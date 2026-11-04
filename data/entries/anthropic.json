@@ -1,0 +1,143 @@
+[
+  {
+    "maker": "anthropic",
+    "name": "claude-sonnet-4-5",
+    "media_type": "text",
+    "display_name": "Claude Sonnet 4.5",
+    "aliases": [
+      "claude-sonnet-4-5-20250929"
+    ],
+    "context_length": 200000,
+    "release_date": "2025-09-29",
+    "shutdown_date": "2026-11-30",
+    "successor": "anthropic/claude-sonnet-5-5",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 64000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 3.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.3
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 3.75
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_1h_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 6.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 15.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "anthropic",
+    "name": "claude-sonnet-5-5",
+    "media_type": "text",
+    "display_name": "Claude Sonnet 5.5",
+    "context_length": 1000000,
+    "release_date": "2026-09-28",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 128000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.1
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_1h_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 4.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 10.0
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

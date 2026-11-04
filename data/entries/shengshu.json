@@ -4,6 +4,7 @@
     "name": "viduq2",
     "media_type": "image",
     "display_name": "Vidu Q2 Image",
+    "release_date": "2025-12-01",
     "facts": {
       "text_to_image": true,
       "image_to_image": true,
@@ -87,6 +88,7 @@
     "name": "viduq3-turbo",
     "media_type": "video",
     "display_name": "Vidu Q3 Turbo",
+    "release_date": "2026-02-11",
     "facts": {
       "durations": [
         1,
@@ -201,6 +203,7 @@
     "name": "viduq3-pro",
     "media_type": "video",
     "display_name": "Vidu Q3 Pro",
+    "release_date": "2026-01-27",
     "facts": {
       "durations": [
         1,
@@ -257,6 +260,69 @@
                 "resolution": "1080p"
               },
               "price": 0.75
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "shengshu",
+    "name": "viduq3-pro-fast",
+    "media_type": "video",
+    "display_name": "Vidu Q3 Pro Fast",
+    "facts": {
+      "durations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ],
+      "max_reference_images": 0,
+      "text_to_video": false,
+      "first_frame": true,
+      "last_frame": false,
+      "reference_audio": false
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.375
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 0.46875
             }
           ],
           "defaults": {

@@ -64,58 +64,7 @@
     "name": "gemini-3-pro-image",
     "media_type": "image",
     "display_name": "Gemini 3 Pro Image",
-    "facts": {
-      "text_to_image": true,
-      "image_to_image": true,
-      "resolutions": [
-        "1K",
-        "2K",
-        "4K"
-      ],
-      "max_reference_images": 14
-    },
-    "price": {
-      "currency": "USD",
-      "meters": [
-        {
-          "meter": "output_images",
-          "dims": [
-            "resolution"
-          ],
-          "rows": [
-            {
-              "when": {
-                "resolution": "1K"
-              },
-              "price": 0.134
-            },
-            {
-              "when": {
-                "resolution": "2K"
-              },
-              "price": 0.134
-            },
-            {
-              "when": {
-                "resolution": "4K"
-              },
-              "price": 0.24
-            }
-          ],
-          "defaults": {
-            "resolution": "1K"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "maker": "google",
-    "name": "gemini-3-pro-image-preview",
-    "media_type": "image",
-    "display_name": "Gemini 3 Pro Image Preview",
-    "shutdown_date": "2026-06-25",
-    "successor": "google/gemini-3-pro-image",
+    "release_date": "2026-05-28",
     "facts": {
       "text_to_image": true,
       "image_to_image": true,
@@ -166,65 +115,8 @@
     "name": "gemini-3.1-flash-image",
     "media_type": "image",
     "display_name": "Gemini 3.1 Flash Image",
+    "release_date": "2026-05-28",
     "successor": "google/gemini-nano-banana-2.1",
-    "facts": {
-      "text_to_image": true,
-      "image_to_image": true,
-      "resolutions": [
-        "1K",
-        "2K",
-        "4K"
-      ],
-      "max_reference_images": 14
-    },
-    "price": {
-      "currency": "USD",
-      "meters": [
-        {
-          "meter": "output_images",
-          "dims": [
-            "resolution"
-          ],
-          "rows": [
-            {
-              "when": {
-                "resolution": "512PX"
-              },
-              "price": 0.045
-            },
-            {
-              "when": {
-                "resolution": "1K"
-              },
-              "price": 0.067
-            },
-            {
-              "when": {
-                "resolution": "2K"
-              },
-              "price": 0.101
-            },
-            {
-              "when": {
-                "resolution": "4K"
-              },
-              "price": 0.151
-            }
-          ],
-          "defaults": {
-            "resolution": "1K"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "maker": "google",
-    "name": "gemini-3.1-flash-image-preview",
-    "media_type": "image",
-    "display_name": "Gemini 3.1 Flash Image Preview",
-    "shutdown_date": "2026-06-25",
-    "successor": "google/gemini-3.1-flash-image",
     "facts": {
       "text_to_image": true,
       "image_to_image": true,
@@ -608,6 +500,7 @@
     "name": "veo-3.1-generate-001",
     "media_type": "video",
     "display_name": "Veo 3.1",
+    "release_date": "2025-11-17",
     "facts": {
       "durations": [
         4,
@@ -704,6 +597,7 @@
     "name": "veo-3.1-fast-generate-001",
     "media_type": "video",
     "display_name": "Veo 3.1 Fast",
+    "release_date": "2025-11-17",
     "facts": {
       "durations": [
         4,
@@ -811,6 +705,7 @@
     "name": "gemini-3.8-flash-tts",
     "media_type": "audio",
     "display_name": "Gemini 3.8 Flash TTS",
+    "release_date": "2026-09-22",
     "facts": {},
     "price": {
       "currency": "USD",
@@ -843,6 +738,7 @@
     "name": "gemini-3.8-flash-lite-tts",
     "media_type": "audio",
     "display_name": "Gemini 3.8 Flash-Lite TTS",
+    "release_date": "2026-09-22",
     "facts": {},
     "price": {
       "currency": "USD",
@@ -864,6 +760,392 @@
             {
               "when": {},
               "price": 6.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "gemini-2.5-flash",
+    "media_type": "text",
+    "display_name": "Gemini 2.5 Flash",
+    "context_length": 1048576,
+    "release_date": "2025-06-17",
+    "shutdown_date": "2026-12-01",
+    "successor": "google/gemini-3.5-flash-lite",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 65536
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.3
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.03
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "meter": "audio_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 1.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "gemini-2.5-pro",
+    "media_type": "text",
+    "display_name": "Gemini 2.5 Pro",
+    "context_length": 1048576,
+    "release_date": "2025-06-17",
+    "shutdown_date": "2026-12-01",
+    "successor": "google/gemini-3.8-flash",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 65536
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "context_tier": 200000
+              },
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 0.125
+            },
+            {
+              "when": {
+                "context_tier": 200000
+              },
+              "price": 0.25
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 10.0
+            },
+            {
+              "when": {
+                "context_tier": 200000
+              },
+              "price": 15.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "gemini-2.5-computer-use-preview-10-2025",
+    "media_type": "text",
+    "display_name": "Gemini 2.5 Computer Use Preview 10-2025",
+    "context_length": 128000,
+    "release_date": "2025-10-07",
+    "shutdown_date": "2026-07-28",
+    "successor": "google/gemini-3.8-flash",
+    "facts": {
+      "image_input": true,
+      "structured_output": false,
+      "max_output_tokens": 64000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "context_tier": 200000
+              },
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "context_tier": 200000
+              },
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [
+            "context_tier"
+          ],
+          "rows": [
+            {
+              "when": {
+                "context_tier": 0
+              },
+              "price": 10.0
+            },
+            {
+              "when": {
+                "context_tier": 200000
+              },
+              "price": 15.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "gemini-3.7-flash",
+    "media_type": "text",
+    "display_name": "Gemini 3.7 Flash",
+    "context_length": 1048576,
+    "release_date": "2026-08-13",
+    "shutdown_date": "2027-01-28",
+    "successor": "google/gemini-3.8-flash",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 65536
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.75
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.075
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 3.75
+            }
+          ]
+        },
+        {
+          "meter": "audio_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.75
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "gemini-3.5-flash-lite",
+    "media_type": "text",
+    "display_name": "Gemini 3.5 Flash Lite",
+    "context_length": 1048576,
+    "release_date": "2026-07-21",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 65536
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.3
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.03
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "gemini-3.8-flash",
+    "media_type": "text",
+    "display_name": "Gemini 3.8 Flash",
+    "context_length": 1048576,
+    "release_date": "2026-09-02",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 65536
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.75
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.075
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 3.75
+            }
+          ]
+        },
+        {
+          "meter": "audio_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.75
             }
           ]
         }
