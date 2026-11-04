@@ -27,7 +27,10 @@ ENTRY = {
 BODY = {
     "entries": [ENTRY],
     "builtin_providers": {
-        "openai": {"models": [{"api_model_name": "gpt-a", "entry": "openai/gpt-a"}], "defaults": {"text": "gpt-a"}}
+        "openai": {
+            "models": [{"api_model_name": "gpt-a", "entry": "openai/gpt-a", "endpoint": "openai-responses"}],
+            "defaults": {"text": "gpt-a"},
+        }
     },
 }
 
@@ -121,4 +124,30 @@ def test_cli_builds_from_local_files(tmp_path: Path) -> None:
     assert main(args) == 0
     catalog = published(out)
     assert [entry["name"] for entry in catalog["entries"]] == ["agnes-1", "gpt-b"]
-    assert catalog["builtin_providers"]["openai"]["models"] == [{"api_model_name": "gpt-b", "entry": "openai/gpt-b"}]
+    assert catalog["builtin_providers"]["openai"]["models"] == [
+        {"api_model_name": "gpt-b", "entry": "openai/gpt-b", "endpoint": "openai-responses"}
+    ]
+
+
+def test_missing_endpoint_is_not_published(tmp_path: Path) -> None:
+    model = {"api_model_name": "gpt-a", "entry": "openai/gpt-a"}
+    broken = {**BODY, "builtin_providers": {"openai": {"models": [model], "defaults": {}}}}
+    with pytest.raises(PublishError, match="missing_endpoint"):
+        publish(tmp_path, broken, NOW)
+    assert not (tmp_path / "catalog.json").exists()
+
+
+@pytest.mark.parametrize(
+    ("endpoint", "code"),
+    [
+        ("does-not-exist", "unknown_endpoint"),
+        ("openai-images", "endpoint_media_type_mismatch"),
+        ("ark-chat", "endpoint_not_selectable"),
+    ],
+)
+def test_invalid_endpoint_is_not_published(tmp_path: Path, endpoint: str, code: str) -> None:
+    model = {"api_model_name": "gpt-a", "entry": "openai/gpt-a", "endpoint": endpoint}
+    broken = {**BODY, "builtin_providers": {"openai": {"models": [model], "defaults": {}}}}
+    with pytest.raises(PublishError, match=code):
+        publish(tmp_path, broken, NOW)
+    assert not (tmp_path / "catalog.json").exists()
