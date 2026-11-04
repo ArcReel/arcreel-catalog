@@ -32,10 +32,19 @@
   - 关停日期不晚于构建当天的条目，发布时 `discontinued` 为真。
   - 关停未满 90 天的条目与清单项照常发布；满 90 天后，条目和引用它的清单项都不再发布，人工数据也一样。过了保留期的人工条目请继续留在 `data/` 里：上游仍有这个模型时，构建靠它认出模型已过保留期，不会重新生成条目和清单项。
   - 上游的 `deprecated` 标记不影响条目和清单。模型的关停日期要写进人工条目。
-  - 条目上的关停日期指模型厂商层面的退役，取仍在提供它的渠道里最晚的那天。只有某个供应商提前下架时，不改条目，在该供应商的清单里处理（`exclude` 或移出人工清单）。
+  - 条目上的关停日期指模型厂商层面的退役，取仍在提供它的渠道里最晚的那天。渠道指模型厂商自营的 API 与本目录的内置供应商，不含转售方。只有某个供应商提前下架时，不改条目，在该供应商的清单里处理（`exclude` 或移出人工清单）。
 - 发布内容（除数据集版本外）与 `main` 上的相同时不产生新版本；校验不通过时不发布。
 
-每周还会用 [LiteLLM](https://github.com/BerriAI/litellm) 的价格文件比对 Google、OpenAI、xAI 的人工媒体条目，有差异时开 issue 提醒，不直接修改数据。
+## 模型巡检
+
+厂商的上新、下线与价格变化，由每周一次的模型巡检跟进：新模型、关停日期、后继、上线日期、价格，以及过期人工数据的清理。巡检是 Claude 按 [`.claude/skills/model-sweep/SKILL.md`](.claude/skills/model-sweep/SKILL.md) 执行的无人值守任务。它读 [LiteLLM](https://github.com/BerriAI/litellm)、models.dev、basellm 的信号与各厂商的官方页面，只做有官方来源的改动。产出一个数据 PR，`Check catalog` 通过后合并；需要新调用端点的模型和需要人裁决的事项，在 ArcReel 仓库开 `needs-triage` issue。
+
+定时任务：
+
+- 位置：维护者 claude.ai 账号下的 Claude Code 云端定时任务「arcreel-catalog 每周模型巡检」，每周运行一次，prompt 首行为 `/model-sweep`。
+- 源仓库：`ArcReel/arcreel-catalog`，以及用于读取调用通道代码、开 issue 的 `ArcReel/ArcReel`。
+- 权限：经云端 GitHub 代理，以维护者身份推送 `model-sweep/` 分支、创建与合并 PR，并在两个仓库开 issue 与评论。代理只支持 REST，所以 skill 里的 GitHub 操作都用 `gh api`。
+- 网络：运行环境需要能访问各厂商官方页面，以及 `models.dev`、`basellm.github.io` 与 `raw.githubusercontent.com`。
 
 ## 本地运行
 
@@ -45,7 +54,7 @@
 uv run python -m pytest                            # 构建脚本的测试，离线
 uv run python -m catalog_build build --check-only  # 抓取上游并完整构建、校验，不写文件
 uv run python -m catalog_build build               # 同上，有变化时写出 catalog.json 与 manifest.json
-uv run python -m catalog_build compare-litellm     # 输出与 LiteLLM 的价格差异
+uv run python -m catalog_build signals             # 列出模型巡检的信号（抓取上游与 LiteLLM）
 ```
 
 `build` 可以用 `--basellm`、`--models-dev` 指向本地文件离线构建。校验器依赖取 ArcReel `main` 上的 `arcreel-catalog-core`；仓库不提交 `uv.lock`，本地需要更新校验器时运行 `uv lock --upgrade-package arcreel-catalog-core`。

@@ -1,4 +1,4 @@
-"""``python -m catalog_build``：构建并发布目录数据，或与 LiteLLM 比对海外媒体价格。"""
+"""``python -m catalog_build``：构建并发布目录数据，或列出模型巡检的信号。"""
 
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ from arcreel_catalog_core import (
 )
 
 from .build import build_catalog
-from .litellm import compare_litellm
+from .signals import collect_signals, render_signals
 
 ROOT = Path(__file__).resolve().parent.parent
 BASELLM_URL = "https://basellm.github.io/llm-metadata/api/all.json"
@@ -98,20 +98,21 @@ def main(argv: Sequence[str] | None = None) -> int:
     build.add_argument("--data", type=Path, default=ROOT / "data", help="人工维护的数据目录")
     build.add_argument("--out", type=Path, default=ROOT, help="写出目录")
     build.add_argument("--check-only", action="store_true", help="只构建与校验，不写文件")
-    compare = commands.add_parser("compare-litellm", help="比对人工条目与 LiteLLM 的海外媒体价格，输出差异")
-    compare.add_argument("--litellm", default=LITELLM_URL, help="LiteLLM 价格文件的地址或本地路径")
-    compare.add_argument("--data", type=Path, default=ROOT / "data", help="人工维护的数据目录")
+    signals = commands.add_parser("signals", help="列出模型巡检的信号：第三方数据与目录不一致、目录数据的缺口")
+    signals.add_argument("--basellm", default=BASELLM_URL, help="basellm all.json 的地址或本地路径")
+    signals.add_argument("--models-dev", default=MODELS_DEV_URL, help="models.dev api.json 的地址或本地路径")
+    signals.add_argument("--litellm", default=LITELLM_URL, help="LiteLLM 价格文件的地址或本地路径")
+    signals.add_argument("--data", type=Path, default=ROOT / "data", help="人工维护的数据目录")
     args = parser.parse_args(argv)
-
-    if args.command == "compare-litellm":
-        _, entries, _ = load_human_data(args.data)
-        for line in compare_litellm(entries, read_json(args.litellm)):
-            print(line)
-        return 0
 
     rules, entries, providers = load_human_data(args.data)
     now = datetime.now(UTC)
     upstreams = [read_json(args.basellm), read_json(args.models_dev)]
+    if args.command == "signals":
+        found = collect_signals(upstreams, rules, entries, providers, read_json(args.litellm), today=now.date())
+        print(render_signals(found), end="")
+        return 0
+
     result = build_catalog(upstreams, rules, entries, providers, today=now.date())
     for warning in result.warnings:
         print(f"warning: {warning}", file=sys.stderr)
