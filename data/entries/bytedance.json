@@ -7,6 +7,7 @@
     "aliases": [
       "doubao-seed-2-0-pro-260215"
     ],
+    "release_date": "2026-02-14",
     "shutdown_date": "2026-11-24",
     "successor": "bytedance/doubao-seed-2.1-lite",
     "facts": {
@@ -150,10 +151,14 @@
     "name": "doubao-seed-2.0-lite",
     "media_type": "text",
     "display_name": "豆包 Seed 2.0 Lite",
-    "shutdown_date": "2026-10-09",
-    "successor": "bytedance/doubao-seed-2.1-lite",
+    "aliases": [
+      "doubao-seed-2-0-lite-260428"
+    ],
+    "context_length": 262144,
+    "release_date": "2026-02-14",
     "facts": {
       "image_input": true,
+      "structured_output": true,
       "max_output_tokens": 131072
     },
     "price": {
@@ -343,6 +348,7 @@
     "aliases": [
       "doubao-seed-2-0-mini-260428"
     ],
+    "release_date": "2026-02-14",
     "facts": {
       "image_input": true,
       "max_output_tokens": 131072
@@ -535,8 +541,9 @@
       "doubao-seed-1-8-251228"
     ],
     "discontinued": true,
+    "release_date": "2025-12-18",
     "shutdown_date": "2026-09-21",
-    "successor": "bytedance/doubao-seed-2-0-lite-260428",
+    "successor": "bytedance/doubao-seed-2.0-lite",
     "facts": {
       "image_input": true,
       "structured_output": true,
@@ -576,7 +583,7 @@
     "context_length": 256000,
     "release_date": "2025-10-15",
     "shutdown_date": "2026-09-21",
-    "successor": "bytedance/doubao-seed-2-0-lite-260428",
+    "successor": "bytedance/doubao-seed-2.0-lite",
     "facts": {
       "image_input": true,
       "structured_output": true,
@@ -772,7 +779,7 @@
     "context_length": 256000,
     "release_date": "2025-08-15",
     "shutdown_date": "2026-09-21",
-    "successor": "bytedance/doubao-seed-2-0-lite-260428",
+    "successor": "bytedance/doubao-seed-2.0-lite",
     "facts": {
       "image_input": true,
       "structured_output": true,
@@ -904,6 +911,35 @@
   },
   {
     "maker": "bytedance",
+    "name": "doubao-seedream-5-0-flash",
+    "media_type": "image",
+    "display_name": "Seedream 5.0 Flash",
+    "aliases": [
+      "doubao-seedream-5-0-flash-260915"
+    ],
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "max_reference_images": 10
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.12
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
     "name": "doubao-seedream-5-0-lite",
     "media_type": "image",
     "display_name": "Seedream 5.0 Lite",
@@ -911,6 +947,7 @@
       "doubao-seedream-5-0-lite-260128",
       "doubao-seedream-5-0-260128"
     ],
+    "release_date": "2026-02-13",
     "shutdown_date": "2026-11-24",
     "successor": "bytedance/doubao-seedream-5-0-pro",
     "facts": {
@@ -1083,6 +1120,7 @@
     "aliases": [
       "doubao-seedance-2-0-260128"
     ],
+    "release_date": "2026-02-12",
     "facts": {
       "durations": [
         4,
@@ -1468,7 +1506,8 @@
     "name": "doubao-seed-2.0-code",
     "media_type": "text",
     "display_name": "豆包 Seed 2.0 Code",
-    "shutdown_date": "2026-08-08",
+    "shutdown_date": "2026-11-24",
+    "successor": "bytedance/doubao-seed-evolving",
     "facts": {
       "max_output_tokens": 131072
     },
@@ -1615,13 +1654,13 @@
               "when": {
                 "context_tier": 32000
               },
-              "price": 4.8
+              "price": 0.96
             },
             {
               "when": {
                 "context_tier": 128000
               },
-              "price": 9.6
+              "price": 1.92
             }
           ]
         },
@@ -1648,6 +1687,54 @@
                 "context_tier": 128000
               },
               "price": 48.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seed-evolving",
+    "media_type": "text",
+    "display_name": "豆包 Seed Evolving",
+    "context_length": 1048576,
+    "release_date": "2026-06-23",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 262144
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 6.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 1.2
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 30.0
             }
           ]
         }

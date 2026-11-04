@@ -1,0 +1,62 @@
+[
+  {
+    "maker": "zhipu",
+    "name": "glm-4.5-flash",
+    "media_type": "text",
+    "display_name": "GLM-4.5-Flash",
+    "context_length": 131072,
+    "release_date": "2025-07-28",
+    "shutdown_date": "2026-01-30",
+    "successor": "zhipu/glm-4.7-flash",
+    "facts": {
+      "image_input": false,
+      "structured_output": false,
+      "max_output_tokens": 98304
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

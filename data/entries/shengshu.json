@@ -4,6 +4,7 @@
     "name": "viduq2",
     "media_type": "image",
     "display_name": "Vidu Q2 Image",
+    "release_date": "2025-12-01",
     "facts": {
       "text_to_image": true,
       "image_to_image": true,
@@ -87,6 +88,7 @@
     "name": "viduq3-turbo",
     "media_type": "video",
     "display_name": "Vidu Q3 Turbo",
+    "release_date": "2026-02-11",
     "facts": {
       "durations": [
         1,
@@ -201,6 +203,7 @@
     "name": "viduq3-pro",
     "media_type": "video",
     "display_name": "Vidu Q3 Pro",
+    "release_date": "2026-01-27",
     "facts": {
       "durations": [
         1,

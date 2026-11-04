@@ -3,6 +3,10 @@
     "upstream": [
       "google"
     ],
+    "exclude": [
+      "^gemini-3\\.5-flash$",
+      "^gemini-3\\.7-flash$"
+    ],
     "models": [
       {
         "api_model_name": "gemini-3-flash-preview",
@@ -101,6 +105,10 @@
         "entry": "bytedance/doubao-seedream-5-0-pro"
       },
       {
+        "api_model_name": "doubao-seedream-5-0-flash-260915",
+        "entry": "bytedance/doubao-seedream-5-0-flash"
+      },
+      {
         "api_model_name": "doubao-seedream-5-0-lite-260128",
         "entry": "bytedance/doubao-seedream-5-0-lite"
       },
@@ -153,40 +161,19 @@
     ],
     "exclude": [
       "^kimi-k2\\.7-code$",
-      "^minimax-m3$"
+      "^minimax-m3$",
+      "^glm-5\\.1$",
+      "^kimi-k2\\.6$",
+      "^minimax-m2\\.7$",
+      "^doubao-seedream-5\\.0-lite$",
+      "^doubao-seed-2\\.0-pro$",
+      "^doubao-seed-2\\.0-lite$",
+      "^doubao-seed-2\\.0-code$"
     ],
     "models": [
       {
         "api_model_name": "doubao-seed-2.0-mini",
         "entry": "bytedance/doubao-seed-2.0-mini"
-      },
-      {
-        "api_model_name": "doubao-seed-2.0-lite",
-        "entry": "bytedance/doubao-seed-2.0-lite"
-      },
-      {
-        "api_model_name": "doubao-seed-2.0-pro",
-        "entry": "bytedance/doubao-seed-2.0-pro"
-      },
-      {
-        "api_model_name": "doubao-seed-2.0-code",
-        "entry": "bytedance/doubao-seed-2.0-code"
-      },
-      {
-        "api_model_name": "glm-5.1",
-        "entry": "zhipu/glm-5.1"
-      },
-      {
-        "api_model_name": "kimi-k2.6",
-        "entry": "moonshot/kimi-k2.6"
-      },
-      {
-        "api_model_name": "minimax-m2.7",
-        "entry": "minimax/MiniMax-M2.7"
-      },
-      {
-        "api_model_name": "doubao-seedream-5.0-lite",
-        "entry": "bytedance/doubao-seedream-5-0-lite"
       },
       {
         "api_model_name": "doubao-seedance-2.0",
@@ -199,6 +186,22 @@
       {
         "api_model_name": "doubao-seedance-2.0-mini",
         "entry": "bytedance/doubao-seedance-2.0-mini"
+      },
+      {
+        "api_model_name": "doubao-seed-2.1-lite",
+        "entry": "bytedance/doubao-seed-2.1-lite"
+      },
+      {
+        "api_model_name": "doubao-seedream-5-0-pro",
+        "entry": "bytedance/doubao-seedream-5-0-pro"
+      },
+      {
+        "api_model_name": "doubao-seedream-5.0-flash",
+        "entry": "bytedance/doubao-seedream-5-0-flash"
+      },
+      {
+        "api_model_name": "doubao-seedance-2.5",
+        "entry": "bytedance/doubao-seedance-2.5"
       }
     ],
     "defaults": {
@@ -217,6 +220,10 @@
       {
         "api_model_name": "grok-imagine-image",
         "entry": "xai/grok-imagine-image"
+      },
+      {
+        "api_model_name": "grok-imagine-image-2.0",
+        "entry": "xai/grok-imagine-image-2.0"
       },
       {
         "api_model_name": "grok-imagine-video",
@@ -334,6 +341,10 @@
         "entry": "alibaba/qwen-image-2.0-pro"
       },
       {
+        "api_model_name": "qwen-image-3.0",
+        "entry": "alibaba/qwen-image-3.0"
+      },
+      {
         "api_model_name": "qwen-image-edit-plus",
         "entry": "alibaba/qwen-image-edit-plus"
       },
@@ -390,6 +401,10 @@
         "entry": "alibaba/wan3.0-video"
       },
       {
+        "api_model_name": "wan3.0-video-prime",
+        "entry": "alibaba/wan3.0-video-prime"
+      },
+      {
         "api_model_name": "qwen3-tts-flash",
         "entry": "alibaba/qwen3-tts-flash"
       },
@@ -429,6 +444,18 @@
       {
         "api_model_name": "MiniMax-H3",
         "entry": "minimax/MiniMax-H3"
+      },
+      {
+        "api_model_name": "MiniMax-H3-Highspeed",
+        "entry": "minimax/MiniMax-H3-Highspeed"
+      },
+      {
+        "api_model_name": "MiniMax-H3-Lite",
+        "entry": "minimax/MiniMax-H3-Lite"
+      },
+      {
+        "api_model_name": "MiniMax-H3-Max",
+        "entry": "minimax/MiniMax-H3-Max"
       },
       {
         "api_model_name": "MiniMax-Hailuo-2.3",
