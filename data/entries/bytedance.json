@@ -156,6 +156,7 @@
     "aliases": [
       "doubao-seed-2-1-pro-260915"
     ],
+    "release_date": "2026-09-15",
     "context_length": 1048576,
     "facts": {
       "image_input": true,
