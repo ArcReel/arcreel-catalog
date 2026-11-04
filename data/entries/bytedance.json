@@ -106,8 +106,10 @@
     "aliases": [
       "doubao-seed-2-1-lite-260915"
     ],
+    "context_length": 1048576,
     "facts": {
       "image_input": true,
+      "structured_output": true,
       "max_output_tokens": 262144
     },
     "price": {
@@ -140,6 +142,56 @@
             {
               "when": {},
               "price": 2.7
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seed-2.1-pro",
+    "media_type": "text",
+    "display_name": "豆包 Seed 2.1 Pro",
+    "aliases": [
+      "doubao-seed-2-1-pro-260915"
+    ],
+    "context_length": 1048576,
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 262144
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 6.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 1.2
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 30.0
             }
           ]
         }

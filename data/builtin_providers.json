@@ -101,6 +101,10 @@
         "entry": "bytedance/doubao-seed-2.1-lite"
       },
       {
+        "api_model_name": "doubao-seed-2-1-pro-260915",
+        "entry": "bytedance/doubao-seed-2.1-pro"
+      },
+      {
         "api_model_name": "doubao-seedream-5-0-pro-260628",
         "entry": "bytedance/doubao-seedream-5-0-pro"
       },
@@ -295,6 +299,10 @@
       {
         "api_model_name": "viduq3-pro",
         "entry": "shengshu/viduq3-pro"
+      },
+      {
+        "api_model_name": "viduq3-pro-fast",
+        "entry": "shengshu/viduq3-pro-fast"
       },
       {
         "api_model_name": "viduq3",

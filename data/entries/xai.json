@@ -400,6 +400,16 @@
           "defaults": {
             "resolution": "480p"
           }
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.002
+            }
+          ]
         }
       ]
     }
@@ -473,6 +483,16 @@
           "defaults": {
             "resolution": "480p"
           }
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.01
+            }
+          ]
         }
       ]
     }
@@ -542,6 +562,16 @@
           "defaults": {
             "resolution": "480p"
           }
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.01
+            }
+          ]
         }
       ]
     }

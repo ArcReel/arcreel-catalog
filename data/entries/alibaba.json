@@ -1806,5 +1806,48 @@
         }
       ]
     }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3.5-plus",
+    "media_type": "text",
+    "display_name": "Qwen3.5 Plus",
+    "context_length": 1000000,
+    "release_date": "2026-02-16",
+    "shutdown_date": "2027-01-19",
+    "successor": "alibaba/qwen3.8-flash",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 65536
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3.5-397b-a17b",
+    "media_type": "text",
+    "display_name": "Qwen3.5 397B-A17B",
+    "context_length": 262144,
+    "release_date": "2026-02-16",
+    "shutdown_date": "2027-01-19",
+    "successor": "alibaba/qwen3.8-flash",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 65536
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen3.8-flash",
+    "media_type": "text",
+    "display_name": "Qwen3.8 Flash",
+    "context_length": 1000000,
+    "release_date": "2026-08-26",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 131072
+    }
   }
 ]

@@ -5,7 +5,6 @@
     "media_type": "text",
     "display_name": "MiniMax M2.7",
     "release_date": "2026-03-18",
-    "shutdown_date": "2026-11-18",
     "facts": {
       "structured_output": true,
       "max_output_tokens": 204800
@@ -140,7 +139,6 @@
     "display_name": "MiniMax-M2.5",
     "context_length": 204800,
     "release_date": "2026-02-12",
-    "shutdown_date": "2026-11-18",
     "facts": {
       "image_input": false,
       "structured_output": false,
