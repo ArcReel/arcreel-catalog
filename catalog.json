@@ -1,5 +1,5 @@
 {
-  "dataset_version": "2026-11-04T07:36:02Z",
+  "dataset_version": "2026-11-04T23:26:27Z",
   "entries": [
     {
       "maker": "agnes",
@@ -2588,10 +2588,10 @@
       "media_type": "text",
       "display_name": "Claude Fable 5",
       "aliases": [
-        "anthropic-claude-fable-5",
-        "us.anthropic.claude-fable-5",
         "global.anthropic.claude-fable-5",
-        "eu.anthropic.claude-fable-5"
+        "us.anthropic.claude-fable-5",
+        "eu.anthropic.claude-fable-5",
+        "anthropic.claude-fable-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-06-07",
@@ -2662,7 +2662,7 @@
       "media_type": "text",
       "display_name": "Claude Fable 5.1",
       "aliases": [
-        "anthropic-claude-fable-5.1",
+        "anthropic.claude-fable-5-1",
         "us.anthropic.claude-fable-5-1",
         "global.anthropic.claude-fable-5-1"
       ],
@@ -2808,12 +2808,12 @@
       "media_type": "text",
       "display_name": "Claude Haiku 5.5",
       "aliases": [
-        "anthropic.claude-haiku-5-5",
-        "jp.anthropic.claude-haiku-5-5",
+        "eu.anthropic.claude-haiku-5-5",
         "global.anthropic.claude-haiku-5-5",
+        "anthropic.claude-haiku-5-5",
         "us.anthropic.claude-haiku-5-5",
         "au.anthropic.claude-haiku-5-5",
-        "eu.anthropic.claude-haiku-5-5"
+        "jp.anthropic.claude-haiku-5-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-10-07",
@@ -3081,12 +3081,12 @@
       "media_type": "text",
       "display_name": "Claude Opus 4.7",
       "aliases": [
-        "anthropic-claude-opus-4.7",
-        "global.anthropic.claude-opus-4-7",
-        "au.anthropic.claude-opus-4-7",
-        "jp.anthropic.claude-opus-4-7",
-        "eu.anthropic.claude-opus-4-7",
         "us.anthropic.claude-opus-4-7",
+        "au.anthropic.claude-opus-4-7",
+        "eu.anthropic.claude-opus-4-7",
+        "global.anthropic.claude-opus-4-7",
+        "anthropic.claude-opus-4-7",
+        "jp.anthropic.claude-opus-4-7",
         "databricks-claude-opus-4-7",
         "claude-opus4-7"
       ],
@@ -3159,11 +3159,11 @@
       "media_type": "text",
       "display_name": "Claude Opus 4.8",
       "aliases": [
-        "anthropic-claude-opus-4.8",
         "us.anthropic.claude-opus-4-8",
         "eu.anthropic.claude-opus-4-8",
-        "jp.anthropic.claude-opus-4-8",
         "global.anthropic.claude-opus-4-8",
+        "jp.anthropic.claude-opus-4-8",
+        "anthropic.claude-opus-4-8",
         "au.anthropic.claude-opus-4-8",
         "claude-opus4-8"
       ],
@@ -3236,13 +3236,13 @@
       "media_type": "text",
       "display_name": "Claude Opus 5",
       "aliases": [
-        "anthropic-claude-opus-5",
-        "global.anthropic.claude-opus-5",
+        "jp.anthropic.claude-opus-5",
         "au.anthropic.claude-opus-5",
         "eu.anthropic.claude-opus-5",
-        "jp.anthropic.claude-opus-5",
-        "us.anthropic.claude-opus-5",
-        "in.anthropic.claude-opus-5"
+        "anthropic.claude-opus-5",
+        "in.anthropic.claude-opus-5",
+        "global.anthropic.claude-opus-5",
+        "us.anthropic.claude-opus-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-07-24",
@@ -3313,12 +3313,12 @@
       "media_type": "text",
       "display_name": "Claude Opus 5.5",
       "aliases": [
-        "anthropic-claude-opus-5.5",
-        "us.anthropic.claude-opus-5-5",
         "eu.anthropic.claude-opus-5-5",
+        "anthropic.claude-opus-5-5",
         "jp.anthropic.claude-opus-5-5",
-        "au.anthropic.claude-opus-5-5",
-        "global.anthropic.claude-opus-5-5"
+        "us.anthropic.claude-opus-5-5",
+        "global.anthropic.claude-opus-5-5",
+        "au.anthropic.claude-opus-5-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-09-22",
@@ -3463,12 +3463,12 @@
       "media_type": "text",
       "display_name": "Claude Sonnet 4.6",
       "aliases": [
-        "eu.anthropic.claude-sonnet-4-6",
-        "jp.anthropic.claude-sonnet-4-6",
-        "anthropic.claude-sonnet-4-6",
-        "us.anthropic.claude-sonnet-4-6",
-        "au.anthropic.claude-sonnet-4-6",
         "global.anthropic.claude-sonnet-4-6",
+        "anthropic.claude-sonnet-4-6",
+        "au.anthropic.claude-sonnet-4-6",
+        "jp.anthropic.claude-sonnet-4-6",
+        "us.anthropic.claude-sonnet-4-6",
+        "eu.anthropic.claude-sonnet-4-6",
         "databricks-claude-sonnet-4-6"
       ],
       "context_length": 1000000,
@@ -3540,13 +3540,13 @@
       "media_type": "text",
       "display_name": "Claude Sonnet 5",
       "aliases": [
+        "global.anthropic.claude-sonnet-5",
         "au.anthropic.claude-sonnet-5",
+        "us.anthropic.claude-sonnet-5",
+        "eu.anthropic.claude-sonnet-5",
         "in.anthropic.claude-sonnet-5",
         "jp.anthropic.claude-sonnet-5",
-        "global.anthropic.claude-sonnet-5",
-        "us.anthropic.claude-sonnet-5",
-        "anthropic.claude-sonnet-5",
-        "eu.anthropic.claude-sonnet-5"
+        "anthropic.claude-sonnet-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-06-29",
@@ -3617,11 +3617,11 @@
       "media_type": "text",
       "display_name": "Claude Sonnet 5.5",
       "aliases": [
-        "anthropic-claude-sonnet-5.5",
         "us.anthropic.claude-sonnet-5-5",
-        "eu.anthropic.claude-sonnet-5-5",
         "au.anthropic.claude-sonnet-5-5",
-        "global.anthropic.claude-sonnet-5-5"
+        "global.anthropic.claude-sonnet-5-5",
+        "eu.anthropic.claude-sonnet-5-5",
+        "anthropic.claude-sonnet-5-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-09-28",
@@ -5717,8 +5717,8 @@
       "media_type": "text",
       "display_name": "DeepSeek V4 Flash",
       "aliases": [
-        "deep-deepseek-v4-flash",
-        "alicloud-deepseek-v4-flash"
+        "alicloud-deepseek-v4-flash",
+        "deep-deepseek-v4-flash"
       ],
       "release_date": "2026-04-24",
       "successor": "deepseek/deepseek-flash",
@@ -5783,8 +5783,8 @@
       "media_type": "text",
       "display_name": "DeepSeek V4 Pro",
       "aliases": [
-        "alicloud-deepseek-v4-pro",
-        "deep-deepseek-v4-pro"
+        "deep-deepseek-v4-pro",
+        "alicloud-deepseek-v4-pro"
       ],
       "release_date": "2026-04-24",
       "facts": {
@@ -8613,8 +8613,8 @@
       "media_type": "text",
       "display_name": "MiniMax-M2.5",
       "aliases": [
-        "minimax-m25",
-        "minimax.minimax-m2.5"
+        "minimax.minimax-m2.5",
+        "minimax-m25"
       ],
       "context_length": 204800,
       "release_date": "2026-02-12",
@@ -9251,9 +9251,9 @@
       "display_name": "Kimi K3",
       "aliases": [
         "morph-kimik3",
-        "umans-kimi-k3",
         "global.moonshotai.kimi-k3",
-        "us.moonshotai.kimi-k3"
+        "us.moonshotai.kimi-k3",
+        "umans-kimi-k3"
       ],
       "context_length": 1048576,
       "release_date": "2026-07-16",
@@ -9861,8 +9861,8 @@
       "display_name": "GPT-5 Mini",
       "aliases": [
         "openai-gpt-5-mini",
-        "duo-chat-gpt-5-mini",
-        "databricks-gpt-5-mini"
+        "databricks-gpt-5-mini",
+        "duo-chat-gpt-5-mini"
       ],
       "context_length": 400000,
       "release_date": "2025-08-07",
@@ -10019,9 +10019,9 @@
       "media_type": "text",
       "display_name": "GPT-5.1",
       "aliases": [
+        "databricks-gpt-5-1",
         "openai-gpt-5.1",
-        "duo-chat-gpt-5-1",
-        "databricks-gpt-5-1"
+        "duo-chat-gpt-5-1"
       ],
       "context_length": 400000,
       "release_date": "2025-11-13",
@@ -10075,9 +10075,9 @@
       "display_name": "GPT-5.2",
       "aliases": [
         "openai-gpt-5.2",
+        "databricks-gpt-5-2",
         "openai-gpt-52",
-        "duo-chat-gpt-5-2",
-        "databricks-gpt-5-2"
+        "duo-chat-gpt-5-2"
       ],
       "context_length": 400000,
       "release_date": "2025-12-11",
@@ -10320,10 +10320,10 @@
       "media_type": "text",
       "display_name": "GPT-5.4",
       "aliases": [
-        "openai-gpt-5.4",
+        "openai.gpt-5.4",
+        "databricks-gpt-5-4",
         "openai-gpt-54",
-        "duo-chat-gpt-5-4",
-        "databricks-gpt-5-4"
+        "duo-chat-gpt-5-4"
       ],
       "release_date": "2026-03-05",
       "facts": {
@@ -10485,9 +10485,9 @@
       "display_name": "GPT-5.4 Mini",
       "aliases": [
         "openai-gpt-5.4-mini",
+        "databricks-gpt-5-4-mini",
         "openai-gpt-54-mini",
-        "duo-chat-gpt-5-4-mini",
-        "databricks-gpt-5-4-mini"
+        "duo-chat-gpt-5-4-mini"
       ],
       "release_date": "2026-03-17",
       "facts": {
@@ -10595,8 +10595,8 @@
       "display_name": "GPT-5.4 Nano",
       "aliases": [
         "openai-gpt-5.4-nano",
-        "duo-chat-gpt-5-4-nano",
-        "databricks-gpt-5-4-nano"
+        "databricks-gpt-5-4-nano",
+        "duo-chat-gpt-5-4-nano"
       ],
       "release_date": "2026-03-17",
       "shutdown_date": "2027-04-01",
@@ -10769,11 +10769,11 @@
       "media_type": "text",
       "display_name": "GPT-5.5",
       "aliases": [
-        "openai-gpt-5.5",
-        "xpersona-gpt-5.5",
+        "openai.gpt-5.5",
+        "databricks-gpt-5-5",
         "openai-gpt-55",
         "duo-chat-gpt-5-5",
-        "databricks-gpt-5-5"
+        "xpersona-gpt-5.5"
       ],
       "release_date": "2026-04-23",
       "facts": {
@@ -11151,13 +11151,13 @@
       "media_type": "text",
       "display_name": "GPT-5.6 Luna",
       "aliases": [
-        "openai-gpt-5.6-luna",
-        "openai-gpt-56-luna",
-        "duo-chat-gpt-5-6-luna",
-        "in.openai.gpt-5.6-luna",
         "us.openai.gpt-5.6-luna",
         "global.openai.gpt-5.6-luna",
-        "databricks-gpt-5-6-luna"
+        "in.openai.gpt-5.6-luna",
+        "openai.gpt-5.6-luna",
+        "databricks-gpt-5-6-luna",
+        "openai-gpt-56-luna",
+        "duo-chat-gpt-5-6-luna"
       ],
       "context_length": 1050000,
       "release_date": "2026-07-09",
@@ -11258,12 +11258,12 @@
       "media_type": "text",
       "display_name": "GPT-5.6 Sol",
       "aliases": [
-        "openai-gpt-5.6-sol",
-        "openai-gpt-56-sol",
-        "duo-chat-gpt-5-6-sol",
-        "us.openai.gpt-5.6-sol",
+        "openai.gpt-5.6-sol",
         "global.openai.gpt-5.6-sol",
-        "databricks-gpt-5-6-sol"
+        "us.openai.gpt-5.6-sol",
+        "databricks-gpt-5-6-sol",
+        "openai-gpt-56-sol",
+        "duo-chat-gpt-5-6-sol"
       ],
       "context_length": 1050000,
       "release_date": "2026-07-09",
@@ -11364,13 +11364,13 @@
       "media_type": "text",
       "display_name": "GPT-5.6 Terra",
       "aliases": [
-        "openai-gpt-5.6-terra",
-        "openai-gpt-56-terra",
-        "duo-chat-gpt-5-6-terra",
-        "us.openai.gpt-5.6-terra",
         "global.openai.gpt-5.6-terra",
+        "us.openai.gpt-5.6-terra",
+        "openai.gpt-5.6-terra",
         "in.openai.gpt-5.6-terra",
-        "databricks-gpt-5-6-terra"
+        "databricks-gpt-5-6-terra",
+        "openai-gpt-56-terra",
+        "duo-chat-gpt-5-6-terra"
       ],
       "context_length": 1050000,
       "release_date": "2026-07-09",
@@ -11471,10 +11471,10 @@
       "media_type": "text",
       "display_name": "GPT-6 Astra",
       "aliases": [
-        "openai-gpt-6-astra",
-        "duo-chat-gpt-6-astra",
         "us.openai.gpt-6-astra",
-        "global.openai.gpt-6-astra"
+        "global.openai.gpt-6-astra",
+        "openai.gpt-6-astra",
+        "duo-chat-gpt-6-astra"
       ],
       "context_length": 1050000,
       "release_date": "2026-09-04",
@@ -11575,10 +11575,10 @@
       "media_type": "text",
       "display_name": "GPT-6 Luna",
       "aliases": [
-        "openai-gpt-6-luna",
-        "duo-chat-gpt-6-luna",
+        "us.openai.gpt-6-luna",
         "global.openai.gpt-6-luna",
-        "us.openai.gpt-6-luna"
+        "openai.gpt-6-luna",
+        "duo-chat-gpt-6-luna"
       ],
       "context_length": 1050000,
       "release_date": "2026-09-22",
@@ -11679,10 +11679,10 @@
       "media_type": "text",
       "display_name": "GPT-6 Sol",
       "aliases": [
-        "openai-gpt-6-sol",
-        "duo-chat-gpt-6-sol",
         "global.openai.gpt-6-sol",
-        "us.openai.gpt-6-sol"
+        "openai.gpt-6-sol",
+        "us.openai.gpt-6-sol",
+        "duo-chat-gpt-6-sol"
       ],
       "context_length": 1050000,
       "release_date": "2026-09-22",
@@ -11783,11 +11783,11 @@
       "media_type": "text",
       "display_name": "GPT-6.1 Sol",
       "aliases": [
-        "openai-gpt-6-1-sol",
-        "openai-gpt-61-sol",
-        "duo-chat-gpt-6-1-sol",
         "us.openai.gpt-6.1-sol",
-        "global.openai.gpt-6.1-sol"
+        "global.openai.gpt-6.1-sol",
+        "openai.gpt-6.1-sol",
+        "openai-gpt-61-sol",
+        "duo-chat-gpt-6-1-sol"
       ],
       "context_length": 1050000,
       "release_date": "2026-09-29",
@@ -11888,10 +11888,10 @@
       "media_type": "text",
       "display_name": "GPT-6.1 Terra",
       "aliases": [
-        "openai-gpt-6.1-terra",
-        "openai-gpt-61-terra",
+        "openai.gpt-6.1-terra",
         "global.openai.gpt-6.1-terra",
-        "us.openai.gpt-6.1-terra"
+        "us.openai.gpt-6.1-terra",
+        "openai-gpt-61-terra"
       ],
       "context_length": 1050000,
       "release_date": "2026-10-26",
@@ -12147,6 +12147,9 @@
       "name": "gpt-image-2",
       "media_type": "image",
       "display_name": "GPT Image 2",
+      "aliases": [
+        "gpt-image-2-2026-04-21"
+      ],
       "release_date": "2026-04-21",
       "facts": {
         "text_to_image": true,
@@ -13815,8 +13818,8 @@
       "media_type": "text",
       "display_name": "Grok 4.7",
       "aliases": [
-        "global.xai.grok-4.7",
-        "us.xai.grok-4.7"
+        "us.xai.grok-4.7",
+        "global.xai.grok-4.7"
       ],
       "context_length": 500000,
       "release_date": "2026-09-21",
@@ -14660,8 +14663,8 @@
       "media_type": "text",
       "display_name": "GLM-4.7",
       "aliases": [
-        "zai-org-glm-4.7",
-        "zai.glm-4.7"
+        "zai.glm-4.7",
+        "zai-org-glm-4.7"
       ],
       "context_length": 204800,
       "release_date": "2025-12-22",
@@ -14881,8 +14884,8 @@
       "media_type": "text",
       "display_name": "GLM-5",
       "aliases": [
-        "zai-org-glm-5",
-        "zai.glm-5"
+        "zai.glm-5",
+        "zai-org-glm-5"
       ],
       "context_length": 204800,
       "release_date": "2026-02-12",
@@ -14983,9 +14986,9 @@
       "media_type": "text",
       "display_name": "GLM-5.1",
       "aliases": [
-        "coding-glm-5.1",
         "zai-glm-5.1",
         "alicloud-glm-5.1",
+        "coding-glm-5.1",
         "zai-org-glm-5-1"
       ],
       "context_length": 200000,
@@ -15088,9 +15091,9 @@
       "display_name": "GLM-5.2",
       "aliases": [
         "zai-glm-5-2",
+        "databricks-glm-5-2",
         "glm5.2",
-        "zai-org-glm-5-2",
-        "databricks-glm-5-2"
+        "zai-org-glm-5-2"
       ],
       "context_length": 1000000,
       "release_date": "2026-06-13",
@@ -15152,11 +15155,11 @@
       "display_name": "GLM-5.3",
       "aliases": [
         "zai-glm-5-3",
-        "umans-glm-5.3",
-        "z-ai-glm-5-3",
-        "glm5.3",
         "us.zai.glm-5.3",
-        "global.zai.glm-5.3"
+        "global.zai.glm-5.3",
+        "glm5.3",
+        "umans-glm-5.3",
+        "z-ai-glm-5-3"
       ],
       "context_length": 1000000,
       "release_date": "2026-08-14",
@@ -15219,9 +15222,9 @@
       "aliases": [
         "zai-glm-5-3-flash",
         "morph-glm53flash",
+        "glm5.3-flash",
         "umans-glm-5.3-flash",
-        "z-ai-glm-5-3-flash",
-        "glm5.3-flash"
+        "z-ai-glm-5-3-flash"
       ],
       "context_length": 1000000,
       "release_date": "2026-08-26",
@@ -15441,67 +15444,83 @@
       "models": [
         {
           "api_model_name": "gemini-3-flash-preview",
-          "entry": "google/gemini-3-flash-preview"
+          "entry": "google/gemini-3-flash-preview",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemini-3-pro-image",
-          "entry": "google/gemini-3-pro-image"
+          "entry": "google/gemini-3-pro-image",
+          "endpoint": "gemini-image"
         },
         {
           "api_model_name": "gemini-3.1-flash-image",
-          "entry": "google/gemini-3.1-flash-image"
+          "entry": "google/gemini-3.1-flash-image",
+          "endpoint": "gemini-image"
         },
         {
           "api_model_name": "veo-3.1-generate-preview",
-          "entry": "google/veo-3.1-generate-preview"
+          "entry": "google/veo-3.1-generate-preview",
+          "endpoint": "gemini-video"
         },
         {
           "api_model_name": "veo-3.1-fast-generate-preview",
-          "entry": "google/veo-3.1-fast-generate-preview"
+          "entry": "google/veo-3.1-fast-generate-preview",
+          "endpoint": "gemini-video"
         },
         {
           "api_model_name": "veo-3.1-lite-generate-preview",
-          "entry": "google/veo-3.1-lite-generate-preview"
+          "entry": "google/veo-3.1-lite-generate-preview",
+          "endpoint": "gemini-video"
         },
         {
           "api_model_name": "gemini-3.8-flash-tts",
-          "entry": "google/gemini-3.8-flash-tts"
+          "entry": "google/gemini-3.8-flash-tts",
+          "endpoint": "gemini-tts"
         },
         {
           "api_model_name": "gemini-3.8-flash-lite-tts",
-          "entry": "google/gemini-3.8-flash-lite-tts"
+          "entry": "google/gemini-3.8-flash-lite-tts",
+          "endpoint": "gemini-tts"
         },
         {
           "api_model_name": "gemini-3.1-flash-lite",
-          "entry": "google/gemini-3.1-flash-lite"
+          "entry": "google/gemini-3.1-flash-lite",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemini-3.1-pro-preview",
-          "entry": "google/gemini-3.1-pro-preview"
+          "entry": "google/gemini-3.1-pro-preview",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemini-3.5-flash-lite",
-          "entry": "google/gemini-3.5-flash-lite"
+          "entry": "google/gemini-3.5-flash-lite",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemini-3.6-flash",
-          "entry": "google/gemini-3.6-flash"
+          "entry": "google/gemini-3.6-flash",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemini-3.8-flash",
-          "entry": "google/gemini-3.8-flash"
+          "entry": "google/gemini-3.8-flash",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemini-4-argon",
-          "entry": "google/gemini-4-argon"
+          "entry": "google/gemini-4-argon",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemma-4-26b-a4b-it",
-          "entry": "google/gemma-4-26b-a4b-it"
+          "entry": "google/gemma-4-26b-a4b-it",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemma-4-31b-it",
-          "entry": "google/gemma-4-31b-it"
+          "entry": "google/gemma-4-31b-it",
+          "endpoint": "gemini-generate"
         }
       ],
       "defaults": {
@@ -15514,63 +15533,78 @@
       "models": [
         {
           "api_model_name": "gemini-3-flash-preview",
-          "entry": "google/gemini-3-flash-preview"
+          "entry": "google/gemini-3-flash-preview",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemini-3-pro-image",
-          "entry": "google/gemini-3-pro-image"
+          "entry": "google/gemini-3-pro-image",
+          "endpoint": "gemini-image"
         },
         {
           "api_model_name": "gemini-3.1-flash-image",
-          "entry": "google/gemini-3.1-flash-image"
+          "entry": "google/gemini-3.1-flash-image",
+          "endpoint": "gemini-image"
         },
         {
           "api_model_name": "veo-3.1-generate-001",
-          "entry": "google/veo-3.1-generate-001"
+          "entry": "google/veo-3.1-generate-001",
+          "endpoint": "gemini-vertex-video"
         },
         {
           "api_model_name": "veo-3.1-fast-generate-001",
-          "entry": "google/veo-3.1-fast-generate-001"
+          "entry": "google/veo-3.1-fast-generate-001",
+          "endpoint": "gemini-vertex-video"
         },
         {
           "api_model_name": "gemini-3.8-flash-tts",
-          "entry": "google/gemini-3.8-flash-tts"
+          "entry": "google/gemini-3.8-flash-tts",
+          "endpoint": "gemini-tts"
         },
         {
           "api_model_name": "gemini-3.8-flash-lite-tts",
-          "entry": "google/gemini-3.8-flash-lite-tts"
+          "entry": "google/gemini-3.8-flash-lite-tts",
+          "endpoint": "gemini-tts"
         },
         {
           "api_model_name": "gemini-3.1-flash-lite",
-          "entry": "google/gemini-3.1-flash-lite"
+          "entry": "google/gemini-3.1-flash-lite",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemini-3.1-pro-preview",
-          "entry": "google/gemini-3.1-pro-preview"
+          "entry": "google/gemini-3.1-pro-preview",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemini-3.5-flash",
-          "entry": "google/gemini-3.5-flash"
+          "entry": "google/gemini-3.5-flash",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemini-3.5-flash-lite",
-          "entry": "google/gemini-3.5-flash-lite"
+          "entry": "google/gemini-3.5-flash-lite",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemini-3.6-flash",
-          "entry": "google/gemini-3.6-flash"
+          "entry": "google/gemini-3.6-flash",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemini-3.7-flash",
-          "entry": "google/gemini-3.7-flash"
+          "entry": "google/gemini-3.7-flash",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemini-3.8-flash",
-          "entry": "google/gemini-3.8-flash"
+          "entry": "google/gemini-3.8-flash",
+          "endpoint": "gemini-generate"
         },
         {
           "api_model_name": "gemini-4-argon",
-          "entry": "google/gemini-4-argon"
+          "entry": "google/gemini-4-argon",
+          "endpoint": "gemini-generate"
         }
       ],
       "defaults": {
@@ -15584,83 +15618,103 @@
       "models": [
         {
           "api_model_name": "doubao-seed-2-1-lite-260915",
-          "entry": "bytedance/doubao-seed-2.1-lite"
+          "entry": "bytedance/doubao-seed-2.1-lite",
+          "endpoint": "ark-chat"
         },
         {
           "api_model_name": "doubao-seed-2-1-pro-260915",
-          "entry": "bytedance/doubao-seed-2.1-pro"
+          "entry": "bytedance/doubao-seed-2.1-pro",
+          "endpoint": "ark-chat"
         },
         {
           "api_model_name": "doubao-seedream-5-0-pro-260628",
-          "entry": "bytedance/doubao-seedream-5-0-pro"
+          "entry": "bytedance/doubao-seedream-5-0-pro",
+          "endpoint": "ark-seedream-4"
         },
         {
           "api_model_name": "doubao-seedream-5-0-flash-260915",
-          "entry": "bytedance/doubao-seedream-5-0-flash"
+          "entry": "bytedance/doubao-seedream-5-0-flash",
+          "endpoint": "ark-seedream-4"
         },
         {
           "api_model_name": "doubao-seedream-5-0-lite-260128",
-          "entry": "bytedance/doubao-seedream-5-0-lite"
+          "entry": "bytedance/doubao-seedream-5-0-lite",
+          "endpoint": "ark-seedream-4"
         },
         {
           "api_model_name": "doubao-seedream-5-0-260128",
-          "entry": "bytedance/doubao-seedream-5-0-lite"
+          "entry": "bytedance/doubao-seedream-5-0-lite",
+          "endpoint": "ark-seedream-4"
         },
         {
           "api_model_name": "doubao-seedream-4-5-251128",
-          "entry": "bytedance/doubao-seedream-4-5"
+          "entry": "bytedance/doubao-seedream-4-5",
+          "endpoint": "ark-seedream-4"
         },
         {
           "api_model_name": "doubao-seedream-4-0-250828",
-          "entry": "bytedance/doubao-seedream-4-0"
+          "entry": "bytedance/doubao-seedream-4-0",
+          "endpoint": "ark-seedream-4"
         },
         {
           "api_model_name": "doubao-seedance-2-0-260128",
-          "entry": "bytedance/doubao-seedance-2.0"
+          "entry": "bytedance/doubao-seedance-2.0",
+          "endpoint": "ark-seedance-2"
         },
         {
           "api_model_name": "doubao-seedance-2-0-fast-260128",
-          "entry": "bytedance/doubao-seedance-2.0-fast"
+          "entry": "bytedance/doubao-seedance-2.0-fast",
+          "endpoint": "ark-seedance-2"
         },
         {
           "api_model_name": "doubao-seedance-2-0-mini-260615",
-          "entry": "bytedance/doubao-seedance-2.0-mini"
+          "entry": "bytedance/doubao-seedance-2.0-mini",
+          "endpoint": "ark-seedance-2"
         },
         {
           "api_model_name": "doubao-seedance-2-5-260628",
-          "entry": "bytedance/doubao-seedance-2.5"
+          "entry": "bytedance/doubao-seedance-2.5",
+          "endpoint": "ark-seedance-2-5"
         },
         {
           "api_model_name": "doubao-seed-2-0-pro-260215",
-          "entry": "bytedance/doubao-seed-2.0-pro"
+          "entry": "bytedance/doubao-seed-2.0-pro",
+          "endpoint": "ark-chat"
         },
         {
           "api_model_name": "doubao-seed-2-0-code-preview-260215",
-          "entry": "bytedance/doubao-seed-2-0-code-preview-260215"
+          "entry": "bytedance/doubao-seed-2-0-code-preview-260215",
+          "endpoint": "ark-chat"
         },
         {
           "api_model_name": "doubao-seed-2-0-lite-260428",
-          "entry": "bytedance/doubao-seed-2.0-lite"
+          "entry": "bytedance/doubao-seed-2.0-lite",
+          "endpoint": "ark-chat"
         },
         {
           "api_model_name": "doubao-seed-2-0-mini-260428",
-          "entry": "bytedance/doubao-seed-2.0-mini"
+          "entry": "bytedance/doubao-seed-2.0-mini",
+          "endpoint": "ark-chat"
         },
         {
           "api_model_name": "doubao-seed-2-1-pro-260628",
-          "entry": "bytedance/doubao-seed-2-1-pro-260628"
+          "entry": "bytedance/doubao-seed-2-1-pro-260628",
+          "endpoint": "ark-chat"
         },
         {
           "api_model_name": "doubao-seed-2-1-turbo-260628",
-          "entry": "bytedance/doubao-seed-2-1-turbo-260628"
+          "entry": "bytedance/doubao-seed-2-1-turbo-260628",
+          "endpoint": "ark-chat"
         },
         {
           "api_model_name": "doubao-seed-character-260628",
-          "entry": "bytedance/doubao-seed-character-260628"
+          "entry": "bytedance/doubao-seed-character-260628",
+          "endpoint": "ark-chat"
         },
         {
           "api_model_name": "doubao-seed-evolving",
-          "entry": "bytedance/doubao-seed-evolving"
+          "entry": "bytedance/doubao-seed-evolving",
+          "endpoint": "ark-chat"
         }
       ],
       "defaults": {
@@ -15673,59 +15727,73 @@
       "models": [
         {
           "api_model_name": "doubao-seed-2.0-mini",
-          "entry": "bytedance/doubao-seed-2.0-mini"
+          "entry": "bytedance/doubao-seed-2.0-mini",
+          "endpoint": "ark-chat"
         },
         {
           "api_model_name": "doubao-seedance-2.0",
-          "entry": "bytedance/doubao-seedance-2.0"
+          "entry": "bytedance/doubao-seedance-2.0",
+          "endpoint": "ark-seedance-2"
         },
         {
           "api_model_name": "doubao-seedance-2.0-fast",
-          "entry": "bytedance/doubao-seedance-2.0-fast"
+          "entry": "bytedance/doubao-seedance-2.0-fast",
+          "endpoint": "ark-seedance-2"
         },
         {
           "api_model_name": "doubao-seedance-2.0-mini",
-          "entry": "bytedance/doubao-seedance-2.0-mini"
+          "entry": "bytedance/doubao-seedance-2.0-mini",
+          "endpoint": "ark-seedance-2"
         },
         {
           "api_model_name": "doubao-seed-2.1-lite",
-          "entry": "bytedance/doubao-seed-2.1-lite"
+          "entry": "bytedance/doubao-seed-2.1-lite",
+          "endpoint": "ark-chat"
         },
         {
           "api_model_name": "doubao-seedream-5-0-pro",
-          "entry": "bytedance/doubao-seedream-5-0-pro"
+          "entry": "bytedance/doubao-seedream-5-0-pro",
+          "endpoint": "ark-seedream-4"
         },
         {
           "api_model_name": "doubao-seedream-5.0-flash",
-          "entry": "bytedance/doubao-seedream-5-0-flash"
+          "entry": "bytedance/doubao-seedream-5-0-flash",
+          "endpoint": "ark-seedream-4"
         },
         {
           "api_model_name": "doubao-seedance-2.5",
-          "entry": "bytedance/doubao-seedance-2.5"
+          "entry": "bytedance/doubao-seedance-2.5",
+          "endpoint": "ark-seedance-2-5"
         },
         {
           "api_model_name": "doubao-seed-evolving",
-          "entry": "bytedance/doubao-seed-evolving"
-        },
-        {
-          "api_model_name": "glm-5.3-flash",
-          "entry": "zhipu/glm-5.3-flash"
-        },
-        {
-          "api_model_name": "deepseek-v4-flash",
-          "entry": "deepseek/deepseek-v4-flash"
-        },
-        {
-          "api_model_name": "kimi-k3",
-          "entry": "moonshot/kimi-k3"
+          "entry": "bytedance/doubao-seed-evolving",
+          "endpoint": "ark-chat"
         },
         {
           "api_model_name": "deepseek-v4-pro",
-          "entry": "deepseek/deepseek-v4-pro"
+          "entry": "deepseek/deepseek-v4-pro",
+          "endpoint": "ark-chat"
+        },
+        {
+          "api_model_name": "glm-5.3-flash",
+          "entry": "zhipu/glm-5.3-flash",
+          "endpoint": "ark-chat"
         },
         {
           "api_model_name": "glm-5.3",
-          "entry": "zhipu/glm-5.3"
+          "entry": "zhipu/glm-5.3",
+          "endpoint": "ark-chat"
+        },
+        {
+          "api_model_name": "kimi-k3",
+          "entry": "moonshot/kimi-k3",
+          "endpoint": "ark-chat"
+        },
+        {
+          "api_model_name": "deepseek-v4-flash",
+          "entry": "deepseek/deepseek-v4-flash",
+          "endpoint": "ark-chat"
         }
       ],
       "defaults": {
@@ -15736,55 +15804,68 @@
       "models": [
         {
           "api_model_name": "grok-4.3",
-          "entry": "xai/grok-4.3"
+          "entry": "xai/grok-4.3",
+          "endpoint": "grok-chat"
         },
         {
           "api_model_name": "grok-imagine-image",
-          "entry": "xai/grok-imagine-image"
+          "entry": "xai/grok-imagine-image",
+          "endpoint": "grok-image"
         },
         {
           "api_model_name": "grok-imagine-image-2.0",
-          "entry": "xai/grok-imagine-image-2.0"
+          "entry": "xai/grok-imagine-image-2.0",
+          "endpoint": "grok-image"
         },
         {
           "api_model_name": "grok-imagine-video",
-          "entry": "xai/grok-imagine-video"
+          "entry": "xai/grok-imagine-video",
+          "endpoint": "grok-video-classic"
         },
         {
           "api_model_name": "grok-imagine-video-1.5",
-          "entry": "xai/grok-imagine-video-1.5"
+          "entry": "xai/grok-imagine-video-1.5",
+          "endpoint": "grok-video-mixed"
         },
         {
           "api_model_name": "grok-imagine-video-1.5-lite",
-          "entry": "xai/grok-imagine-video-1.5-lite"
+          "entry": "xai/grok-imagine-video-1.5-lite",
+          "endpoint": "grok-video-mixed"
         },
         {
           "api_model_name": "grok-4.20-0309-non-reasoning",
-          "entry": "xai/grok-4.20-0309-non-reasoning"
+          "entry": "xai/grok-4.20-0309-non-reasoning",
+          "endpoint": "grok-chat"
         },
         {
           "api_model_name": "grok-4.20-0309-reasoning",
-          "entry": "xai/grok-4.20-0309-reasoning"
+          "entry": "xai/grok-4.20-0309-reasoning",
+          "endpoint": "grok-chat"
         },
         {
           "api_model_name": "grok-4.20-multi-agent-0309",
-          "entry": "xai/grok-4.20-multi-agent-0309"
+          "entry": "xai/grok-4.20-multi-agent-0309",
+          "endpoint": "grok-chat"
         },
         {
           "api_model_name": "grok-4.5",
-          "entry": "xai/grok-4.5"
+          "entry": "xai/grok-4.5",
+          "endpoint": "grok-chat"
         },
         {
           "api_model_name": "grok-4.6",
-          "entry": "xai/grok-4.6"
+          "entry": "xai/grok-4.6",
+          "endpoint": "grok-chat"
         },
         {
           "api_model_name": "grok-4.7",
-          "entry": "xai/grok-4.7"
+          "entry": "xai/grok-4.7",
+          "endpoint": "grok-chat"
         },
         {
           "api_model_name": "grok-build-0.1",
-          "entry": "xai/grok-build-0.1"
+          "entry": "xai/grok-build-0.1",
+          "endpoint": "grok-chat"
         }
       ],
       "defaults": {
@@ -15797,83 +15878,103 @@
       "models": [
         {
           "api_model_name": "gpt-5.4-mini",
-          "entry": "openai/gpt-5.4-mini"
+          "entry": "openai/gpt-5.4-mini",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "o3-pro",
-          "entry": "openai/o3-pro"
+          "entry": "openai/o3-pro",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-image-2.5-sunburst",
-          "entry": "openai/gpt-image-2.5-sunburst"
+          "entry": "openai/gpt-image-2.5-sunburst",
+          "endpoint": "openai-images"
         },
         {
           "api_model_name": "gpt-image-2.5-flare",
-          "entry": "openai/gpt-image-2.5-flare"
+          "entry": "openai/gpt-image-2.5-flare",
+          "endpoint": "openai-images"
         },
         {
           "api_model_name": "gpt-image-2",
-          "entry": "openai/gpt-image-2"
+          "entry": "openai/gpt-image-2",
+          "endpoint": "openai-images"
         },
         {
           "api_model_name": "gpt-5.3-codex",
-          "entry": "openai/gpt-5.3-codex"
+          "entry": "openai/gpt-5.3-codex",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-5.4",
-          "entry": "openai/gpt-5.4"
+          "entry": "openai/gpt-5.4",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-5.4-nano",
-          "entry": "openai/gpt-5.4-nano"
+          "entry": "openai/gpt-5.4-nano",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-5.4-pro",
-          "entry": "openai/gpt-5.4-pro"
+          "entry": "openai/gpt-5.4-pro",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-5.5",
-          "entry": "openai/gpt-5.5"
+          "entry": "openai/gpt-5.5",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-5.5-pro",
-          "entry": "openai/gpt-5.5-pro"
+          "entry": "openai/gpt-5.5-pro",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-5.6",
-          "entry": "openai/gpt-5.6"
+          "entry": "openai/gpt-5.6",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-5.6-luna",
-          "entry": "openai/gpt-5.6-luna"
+          "entry": "openai/gpt-5.6-luna",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-5.6-sol",
-          "entry": "openai/gpt-5.6-sol"
+          "entry": "openai/gpt-5.6-sol",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-5.6-terra",
-          "entry": "openai/gpt-5.6-terra"
+          "entry": "openai/gpt-5.6-terra",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-6-astra",
-          "entry": "openai/gpt-6-astra"
+          "entry": "openai/gpt-6-astra",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-6-luna",
-          "entry": "openai/gpt-6-luna"
+          "entry": "openai/gpt-6-luna",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-6-sol",
-          "entry": "openai/gpt-6-sol"
+          "entry": "openai/gpt-6-sol",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-6.1-sol",
-          "entry": "openai/gpt-6.1-sol"
+          "entry": "openai/gpt-6.1-sol",
+          "endpoint": "openai-responses"
         },
         {
           "api_model_name": "gpt-6.1-terra",
-          "entry": "openai/gpt-6.1-terra"
+          "entry": "openai/gpt-6.1-terra",
+          "endpoint": "openai-responses"
         }
       ],
       "defaults": {
@@ -15885,31 +15986,38 @@
       "models": [
         {
           "api_model_name": "viduq2",
-          "entry": "shengshu/viduq2"
+          "entry": "shengshu/viduq2",
+          "endpoint": "vidu-image"
         },
         {
           "api_model_name": "viduq1",
-          "entry": "shengshu/viduq1"
+          "entry": "shengshu/viduq1",
+          "endpoint": "vidu-image"
         },
         {
           "api_model_name": "viduq3-turbo",
-          "entry": "shengshu/viduq3-turbo"
+          "entry": "shengshu/viduq3-turbo",
+          "endpoint": "vidu-video-q3-turbo"
         },
         {
           "api_model_name": "viduq3-pro",
-          "entry": "shengshu/viduq3-pro"
+          "entry": "shengshu/viduq3-pro",
+          "endpoint": "vidu-video-q3-pro"
         },
         {
           "api_model_name": "viduq3-pro-fast",
-          "entry": "shengshu/viduq3-pro-fast"
+          "entry": "shengshu/viduq3-pro-fast",
+          "endpoint": "vidu-video-q3-fast"
         },
         {
           "api_model_name": "viduq3",
-          "entry": "shengshu/viduq3"
+          "entry": "shengshu/viduq3",
+          "endpoint": "vidu-video-q3-reference"
         },
         {
           "api_model_name": "vidu2.0",
-          "entry": "shengshu/vidu2.0"
+          "entry": "shengshu/vidu2.0",
+          "endpoint": "vidu-video-2"
         }
       ],
       "defaults": {
@@ -15921,167 +16029,208 @@
       "models": [
         {
           "api_model_name": "qwen-plus",
-          "entry": "alibaba/qwen-plus"
+          "entry": "alibaba/qwen-plus",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "qwen3-max",
-          "entry": "alibaba/qwen3-max"
+          "entry": "alibaba/qwen3-max",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "qwen-long",
-          "entry": "alibaba/qwen-long"
+          "entry": "alibaba/qwen-long",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "qwen-image-2.0",
-          "entry": "alibaba/qwen-image-2.0"
+          "entry": "alibaba/qwen-image-2.0",
+          "endpoint": "dashscope-qwen-image"
         },
         {
           "api_model_name": "qwen-image-2.0-pro",
-          "entry": "alibaba/qwen-image-2.0-pro"
+          "entry": "alibaba/qwen-image-2.0-pro",
+          "endpoint": "dashscope-qwen-image"
         },
         {
           "api_model_name": "qwen-image-3.0",
-          "entry": "alibaba/qwen-image-3.0"
+          "entry": "alibaba/qwen-image-3.0",
+          "endpoint": "dashscope-qwen-image"
         },
         {
           "api_model_name": "qwen-image-edit-plus",
-          "entry": "alibaba/qwen-image-edit-plus"
+          "entry": "alibaba/qwen-image-edit-plus",
+          "endpoint": "dashscope-qwen-image-edit"
         },
         {
           "api_model_name": "qwen-image-edit-max",
-          "entry": "alibaba/qwen-image-edit-max"
+          "entry": "alibaba/qwen-image-edit-max",
+          "endpoint": "dashscope-qwen-image-edit"
         },
         {
           "api_model_name": "wan2.7-image",
-          "entry": "alibaba/wan2.7-image"
+          "entry": "alibaba/wan2.7-image",
+          "endpoint": "dashscope-wan-image"
         },
         {
           "api_model_name": "wan2.7-image-pro",
-          "entry": "alibaba/wan2.7-image-pro"
+          "entry": "alibaba/wan2.7-image-pro",
+          "endpoint": "dashscope-wan-image"
         },
         {
           "api_model_name": "happyhorse-1.1-i2v",
-          "entry": "alibaba/happyhorse-1.1-i2v"
+          "entry": "alibaba/happyhorse-1.1-i2v",
+          "endpoint": "dashscope-always-on-video"
         },
         {
           "api_model_name": "happyhorse-1.1-t2v",
-          "entry": "alibaba/happyhorse-1.1-t2v"
+          "entry": "alibaba/happyhorse-1.1-t2v",
+          "endpoint": "dashscope-always-on-video"
         },
         {
           "api_model_name": "happyhorse-1.1-r2v",
-          "entry": "alibaba/happyhorse-1.1-r2v"
+          "entry": "alibaba/happyhorse-1.1-r2v",
+          "endpoint": "dashscope-reference-video"
         },
         {
           "api_model_name": "happyhorse-1.0-i2v",
-          "entry": "alibaba/happyhorse-1.0-i2v"
+          "entry": "alibaba/happyhorse-1.0-i2v",
+          "endpoint": "dashscope-always-on-video"
         },
         {
           "api_model_name": "happyhorse-1.0-t2v",
-          "entry": "alibaba/happyhorse-1.0-t2v"
+          "entry": "alibaba/happyhorse-1.0-t2v",
+          "endpoint": "dashscope-always-on-video"
         },
         {
           "api_model_name": "happyhorse-1.0-r2v",
-          "entry": "alibaba/happyhorse-1.0-r2v"
+          "entry": "alibaba/happyhorse-1.0-r2v",
+          "endpoint": "dashscope-reference-video"
         },
         {
           "api_model_name": "wan2.7-i2v",
-          "entry": "alibaba/wan2.7-i2v"
+          "entry": "alibaba/wan2.7-i2v",
+          "endpoint": "dashscope-always-on-video"
         },
         {
           "api_model_name": "wan2.7-t2v",
-          "entry": "alibaba/wan2.7-t2v"
+          "entry": "alibaba/wan2.7-t2v",
+          "endpoint": "dashscope-always-on-video"
         },
         {
           "api_model_name": "wan2.7-r2v",
-          "entry": "alibaba/wan2.7-r2v"
+          "entry": "alibaba/wan2.7-r2v",
+          "endpoint": "dashscope-reference-voice-video"
         },
         {
           "api_model_name": "wan3.0-video",
-          "entry": "alibaba/wan3.0-video"
+          "entry": "alibaba/wan3.0-video",
+          "endpoint": "dashscope-wan3-video"
         },
         {
           "api_model_name": "wan3.0-video-prime",
-          "entry": "alibaba/wan3.0-video-prime"
+          "entry": "alibaba/wan3.0-video-prime",
+          "endpoint": "dashscope-wan3-video"
         },
         {
           "api_model_name": "qwen3-tts-flash",
-          "entry": "alibaba/qwen3-tts-flash"
+          "entry": "alibaba/qwen3-tts-flash",
+          "endpoint": "dashscope-tts"
         },
         {
           "api_model_name": "qwen3.6-max-preview",
-          "entry": "alibaba/qwen3.6-max-preview"
+          "entry": "alibaba/qwen3.6-max-preview",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "MiniMax-M2.5",
-          "entry": "minimax/MiniMax-M2.5"
+          "entry": "minimax/MiniMax-M2.5",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "qwen3.5-flash",
-          "entry": "alibaba/qwen3.5-flash"
+          "entry": "alibaba/qwen3.5-flash",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "qwen3.5-plus",
-          "entry": "alibaba/qwen3.5-plus"
+          "entry": "alibaba/qwen3.5-plus",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "qwen3.6-flash",
-          "entry": "alibaba/qwen3.6-flash"
+          "entry": "alibaba/qwen3.6-flash",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "qwen3.6-plus",
-          "entry": "alibaba/qwen3.6-plus"
+          "entry": "alibaba/qwen3.6-plus",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "qwen3.7-flash",
-          "entry": "alibaba/qwen3.7-flash"
+          "entry": "alibaba/qwen3.7-flash",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "qwen3.7-max",
-          "entry": "alibaba/qwen3.7-max"
+          "entry": "alibaba/qwen3.7-max",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "qwen3.7-plus",
-          "entry": "alibaba/qwen3.7-plus"
+          "entry": "alibaba/qwen3.7-plus",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "qwen3.8-flash",
-          "entry": "alibaba/qwen3.8-flash"
+          "entry": "alibaba/qwen3.8-flash",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "qwen3.8-max",
-          "entry": "alibaba/qwen3.8-max"
-        },
-        {
-          "api_model_name": "glm-5.1",
-          "entry": "zhipu/glm-5.1"
-        },
-        {
-          "api_model_name": "kimi-k3",
-          "entry": "moonshot/kimi-k3"
+          "entry": "alibaba/qwen3.8-max",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "glm-5",
-          "entry": "zhipu/glm-5"
-        },
-        {
-          "api_model_name": "deepseek-v4.1-flash",
-          "entry": "deepseek/deepseek-flash"
-        },
-        {
-          "api_model_name": "kimi-k2.6",
-          "entry": "moonshot/kimi-k2.6"
+          "entry": "zhipu/glm-5",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "glm-5.2",
-          "entry": "zhipu/glm-5.2"
+          "entry": "zhipu/glm-5.2",
+          "endpoint": "openai-chat"
+        },
+        {
+          "api_model_name": "glm-5.1",
+          "entry": "zhipu/glm-5.1",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "deepseek-v4-pro",
-          "entry": "deepseek/deepseek-v4-pro"
+          "entry": "deepseek/deepseek-v4-pro",
+          "endpoint": "openai-chat"
+        },
+        {
+          "api_model_name": "kimi-k2.6",
+          "entry": "moonshot/kimi-k2.6",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "glm-5.3",
-          "entry": "zhipu/glm-5.3"
+          "entry": "zhipu/glm-5.3",
+          "endpoint": "openai-chat"
+        },
+        {
+          "api_model_name": "kimi-k3",
+          "entry": "moonshot/kimi-k3",
+          "endpoint": "openai-chat"
+        },
+        {
+          "api_model_name": "deepseek-v4.1-flash",
+          "entry": "deepseek/deepseek-flash",
+          "endpoint": "openai-chat"
         }
       ],
       "defaults": {
@@ -16095,63 +16244,78 @@
       "models": [
         {
           "api_model_name": "MiniMax-M3",
-          "entry": "minimax/MiniMax-M3"
+          "entry": "minimax/MiniMax-M3",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "MiniMax-M2.7",
-          "entry": "minimax/MiniMax-M2.7"
+          "entry": "minimax/MiniMax-M2.7",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "image-01",
-          "entry": "minimax/image-01"
+          "entry": "minimax/image-01",
+          "endpoint": "minimax-image"
         },
         {
           "api_model_name": "MiniMax-H3",
-          "entry": "minimax/MiniMax-H3"
+          "entry": "minimax/MiniMax-H3",
+          "endpoint": "minimax-h3"
         },
         {
           "api_model_name": "MiniMax-H3-Highspeed",
-          "entry": "minimax/MiniMax-H3-Highspeed"
+          "entry": "minimax/MiniMax-H3-Highspeed",
+          "endpoint": "minimax-h3"
         },
         {
           "api_model_name": "MiniMax-H3-Lite",
-          "entry": "minimax/MiniMax-H3-Lite"
+          "entry": "minimax/MiniMax-H3-Lite",
+          "endpoint": "minimax-h3"
         },
         {
           "api_model_name": "MiniMax-H3-Max",
-          "entry": "minimax/MiniMax-H3-Max"
+          "entry": "minimax/MiniMax-H3-Max",
+          "endpoint": "minimax-h3"
         },
         {
           "api_model_name": "MiniMax-Hailuo-2.3",
-          "entry": "minimax/MiniMax-Hailuo-2.3"
+          "entry": "minimax/MiniMax-Hailuo-2.3",
+          "endpoint": "minimax-hailuo-v1"
         },
         {
           "api_model_name": "MiniMax-Hailuo-2.3-Fast",
-          "entry": "minimax/MiniMax-Hailuo-2.3-Fast"
+          "entry": "minimax/MiniMax-Hailuo-2.3-Fast",
+          "endpoint": "minimax-hailuo-v1-fast"
         },
         {
           "api_model_name": "speech-2.8-hd",
-          "entry": "minimax/speech-2.8-hd"
+          "entry": "minimax/speech-2.8-hd",
+          "endpoint": "minimax-tts"
         },
         {
           "api_model_name": "speech-2.8-turbo",
-          "entry": "minimax/speech-2.8-turbo"
+          "entry": "minimax/speech-2.8-turbo",
+          "endpoint": "minimax-tts"
         },
         {
           "api_model_name": "MiniMax-M2.5",
-          "entry": "minimax/MiniMax-M2.5"
+          "entry": "minimax/MiniMax-M2.5",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "MiniMax-M2.5-highspeed",
-          "entry": "minimax/MiniMax-M2.5-highspeed"
+          "entry": "minimax/MiniMax-M2.5-highspeed",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "MiniMax-M2.7-highspeed",
-          "entry": "minimax/MiniMax-M2.7-highspeed"
+          "entry": "minimax/MiniMax-M2.7-highspeed",
+          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "MiniMax-M3.1-Flash",
-          "entry": "minimax/MiniMax-M3.1-Flash"
+          "entry": "minimax/MiniMax-M3.1-Flash",
+          "endpoint": "openai-chat"
         }
       ],
       "defaults": {
@@ -16165,33 +16329,40 @@
       "models": [
         {
           "api_model_name": "kling-v2-5-turbo",
-          "entry": "kuaishou/kling-v2-5-turbo"
+          "entry": "kuaishou/kling-v2-5-turbo",
+          "endpoint": "kling-video-pro-silent"
         },
         {
           "api_model_name": "kling-image-o1",
-          "entry": "kuaishou/kling-image-o1"
+          "entry": "kuaishou/kling-image-o1",
+          "endpoint": "kling-image"
         },
         {
           "api_model_name": "kling-v3-omni",
           "entry": "kuaishou/kling-v3-omni",
-          "media_type": "image"
+          "media_type": "image",
+          "endpoint": "kling-image"
         },
         {
           "api_model_name": "kling-v3",
-          "entry": "kuaishou/kling-v3"
+          "entry": "kuaishou/kling-v3",
+          "endpoint": "kling-video-audio"
         },
         {
           "api_model_name": "kling-v3-omni",
           "entry": "kuaishou/kling-v3-omni",
-          "media_type": "video"
+          "media_type": "video",
+          "endpoint": "kling-video-audio"
         },
         {
           "api_model_name": "kling-v2-6",
-          "entry": "kuaishou/kling-v2-6"
+          "entry": "kuaishou/kling-v2-6",
+          "endpoint": "kling-video-pro-audio"
         },
         {
           "api_model_name": "kling-video-o1",
-          "entry": "kuaishou/kling-video-o1"
+          "entry": "kuaishou/kling-video-o1",
+          "endpoint": "kling-video-silent"
         }
       ],
       "defaults": {
@@ -16203,39 +16374,48 @@
       "models": [
         {
           "api_model_name": "agnes-3.0-flash",
-          "entry": "agnes/agnes-3.0-flash"
+          "entry": "agnes/agnes-3.0-flash",
+          "endpoint": "agnes-chat"
         },
         {
           "api_model_name": "agnes-2.5-flash",
-          "entry": "agnes/agnes-2.5-flash"
+          "entry": "agnes/agnes-2.5-flash",
+          "endpoint": "agnes-chat"
         },
         {
           "api_model_name": "agnes-2.5-pro",
-          "entry": "agnes/agnes-2.5-pro"
+          "entry": "agnes/agnes-2.5-pro",
+          "endpoint": "agnes-chat"
         },
         {
           "api_model_name": "agnes-2.0-flash",
-          "entry": "agnes/agnes-2.0-flash"
+          "entry": "agnes/agnes-2.0-flash",
+          "endpoint": "agnes-chat"
         },
         {
           "api_model_name": "agnes-image-2.5-flash",
-          "entry": "agnes/agnes-image-2.5-flash"
+          "entry": "agnes/agnes-image-2.5-flash",
+          "endpoint": "agnes-image-tier"
         },
         {
           "api_model_name": "agnes-image-2.1-flash",
-          "entry": "agnes/agnes-image-2.1-flash"
+          "entry": "agnes/agnes-image-2.1-flash",
+          "endpoint": "agnes-image-pixels"
         },
         {
           "api_model_name": "agnes-video-2.5-flash",
-          "entry": "agnes/agnes-video-2.5-flash"
+          "entry": "agnes/agnes-video-2.5-flash",
+          "endpoint": "agnes-video-2-5"
         },
         {
           "api_model_name": "agnes-video-2.5",
-          "entry": "agnes/agnes-video-2.5"
+          "entry": "agnes/agnes-video-2.5",
+          "endpoint": "agnes-video-2-5"
         },
         {
           "api_model_name": "agnes-video-v2.0",
-          "entry": "agnes/agnes-video-v2.0"
+          "entry": "agnes/agnes-video-v2.0",
+          "endpoint": "agnes-video-2"
         }
       ],
       "defaults": {
