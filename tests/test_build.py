@@ -404,7 +404,10 @@ def test_endpoint_versions_take_highest_floor_and_exempt_only_verified_binding(m
     assert built(listing)["min_app_version"] == "0.42.0"
 
 
-def test_new_multi_endpoint_listing_waits_for_declaration_release() -> None:
+def test_new_multi_endpoint_listing_waits_for_declaration_release(monkeypatch) -> None:
+    from arcreel_catalog_core import endpoints
+
+    monkeypatch.setattr(endpoints, "ENDPOINT_DECLARATIONS_SINCE", None)
     entry = {"maker": "bytedance", "name": "seedance", "media_type": "video"}
     with pytest.raises(ValueError, match="ENDPOINT_DECLARATIONS_SINCE"):
         build_catalog(
