@@ -142,7 +142,8 @@
       },
       {
         "api_model_name": "doubao-seedance-2-5-260628",
-        "entry": "bytedance/doubao-seedance-2.5"
+        "entry": "bytedance/doubao-seedance-2.5",
+        "endpoint": "ark-seedance-2-5"
       },
       {
         "api_model_name": "doubao-seed-2-0-pro-260215",
@@ -205,7 +206,8 @@
       },
       {
         "api_model_name": "doubao-seedance-2.5",
-        "entry": "bytedance/doubao-seedance-2.5"
+        "entry": "bytedance/doubao-seedance-2.5",
+        "endpoint": "ark-seedance-2-5"
       }
     ],
     "defaults": {
@@ -235,11 +237,13 @@
       },
       {
         "api_model_name": "grok-imagine-video-1.5",
-        "entry": "xai/grok-imagine-video-1.5"
+        "entry": "xai/grok-imagine-video-1.5",
+        "endpoint": "grok-video-mixed"
       },
       {
         "api_model_name": "grok-imagine-video-1.5-lite",
-        "entry": "xai/grok-imagine-video-1.5-lite"
+        "entry": "xai/grok-imagine-video-1.5-lite",
+        "endpoint": "grok-video-mixed"
       }
     ],
     "defaults": {
@@ -298,19 +302,23 @@
       },
       {
         "api_model_name": "viduq3-pro",
-        "entry": "shengshu/viduq3-pro"
+        "entry": "shengshu/viduq3-pro",
+        "endpoint": "vidu-video-q3-pro"
       },
       {
         "api_model_name": "viduq3-pro-fast",
-        "entry": "shengshu/viduq3-pro-fast"
+        "entry": "shengshu/viduq3-pro-fast",
+        "endpoint": "vidu-video-q3-fast"
       },
       {
         "api_model_name": "viduq3",
-        "entry": "shengshu/viduq3"
+        "entry": "shengshu/viduq3",
+        "endpoint": "vidu-video-q3-reference"
       },
       {
         "api_model_name": "vidu2.0",
-        "entry": "shengshu/vidu2.0"
+        "entry": "shengshu/vidu2.0",
+        "endpoint": "vidu-video-2"
       }
     ],
     "defaults": {
@@ -354,19 +362,23 @@
       },
       {
         "api_model_name": "qwen-image-edit-plus",
-        "entry": "alibaba/qwen-image-edit-plus"
+        "entry": "alibaba/qwen-image-edit-plus",
+        "endpoint": "dashscope-qwen-image-edit"
       },
       {
         "api_model_name": "qwen-image-edit-max",
-        "entry": "alibaba/qwen-image-edit-max"
+        "entry": "alibaba/qwen-image-edit-max",
+        "endpoint": "dashscope-qwen-image-edit"
       },
       {
         "api_model_name": "wan2.7-image",
-        "entry": "alibaba/wan2.7-image"
+        "entry": "alibaba/wan2.7-image",
+        "endpoint": "dashscope-wan-image"
       },
       {
         "api_model_name": "wan2.7-image-pro",
-        "entry": "alibaba/wan2.7-image-pro"
+        "entry": "alibaba/wan2.7-image-pro",
+        "endpoint": "dashscope-wan-image"
       },
       {
         "api_model_name": "happyhorse-1.1-i2v",
@@ -378,7 +390,8 @@
       },
       {
         "api_model_name": "happyhorse-1.1-r2v",
-        "entry": "alibaba/happyhorse-1.1-r2v"
+        "entry": "alibaba/happyhorse-1.1-r2v",
+        "endpoint": "dashscope-reference-video"
       },
       {
         "api_model_name": "happyhorse-1.0-i2v",
@@ -390,7 +403,8 @@
       },
       {
         "api_model_name": "happyhorse-1.0-r2v",
-        "entry": "alibaba/happyhorse-1.0-r2v"
+        "entry": "alibaba/happyhorse-1.0-r2v",
+        "endpoint": "dashscope-reference-video"
       },
       {
         "api_model_name": "wan2.7-i2v",
@@ -402,15 +416,18 @@
       },
       {
         "api_model_name": "wan2.7-r2v",
-        "entry": "alibaba/wan2.7-r2v"
+        "entry": "alibaba/wan2.7-r2v",
+        "endpoint": "dashscope-reference-voice-video"
       },
       {
         "api_model_name": "wan3.0-video",
-        "entry": "alibaba/wan3.0-video"
+        "entry": "alibaba/wan3.0-video",
+        "endpoint": "dashscope-wan3-video"
       },
       {
         "api_model_name": "wan3.0-video-prime",
-        "entry": "alibaba/wan3.0-video-prime"
+        "entry": "alibaba/wan3.0-video-prime",
+        "endpoint": "dashscope-wan3-video"
       },
       {
         "api_model_name": "qwen3-tts-flash",
@@ -451,19 +468,23 @@
       },
       {
         "api_model_name": "MiniMax-H3",
-        "entry": "minimax/MiniMax-H3"
+        "entry": "minimax/MiniMax-H3",
+        "endpoint": "minimax-h3"
       },
       {
         "api_model_name": "MiniMax-H3-Highspeed",
-        "entry": "minimax/MiniMax-H3-Highspeed"
+        "entry": "minimax/MiniMax-H3-Highspeed",
+        "endpoint": "minimax-h3"
       },
       {
         "api_model_name": "MiniMax-H3-Lite",
-        "entry": "minimax/MiniMax-H3-Lite"
+        "entry": "minimax/MiniMax-H3-Lite",
+        "endpoint": "minimax-h3"
       },
       {
         "api_model_name": "MiniMax-H3-Max",
-        "entry": "minimax/MiniMax-H3-Max"
+        "entry": "minimax/MiniMax-H3-Max",
+        "endpoint": "minimax-h3"
       },
       {
         "api_model_name": "MiniMax-Hailuo-2.3",
@@ -471,7 +492,8 @@
       },
       {
         "api_model_name": "MiniMax-Hailuo-2.3-Fast",
-        "entry": "minimax/MiniMax-Hailuo-2.3-Fast"
+        "entry": "minimax/MiniMax-Hailuo-2.3-Fast",
+        "endpoint": "minimax-hailuo-v1-fast"
       },
       {
         "api_model_name": "speech-2.8-hd",
@@ -518,20 +540,24 @@
       },
       {
         "api_model_name": "kling-v3",
-        "entry": "kuaishou/kling-v3"
+        "entry": "kuaishou/kling-v3",
+        "endpoint": "kling-video-audio"
       },
       {
         "api_model_name": "kling-v3-omni",
         "entry": "kuaishou/kling-v3-omni",
-        "media_type": "video"
+        "media_type": "video",
+        "endpoint": "kling-video-audio"
       },
       {
         "api_model_name": "kling-v2-6",
-        "entry": "kuaishou/kling-v2-6"
+        "entry": "kuaishou/kling-v2-6",
+        "endpoint": "kling-video-pro-audio"
       },
       {
         "api_model_name": "kling-video-o1",
-        "entry": "kuaishou/kling-video-o1"
+        "entry": "kuaishou/kling-video-o1",
+        "endpoint": "kling-video-silent"
       }
     ],
     "defaults": {
@@ -563,7 +589,8 @@
       },
       {
         "api_model_name": "agnes-image-2.1-flash",
-        "entry": "agnes/agnes-image-2.1-flash"
+        "entry": "agnes/agnes-image-2.1-flash",
+        "endpoint": "agnes-image-pixels"
       },
       {
         "api_model_name": "agnes-video-2.5-flash",
@@ -575,7 +602,8 @@
       },
       {
         "api_model_name": "agnes-video-v2.0",
-        "entry": "agnes/agnes-video-v2.0"
+        "entry": "agnes/agnes-video-v2.0",
+        "endpoint": "agnes-video-2"
       }
     ],
     "defaults": {

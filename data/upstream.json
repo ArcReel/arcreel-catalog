@@ -73,5 +73,413 @@
     "customtools",
     "computer-use",
     "deep-research"
+  ],
+  "endpoint_version_exemptions": [
+    {
+      "provider": "ark",
+      "api_model_name": "doubao-seedream-5-0-pro-260628",
+      "entry": "bytedance/doubao-seedream-5-0-pro",
+      "media_type": "image",
+      "endpoint": "ark-seedream-4"
+    },
+    {
+      "provider": "ark",
+      "api_model_name": "doubao-seedream-5-0-flash-260915",
+      "entry": "bytedance/doubao-seedream-5-0-flash",
+      "media_type": "image",
+      "endpoint": "ark-seedream-4"
+    },
+    {
+      "provider": "ark",
+      "api_model_name": "doubao-seedream-5-0-lite-260128",
+      "entry": "bytedance/doubao-seedream-5-0-lite",
+      "media_type": "image",
+      "endpoint": "ark-seedream-4"
+    },
+    {
+      "provider": "ark",
+      "api_model_name": "doubao-seedream-5-0-260128",
+      "entry": "bytedance/doubao-seedream-5-0-lite",
+      "media_type": "image",
+      "endpoint": "ark-seedream-4"
+    },
+    {
+      "provider": "ark",
+      "api_model_name": "doubao-seedream-4-5-251128",
+      "entry": "bytedance/doubao-seedream-4-5",
+      "media_type": "image",
+      "endpoint": "ark-seedream-4"
+    },
+    {
+      "provider": "ark",
+      "api_model_name": "doubao-seedream-4-0-250828",
+      "entry": "bytedance/doubao-seedream-4-0",
+      "media_type": "image",
+      "endpoint": "ark-seedream-4"
+    },
+    {
+      "provider": "ark",
+      "api_model_name": "doubao-seedance-2-0-260128",
+      "entry": "bytedance/doubao-seedance-2.0",
+      "media_type": "video",
+      "endpoint": "ark-seedance-2"
+    },
+    {
+      "provider": "ark",
+      "api_model_name": "doubao-seedance-2-0-fast-260128",
+      "entry": "bytedance/doubao-seedance-2.0-fast",
+      "media_type": "video",
+      "endpoint": "ark-seedance-2"
+    },
+    {
+      "provider": "ark",
+      "api_model_name": "doubao-seedance-2-0-mini-260615",
+      "entry": "bytedance/doubao-seedance-2.0-mini",
+      "media_type": "video",
+      "endpoint": "ark-seedance-2"
+    },
+    {
+      "provider": "ark",
+      "api_model_name": "doubao-seedance-2-5-260628",
+      "entry": "bytedance/doubao-seedance-2.5",
+      "media_type": "video",
+      "endpoint": "ark-seedance-2-5"
+    },
+    {
+      "provider": "ark-agent-plan",
+      "api_model_name": "doubao-seedance-2.0",
+      "entry": "bytedance/doubao-seedance-2.0",
+      "media_type": "video",
+      "endpoint": "ark-seedance-2"
+    },
+    {
+      "provider": "ark-agent-plan",
+      "api_model_name": "doubao-seedance-2.0-fast",
+      "entry": "bytedance/doubao-seedance-2.0-fast",
+      "media_type": "video",
+      "endpoint": "ark-seedance-2"
+    },
+    {
+      "provider": "ark-agent-plan",
+      "api_model_name": "doubao-seedance-2.0-mini",
+      "entry": "bytedance/doubao-seedance-2.0-mini",
+      "media_type": "video",
+      "endpoint": "ark-seedance-2"
+    },
+    {
+      "provider": "ark-agent-plan",
+      "api_model_name": "doubao-seedream-5-0-pro",
+      "entry": "bytedance/doubao-seedream-5-0-pro",
+      "media_type": "image",
+      "endpoint": "ark-seedream-4"
+    },
+    {
+      "provider": "ark-agent-plan",
+      "api_model_name": "doubao-seedream-5.0-flash",
+      "entry": "bytedance/doubao-seedream-5-0-flash",
+      "media_type": "image",
+      "endpoint": "ark-seedream-4"
+    },
+    {
+      "provider": "ark-agent-plan",
+      "api_model_name": "doubao-seedance-2.5",
+      "entry": "bytedance/doubao-seedance-2.5",
+      "media_type": "video",
+      "endpoint": "ark-seedance-2-5"
+    },
+    {
+      "provider": "grok",
+      "api_model_name": "grok-imagine-video",
+      "entry": "xai/grok-imagine-video",
+      "media_type": "video",
+      "endpoint": "grok-video-classic"
+    },
+    {
+      "provider": "grok",
+      "api_model_name": "grok-imagine-video-1.5",
+      "entry": "xai/grok-imagine-video-1.5",
+      "media_type": "video",
+      "endpoint": "grok-video-mixed"
+    },
+    {
+      "provider": "grok",
+      "api_model_name": "grok-imagine-video-1.5-lite",
+      "entry": "xai/grok-imagine-video-1.5-lite",
+      "media_type": "video",
+      "endpoint": "grok-video-mixed"
+    },
+    {
+      "provider": "vidu",
+      "api_model_name": "viduq3-turbo",
+      "entry": "shengshu/viduq3-turbo",
+      "media_type": "video",
+      "endpoint": "vidu-video-q3-turbo"
+    },
+    {
+      "provider": "vidu",
+      "api_model_name": "viduq3-pro",
+      "entry": "shengshu/viduq3-pro",
+      "media_type": "video",
+      "endpoint": "vidu-video-q3-pro"
+    },
+    {
+      "provider": "vidu",
+      "api_model_name": "viduq3-pro-fast",
+      "entry": "shengshu/viduq3-pro-fast",
+      "media_type": "video",
+      "endpoint": "vidu-video-q3-fast"
+    },
+    {
+      "provider": "vidu",
+      "api_model_name": "viduq3",
+      "entry": "shengshu/viduq3",
+      "media_type": "video",
+      "endpoint": "vidu-video-q3-reference"
+    },
+    {
+      "provider": "vidu",
+      "api_model_name": "vidu2.0",
+      "entry": "shengshu/vidu2.0",
+      "media_type": "video",
+      "endpoint": "vidu-video-2"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "qwen-image-2.0",
+      "entry": "alibaba/qwen-image-2.0",
+      "media_type": "image",
+      "endpoint": "dashscope-qwen-image"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "qwen-image-2.0-pro",
+      "entry": "alibaba/qwen-image-2.0-pro",
+      "media_type": "image",
+      "endpoint": "dashscope-qwen-image"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "qwen-image-3.0",
+      "entry": "alibaba/qwen-image-3.0",
+      "media_type": "image",
+      "endpoint": "dashscope-qwen-image"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "qwen-image-edit-plus",
+      "entry": "alibaba/qwen-image-edit-plus",
+      "media_type": "image",
+      "endpoint": "dashscope-qwen-image-edit"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "qwen-image-edit-max",
+      "entry": "alibaba/qwen-image-edit-max",
+      "media_type": "image",
+      "endpoint": "dashscope-qwen-image-edit"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "wan2.7-image",
+      "entry": "alibaba/wan2.7-image",
+      "media_type": "image",
+      "endpoint": "dashscope-wan-image"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "wan2.7-image-pro",
+      "entry": "alibaba/wan2.7-image-pro",
+      "media_type": "image",
+      "endpoint": "dashscope-wan-image"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "happyhorse-1.1-i2v",
+      "entry": "alibaba/happyhorse-1.1-i2v",
+      "media_type": "video",
+      "endpoint": "dashscope-always-on-video"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "happyhorse-1.1-t2v",
+      "entry": "alibaba/happyhorse-1.1-t2v",
+      "media_type": "video",
+      "endpoint": "dashscope-always-on-video"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "happyhorse-1.1-r2v",
+      "entry": "alibaba/happyhorse-1.1-r2v",
+      "media_type": "video",
+      "endpoint": "dashscope-reference-video"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "happyhorse-1.0-i2v",
+      "entry": "alibaba/happyhorse-1.0-i2v",
+      "media_type": "video",
+      "endpoint": "dashscope-always-on-video"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "happyhorse-1.0-t2v",
+      "entry": "alibaba/happyhorse-1.0-t2v",
+      "media_type": "video",
+      "endpoint": "dashscope-always-on-video"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "happyhorse-1.0-r2v",
+      "entry": "alibaba/happyhorse-1.0-r2v",
+      "media_type": "video",
+      "endpoint": "dashscope-reference-video"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "wan2.7-i2v",
+      "entry": "alibaba/wan2.7-i2v",
+      "media_type": "video",
+      "endpoint": "dashscope-always-on-video"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "wan2.7-t2v",
+      "entry": "alibaba/wan2.7-t2v",
+      "media_type": "video",
+      "endpoint": "dashscope-always-on-video"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "wan2.7-r2v",
+      "entry": "alibaba/wan2.7-r2v",
+      "media_type": "video",
+      "endpoint": "dashscope-reference-voice-video"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "wan3.0-video",
+      "entry": "alibaba/wan3.0-video",
+      "media_type": "video",
+      "endpoint": "dashscope-wan3-video"
+    },
+    {
+      "provider": "dashscope",
+      "api_model_name": "wan3.0-video-prime",
+      "entry": "alibaba/wan3.0-video-prime",
+      "media_type": "video",
+      "endpoint": "dashscope-wan3-video"
+    },
+    {
+      "provider": "minimax",
+      "api_model_name": "MiniMax-H3",
+      "entry": "minimax/MiniMax-H3",
+      "media_type": "video",
+      "endpoint": "minimax-h3"
+    },
+    {
+      "provider": "minimax",
+      "api_model_name": "MiniMax-H3-Highspeed",
+      "entry": "minimax/MiniMax-H3-Highspeed",
+      "media_type": "video",
+      "endpoint": "minimax-h3"
+    },
+    {
+      "provider": "minimax",
+      "api_model_name": "MiniMax-H3-Lite",
+      "entry": "minimax/MiniMax-H3-Lite",
+      "media_type": "video",
+      "endpoint": "minimax-h3"
+    },
+    {
+      "provider": "minimax",
+      "api_model_name": "MiniMax-H3-Max",
+      "entry": "minimax/MiniMax-H3-Max",
+      "media_type": "video",
+      "endpoint": "minimax-h3"
+    },
+    {
+      "provider": "minimax",
+      "api_model_name": "MiniMax-Hailuo-2.3",
+      "entry": "minimax/MiniMax-Hailuo-2.3",
+      "media_type": "video",
+      "endpoint": "minimax-hailuo-v1"
+    },
+    {
+      "provider": "minimax",
+      "api_model_name": "MiniMax-Hailuo-2.3-Fast",
+      "entry": "minimax/MiniMax-Hailuo-2.3-Fast",
+      "media_type": "video",
+      "endpoint": "minimax-hailuo-v1-fast"
+    },
+    {
+      "provider": "kling",
+      "api_model_name": "kling-v2-5-turbo",
+      "entry": "kuaishou/kling-v2-5-turbo",
+      "media_type": "video",
+      "endpoint": "kling-video-pro-silent"
+    },
+    {
+      "provider": "kling",
+      "api_model_name": "kling-v3",
+      "entry": "kuaishou/kling-v3",
+      "media_type": "video",
+      "endpoint": "kling-video-audio"
+    },
+    {
+      "provider": "kling",
+      "api_model_name": "kling-v3-omni",
+      "entry": "kuaishou/kling-v3-omni",
+      "media_type": "video",
+      "endpoint": "kling-video-audio"
+    },
+    {
+      "provider": "kling",
+      "api_model_name": "kling-v2-6",
+      "entry": "kuaishou/kling-v2-6",
+      "media_type": "video",
+      "endpoint": "kling-video-pro-audio"
+    },
+    {
+      "provider": "kling",
+      "api_model_name": "kling-video-o1",
+      "entry": "kuaishou/kling-video-o1",
+      "media_type": "video",
+      "endpoint": "kling-video-silent"
+    },
+    {
+      "provider": "agnes",
+      "api_model_name": "agnes-image-2.5-flash",
+      "entry": "agnes/agnes-image-2.5-flash",
+      "media_type": "image",
+      "endpoint": "agnes-image-tier"
+    },
+    {
+      "provider": "agnes",
+      "api_model_name": "agnes-image-2.1-flash",
+      "entry": "agnes/agnes-image-2.1-flash",
+      "media_type": "image",
+      "endpoint": "agnes-image-pixels"
+    },
+    {
+      "provider": "agnes",
+      "api_model_name": "agnes-video-2.5-flash",
+      "entry": "agnes/agnes-video-2.5-flash",
+      "media_type": "video",
+      "endpoint": "agnes-video-2-5"
+    },
+    {
+      "provider": "agnes",
+      "api_model_name": "agnes-video-2.5",
+      "entry": "agnes/agnes-video-2.5",
+      "media_type": "video",
+      "endpoint": "agnes-video-2-5"
+    },
+    {
+      "provider": "agnes",
+      "api_model_name": "agnes-video-v2.0",
+      "entry": "agnes/agnes-video-v2.0",
+      "media_type": "video",
+      "endpoint": "agnes-video-2"
+    }
   ]
 }

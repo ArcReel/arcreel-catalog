@@ -22,7 +22,7 @@ from collections.abc import Iterable, Mapping
 from dataclasses import dataclass, field
 from datetime import date, timedelta
 
-from arcreel_catalog_core import normalize_model_name
+from arcreel_catalog_core import endpoints, normalize_model_name
 
 # 上游 cost 字段 → 计量项。各项单价都按每百万 token 标价，与 ArcReel 的 token 类计量项一致。
 COST_METERS = {
@@ -396,6 +396,36 @@ def compose_listings(
                     continue
                 taken.add(model_id)
                 models.append({"api_model_name": model_id, "entry": f"{entry['maker']}/{entry['name']}"})
+        for model in models:
+            matches = [entry for entry in entries if _refers_to(model, entry)]
+            if len(matches) != 1:
+                continue  # 无效或歧义引用交给目录校验器报告。
+            media_type = matches[0]["media_type"]
+            options = endpoints.provider_endpoint_options(provider_id, media_type)
+            if options is not None:
+                model.setdefault("endpoint", options.default)
+                binding = {
+                    "provider": provider_id,
+                    "api_model_name": model["api_model_name"],
+                    "entry": model["entry"],
+                    "media_type": media_type,
+                    "endpoint": model["endpoint"],
+                }
+                exempt = binding in rules.get("endpoint_version_exemptions", [])
+                if len(options.endpoints) > 1 and not exempt and endpoints.ENDPOINT_DECLARATIONS_SINCE is None:
+                    raise ValueError(f"{binding}: ENDPOINT_DECLARATIONS_SINCE 尚未确定，不能发布新的多端点模型")
+                # 豁免只免去读取声明的版本，不免去端点自身的起始版本和手写版本。
+                declared = endpoints.BUILTIN_ENDPOINTS.get(model["endpoint"])
+                floor = (
+                    declared.since
+                    if exempt and declared is not None
+                    else endpoints.endpoint_version_floor(provider_id, media_type, model["endpoint"])
+                )
+                versions = [v for v in (floor, model.get("min_app_version")) if v is not None]
+                if any(not isinstance(v, str) or not endpoints.is_app_version(v) for v in versions):
+                    raise ValueError(f"{binding}: invalid_app_version")
+                if versions:
+                    model["min_app_version"] = max(versions, key=lambda v: (*map(int, v.split(".")), 0, 0)[:3])
         listings[provider_id] = {"models": models, "defaults": dict(config.get("defaults", {}))}
     return listings
 

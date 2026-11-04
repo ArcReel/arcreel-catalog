@@ -81,6 +81,10 @@ def publish(directory: Path, body: Mapping, now: datetime, *, write: bool = True
     issues = check_catalog_files(manifest, content)
     if issues:
         raise PublishError("\n".join(str(issue) for issue in issues))
+    for provider_id, listing in body["builtin_providers"].items():
+        for index, model in enumerate(listing["models"]):
+            if not model.get("endpoint"):
+                raise PublishError(f"builtin_providers.{provider_id}.models[{index}].endpoint: missing_endpoint")
     changed = not unchanged
     if write:
         for path, data in ((catalog_path, content), (manifest_path, manifest)):

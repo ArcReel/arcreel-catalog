@@ -225,10 +225,10 @@ def test_listing_maps_upstream_models_with_filters_and_human_priority() -> None:
     listings = result.catalog["builtin_providers"]
     assert listings["openai"] == {
         "models": [
-            {"api_model_name": "gpt-old", "entry": "openai/gpt-old"},
-            {"api_model_name": "gpt-new", "entry": "openai/gpt-new", "multiplier": 0.5},
+            {"api_model_name": "gpt-old", "entry": "openai/gpt-old", "endpoint": "openai-responses"},
+            {"api_model_name": "gpt-new", "entry": "openai/gpt-new", "endpoint": "openai-responses", "multiplier": 0.5},
             # 上游标了 deprecated、条目没有关停日期：照常列入
-            {"api_model_name": "gpt-deprecated", "entry": "openai/gpt-deprecated"},
+            {"api_model_name": "gpt-deprecated", "entry": "openai/gpt-deprecated", "endpoint": "openai-responses"},
         ],
         "defaults": {"text": "gpt-old"},
     }
@@ -352,3 +352,68 @@ def test_split_off_snapshot_is_not_folded_back_into_the_live_entry() -> None:
         **{name: f"openai/{name}" for name in ("gpt-a", "gpt-a-20260101", "gpt-b", "gpt-c", "gpt-c-20260101", "gpt-d")},
         "gpt-d-20260101": "openai/gpt-d-legacy",
     }
+
+
+def test_listings_receive_default_endpoints_without_changing_inputs() -> None:
+    providers = {"openai": {"upstream": ["openai"]}}
+    upstream = {"openai": {"models": {"gpt-a": model("GPT A")}}}
+    result = build_catalog([upstream], rules(OPENAI), [], providers, today=TODAY)
+
+    assert result.catalog["builtin_providers"]["openai"]["models"] == [
+        {"api_model_name": "gpt-a", "entry": "openai/gpt-a", "endpoint": "openai-responses"}
+    ]
+    assert providers == {"openai": {"upstream": ["openai"]}}
+
+
+def test_endpoint_versions_take_highest_floor_and_exempt_only_verified_binding(monkeypatch) -> None:
+    from arcreel_catalog_core import endpoints
+
+    monkeypatch.setattr(endpoints, "ENDPOINT_DECLARATIONS_SINCE", "0.40.0")
+    monkeypatch.setattr(
+        endpoints,
+        "BUILTIN_ENDPOINTS",
+        {**endpoints.BUILTIN_ENDPOINTS, "ark-seedance-2": endpoints.BuiltinEndpoint("video", "0.39.0")},
+    )
+    entry = {"maker": "bytedance", "name": "seedance", "media_type": "video"}
+    listing = {"api_model_name": "opaque-id", "entry": "bytedance/seedance", "endpoint": "ark-seedance-2"}
+    exemption = {"provider": "ark", "media_type": "video", **listing}
+
+    def built(model, exemptions=()):
+        result = build_catalog(
+            [], rules(endpoint_version_exemptions=exemptions), [entry], {"ark": {"models": [model]}}, today=TODAY
+        )
+        return result.catalog["builtin_providers"]["ark"]["models"][0]
+
+    assert built(listing)["min_app_version"] == "0.40.0"
+    assert built({**listing, "min_app_version": "0.9"})["min_app_version"] == "0.40.0"
+    assert built({**listing, "min_app_version": "0.41"})["min_app_version"] == "0.41"
+    assert built(listing, [exemption])["min_app_version"] == "0.39.0"
+    monkeypatch.setattr(
+        endpoints,
+        "BUILTIN_ENDPOINTS",
+        {**endpoints.BUILTIN_ENDPOINTS, "ark-seedance-2": endpoints.BuiltinEndpoint("video")},
+    )
+    assert "min_app_version" not in built(listing, [exemption])
+    assert built({**listing, "endpoint": "ark-seedance-1"}, [exemption])["min_app_version"] == "0.40.0"
+    assert built({**listing, "api_model_name": "new-id"}, [exemption])["min_app_version"] == "0.40.0"
+    monkeypatch.setattr(
+        endpoints,
+        "BUILTIN_ENDPOINTS",
+        {**endpoints.BUILTIN_ENDPOINTS, "ark-seedance-2": endpoints.BuiltinEndpoint("video", "0.42.0")},
+    )
+    assert built(listing)["min_app_version"] == "0.42.0"
+
+
+def test_new_multi_endpoint_listing_waits_for_declaration_release(monkeypatch) -> None:
+    from arcreel_catalog_core import endpoints
+
+    monkeypatch.setattr(endpoints, "ENDPOINT_DECLARATIONS_SINCE", None)
+    entry = {"maker": "bytedance", "name": "seedance", "media_type": "video"}
+    with pytest.raises(ValueError, match="ENDPOINT_DECLARATIONS_SINCE"):
+        build_catalog(
+            [],
+            rules(),
+            [entry],
+            {"ark": {"models": [{"api_model_name": "new-seedance", "entry": "bytedance/seedance"}]}},
+            today=TODAY,
+        )

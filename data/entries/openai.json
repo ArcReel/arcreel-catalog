@@ -1386,6 +1386,9 @@
     "name": "gpt-image-2",
     "media_type": "image",
     "display_name": "GPT Image 2",
+    "aliases": [
+      "gpt-image-2-2026-04-21"
+    ],
     "release_date": "2026-04-21",
     "facts": {
       "text_to_image": true,
