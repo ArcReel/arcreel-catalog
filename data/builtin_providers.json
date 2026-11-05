@@ -21,6 +21,16 @@
         "entry": "google/gemini-3.1-flash-image"
       },
       {
+        "api_model_name": "gemini-nano-banana-2.1",
+        "entry": "google/gemini-nano-banana-2.1",
+        "min_app_version": "0.35.1"
+      },
+      {
+        "api_model_name": "gemini-3.1-flash-lite-image",
+        "entry": "google/gemini-3.1-flash-lite-image",
+        "min_app_version": "0.35.1"
+      },
+      {
         "api_model_name": "veo-3.1-generate-preview",
         "entry": "google/veo-3.1-generate-preview"
       },
@@ -68,12 +78,27 @@
         "entry": "google/gemini-3.1-flash-image"
       },
       {
+        "api_model_name": "gemini-nano-banana-2.1",
+        "entry": "google/gemini-nano-banana-2.1",
+        "min_app_version": "0.35.1"
+      },
+      {
+        "api_model_name": "gemini-3.1-flash-lite-image",
+        "entry": "google/gemini-3.1-flash-lite-image",
+        "min_app_version": "0.35.1"
+      },
+      {
         "api_model_name": "veo-3.1-generate-001",
         "entry": "google/veo-3.1-generate-001"
       },
       {
         "api_model_name": "veo-3.1-fast-generate-001",
         "entry": "google/veo-3.1-fast-generate-001"
+      },
+      {
+        "api_model_name": "veo-3.1-lite-generate-001",
+        "entry": "google/veo-3.1-lite-generate-001",
+        "min_app_version": "0.35.1"
       },
       {
         "api_model_name": "gemini-3.8-flash-tts",

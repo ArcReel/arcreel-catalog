@@ -221,6 +221,42 @@
   },
   {
     "maker": "google",
+    "name": "gemini-3.1-flash-lite-image",
+    "media_type": "image",
+    "display_name": "Gemini 3.1 Flash-Lite Image",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K"
+      ],
+      "max_reference_images": 14
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "1K"
+              },
+              "price": 0.0336
+            }
+          ],
+          "defaults": {
+            "resolution": "1K"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
     "name": "veo-3.1-generate-preview",
     "media_type": "video",
     "display_name": "Veo 3.1",
@@ -422,6 +458,85 @@
     "display_name": "Veo 3.1 Lite",
     "shutdown_date": "2026-10-22",
     "successor": "google/gemini-omni-1.1-flash",
+    "facts": {
+      "durations": [
+        4,
+        6,
+        8
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ],
+      "duration_constraints": {
+        "by_resolution": {
+          "1080p": [
+            8
+          ]
+        },
+        "with_reference_images": [
+          8
+        ]
+      },
+      "max_reference_images": 0,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": false
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution",
+            "audio"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": true
+              },
+              "price": 0.05
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "audio": false
+              },
+              "price": 0.03
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": true
+              },
+              "price": 0.08
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "audio": false
+              },
+              "price": 0.05
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "audio": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "veo-3.1-lite-generate-001",
+    "media_type": "video",
+    "display_name": "Veo 3.1 Lite",
+    "release_date": "2026-04-02",
     "facts": {
       "durations": [
         4,
