@@ -21,6 +21,16 @@
         "entry": "google/gemini-3.1-flash-image"
       },
       {
+        "api_model_name": "gemini-nano-banana-2.1",
+        "entry": "google/gemini-nano-banana-2.1",
+        "min_app_version": "0.35.1"
+      },
+      {
+        "api_model_name": "gemini-3.1-flash-lite-image",
+        "entry": "google/gemini-3.1-flash-lite-image",
+        "min_app_version": "0.35.1"
+      },
+      {
         "api_model_name": "veo-3.1-generate-preview",
         "entry": "google/veo-3.1-generate-preview"
       },
@@ -68,12 +78,27 @@
         "entry": "google/gemini-3.1-flash-image"
       },
       {
+        "api_model_name": "gemini-nano-banana-2.1",
+        "entry": "google/gemini-nano-banana-2.1",
+        "min_app_version": "0.35.1"
+      },
+      {
+        "api_model_name": "gemini-3.1-flash-lite-image",
+        "entry": "google/gemini-3.1-flash-lite-image",
+        "min_app_version": "0.35.1"
+      },
+      {
         "api_model_name": "veo-3.1-generate-001",
         "entry": "google/veo-3.1-generate-001"
       },
       {
         "api_model_name": "veo-3.1-fast-generate-001",
         "entry": "google/veo-3.1-fast-generate-001"
+      },
+      {
+        "api_model_name": "veo-3.1-lite-generate-001",
+        "entry": "google/veo-3.1-lite-generate-001",
+        "min_app_version": "0.35.1"
       },
       {
         "api_model_name": "gemini-3.8-flash-tts",
@@ -269,6 +294,14 @@
         "entry": "openai/o3-pro"
       },
       {
+        "api_model_name": "gpt-image-2.6-sunburst",
+        "entry": "openai/gpt-image-2.6-sunburst"
+      },
+      {
+        "api_model_name": "gpt-image-2.6-flare",
+        "entry": "openai/gpt-image-2.6-flare"
+      },
+      {
         "api_model_name": "gpt-image-2.5-sunburst",
         "entry": "openai/gpt-image-2.5-sunburst"
       },
@@ -355,6 +388,14 @@
       {
         "api_model_name": "qwen-image-2.0-pro",
         "entry": "alibaba/qwen-image-2.0-pro"
+      },
+      {
+        "api_model_name": "qwen-image-2.1-pro",
+        "entry": "alibaba/qwen-image-2.1-pro"
+      },
+      {
+        "api_model_name": "qwen-image-2.1-turbo",
+        "entry": "alibaba/qwen-image-2.1-turbo"
       },
       {
         "api_model_name": "qwen-image-3.0",

@@ -759,6 +759,74 @@
   },
   {
     "maker": "alibaba",
+    "name": "qwen-image-2.1-pro",
+    "media_type": "image",
+    "display_name": "Qwen Image 2.1 Pro",
+    "release_date": "2026-10-02",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "2048*2048",
+        "2688*1536",
+        "1536*2688",
+        "2368*1728",
+        "1728*2368"
+      ],
+      "max_reference_images": 10
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.25
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
+    "name": "qwen-image-2.1-turbo",
+    "media_type": "image",
+    "display_name": "Qwen Image 2.1 Turbo",
+    "release_date": "2026-10-09",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "2048*2048",
+        "2688*1536",
+        "1536*2688",
+        "2368*1728",
+        "1728*2368"
+      ],
+      "max_reference_images": 10
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "alibaba",
     "name": "qwen-image-3.0",
     "media_type": "image",
     "display_name": "Qwen Image 3.0",
