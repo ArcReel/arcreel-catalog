@@ -269,6 +269,14 @@
         "entry": "openai/o3-pro"
       },
       {
+        "api_model_name": "gpt-image-2.6-sunburst",
+        "entry": "openai/gpt-image-2.6-sunburst"
+      },
+      {
+        "api_model_name": "gpt-image-2.6-flare",
+        "entry": "openai/gpt-image-2.6-flare"
+      },
+      {
         "api_model_name": "gpt-image-2.5-sunburst",
         "entry": "openai/gpt-image-2.5-sunburst"
       },

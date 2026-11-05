@@ -1207,6 +1207,178 @@
   },
   {
     "maker": "openai",
+    "name": "gpt-image-2.6-sunburst",
+    "media_type": "image",
+    "display_name": "GPT Image 2.6 Sunburst",
+    "release_date": "2026-11-04",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "512px",
+        "1K",
+        "2K"
+      ],
+      "output_token_bases": {
+        "high": 48,
+        "xhigh": 64,
+        "max": 96
+      }
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 5.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 1.25
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.0
+            }
+          ]
+        },
+        {
+          "meter": "uncached_image_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 8.0
+            }
+          ]
+        },
+        {
+          "meter": "image_cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.0
+            }
+          ]
+        },
+        {
+          "meter": "image_output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 30.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
+    "name": "gpt-image-2.6-flare",
+    "media_type": "image",
+    "display_name": "GPT Image 2.6 Flare",
+    "release_date": "2026-11-04",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "512px",
+        "1K",
+        "2K"
+      ],
+      "output_token_bases": {
+        "high": 48,
+        "xhigh": 64,
+        "max": 96
+      }
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 5.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 1.25
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.0
+            }
+          ]
+        },
+        {
+          "meter": "uncached_image_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 8.0
+            }
+          ]
+        },
+        {
+          "meter": "image_cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 2.0
+            }
+          ]
+        },
+        {
+          "meter": "image_output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 30.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "openai",
     "name": "gpt-image-2.5-sunburst",
     "media_type": "image",
     "display_name": "GPT Image 2.5 Sunburst",
