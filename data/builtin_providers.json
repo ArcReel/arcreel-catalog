@@ -365,6 +365,14 @@
         "entry": "alibaba/qwen-image-2.0-pro"
       },
       {
+        "api_model_name": "qwen-image-2.1-pro",
+        "entry": "alibaba/qwen-image-2.1-pro"
+      },
+      {
+        "api_model_name": "qwen-image-2.1-turbo",
+        "entry": "alibaba/qwen-image-2.1-turbo"
+      },
+      {
         "api_model_name": "qwen-image-3.0",
         "entry": "alibaba/qwen-image-3.0"
       },
