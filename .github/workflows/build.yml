@@ -4,8 +4,14 @@
 # （arcreel-catalog-core）。校验失败时这次不发布；内容有变化时以 arcreel-catalog-bot 的身份直接提交
 # catalog.json 与 manifest.json 到 main，不经 PR（该 App 是 main ruleset 的 bypass actor）。
 #
-# 触发：每天一次；人工数据或构建脚本合入 main 后立即一次；也可手动触发。bot 的提交只改两个发布文件，
-# 不在 paths 内，不会再次触发。
+# 按 ArcReel 发布版本放出：构建读取 ArcReel/ArcReel 的 latest release，最低应用版本高于它的供应商模型这次
+# 不发布，日志列出暂缓（withheld:）与相对 main 新增（newly listed:）的清单项。读不到最新发布版本、或暂缓的
+# 是供应商默认模型时构建失败，main 上的发布数据不变；dry_run 同样按这两条判定。PR 检查（check.yml）对后一种
+# 只提示、不判失败。
+#
+# 触发：每天一次；人工数据或构建脚本合入 main 后立即一次；ArcReel 镜像发布后由它的发版流程触发一次，
+# 放出随这个版本可用的模型；也可手动触发。手动触发时勾选 dry_run 只构建与校验，不提交。bot 的提交只改
+# 两个发布文件，不在 paths 内，不会再次触发。
 name: Build catalog
 
 on:
@@ -19,6 +25,11 @@ on:
       - "pyproject.toml"
       - ".github/workflows/build.yml"
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "只构建与校验，不提交发布数据"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -53,8 +64,16 @@ jobs:
 
       - name: Build and validate
         id: build
+        env:
+          # 读取 ArcReel 最新发布版本时认证，避开匿名请求的频率限制
+          GITHUB_TOKEN: ${{ github.token }}
+          DRY_RUN: ${{ inputs.dry_run }}
         run: |
-          uv run python -m catalog_build build
+          if [ "$DRY_RUN" = "true" ]; then
+            uv run python -m catalog_build build --check-only
+          else
+            uv run python -m catalog_build build
+          fi
           if git status --porcelain -- catalog.json manifest.json | grep -q .; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi

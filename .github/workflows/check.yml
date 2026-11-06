@@ -1,7 +1,9 @@
 # PR 校验：构建脚本的测试，加上一次不写文件的完整构建。
 #
-# 完整构建抓取当前的第三方数据，叠加 PR 里的人工数据，过 ArcReel main 上的目录数据校验器，
-# 判定这份 PR 合入后能否发布。job 名「Check catalog」是 main ruleset 的必需检查，改名须同步 ruleset。
+# 完整构建抓取当前的第三方数据，叠加 PR 里的人工数据，过 ArcReel main 上的目录数据校验器，判定这份 PR
+# 合入后能否发布。构建同样按 ArcReel 最新发布版本暂缓模型，日志列出暂缓与新增的清单项；读不到最新发布版本时
+# 失败。只因默认模型被暂缓时不判失败（--allow-withheld-defaults），只提示合入后发布构建要等 ArcReel 发版，
+# 免得发版前所有数据 PR 都合不进来。job 名「Check catalog」是 main ruleset 的必需检查，改名须同步 ruleset。
 name: Check catalog
 
 on:
@@ -35,4 +37,7 @@ jobs:
         run: uv run python -m pytest -q
 
       - name: Build and validate (dry run)
-        run: uv run python -m catalog_build build --check-only
+        env:
+          # 读取 ArcReel 最新发布版本时认证，避开匿名请求的频率限制
+          GITHUB_TOKEN: ${{ github.token }}
+        run: uv run python -m catalog_build build --check-only --allow-withheld-defaults

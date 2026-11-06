@@ -12,6 +12,7 @@
   同一 API 模型名以人工清单为准。
 - 生命周期按构建当天（UTC）落实：关停日期已到的条目置真 ``discontinued``；关停满保留期的条目与引用它的
   清单项不再发布，上游的同名模型也不再列入。上游的 ``deprecated`` 标记不影响条目与清单。
+- 按 ArcReel 发布版本放出：最低应用版本高于最新发布版本的清单项这次不发布（``withhold_unreleased``）。
 """
 
 from __future__ import annotations
@@ -456,3 +457,63 @@ def build_catalog(
     )
     listings = compose_listings(providers, upstreams, entries, expired, rules, folded, warnings)
     return BuildResult({"entries": entries, "builtin_providers": listings}, warnings)
+
+
+class WithheldDefaultError(ValueError):
+    """暂缓的清单项里有供应商的默认模型，这次不能发布。
+
+    ``withheld`` 是这次暂缓的全部清单项；``catalog`` 是去掉其余暂缓项、但留着被暂缓的默认模型的内容，
+    供 PR 检查继续做其他校验，不用于发布。
+    """
+
+    def __init__(self, message: str, withheld: list[dict], catalog: dict) -> None:
+        super().__init__(message)
+        self.withheld = withheld
+        self.catalog = catalog
+
+
+def withhold_unreleased(catalog: Mapping, released: str) -> tuple[dict, list[dict]]:
+    """去掉最低应用版本高于 ArcReel 最新发布版本 ``released`` 的清单项，返回 ``(发布内容, 暂缓的清单项)``。
+
+    暂缓的清单项等 ArcReel 发布对应版本后随下一次构建放出；条目照常发布。暂缓的是供应商的默认模型时抛
+    ``WithheldDefaultError``：不悄悄换默认，由维护者等发版或调整数据。最低应用版本格式不对的不在这里处理，由校验器拒绝。
+    """
+    released_key = endpoints.app_version_key(released)
+    entries = catalog["entries"]
+    listings: dict[str, dict] = {}
+    checked: dict[str, dict] = {}  # 留着被暂缓的默认模型，只供校验
+    withheld: list[dict] = []
+    blocked: list[str] = []
+    for provider_id, listing in catalog["builtin_providers"].items():
+        models = []
+        check_models = []
+        for model in listing["models"]:
+            version = model.get("min_app_version")
+            if not (isinstance(version, str) and endpoints.is_app_version(version)) or (
+                endpoints.app_version_key(version) <= released_key
+            ):
+                models.append(model)
+                check_models.append(model)
+                continue
+            matches = [entry for entry in entries if _refers_to(model, entry)]
+            media_type = matches[0]["media_type"] if len(matches) == 1 else model.get("media_type")
+            withheld.append(
+                {
+                    "provider": provider_id,
+                    "api_model_name": model["api_model_name"],
+                    "media_type": media_type,
+                    "min_app_version": version,
+                }
+            )
+            if listing.get("defaults", {}).get(media_type) == model["api_model_name"]:
+                blocked.append(f"{provider_id} 的 {media_type} 默认模型 {model['api_model_name']}（{version}）")
+                check_models.append(model)
+        listings[provider_id] = {**listing, "models": models}
+        checked[provider_id] = {**listing, "models": check_models}
+    if blocked:
+        raise WithheldDefaultError(
+            f"以下默认模型的最低应用版本高于 ArcReel 最新发布版本 {released}，不能发布：{'；'.join(blocked)}",
+            withheld,
+            {**catalog, "builtin_providers": checked},
+        )
+    return {**catalog, "builtin_providers": listings}, withheld

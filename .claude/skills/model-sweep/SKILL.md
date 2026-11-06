@@ -102,7 +102,7 @@ disable-model-invocation: true
 
 ## 4. 验证
 
-1. `uv run python -m pytest -q`，再运行 `uv run python -m catalog_build build --check-only`，直到通过。`build` 拿不到上游时记下原因，以 PR 上的 `Check catalog` 为准。`build` 的警告不必逐条处理；其中指向数据缺口的（例如因币种不符按未定价发布的模型），可以补人工条目。补了以后这条警告仍可能出现，因为它只看上游；是否修好，以构建产物里的条目为准。
+1. `uv run python -m pytest -q`，再运行 `uv run python -m catalog_build build --check-only --allow-withheld-defaults`（与 PR 上的 `Check catalog` 同口径），直到通过。`build` 拿不到上游时记下原因，以 PR 上的 `Check catalog` 为准。输出的 `withheld:` 与默认模型被暂缓的 `notice:` 是等 ArcReel 发版的正常状态，不换默认模型、不改最低应用版本。`build` 的警告不必逐条处理；其中指向数据缺口的（例如因币种不符按未定价发布的模型），可以补人工条目。补了以后这条警告仍可能出现，因为它只看上游；是否修好，以构建产物里的条目为准。
 2. 重跑 `signals`：本次处理过的信号应当消失，或者在运行记录里写明为何保留。
 3. 核对改动范围：`git diff --stat origin/main` 只含 `data/`，以及本次更新的 `.claude/skills/model-sweep/references/sources.md`，不含 `catalog.json`、`manifest.json`。
 
