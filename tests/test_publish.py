@@ -211,12 +211,58 @@ def test_pr_check_reports_a_withheld_default_model_without_failing(
     assert "withheld: openai/gpt-b (text, min_app_version 0.36)" in report
     assert "notice:" in report
     assert "gpt-b" in report.split("notice:")[1]
+    # 留着供校验的暂缓默认模型发布不了，不算新增
+    assert "newly listed: openai/gpt-b" not in report
+    assert "newly listed: openai/gpt-c (text)" in report
 
 
-def test_pr_check_still_fails_on_other_validation_errors(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
+def test_newly_listed_tells_media_types_of_the_same_api_model_apart(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
     gated = [
-        {"api_model_name": "gpt-b", "entry": "openai/gpt-b", "min_app_version": "0.36"},
-        {"api_model_name": "gpt-c", "entry": "openai/gpt-c", "endpoint": "does-not-exist"},
+        {"api_model_name": "gpt-c", "entry": "openai/gpt-c", "media_type": "text"},
+        {
+            "api_model_name": "gpt-c",
+            "entry": "openai/gpt-c",
+            "media_type": "image",
+            "endpoint": "openai-images",
+            "min_app_version": "0.35.1",
+        },
+    ]
+    args = cli_args(tmp_path, listing=gated)
+    image = {
+        "maker": "openai",
+        "name": "gpt-c",
+        "media_type": "image",
+        "display_name": "GPT C Image",
+        "facts": {"text_to_image": True},
+        "price": {
+            "currency": "USD",
+            "meters": [{"meter": "image_output_tokens", "dims": [], "rows": [{"when": {}, "price": 30.0}]}],
+        },
+    }
+    (tmp_path / "data" / "entries" / "openai.json").write_text(json.dumps([image]))
+    assert main(args) == 0
+    assert "withheld: openai/gpt-c (image, min_app_version 0.35.1)" in capsys.readouterr().out
+
+    (tmp_path / "release.json").write_text(json.dumps({"tag_name": "v0.35.1"}))
+    assert main(args) == 0
+    assert "newly listed: openai/gpt-c (image)" in capsys.readouterr().out
+
+
+@pytest.mark.parametrize("default_version", ["0.35.0", "0.36"])
+@pytest.mark.parametrize("invalid_version", ["0.35.0", "0.36"])
+def test_pr_check_still_fails_on_other_validation_errors(
+    tmp_path: Path, default_version: str, invalid_version: str, capsys: pytest.CaptureFixture[str]
+) -> None:
+    gated = [
+        {"api_model_name": "gpt-b", "entry": "openai/gpt-b", "min_app_version": default_version},
+        {
+            "api_model_name": "gpt-c",
+            "entry": "openai/gpt-c",
+            "endpoint": "does-not-exist",
+            "min_app_version": invalid_version,
+        },
     ]
     args = cli_args(tmp_path, listing=gated)
 

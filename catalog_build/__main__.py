@@ -20,7 +20,7 @@ from arcreel_catalog_core import (
     parse_dataset_version,
 )
 
-from .build import WithheldDefaultError, build_catalog, withhold_unreleased
+from .build import WithheldDefaultError, build_catalog, listing_media_type, withhold_unreleased
 from .signals import collect_signals, render_signals
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -66,12 +66,13 @@ def latest_app_release(source: str) -> str:
     return version
 
 
-def listed_models(catalog: object) -> set[str]:
-    """发布内容里的清单项，``供应商/API 模型名``。"""
+def listed_models(catalog: object) -> set[tuple[str, str, str | None]]:
+    """发布内容里的清单项，``(供应商, API 模型名, 媒体类型)``：同一 API 模型名可以按媒体类型各列一项。"""
     if not isinstance(catalog, Mapping):
         return set()
+    entries = catalog.get("entries", [])
     return {
-        f"{provider_id}/{model['api_model_name']}"
+        (provider_id, model["api_model_name"], listing_media_type(model, entries))
         for provider_id, listing in catalog.get("builtin_providers", {}).items()
         for model in listing.get("models", [])
     }
@@ -182,24 +183,27 @@ def main(argv: Sequence[str] | None = None) -> int:
         result = build_catalog(upstreams, rules, entries, providers, today=now.date())
         for warning in result.warnings:
             print(f"warning: {warning}", file=sys.stderr)
+        # 先校验完整数据，避免暂缓过滤掩盖尚未放出的模型错误。
+        publish(args.out, result.catalog, now, write=False)
         body, withheld = withhold_unreleased(result.catalog, released)
     except WithheldDefaultError as exc:
-        report_withheld(exc.withheld)
         if not args.allow_withheld_defaults:
+            report_withheld(exc.withheld)
             print(exc, file=sys.stderr)
             return 1
         # PR 检查：数据本身可以合入，发布构建要等 ArcReel 发布对应版本才会成功；其余校验照常
         print(f"notice: {exc}。这份数据合入后，发布构建要等 ArcReel 发布对应版本才会成功。")
-        body, withheld = exc.catalog, []
-    except ValueError as exc:
+        body, withheld = exc.catalog, exc.withheld
+    except (ValueError, PublishError) as exc:
         print(exc, file=sys.stderr)
         return 1
     report_withheld(withheld)
-    # 与已发布数据相比新增的清单项，含这次放出的暂缓模型
+    # 与已发布数据相比新增的清单项，含这次放出的暂缓模型；PR 检查为校验留着的暂缓默认模型发布不了，不算
     previous_path = args.out / CATALOG_FILENAME
     previous = json.loads(previous_path.read_bytes()) if previous_path.exists() else None
-    for name in sorted(listed_models(body) - listed_models(previous)):
-        print(f"newly listed: {name}")
+    held = {(model["provider"], model["api_model_name"], model["media_type"]) for model in withheld}
+    for provider_id, api_model_name, media_type in sorted(listed_models(body) - held - listed_models(previous)):
+        print(f"newly listed: {provider_id}/{api_model_name} ({media_type})")
     try:
         changed = publish(args.out, body, now, write=not args.check_only)
     except PublishError as exc:

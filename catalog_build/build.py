@@ -340,6 +340,12 @@ def _refers_to(model: Mapping, entry: Mapping) -> bool:
     )
 
 
+def listing_media_type(model: Mapping, entries: Iterable[Mapping]) -> str | None:
+    """清单项的媒体类型：引用唯一条目时取条目的，否则取清单项自己写的（可能没有）。"""
+    matches = [entry for entry in entries if _refers_to(model, entry)]
+    return matches[0]["media_type"] if len(matches) == 1 else model.get("media_type")
+
+
 def _text_lookup(entries: list[dict]) -> dict[str, dict]:
     lookup: dict[str, dict] = {}
     for entry in entries:
@@ -495,8 +501,7 @@ def withhold_unreleased(catalog: Mapping, released: str) -> tuple[dict, list[dic
                 models.append(model)
                 check_models.append(model)
                 continue
-            matches = [entry for entry in entries if _refers_to(model, entry)]
-            media_type = matches[0]["media_type"] if len(matches) == 1 else model.get("media_type")
+            media_type = listing_media_type(model, entries)
             withheld.append(
                 {
                     "provider": provider_id,
