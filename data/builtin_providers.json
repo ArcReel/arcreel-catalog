@@ -21,6 +21,11 @@
         "entry": "google/gemini-3.1-flash-image"
       },
       {
+        "api_model_name": "gemini-omni-1.1-flash",
+        "entry": "google/gemini-omni-1.1-flash",
+        "endpoint": "gemini-interactions-video"
+      },
+      {
         "api_model_name": "gemini-nano-banana-2.1",
         "entry": "google/gemini-nano-banana-2.1",
         "min_app_version": "0.35.1"
@@ -481,6 +486,26 @@
       {
         "api_model_name": "MiniMax-M2.5",
         "entry": "minimax/MiniMax-M2.5"
+      },
+      {
+        "api_model_name": "qwen-audio-3.1-tts-flash",
+        "entry": "alibaba/qwen-audio-3.1-tts-flash",
+        "endpoint": "dashscope-speech-synthesizer"
+      },
+      {
+        "api_model_name": "qwen-audio-3.1-tts-plus",
+        "entry": "alibaba/qwen-audio-3.1-tts-plus",
+        "endpoint": "dashscope-speech-synthesizer"
+      },
+      {
+        "api_model_name": "qwen-audio-3.0-tts-flash",
+        "entry": "alibaba/qwen-audio-3.0-tts-flash",
+        "endpoint": "dashscope-speech-synthesizer"
+      },
+      {
+        "api_model_name": "qwen-audio-3.0-tts-plus",
+        "entry": "alibaba/qwen-audio-3.0-tts-plus",
+        "endpoint": "dashscope-speech-synthesizer"
       }
     ],
     "defaults": {
@@ -599,6 +624,21 @@
         "api_model_name": "kling-video-o1",
         "entry": "kuaishou/kling-video-o1",
         "endpoint": "kling-video-silent"
+      },
+      {
+        "api_model_name": "kling-4.0",
+        "entry": "kuaishou/kling-4.0",
+        "endpoint": "kling-video-model-path"
+      },
+      {
+        "api_model_name": "kling-4.0-flash",
+        "entry": "kuaishou/kling-4.0-flash",
+        "endpoint": "kling-video-model-path"
+      },
+      {
+        "api_model_name": "kling-3.0-turbo",
+        "entry": "kuaishou/kling-3.0-turbo",
+        "endpoint": "kling-video-model-path"
       }
     ],
     "defaults": {

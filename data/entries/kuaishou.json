@@ -1,6 +1,202 @@
 [
   {
     "maker": "kuaishou",
+    "name": "kling-4.0",
+    "media_type": "video",
+    "display_name": "可灵 4.0",
+    "release_date": "2026-10-28",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ],
+      "max_reference_images": 0,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": false
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 1.0
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 1.5
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "kuaishou",
+    "name": "kling-4.0-flash",
+    "media_type": "video",
+    "display_name": "可灵 4.0 Flash",
+    "release_date": "2026-11-04",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "resolutions": [
+        "720p"
+      ],
+      "max_reference_images": 0,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": false,
+      "reference_audio": false
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.6
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "kuaishou",
+    "name": "kling-3.0-turbo",
+    "media_type": "video",
+    "display_name": "可灵 3.0 Turbo",
+    "release_date": "2026-06-17",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ],
+      "max_reference_images": 0,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": false,
+      "reference_audio": false
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.8
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 1.0
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "kuaishou",
     "name": "kling-v2-5-turbo",
     "media_type": "video",
     "display_name": "可灵 2.5 Turbo",
