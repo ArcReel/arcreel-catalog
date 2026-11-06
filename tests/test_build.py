@@ -6,7 +6,7 @@ from datetime import date
 
 import pytest
 
-from catalog_build.build import build_catalog, convert_price
+from catalog_build.build import build_catalog, convert_price, withhold_unreleased
 
 OPENAI = {"provider": "openai", "maker": "openai", "currency": "USD", "canonical": "openai"}
 ZHIPU = {"provider": "zhipuai", "maker": "zhipu", "currency": "CNY", "canonical": "zhipuai"}
@@ -417,3 +417,56 @@ def test_new_multi_endpoint_listing_waits_for_declaration_release(monkeypatch) -
             {"ark": {"models": [{"api_model_name": "new-seedance", "entry": "bytedance/seedance"}]}},
             today=TODAY,
         )
+
+
+def released_catalog(*models: dict, defaults: dict | None = None) -> dict:
+    """一个内置供应商挂着视频条目 ``bytedance/seedance`` 的发布内容。"""
+    entry = {"maker": "bytedance", "name": "seedance", "media_type": "video"}
+    listing = {"models": [{"entry": "bytedance/seedance", **model} for model in models], "defaults": defaults or {}}
+    return {"entries": [entry], "builtin_providers": {"ark": listing}}
+
+
+def test_models_above_the_latest_app_release_are_withheld_until_it_ships() -> None:
+    catalog = released_catalog(
+        {"api_model_name": "older", "min_app_version": "0.34"},
+        {"api_model_name": "same", "min_app_version": "0.35.0"},
+        {"api_model_name": "ungated"},
+        {"api_model_name": "next-patch", "min_app_version": "0.35.1"},
+        {"api_model_name": "next-minor", "min_app_version": "0.36"},
+        defaults={"video": "same"},
+    )
+
+    published, withheld = withhold_unreleased(catalog, "0.35.0")
+
+    assert [model["api_model_name"] for model in published["builtin_providers"]["ark"]["models"]] == [
+        "older",
+        "same",
+        "ungated",
+    ]
+    assert published["builtin_providers"]["ark"]["defaults"] == {"video": "same"}
+    assert published["entries"] == catalog["entries"]
+    assert withheld == [
+        {"provider": "ark", "api_model_name": "next-patch", "media_type": "video", "min_app_version": "0.35.1"},
+        {"provider": "ark", "api_model_name": "next-minor", "media_type": "video", "min_app_version": "0.36"},
+    ]
+    # 输入不被改动
+    assert len(catalog["builtin_providers"]["ark"]["models"]) == 5
+    # 发版后同一份数据全部放出
+    assert withhold_unreleased(catalog, "0.36.0") == (catalog, [])
+
+
+def test_withheld_default_model_fails_the_build_instead_of_switching_defaults() -> None:
+    catalog = released_catalog(
+        {"api_model_name": "current"},
+        {"api_model_name": "next", "min_app_version": "0.35.1"},
+        defaults={"video": "next"},
+    )
+
+    with pytest.raises(ValueError, match=r"ark.*next.*0\.35\.1") as raised:
+        withhold_unreleased(catalog, "0.35.0")
+
+    assert [model["api_model_name"] for model in raised.value.withheld] == ["next"]
+    # 供 PR 检查继续校验的内容：被暂缓的默认模型留在清单里，默认模型的引用仍然成立
+    listing = raised.value.catalog["builtin_providers"]["ark"]
+    assert [model["api_model_name"] for model in listing["models"]] == ["current", "next"]
+    assert listing["defaults"] == {"video": "next"}

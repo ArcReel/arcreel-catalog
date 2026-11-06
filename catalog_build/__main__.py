@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 import urllib.request
 from collections.abc import Mapping, Sequence
@@ -14,17 +15,19 @@ from arcreel_catalog_core import (
     CATALOG_FILENAME,
     MANIFEST_FILENAME,
     check_catalog_files,
+    endpoints,
     make_manifest,
     parse_dataset_version,
 )
 
-from .build import build_catalog
+from .build import WithheldDefaultError, build_catalog, listing_media_type, withhold_unreleased
 from .signals import collect_signals, render_signals
 
 ROOT = Path(__file__).resolve().parent.parent
 BASELLM_URL = "https://basellm.github.io/llm-metadata/api/all.json"
 MODELS_DEV_URL = "https://models.dev/api.json"
 LITELLM_URL = "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
+APP_RELEASE_URL = "https://api.github.com/repos/ArcReel/ArcReel/releases/latest"
 USER_AGENT = "arcreel-catalog-build (+https://github.com/ArcReel/arcreel-catalog)"
 _VERSION_FORMAT = "%Y-%m-%dT%H:%M:%SZ"
 
@@ -33,14 +36,55 @@ class PublishError(Exception):
     pass
 
 
-def read_json(source: str) -> object:
-    """``source`` 是 https 地址或本地路径。"""
+def read_json(source: str, headers: Mapping[str, str] | None = None) -> object:
+    """``source`` 是 https 地址或本地路径；``headers`` 只用于 https 请求。"""
     if source.startswith("https://"):
         # 部分数据源拒绝 urllib 默认的 User-Agent
-        request = urllib.request.Request(source, headers={"User-Agent": USER_AGENT})
+        request = urllib.request.Request(source, headers={"User-Agent": USER_AGENT, **(headers or {})})
         with urllib.request.urlopen(request, timeout=120) as response:
             return json.loads(response.read())
     return json.loads(Path(source).read_bytes())
+
+
+def latest_app_release(source: str) -> str:
+    """ArcReel 最新发布版本（latest release 的 tag 去掉 ``v``）。``source`` 是 GitHub REST 地址或本地 release JSON。
+
+    环境变量 ``GITHUB_TOKEN`` 或 ``GH_TOKEN`` 存在时带上认证，避开匿名请求的频率限制；没有也能读公开仓库。
+    读不到或 tag 不是应用版本时抛 ``PublishError``。
+    """
+    headers = {"Accept": "application/vnd.github+json"}
+    if token := os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN"):
+        headers["Authorization"] = f"Bearer {token}"
+    try:
+        release = read_json(source, headers)
+    except (OSError, ValueError) as exc:
+        raise PublishError(f"读不到 ArcReel 最新发布版本（{source}）：{exc!r}") from exc
+    tag = release.get("tag_name") if isinstance(release, dict) else None
+    version = tag.removeprefix("v") if isinstance(tag, str) else ""
+    if not endpoints.is_app_version(version):
+        raise PublishError(f"ArcReel 最新发布版本的 tag {tag!r} 不是应用版本")
+    return version
+
+
+def listed_models(catalog: object) -> set[tuple[str, str, str | None]]:
+    """发布内容里的清单项，``(供应商, API 模型名, 媒体类型)``：同一 API 模型名可以按媒体类型各列一项。"""
+    if not isinstance(catalog, Mapping):
+        return set()
+    entries = catalog.get("entries", [])
+    return {
+        (provider_id, model["api_model_name"], listing_media_type(model, entries))
+        for provider_id, listing in catalog.get("builtin_providers", {}).items()
+        for model in listing.get("models", [])
+    }
+
+
+def report_withheld(withheld: Sequence[Mapping]) -> None:
+    """列出这次暂缓的清单项，它们等 ArcReel 发版后放出。"""
+    for model in withheld:
+        print(
+            f"withheld: {model['provider']}/{model['api_model_name']} "
+            f"({model['media_type']}, min_app_version {model['min_app_version']})"
+        )
 
 
 def load_human_data(data_dir: Path) -> tuple[dict, list[dict], dict]:
@@ -102,30 +146,70 @@ def main(argv: Sequence[str] | None = None) -> int:
     build.add_argument("--data", type=Path, default=ROOT / "data", help="人工维护的数据目录")
     build.add_argument("--out", type=Path, default=ROOT, help="写出目录")
     build.add_argument("--check-only", action="store_true", help="只构建与校验，不写文件")
+    build.add_argument(
+        "--allow-withheld-defaults",
+        action="store_true",
+        help="PR 检查用，须与 --check-only 同用：默认模型被暂缓时只提示、不判失败，其他校验照常",
+    )
+    build.add_argument(
+        "--app-release", default=APP_RELEASE_URL, help="ArcReel latest release 的 GitHub REST 地址或本地 JSON"
+    )
     signals = commands.add_parser("signals", help="列出模型巡检的信号：第三方数据与目录不一致、目录数据的缺口")
     signals.add_argument("--basellm", default=BASELLM_URL, help="basellm all.json 的地址或本地路径")
     signals.add_argument("--models-dev", default=MODELS_DEV_URL, help="models.dev api.json 的地址或本地路径")
     signals.add_argument("--litellm", default=LITELLM_URL, help="LiteLLM 价格文件的地址或本地路径")
     signals.add_argument("--data", type=Path, default=ROOT / "data", help="人工维护的数据目录")
     args = parser.parse_args(argv)
+    if getattr(args, "allow_withheld_defaults", False) and not args.check_only:
+        parser.error("--allow-withheld-defaults 只能与 --check-only 同用：发布构建遇到被暂缓的默认模型必须失败")
 
     rules, entries, providers = load_human_data(args.data)
     now = datetime.now(UTC)
-    upstreams = [read_json(args.basellm), read_json(args.models_dev)]
     if args.command == "signals":
+        upstreams = [read_json(args.basellm), read_json(args.models_dev)]
         found = collect_signals(upstreams, rules, entries, providers, read_json(args.litellm), today=now.date())
         print(render_signals(found), end="")
         return 0
 
-    result = build_catalog(upstreams, rules, entries, providers, today=now.date())
-    for warning in result.warnings:
-        print(f"warning: {warning}", file=sys.stderr)
+    # 读不到最新发布版本时不构建：暂缓的模型不能放出，上一次的发布数据原样保留
     try:
-        changed = publish(args.out, result.catalog, now, write=not args.check_only)
+        released = latest_app_release(args.app_release)
     except PublishError as exc:
         print(exc, file=sys.stderr)
         return 1
-    entries_count = len(result.catalog["entries"])
+    print(f"ArcReel latest release: {released}")
+    upstreams = [read_json(args.basellm), read_json(args.models_dev)]
+    try:
+        result = build_catalog(upstreams, rules, entries, providers, today=now.date())
+        for warning in result.warnings:
+            print(f"warning: {warning}", file=sys.stderr)
+        # 先校验完整数据，避免暂缓过滤掩盖尚未放出的模型错误。
+        publish(args.out, result.catalog, now, write=False)
+        body, withheld = withhold_unreleased(result.catalog, released)
+    except WithheldDefaultError as exc:
+        if not args.allow_withheld_defaults:
+            report_withheld(exc.withheld)
+            print(exc, file=sys.stderr)
+            return 1
+        # PR 检查：数据本身可以合入，发布构建要等 ArcReel 发布对应版本才会成功；其余校验照常
+        print(f"notice: {exc}。这份数据合入后，发布构建要等 ArcReel 发布对应版本才会成功。")
+        body, withheld = exc.catalog, exc.withheld
+    except (ValueError, PublishError) as exc:
+        print(exc, file=sys.stderr)
+        return 1
+    report_withheld(withheld)
+    # 与已发布数据相比新增的清单项，含这次放出的暂缓模型；PR 检查为校验留着的暂缓默认模型发布不了，不算
+    previous_path = args.out / CATALOG_FILENAME
+    previous = json.loads(previous_path.read_bytes()) if previous_path.exists() else None
+    held = {(model["provider"], model["api_model_name"], model["media_type"]) for model in withheld}
+    for provider_id, api_model_name, media_type in sorted(listed_models(body) - held - listed_models(previous)):
+        print(f"newly listed: {provider_id}/{api_model_name} ({media_type})")
+    try:
+        changed = publish(args.out, body, now, write=not args.check_only)
+    except PublishError as exc:
+        print(exc, file=sys.stderr)
+        return 1
+    entries_count = len(body["entries"])
     print(f"{'changed' if changed else 'unchanged'}: {entries_count} entries")
     return 0
 
