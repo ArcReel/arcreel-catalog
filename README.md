@@ -39,11 +39,11 @@
 
 ## 模型巡检
 
-厂商的上新、下线与价格变化，由每周一次的模型巡检跟进：新模型、关停日期、后继、上线日期、价格，以及过期人工数据的清理。巡检是 Claude 按 [`.claude/skills/model-sweep/SKILL.md`](.claude/skills/model-sweep/SKILL.md) 执行的无人值守任务。它读 [LiteLLM](https://github.com/BerriAI/litellm)、models.dev、basellm 的信号与各厂商的官方页面，只做有官方来源的改动。产出一个数据 PR，`Check catalog` 通过后合并；需要新调用端点的模型和需要人裁决的事项，在 ArcReel 仓库开 `needs-triage` issue。
+厂商的上新、下线与价格变化，由每日一次的模型巡检跟进：新模型、关停日期、后继、上线日期、价格，以及过期人工数据的清理。巡检是 Claude 按 [`.claude/skills/model-sweep/SKILL.md`](.claude/skills/model-sweep/SKILL.md) 执行的无人值守任务。它读 [LiteLLM](https://github.com/BerriAI/litellm)、models.dev、basellm 的信号与各厂商的官方页面，只做有官方来源的改动。产出一个数据 PR，`Check catalog` 通过后合并；需要新调用端点的模型和需要人裁决的事项，在 ArcReel 仓库开 `needs-triage` issue。
 
 定时任务：
 
-- 位置：维护者 claude.ai 账号下的 Claude Code 云端定时任务「arcreel-catalog 每周模型巡检」，每周运行一次，prompt 首行为 `/model-sweep`。
+- 位置：维护者 claude.ai 账号下的 Claude Code 云端定时任务「arcreel-catalog 每日模型巡检」，每天运行一次，prompt 首行为 `/model-sweep`。
 - 源仓库：`ArcReel/arcreel-catalog`，以及用于读取调用通道代码、开 issue 的 `ArcReel/ArcReel`。
 - 权限：经云端 GitHub 代理，以维护者身份推送 `model-sweep/` 分支、创建与合并 PR，并在两个仓库开 issue 与评论。代理只支持 REST，所以 skill 里的 GitHub 操作都用 `gh api`。
 - 网络：运行环境需要能访问各厂商官方页面，以及 `models.dev`、`basellm.github.io` 与 `raw.githubusercontent.com`。
