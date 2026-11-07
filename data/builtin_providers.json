@@ -21,6 +21,11 @@
         "entry": "google/gemini-3.1-flash-image"
       },
       {
+        "api_model_name": "gemini-omni-1.2-flash",
+        "entry": "google/gemini-omni-1.2-flash",
+        "endpoint": "gemini-interactions-video"
+      },
+      {
         "api_model_name": "gemini-omni-1.1-flash",
         "entry": "google/gemini-omni-1.1-flash",
         "endpoint": "gemini-interactions-video"
