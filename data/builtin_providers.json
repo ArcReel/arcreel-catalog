@@ -359,6 +359,26 @@
         "endpoint": "vidu-video-q3-reference"
       },
       {
+        "api_model_name": "viduq4-preview",
+        "entry": "shengshu/viduq4-preview",
+        "endpoint": "vidu-video-q4"
+      },
+      {
+        "api_model_name": "viduq2-pro",
+        "entry": "shengshu/viduq2-pro",
+        "endpoint": "vidu-video-q2-pro"
+      },
+      {
+        "api_model_name": "viduq2-turbo",
+        "entry": "shengshu/viduq2-turbo",
+        "endpoint": "vidu-video-q2-fast"
+      },
+      {
+        "api_model_name": "viduq2-pro-fast",
+        "entry": "shengshu/viduq2-pro-fast",
+        "endpoint": "vidu-video-q2-fast"
+      },
+      {
         "api_model_name": "vidu2.0",
         "entry": "shengshu/vidu2.0",
         "endpoint": "vidu-video-2"
@@ -612,6 +632,13 @@
       {
         "api_model_name": "kling-v3",
         "entry": "kuaishou/kling-v3",
+        "media_type": "image",
+        "endpoint": "kling-image-single"
+      },
+      {
+        "api_model_name": "kling-v3",
+        "entry": "kuaishou/kling-v3",
+        "media_type": "video",
         "endpoint": "kling-video-audio"
       },
       {

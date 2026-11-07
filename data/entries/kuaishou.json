@@ -329,6 +329,50 @@
   {
     "maker": "kuaishou",
     "name": "kling-v3",
+    "media_type": "image",
+    "display_name": "可灵 V3（图像）",
+    "release_date": "2026-02-25",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K"
+      ],
+      "max_reference_images": 1
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "1K"
+              },
+              "price": 0.2
+            },
+            {
+              "when": {
+                "resolution": "2K"
+              },
+              "price": 0.2
+            }
+          ],
+          "defaults": {
+            "resolution": "1K"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "kuaishou",
+    "name": "kling-v3",
     "media_type": "video",
     "display_name": "可灵 v3",
     "release_date": "2026-02-25",

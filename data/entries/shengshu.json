@@ -85,6 +85,90 @@
   },
   {
     "maker": "shengshu",
+    "name": "viduq4-preview",
+    "media_type": "video",
+    "display_name": "Vidu Q4 Preview",
+    "release_date": "2026-10-08",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "resolutions": [
+        "540p",
+        "720p",
+        "1080p",
+        "2K",
+        "4K"
+      ],
+      "max_reference_images": 15,
+      "text_to_video": false,
+      "first_frame": true,
+      "last_frame": false,
+      "reference_audio": true,
+      "max_reference_audio_count": 3
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "540p"
+              },
+              "price": 0.28125
+            },
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.59375
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 0.75
+            },
+            {
+              "when": {
+                "resolution": "2K"
+              },
+              "price": 1.1875
+            },
+            {
+              "when": {
+                "resolution": "4K"
+              },
+              "price": 2.4375
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "shengshu",
     "name": "viduq3-turbo",
     "media_type": "video",
     "display_name": "Vidu Q3 Turbo",
@@ -413,6 +497,984 @@
           ],
           "defaults": {
             "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "shengshu",
+    "name": "viduq2-pro",
+    "media_type": "video",
+    "display_name": "Vidu Q2 Pro",
+    "release_date": "2025-09-24",
+    "facts": {
+      "durations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "resolutions": [
+        "540p",
+        "720p",
+        "1080p"
+      ],
+      "max_reference_images": 7,
+      "text_to_video": false,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": false
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "requests",
+          "dims": [
+            "resolution",
+            "duration",
+            "reference_to_video"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 1,
+                "reference_to_video": false
+              },
+              "price": 0.25
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 2,
+                "reference_to_video": false
+              },
+              "price": 0.3125
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 3,
+                "reference_to_video": false
+              },
+              "price": 0.46875
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 4,
+                "reference_to_video": false
+              },
+              "price": 0.625
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 5,
+                "reference_to_video": false
+              },
+              "price": 0.78125
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 6,
+                "reference_to_video": false
+              },
+              "price": 0.9375
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 7,
+                "reference_to_video": false
+              },
+              "price": 1.09375
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 8,
+                "reference_to_video": false
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 9,
+                "reference_to_video": false
+              },
+              "price": 1.40625
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 10,
+                "reference_to_video": false
+              },
+              "price": 1.5625
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 1,
+                "reference_to_video": false
+              },
+              "price": 0.46875
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 2,
+                "reference_to_video": false
+              },
+              "price": 0.78125
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 3,
+                "reference_to_video": false
+              },
+              "price": 1.09375
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 4,
+                "reference_to_video": false
+              },
+              "price": 1.40625
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 5,
+                "reference_to_video": false
+              },
+              "price": 1.71875
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 6,
+                "reference_to_video": false
+              },
+              "price": 2.03125
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 7,
+                "reference_to_video": false
+              },
+              "price": 2.34375
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 8,
+                "reference_to_video": false
+              },
+              "price": 2.65625
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 9,
+                "reference_to_video": false
+              },
+              "price": 2.96875
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 10,
+                "reference_to_video": false
+              },
+              "price": 3.28125
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 1,
+                "reference_to_video": false
+              },
+              "price": 1.71875
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 2,
+                "reference_to_video": false
+              },
+              "price": 2.1875
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 3,
+                "reference_to_video": false
+              },
+              "price": 2.65625
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 4,
+                "reference_to_video": false
+              },
+              "price": 3.125
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 5,
+                "reference_to_video": false
+              },
+              "price": 3.59375
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 6,
+                "reference_to_video": false
+              },
+              "price": 4.0625
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 7,
+                "reference_to_video": false
+              },
+              "price": 4.53125
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 8,
+                "reference_to_video": false
+              },
+              "price": 5.0
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 9,
+                "reference_to_video": false
+              },
+              "price": 5.46875
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 10,
+                "reference_to_video": false
+              },
+              "price": 5.9375
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 1,
+                "reference_to_video": true
+              },
+              "price": 0.625
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 2,
+                "reference_to_video": true
+              },
+              "price": 0.78125
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 3,
+                "reference_to_video": true
+              },
+              "price": 0.9375
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 4,
+                "reference_to_video": true
+              },
+              "price": 1.09375
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 5,
+                "reference_to_video": true
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 6,
+                "reference_to_video": true
+              },
+              "price": 1.40625
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 7,
+                "reference_to_video": true
+              },
+              "price": 1.5625
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 8,
+                "reference_to_video": true
+              },
+              "price": 1.71875
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 9,
+                "reference_to_video": true
+              },
+              "price": 1.875
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 10,
+                "reference_to_video": true
+              },
+              "price": 2.03125
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 1,
+                "reference_to_video": true
+              },
+              "price": 0.9375
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 2,
+                "reference_to_video": true
+              },
+              "price": 1.09375
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 3,
+                "reference_to_video": true
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 4,
+                "reference_to_video": true
+              },
+              "price": 1.40625
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 5,
+                "reference_to_video": true
+              },
+              "price": 1.5625
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 6,
+                "reference_to_video": true
+              },
+              "price": 1.71875
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 7,
+                "reference_to_video": true
+              },
+              "price": 1.875
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 8,
+                "reference_to_video": true
+              },
+              "price": 2.03125
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 9,
+                "reference_to_video": true
+              },
+              "price": 2.1875
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 10,
+                "reference_to_video": true
+              },
+              "price": 2.34375
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 1,
+                "reference_to_video": true
+              },
+              "price": 2.65625
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 2,
+                "reference_to_video": true
+              },
+              "price": 2.96875
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 3,
+                "reference_to_video": true
+              },
+              "price": 3.28125
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 4,
+                "reference_to_video": true
+              },
+              "price": 3.59375
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 5,
+                "reference_to_video": true
+              },
+              "price": 3.90625
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 6,
+                "reference_to_video": true
+              },
+              "price": 4.21875
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 7,
+                "reference_to_video": true
+              },
+              "price": 4.53125
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 8,
+                "reference_to_video": true
+              },
+              "price": 4.84375
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 9,
+                "reference_to_video": true
+              },
+              "price": 5.15625
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 10,
+                "reference_to_video": true
+              },
+              "price": 5.46875
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "duration": 5,
+            "reference_to_video": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "shengshu",
+    "name": "viduq2-turbo",
+    "media_type": "video",
+    "display_name": "Vidu Q2 Turbo",
+    "release_date": "2025-09-24",
+    "facts": {
+      "durations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "resolutions": [
+        "540p",
+        "720p",
+        "1080p"
+      ],
+      "max_reference_images": 0,
+      "text_to_video": false,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": false
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "requests",
+          "dims": [
+            "resolution",
+            "duration"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 1
+              },
+              "price": 0.1875
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 2
+              },
+              "price": 0.25
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 3
+              },
+              "price": 0.3125
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 4
+              },
+              "price": 0.375
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 5
+              },
+              "price": 0.4375
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 6
+              },
+              "price": 0.5
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 7
+              },
+              "price": 0.5625
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 8
+              },
+              "price": 0.625
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 9
+              },
+              "price": 0.6875
+            },
+            {
+              "when": {
+                "resolution": "540p",
+                "duration": 10
+              },
+              "price": 0.75
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 1
+              },
+              "price": 0.25
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 2
+              },
+              "price": 0.3125
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 3
+              },
+              "price": 0.625
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 4
+              },
+              "price": 0.9375
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 5
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 6
+              },
+              "price": 1.5625
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 7
+              },
+              "price": 1.875
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 8
+              },
+              "price": 2.1875
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 9
+              },
+              "price": 2.5
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 10
+              },
+              "price": 2.8125
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 1
+              },
+              "price": 1.09375
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 2
+              },
+              "price": 1.40625
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 3
+              },
+              "price": 1.71875
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 4
+              },
+              "price": 2.03125
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 5
+              },
+              "price": 2.34375
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 6
+              },
+              "price": 2.65625
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 7
+              },
+              "price": 2.96875
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 8
+              },
+              "price": 3.28125
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 9
+              },
+              "price": 3.59375
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 10
+              },
+              "price": 3.90625
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "duration": 5
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "shengshu",
+    "name": "viduq2-pro-fast",
+    "media_type": "video",
+    "display_name": "Vidu Q2 Pro Fast",
+    "release_date": "2025-12-02",
+    "facts": {
+      "durations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ],
+      "max_reference_images": 0,
+      "text_to_video": false,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": false
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "requests",
+          "dims": [
+            "resolution",
+            "duration"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 1
+              },
+              "price": 0.25
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 2
+              },
+              "price": 0.3125
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 3
+              },
+              "price": 0.375
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 4
+              },
+              "price": 0.4375
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 5
+              },
+              "price": 0.5
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 6
+              },
+              "price": 0.5625
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 7
+              },
+              "price": 0.625
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 8
+              },
+              "price": 0.6875
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 9
+              },
+              "price": 0.75
+            },
+            {
+              "when": {
+                "resolution": "720p",
+                "duration": 10
+              },
+              "price": 0.8125
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 1
+              },
+              "price": 0.5
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 2
+              },
+              "price": 0.625
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 3
+              },
+              "price": 0.75
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 4
+              },
+              "price": 0.875
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 5
+              },
+              "price": 1.0
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 6
+              },
+              "price": 1.125
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 7
+              },
+              "price": 1.25
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 8
+              },
+              "price": 1.375
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 9
+              },
+              "price": 1.5
+            },
+            {
+              "when": {
+                "resolution": "1080p",
+                "duration": 10
+              },
+              "price": 1.625
+            }
+          ],
+          "defaults": {
+            "resolution": "720p",
+            "duration": 5
           }
         }
       ]
