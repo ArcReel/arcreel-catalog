@@ -655,6 +655,7 @@
         15
       ],
       "resolutions": [
+        "480p",
         "768p"
       ],
       "max_reference_images": 9,
@@ -674,6 +675,12 @@
             "resolution"
           ],
           "rows": [
+            {
+              "when": {
+                "resolution": "480p"
+              },
+              "price": 0.26
+            },
             {
               "when": {
                 "resolution": "768p"
@@ -720,6 +727,7 @@
         15
       ],
       "resolutions": [
+        "480p",
         "768p"
       ],
       "max_reference_images": 9,
@@ -739,6 +747,12 @@
             "resolution"
           ],
           "rows": [
+            {
+              "when": {
+                "resolution": "480p"
+              },
+              "price": 0.16
+            },
             {
               "when": {
                 "resolution": "768p"
@@ -784,6 +798,7 @@
         15
       ],
       "resolutions": [
+        "480p",
         "768p"
       ],
       "max_reference_images": 9,
@@ -803,6 +818,12 @@
             "resolution"
           ],
           "rows": [
+            {
+              "when": {
+                "resolution": "480p"
+              },
+              "price": 0.33
+            },
             {
               "when": {
                 "resolution": "768p"
