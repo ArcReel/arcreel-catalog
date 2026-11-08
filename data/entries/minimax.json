@@ -537,6 +537,7 @@
     "name": "image-01",
     "media_type": "image",
     "display_name": "MiniMax Image 01",
+    "release_date": "2025-04-02",
     "facts": {
       "text_to_image": true,
       "image_to_image": true,
