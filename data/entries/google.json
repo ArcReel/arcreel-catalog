@@ -261,7 +261,7 @@
     "media_type": "video",
     "display_name": "Veo 3.1",
     "shutdown_date": "2026-10-22",
-    "successor": "google/gemini-omni-1.1-flash",
+    "successor": "google/gemini-omni-1.2-flash",
     "facts": {
       "durations": [
         4,
@@ -359,7 +359,7 @@
     "media_type": "video",
     "display_name": "Veo 3.1 Fast",
     "shutdown_date": "2026-10-22",
-    "successor": "google/gemini-omni-1.1-flash",
+    "successor": "google/gemini-omni-1.2-flash",
     "facts": {
       "durations": [
         4,
@@ -457,7 +457,7 @@
     "media_type": "video",
     "display_name": "Veo 3.1 Lite",
     "shutdown_date": "2026-10-22",
-    "successor": "google/gemini-omni-1.1-flash",
+    "successor": "google/gemini-omni-1.2-flash",
     "facts": {
       "durations": [
         4,
@@ -616,6 +616,7 @@
     "media_type": "video",
     "display_name": "Veo 3.1",
     "release_date": "2025-11-17",
+    "successor": "google/gemini-omni-1.2-flash",
     "facts": {
       "durations": [
         4,
@@ -713,6 +714,7 @@
     "media_type": "video",
     "display_name": "Veo 3.1 Fast",
     "release_date": "2025-11-17",
+    "successor": "google/gemini-omni-1.2-flash",
     "facts": {
       "durations": [
         4,
@@ -788,9 +790,59 @@
   },
   {
     "maker": "google",
+    "name": "gemini-omni-1.2-flash",
+    "media_type": "video",
+    "display_name": "Gemini Omni 1.2 Flash",
+    "release_date": "2026-11-05",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "360p",
+        "720p",
+        "1080p",
+        "4k"
+      ],
+      "max_reference_images": 6,
+      "text_to_video": true,
+      "first_frame": true,
+      "last_frame": true,
+      "reference_audio": false
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "video_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 12.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
     "name": "gemini-omni-1.1-flash",
     "media_type": "video",
-    "display_name": "Gemini Omni Flash",
+    "display_name": "Gemini Omni 1.1 Flash",
     "release_date": "2026-08-27",
     "facts": {
       "durations": [
@@ -813,6 +865,22 @@
       "first_frame": true,
       "last_frame": true,
       "reference_audio": false
+    },
+    "successor": "google/gemini-omni-1.2-flash",
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "video_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 17.5
+            }
+          ]
+        }
+      ]
     }
   },
   {

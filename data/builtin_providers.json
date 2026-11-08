@@ -21,6 +21,16 @@
         "entry": "google/gemini-3.1-flash-image"
       },
       {
+        "api_model_name": "gemini-omni-1.2-flash",
+        "entry": "google/gemini-omni-1.2-flash",
+        "endpoint": "gemini-interactions-video"
+      },
+      {
+        "api_model_name": "gemini-omni-1.1-flash",
+        "entry": "google/gemini-omni-1.1-flash",
+        "endpoint": "gemini-interactions-video"
+      },
+      {
         "api_model_name": "gemini-nano-banana-2.1",
         "entry": "google/gemini-nano-banana-2.1",
         "min_app_version": "0.35.1"
@@ -349,6 +359,26 @@
         "endpoint": "vidu-video-q3-reference"
       },
       {
+        "api_model_name": "viduq4-preview",
+        "entry": "shengshu/viduq4-preview",
+        "endpoint": "vidu-video-q4"
+      },
+      {
+        "api_model_name": "viduq2-pro",
+        "entry": "shengshu/viduq2-pro",
+        "endpoint": "vidu-video-q2-pro"
+      },
+      {
+        "api_model_name": "viduq2-turbo",
+        "entry": "shengshu/viduq2-turbo",
+        "endpoint": "vidu-video-q2-fast"
+      },
+      {
+        "api_model_name": "viduq2-pro-fast",
+        "entry": "shengshu/viduq2-pro-fast",
+        "endpoint": "vidu-video-q2-fast"
+      },
+      {
         "api_model_name": "vidu2.0",
         "entry": "shengshu/vidu2.0",
         "endpoint": "vidu-video-2"
@@ -481,6 +511,26 @@
       {
         "api_model_name": "MiniMax-M2.5",
         "entry": "minimax/MiniMax-M2.5"
+      },
+      {
+        "api_model_name": "qwen-audio-3.1-tts-flash",
+        "entry": "alibaba/qwen-audio-3.1-tts-flash",
+        "endpoint": "dashscope-speech-synthesizer"
+      },
+      {
+        "api_model_name": "qwen-audio-3.1-tts-plus",
+        "entry": "alibaba/qwen-audio-3.1-tts-plus",
+        "endpoint": "dashscope-speech-synthesizer"
+      },
+      {
+        "api_model_name": "qwen-audio-3.0-tts-flash",
+        "entry": "alibaba/qwen-audio-3.0-tts-flash",
+        "endpoint": "dashscope-speech-synthesizer"
+      },
+      {
+        "api_model_name": "qwen-audio-3.0-tts-plus",
+        "entry": "alibaba/qwen-audio-3.0-tts-plus",
+        "endpoint": "dashscope-speech-synthesizer"
       }
     ],
     "defaults": {
@@ -582,6 +632,13 @@
       {
         "api_model_name": "kling-v3",
         "entry": "kuaishou/kling-v3",
+        "media_type": "image",
+        "endpoint": "kling-image-single"
+      },
+      {
+        "api_model_name": "kling-v3",
+        "entry": "kuaishou/kling-v3",
+        "media_type": "video",
         "endpoint": "kling-video-audio"
       },
       {
@@ -599,6 +656,21 @@
         "api_model_name": "kling-video-o1",
         "entry": "kuaishou/kling-video-o1",
         "endpoint": "kling-video-silent"
+      },
+      {
+        "api_model_name": "kling-4.0",
+        "entry": "kuaishou/kling-4.0",
+        "endpoint": "kling-video-model-path"
+      },
+      {
+        "api_model_name": "kling-4.0-flash",
+        "entry": "kuaishou/kling-4.0-flash",
+        "endpoint": "kling-video-model-path"
+      },
+      {
+        "api_model_name": "kling-3.0-turbo",
+        "entry": "kuaishou/kling-3.0-turbo",
+        "endpoint": "kling-video-model-path"
       }
     ],
     "defaults": {
