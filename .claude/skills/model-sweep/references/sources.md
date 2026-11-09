@@ -80,6 +80,6 @@
 只核实生命周期信号涉及的型号。
 
 - Anthropic：https://platform.claude.com/docs/en/about-claude/model-deprecations
-- DeepSeek：<https://api-docs.deepseek.com/updates>、<https://api-docs.deepseek.com/quick_start/pricing>
+- DeepSeek：<https://api-docs.deepseek.com/updates>、<https://api-docs.deepseek.com/quick_start/pricing.md>（不带 `.md` 的地址返回「Your First API Call」页）
 - Moonshot（Kimi）：https://platform.kimi.com/docs/models.md
 - 智谱：<https://docs.bigmodel.cn/cn/guide/start/model-overview>（没有独立的下线公告页，弃用信息写在各模型页）
