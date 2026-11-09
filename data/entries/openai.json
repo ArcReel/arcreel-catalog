@@ -1223,6 +1223,16 @@
         "high": 48,
         "xhigh": 64,
         "max": 96
+      },
+      "output_token_scaled_bases": {
+        "low": {
+          "base": 16,
+          "multiplier": 4.2
+        },
+        "medium": {
+          "base": 24,
+          "multiplier": 3.3
+        }
       }
     },
     "price": {
@@ -1309,6 +1319,16 @@
         "high": 48,
         "xhigh": 64,
         "max": 96
+      },
+      "output_token_scaled_bases": {
+        "low": {
+          "base": 16,
+          "multiplier": 4.2
+        },
+        "medium": {
+          "base": 24,
+          "multiplier": 3.3
+        }
       }
     },
     "price": {
