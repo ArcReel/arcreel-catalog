@@ -279,6 +279,10 @@
         "api_model_name": "grok-imagine-video-1.5-lite",
         "entry": "xai/grok-imagine-video-1.5-lite",
         "endpoint": "grok-video-mixed"
+      },
+      {
+        "api_model_name": "grok-tts",
+        "entry": "xai/grok-tts"
       }
     ],
     "defaults": {

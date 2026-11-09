@@ -575,5 +575,27 @@
         }
       ]
     }
+  },
+  {
+    "maker": "xai",
+    "name": "grok-tts",
+    "media_type": "audio",
+    "display_name": "Grok TTS",
+    "facts": {},
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "characters",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.15
+            }
+          ]
+        }
+      ]
+    }
   }
 ]
