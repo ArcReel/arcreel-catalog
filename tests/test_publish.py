@@ -235,7 +235,7 @@ def test_newly_listed_tells_media_types_of_the_same_api_model_apart(
         "name": "gpt-c",
         "media_type": "image",
         "display_name": "GPT C Image",
-        "facts": {"text_to_image": True},
+        "facts": {"text_to_image": True, "output_token_bases": {"medium": 48}},
         "price": {
             "currency": "USD",
             "meters": [{"meter": "image_output_tokens", "dims": [], "rows": [{"when": {}, "price": 30.0}]}],
