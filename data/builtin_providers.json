@@ -13,6 +13,10 @@
         "entry": "google/gemini-3-flash-preview"
       },
       {
+        "api_model_name": "gemini-3.6-flash",
+        "entry": "google/gemini-3.6-flash"
+      },
+      {
         "api_model_name": "gemini-3-pro-image",
         "entry": "google/gemini-3-pro-image"
       },
@@ -78,6 +82,10 @@
       {
         "api_model_name": "gemini-3-flash-preview",
         "entry": "google/gemini-3-flash-preview"
+      },
+      {
+        "api_model_name": "gemini-3.6-flash",
+        "entry": "google/gemini-3.6-flash"
       },
       {
         "api_model_name": "gemini-3-pro-image",
