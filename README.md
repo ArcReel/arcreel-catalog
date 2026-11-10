@@ -30,7 +30,8 @@
 - 内置供应商清单 = 人工清单 + `upstream` 中满足条件的文本模型：发布日期不早于 `listing_min_release_date`、不匹配 `listing_exclude` 与 `exclude`、名字能对应到条目；对应的条目已下线、但没有关停日期时不列入。同一 API 模型名以人工清单为准；供应商模型倍率与最低应用版本写在人工清单里。默认模型请留在人工清单里，免得上游变化把它移出清单。
 - 供应商模型省略 `endpoint` 时补成格式包里该供应商、媒体类型的默认端点；偏离默认的端点写在 `data/builtin_providers.json`。发布入口拒绝缺失端点的数据，端点名、媒体类型和可选范围由格式包严格校验。
 - 最低应用版本取手写值、端点起始版本、多端点供应商的声明读取版本中的最高值（按数字版本比较）。`data/upstream.json` 的 `endpoint_version_exemptions` 固定记录首次过渡时已逐条核对的供应商、API 模型名、条目、媒体类型和端点，只豁免声明读取版本；改绑条目或端点后不再豁免。不要把新模型加入这份历史清单。声明读取版本尚为 `None` 时，新加入的多端点模型拒绝构建，待 ArcReel 确定该版本后自动按版本门槛发布，避免旧实例按名字误路由。
-- 按 ArcReel 发布版本放出：构建先读取 `ArcReel/ArcReel` 的 latest release 版本，最低应用版本高于它的供应商模型这次不发布，构建输出列出这些模型（`withheld:`）。ArcReel 正式版的 GitHub release 一发布就触发一次构建（预发布版本不触发），与镜像构建并行，放出这些模型；ArcReel 的镜像发布不依赖这次构建。读不到最新发布版本时构建失败，上一次的发布数据保持不变。被暂缓的是供应商默认模型时构建同样失败并列出原因，不会换用其他默认模型；等 ArcReel 发版，或调整这个默认模型的数据。PR 检查带 `--allow-withheld-defaults`（只能与 `--check-only` 同用）：只因默认模型被暂缓时不判失败，提示合入后发布构建要等 ArcReel 发版；读不到最新发布版本和其他校验错误照常失败。
+- 按 ArcReel 发布版本放出：构建先读取 `ArcReel/ArcReel` 的 latest release 版本，最低应用版本高于它的供应商模型这次不发布，构建输出列出这些模型（`withheld:`）。ArcReel 正式版的 GitHub release 一发布就触发一次构建（预发布版本不触发），与镜像构建并行，放出这些模型；ArcReel 的镜像发布不依赖这次构建。读不到最新发布版本时构建失败，上一次的发布数据保持不变。被暂缓的是供应商默认模型时构建不失败：这个媒体类型沿用上一次发布的默认模型；上一次没有，或者它已不在清单里、已下线或带关停日期时，这次不发布这一项。构建输出列出每一处的结果（`withheld default:`），ArcReel 发版后的构建再放出新的默认模型。
+- 默认模型（`defaults`）在 0.36 之后的 ArcReel 里只作推荐：首次配置供应商时写进用户设置，之后的变化只提示。0.36 及更早的版本运行时仍按它挑选模型，没有设置默认模型的实例会随数据改用新的默认模型。默认模型宣布退役时按校验规则改为后继或删除；除此之外改值或新增默认模型，合入 main 前确认能接受对这些实例的影响（见 ArcReel 的 `docs/adr/0103`）。
 - 生命周期按构建当天（UTC）落实：
   - 关停日期不晚于构建当天的条目，发布时 `discontinued` 为真。
   - 关停未满 90 天的条目与清单项照常发布；满 90 天后，条目和引用它的清单项都不再发布，人工数据也一样。过了保留期的人工条目请继续留在 `data/` 里：上游仍有这个模型时，构建靠它认出模型已过保留期，不会重新生成条目和清单项。
@@ -57,7 +58,7 @@
 uv run python -m pytest                            # 构建脚本的测试，离线
 uv run python -m catalog_build build --check-only  # 抓取上游并完整构建、校验，不写文件
 uv run python -m catalog_build build               # 同上，有变化时写出 catalog.json 与 manifest.json
-uv run python -m catalog_build build --check-only --allow-withheld-defaults  # PR 检查的口径，不写文件
+uv run python -m catalog_build build --check-only  # PR 检查的口径，不写文件
 uv run python -m catalog_build signals             # 列出模型巡检的信号（抓取上游与 LiteLLM）
 ```
 

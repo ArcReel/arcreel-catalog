@@ -5,9 +5,9 @@
 # catalog.json 与 manifest.json 到 main，不经 PR（该 App 是 main ruleset 的 bypass actor）。
 #
 # 按 ArcReel 发布版本放出：构建读取 ArcReel/ArcReel 的 latest release，最低应用版本高于它的供应商模型这次
-# 不发布，日志列出暂缓（withheld:）与相对 main 新增（newly listed:）的清单项。读不到最新发布版本、或暂缓的
-# 是供应商默认模型时构建失败，main 上的发布数据不变；dry_run 同样按这两条判定。PR 检查（check.yml）对后一种
-# 只提示、不判失败。
+# 不发布，日志列出暂缓（withheld:）与相对 main 新增（newly listed:）的清单项。被暂缓的是供应商默认模型
+# （推荐模型）时沿用上一次发布的值，沿用不了就不发布这一项，日志列出结果（withheld default:）。读不到最新
+# 发布版本时构建失败，main 上的发布数据不变；dry_run 同样按这条判定。
 #
 # 触发：每天一次；人工数据或构建脚本合入 main 后立即一次；ArcReel 正式版的 GitHub release 发布时由 ArcReel
 # 仓库的 catalog-release-build.yml 触发一次（预发布版本不触发），放出随这个版本可用的模型；也可手动触发。
