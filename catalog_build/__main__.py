@@ -20,7 +20,7 @@ from arcreel_catalog_core import (
     parse_dataset_version,
 )
 
-from .build import WithheldDefaultError, build_catalog, listing_media_type, withhold_unreleased
+from .build import build_catalog, listing_media_type, withhold_unreleased
 from .signals import collect_signals, render_signals
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -79,11 +79,20 @@ def listed_models(catalog: object) -> set[tuple[str, str, str | None]]:
 
 
 def report_withheld(withheld: Sequence[Mapping]) -> None:
-    """列出这次暂缓的清单项，它们等 ArcReel 发版后放出。"""
+    """列出这次暂缓的清单项，它们等 ArcReel 发版后放出；暂缓的默认模型另列这次发布的默认模型。"""
     for model in withheld:
         print(
             f"withheld: {model['provider']}/{model['api_model_name']} "
             f"({model['media_type']}, min_app_version {model['min_app_version']})"
+        )
+    for model in withheld:
+        if "default_kept" not in model:
+            continue
+        kept = model["default_kept"]
+        state = f"keeps {kept}" if kept is not None else "has no default"
+        print(
+            f"withheld default: {model['provider']} {model['media_type']} {state} "
+            f"until ArcReel releases {model['min_app_version']}"
         )
 
 
@@ -147,11 +156,6 @@ def main(argv: Sequence[str] | None = None) -> int:
     build.add_argument("--out", type=Path, default=ROOT, help="写出目录")
     build.add_argument("--check-only", action="store_true", help="只构建与校验，不写文件")
     build.add_argument(
-        "--allow-withheld-defaults",
-        action="store_true",
-        help="PR 检查用，须与 --check-only 同用：默认模型被暂缓时只提示、不判失败，其他校验照常",
-    )
-    build.add_argument(
         "--app-release", default=APP_RELEASE_URL, help="ArcReel latest release 的 GitHub REST 地址或本地 JSON"
     )
     signals = commands.add_parser("signals", help="列出模型巡检的信号：第三方数据与目录不一致、目录数据的缺口")
@@ -160,8 +164,6 @@ def main(argv: Sequence[str] | None = None) -> int:
     signals.add_argument("--litellm", default=LITELLM_URL, help="LiteLLM 价格文件的地址或本地路径")
     signals.add_argument("--data", type=Path, default=ROOT / "data", help="人工维护的数据目录")
     args = parser.parse_args(argv)
-    if getattr(args, "allow_withheld_defaults", False) and not args.check_only:
-        parser.error("--allow-withheld-defaults 只能与 --check-only 同用：发布构建遇到被暂缓的默认模型必须失败")
 
     rules, entries, providers = load_human_data(args.data)
     now = datetime.now(UTC)
@@ -179,30 +181,21 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 1
     print(f"ArcReel latest release: {released}")
     upstreams = [read_json(args.basellm), read_json(args.models_dev)]
+    previous_path = args.out / CATALOG_FILENAME
+    previous = json.loads(previous_path.read_bytes()) if previous_path.exists() else None
     try:
         result = build_catalog(upstreams, rules, entries, providers, today=now.date())
         for warning in result.warnings:
             print(f"warning: {warning}", file=sys.stderr)
         # 先校验完整数据，避免暂缓过滤掩盖尚未放出的模型错误。
         publish(args.out, result.catalog, now, write=False)
-        body, withheld = withhold_unreleased(result.catalog, released)
-    except WithheldDefaultError as exc:
-        if not args.allow_withheld_defaults:
-            report_withheld(exc.withheld)
-            print(exc, file=sys.stderr)
-            return 1
-        # PR 检查：数据本身可以合入，发布构建要等 ArcReel 发布对应版本才会成功；其余校验照常
-        print(f"notice: {exc}。这份数据合入后，发布构建要等 ArcReel 发布对应版本才会成功。")
-        body, withheld = exc.catalog, exc.withheld
+        body, withheld = withhold_unreleased(result.catalog, released, previous)
     except (ValueError, PublishError) as exc:
         print(exc, file=sys.stderr)
         return 1
     report_withheld(withheld)
-    # 与已发布数据相比新增的清单项，含这次放出的暂缓模型；PR 检查为校验留着的暂缓默认模型发布不了，不算
-    previous_path = args.out / CATALOG_FILENAME
-    previous = json.loads(previous_path.read_bytes()) if previous_path.exists() else None
-    held = {(model["provider"], model["api_model_name"], model["media_type"]) for model in withheld}
-    for provider_id, api_model_name, media_type in sorted(listed_models(body) - held - listed_models(previous)):
+    # 与已发布数据相比新增的清单项，含这次放出的暂缓模型
+    for provider_id, api_model_name, media_type in sorted(listed_models(body) - listed_models(previous)):
         print(f"newly listed: {provider_id}/{api_model_name} ({media_type})")
     try:
         changed = publish(args.out, body, now, write=not args.check_only)

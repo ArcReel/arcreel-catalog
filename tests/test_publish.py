@@ -172,7 +172,7 @@ def test_cli_fails_without_a_readable_latest_release(
     out = tmp_path / "out"
     assert main(args) == 0
     if pr_check:
-        args = [*args, "--check-only", "--allow-withheld-defaults"]
+        args = [*args, "--check-only"]
     before = (out / "catalog.json").read_bytes(), (out / "manifest.json").read_bytes()
     release_file = tmp_path / "release.json"
     if release is None:
@@ -186,34 +186,47 @@ def test_cli_fails_without_a_readable_latest_release(
     assert "ArcReel 最新发布版本" in capsys.readouterr().err
 
 
-def test_cli_fails_when_a_default_model_is_withheld(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
-    gated = [{"api_model_name": "gpt-b", "entry": "openai/gpt-b", "min_app_version": "0.36"}]
-    args = cli_args(tmp_path, listing=gated)
+def test_cli_publishes_the_rest_when_a_default_model_is_withheld(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    args = cli_args(tmp_path)
+    out = tmp_path / "out"
+    assert main(args) == 0
+    capsys.readouterr()
+    # 新的默认模型要等 ArcReel 发版：其余数据照常发布，默认模型沿用上一次发布的
+    data = tmp_path / "data" / "builtin_providers.json"
+    providers = json.loads(data.read_text())
+    providers["openai"]["models"] = [{"api_model_name": "gpt-c", "entry": "openai/gpt-c", "min_app_version": "0.36"}]
+    providers["openai"]["defaults"] = {"text": "gpt-c"}
+    data.write_text(json.dumps(providers))
 
-    assert main(args) == 1
+    assert main(args) == 0
 
-    assert not (tmp_path / "out" / "catalog.json").exists()
-    report = capsys.readouterr()
-    assert "gpt-b" in report.err
-    assert "withheld: openai/gpt-b (text, min_app_version 0.36)" in report.out
+    assert listed(out) == ["gpt-b"]
+    assert published(out)["builtin_providers"]["openai"]["defaults"] == {"text": "gpt-b"}
+    report = capsys.readouterr().out
+    assert "withheld: openai/gpt-c (text, min_app_version 0.36)" in report
+    assert "withheld default: openai text keeps gpt-b until ArcReel releases 0.36" in report
+
+    (tmp_path / "release.json").write_text(json.dumps({"tag_name": "v0.36.0"}))
+    assert main(args) == 0
+    assert published(out)["builtin_providers"]["openai"]["defaults"] == {"text": "gpt-c"}
 
 
-def test_pr_check_reports_a_withheld_default_model_without_failing(
+def test_withheld_default_model_without_a_previous_default_is_left_out(
     tmp_path: Path, capsys: pytest.CaptureFixture[str]
 ) -> None:
     gated = [{"api_model_name": "gpt-b", "entry": "openai/gpt-b", "min_app_version": "0.36"}]
     args = cli_args(tmp_path, listing=gated)
 
-    assert main([*args, "--check-only", "--allow-withheld-defaults"]) == 0
+    assert main(args) == 0
 
-    assert not (tmp_path / "out" / "catalog.json").exists()
+    catalog = published(tmp_path / "out")
+    assert listed(tmp_path / "out") == ["gpt-c"]
+    assert catalog["builtin_providers"]["openai"]["defaults"] == {}
     report = capsys.readouterr().out
-    assert "withheld: openai/gpt-b (text, min_app_version 0.36)" in report
-    assert "notice:" in report
-    assert "gpt-b" in report.split("notice:")[1]
-    # 留着供校验的暂缓默认模型发布不了，不算新增
+    assert "withheld default: openai text has no default until ArcReel releases 0.36" in report
     assert "newly listed: openai/gpt-b" not in report
-    assert "newly listed: openai/gpt-c (text)" in report
 
 
 def test_newly_listed_tells_media_types_of_the_same_api_model_apart(
@@ -252,7 +265,7 @@ def test_newly_listed_tells_media_types_of_the_same_api_model_apart(
 
 @pytest.mark.parametrize("default_version", ["0.35.0", "0.36"])
 @pytest.mark.parametrize("invalid_version", ["0.35.0", "0.36"])
-def test_pr_check_still_fails_on_other_validation_errors(
+def test_withheld_default_does_not_hide_other_validation_errors(
     tmp_path: Path, default_version: str, invalid_version: str, capsys: pytest.CaptureFixture[str]
 ) -> None:
     gated = [
@@ -266,14 +279,9 @@ def test_pr_check_still_fails_on_other_validation_errors(
     ]
     args = cli_args(tmp_path, listing=gated)
 
-    assert main([*args, "--check-only", "--allow-withheld-defaults"]) == 1
+    assert main([*args, "--check-only"]) == 1
 
     assert "unknown_endpoint" in capsys.readouterr().err
-
-
-def test_withheld_defaults_are_only_allowed_in_check_only_builds(tmp_path: Path) -> None:
-    with pytest.raises(SystemExit):
-        main([*cli_args(tmp_path), "--allow-withheld-defaults"])
 
 
 def test_missing_endpoint_is_not_published(tmp_path: Path) -> None:

@@ -83,6 +83,7 @@ disable-model-invocation: true
 ### 默认模型与清单
 
 - 默认模型不能带关停日期。默认模型宣布退役时，在本 PR 里改为该供应商清单里已收录、能调用的官方后继；没有这样的后继，就删除这个默认值。
+- 默认模型在 0.36 之后的 ArcReel 里只作推荐，但 0.36 及更早的实例运行时仍按它挑选模型。除上一条的退役替换外，改掉已有的默认模型、或为没有默认模型的媒体类型新增默认模型，都会让没有设置默认模型的旧实例在不知情时换模型。这类改动不在本 PR 里做，按「需要人裁决的事项」开 issue。
 - 新收录的模型同时加进对应内置供应商的人工清单。挂接的端点不是默认端点时，写上 `endpoint`。端点声明与最低应用版本的规则见 README。构建拒绝这个清单项时（例如多端点供应商的新模型在声明读取版本确定之前），只收条目、不进清单，记进「待办」，不必开 issue。
 
 ### 到期清理
@@ -97,12 +98,13 @@ disable-model-invocation: true
 
 - 无法由官方来源核实，例如同一事实在两个官方页面上说法不同（上线日期除外，见上文）；
 - 出错后难以回退。
+- 改掉已有的默认模型或新增默认模型（退役替换除外），见「默认模型与清单」。
 
 在 ArcReel 发现的其他缺陷（例如内置调用端点推荐的模型已下线），按 ArcReel 仓库 `docs/agents/escalation.md`「范围外的真缺陷」处理。
 
 ## 4. 验证
 
-1. `uv run python -m pytest -q`，再运行 `uv run python -m catalog_build build --check-only --allow-withheld-defaults`（与 PR 上的 `Check catalog` 同口径），直到通过。`build` 拿不到上游时记下原因，以 PR 上的 `Check catalog` 为准。输出的 `withheld:` 与默认模型被暂缓的 `notice:` 是等 ArcReel 发版的正常状态，不换默认模型、不改最低应用版本。`build` 的警告不必逐条处理；其中指向数据缺口的（例如因币种不符按未定价发布的模型），可以补人工条目。补了以后这条警告仍可能出现，因为它只看上游；是否修好，以构建产物里的条目为准。
+1. `uv run python -m pytest -q`，再运行 `uv run python -m catalog_build build --check-only`（与 PR 上的 `Check catalog` 同口径），直到通过。`build` 拿不到上游时记下原因，以 PR 上的 `Check catalog` 为准。输出的 `withheld:` 与 `withheld default:` 是等 ArcReel 发版的正常状态，不换默认模型、不改最低应用版本。`build` 的警告不必逐条处理；其中指向数据缺口的（例如因币种不符按未定价发布的模型），可以补人工条目。补了以后这条警告仍可能出现，因为它只看上游；是否修好，以构建产物里的条目为准。
 2. 重跑 `signals`：本次处理过的信号应当消失，或者在运行记录里写明为何保留。
 3. 核对改动范围：`git diff --stat origin/main` 只含 `data/`，以及本次更新的 `.claude/skills/model-sweep/references/sources.md`，不含 `catalog.json`、`manifest.json`。
 

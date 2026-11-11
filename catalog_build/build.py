@@ -465,60 +465,72 @@ def build_catalog(
     return BuildResult({"entries": entries, "builtin_providers": listings}, warnings)
 
 
-class WithheldDefaultError(ValueError):
-    """暂缓的清单项里有供应商的默认模型，这次不能发布。
-
-    ``withheld`` 是这次暂缓的全部清单项；``catalog`` 是去掉其余暂缓项、但留着被暂缓的默认模型的内容，
-    供 PR 检查继续做其他校验，不用于发布。
-    """
-
-    def __init__(self, message: str, withheld: list[dict], catalog: dict) -> None:
-        super().__init__(message)
-        self.withheld = withheld
-        self.catalog = catalog
+def _previous_default(previous: Mapping | None, provider_id: str, media_type: str | None) -> str | None:
+    if not isinstance(previous, Mapping):
+        return None
+    listing = previous.get("builtin_providers", {}).get(provider_id)
+    defaults = listing.get("defaults") if isinstance(listing, Mapping) else None
+    value = defaults.get(media_type) if isinstance(defaults, Mapping) else None
+    return value if isinstance(value, str) else None
 
 
-def withhold_unreleased(catalog: Mapping, released: str) -> tuple[dict, list[dict]]:
+def _usable_default(api_model_name: str, media_type: str | None, models: list[dict], entries: list[dict]) -> bool:
+    """``api_model_name`` 在这次发布的清单里、属于 ``media_type``，且条目没有关停日期、没有下线。"""
+    for model in models:
+        if model["api_model_name"] != api_model_name or listing_media_type(model, entries) != media_type:
+            continue
+        refers = [entry for entry in entries if _refers_to(model, entry)]
+        return not any(entry.get("shutdown_date") or entry.get("discontinued") for entry in refers)
+    return False
+
+
+def withhold_unreleased(catalog: Mapping, released: str, previous: Mapping | None = None) -> tuple[dict, list[dict]]:
     """去掉最低应用版本高于 ArcReel 最新发布版本 ``released`` 的清单项，返回 ``(发布内容, 暂缓的清单项)``。
 
-    暂缓的清单项等 ArcReel 发布对应版本后随下一次构建放出；条目照常发布。暂缓的是供应商的默认模型时抛
-    ``WithheldDefaultError``：不悄悄换默认，由维护者等发版或调整数据。最低应用版本格式不对的不在这里处理，由校验器拒绝。
+    暂缓的清单项等 ArcReel 发布对应版本后随下一次构建放出；条目照常发布。
+
+    暂缓的是供应商的默认模型时，构建照常发布其余数据，这一项默认模型沿用 ``previous``（上一次发布的数据）里的值；
+    上一次没有、或它这次不在清单里、带关停日期或已下线时，这一项不发布默认模型。暂缓清单项上的 ``default_kept``
+    记录沿用的模型（没有沿用时为 ``None``）。0.36 及更早的实例把默认模型当运行时兜底，沿用旧值让它们生成用的模型
+    不变；之后的实例只把它当推荐。不换用其他模型作默认，最低应用版本格式不对的不在这里处理，由校验器拒绝。
     """
     released_key = endpoints.app_version_key(released)
     entries = catalog["entries"]
     listings: dict[str, dict] = {}
-    checked: dict[str, dict] = {}  # 留着被暂缓的默认模型，只供校验
     withheld: list[dict] = []
-    blocked: list[str] = []
     for provider_id, listing in catalog["builtin_providers"].items():
         models = []
-        check_models = []
+        held_defaults: list[dict] = []
         for model in listing["models"]:
             version = model.get("min_app_version")
             if not (isinstance(version, str) and endpoints.is_app_version(version)) or (
                 endpoints.app_version_key(version) <= released_key
             ):
                 models.append(model)
-                check_models.append(model)
                 continue
             media_type = listing_media_type(model, entries)
-            withheld.append(
-                {
-                    "provider": provider_id,
-                    "api_model_name": model["api_model_name"],
-                    "media_type": media_type,
-                    "min_app_version": version,
-                }
-            )
+            record = {
+                "provider": provider_id,
+                "api_model_name": model["api_model_name"],
+                "media_type": media_type,
+                "min_app_version": version,
+            }
+            withheld.append(record)
             if listing.get("defaults", {}).get(media_type) == model["api_model_name"]:
-                blocked.append(f"{provider_id} 的 {media_type} 默认模型 {model['api_model_name']}（{version}）")
-                check_models.append(model)
-        listings[provider_id] = {**listing, "models": models}
-        checked[provider_id] = {**listing, "models": check_models}
-    if blocked:
-        raise WithheldDefaultError(
-            f"以下默认模型的最低应用版本高于 ArcReel 最新发布版本 {released}，不能发布：{'；'.join(blocked)}",
-            withheld,
-            {**catalog, "builtin_providers": checked},
-        )
+                held_defaults.append(record)
+        if not held_defaults:
+            listings[provider_id] = {**listing, "models": models}
+            continue
+        defaults = dict(listing.get("defaults", {}))
+        for record in held_defaults:
+            media_type = record["media_type"]
+            kept = _previous_default(previous, provider_id, media_type)
+            if kept is not None and not _usable_default(kept, media_type, models, entries):
+                kept = None
+            record["default_kept"] = kept
+            if kept is None:
+                defaults.pop(media_type, None)
+            else:
+                defaults[media_type] = kept
+        listings[provider_id] = {**listing, "models": models, "defaults": defaults}
     return {**catalog, "builtin_providers": listings}, withheld

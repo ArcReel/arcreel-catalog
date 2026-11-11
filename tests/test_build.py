@@ -455,18 +455,67 @@ def test_models_above_the_latest_app_release_are_withheld_until_it_ships() -> No
     assert withhold_unreleased(catalog, "0.36.0") == (catalog, [])
 
 
-def test_withheld_default_model_fails_the_build_instead_of_switching_defaults() -> None:
+def test_withheld_default_model_keeps_the_previously_published_default() -> None:
     catalog = released_catalog(
         {"api_model_name": "current"},
         {"api_model_name": "next", "min_app_version": "0.35.1"},
         defaults={"video": "next"},
     )
+    previous = released_catalog({"api_model_name": "current"}, defaults={"video": "current"})
 
-    with pytest.raises(ValueError, match=r"ark.*next.*0\.35\.1") as raised:
-        withhold_unreleased(catalog, "0.35.0")
+    published, withheld = withhold_unreleased(catalog, "0.35.0", previous)
 
-    assert [model["api_model_name"] for model in raised.value.withheld] == ["next"]
-    # 供 PR 检查继续校验的内容：被暂缓的默认模型留在清单里，默认模型的引用仍然成立
-    listing = raised.value.catalog["builtin_providers"]["ark"]
-    assert [model["api_model_name"] for model in listing["models"]] == ["current", "next"]
-    assert listing["defaults"] == {"video": "next"}
+    listing = published["builtin_providers"]["ark"]
+    assert [model["api_model_name"] for model in listing["models"]] == ["current"]
+    # 旧实例仍把默认模型当运行时兜底：沿用上一次发布的默认模型，它们生成用的模型不变
+    assert listing["defaults"] == {"video": "current"}
+    assert withheld == [
+        {
+            "provider": "ark",
+            "api_model_name": "next",
+            "media_type": "video",
+            "min_app_version": "0.35.1",
+            "default_kept": "current",
+        }
+    ]
+    # 发版后放出新的默认模型
+    assert withhold_unreleased(catalog, "0.35.1", previous) == (catalog, [])
+
+
+@pytest.mark.parametrize(
+    "previous",
+    [
+        None,
+        released_catalog({"api_model_name": "current"}, defaults={}),
+        # 上一次的默认模型这次不在清单里
+        released_catalog({"api_model_name": "gone"}, defaults={"video": "gone"}),
+    ],
+)
+def test_withheld_default_model_without_a_previous_default_publishes_no_default(previous: dict | None) -> None:
+    catalog = released_catalog(
+        {"api_model_name": "current"},
+        {"api_model_name": "next", "min_app_version": "0.35.1"},
+        defaults={"video": "next", "image": "current"},
+    )
+
+    published, withheld = withhold_unreleased(catalog, "0.35.0", previous)
+
+    assert published["builtin_providers"]["ark"]["defaults"] == {"image": "current"}
+    assert withheld[0]["default_kept"] is None
+
+
+@pytest.mark.parametrize("lifecycle", [{"shutdown_date": "2026-12-01"}, {"discontinued": True}])
+def test_withheld_default_does_not_fall_back_to_a_retiring_model(lifecycle: dict) -> None:
+    catalog = released_catalog(
+        {"api_model_name": "current"},
+        {"api_model_name": "next", "min_app_version": "0.35.1"},
+        defaults={"video": "next"},
+    )
+    catalog["entries"] = [{**catalog["entries"][0], **lifecycle}]
+    previous = released_catalog({"api_model_name": "current"}, defaults={"video": "current"})
+
+    published, withheld = withhold_unreleased(catalog, "0.35.0", previous)
+
+    # 校验器拒绝带关停日期的默认模型：不沿用，这次不发布这一项默认模型
+    assert published["builtin_providers"]["ark"]["defaults"] == {}
+    assert withheld[0]["default_kept"] is None
