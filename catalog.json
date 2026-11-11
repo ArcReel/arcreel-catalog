@@ -1,5 +1,5 @@
 {
-  "dataset_version": "2026-11-11T07:58:54Z",
+  "dataset_version": "2026-11-11T10:57:09Z",
   "entries": [
     {
       "maker": "agnes",
@@ -6283,6 +6283,7 @@
       "display_name": "Gemini 3 Flash Preview",
       "context_length": 1048576,
       "release_date": "2025-12-17",
+      "successor": "google/gemini-3.6-flash",
       "facts": {
         "image_input": true,
         "structured_output": true,
@@ -17501,6 +17502,11 @@
           "endpoint": "gemini-generate"
         },
         {
+          "api_model_name": "gemini-3.6-flash",
+          "entry": "google/gemini-3.6-flash",
+          "endpoint": "gemini-generate"
+        },
+        {
           "api_model_name": "gemini-3-pro-image",
           "entry": "google/gemini-3-pro-image",
           "endpoint": "gemini-image"
@@ -17578,11 +17584,6 @@
           "endpoint": "gemini-generate"
         },
         {
-          "api_model_name": "gemini-3.6-flash",
-          "entry": "google/gemini-3.6-flash",
-          "endpoint": "gemini-generate"
-        },
-        {
           "api_model_name": "gemini-3.8-flash",
           "entry": "google/gemini-3.8-flash",
           "endpoint": "gemini-generate"
@@ -17619,6 +17620,11 @@
         {
           "api_model_name": "gemini-3-flash-preview",
           "entry": "google/gemini-3-flash-preview",
+          "endpoint": "gemini-generate"
+        },
+        {
+          "api_model_name": "gemini-3.6-flash",
+          "entry": "google/gemini-3.6-flash",
           "endpoint": "gemini-generate"
         },
         {
@@ -17689,11 +17695,6 @@
         {
           "api_model_name": "gemini-3.5-flash-lite",
           "entry": "google/gemini-3.5-flash-lite",
-          "endpoint": "gemini-generate"
-        },
-        {
-          "api_model_name": "gemini-3.6-flash",
-          "entry": "google/gemini-3.6-flash",
           "endpoint": "gemini-generate"
         },
         {
