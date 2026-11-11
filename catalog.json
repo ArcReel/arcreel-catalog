@@ -1,5 +1,5 @@
 {
-  "dataset_version": "2026-11-11T06:41:26Z",
+  "dataset_version": "2026-11-11T07:58:54Z",
   "entries": [
     {
       "maker": "agnes",
@@ -12911,7 +12911,12 @@
           "low": 16,
           "medium": 48,
           "high": 96
-        }
+        },
+        "qualities": [
+          "low",
+          "medium",
+          "high"
+        ]
       },
       "price": {
         "currency": "USD",
@@ -12998,7 +13003,14 @@
           "high": 48,
           "xhigh": 64,
           "max": 96
-        }
+        },
+        "qualities": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
       },
       "price": {
         "currency": "USD",
@@ -13085,7 +13097,14 @@
           "high": 48,
           "xhigh": 64,
           "max": 96
-        }
+        },
+        "qualities": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
       },
       "price": {
         "currency": "USD",
@@ -13180,7 +13199,14 @@
             "base": 24,
             "multiplier": 3.3
           }
-        }
+        },
+        "qualities": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
       },
       "price": {
         "currency": "USD",
@@ -13275,7 +13301,14 @@
             "base": 24,
             "multiplier": 3.3
           }
-        }
+        },
+        "qualities": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
       },
       "price": {
         "currency": "USD",
