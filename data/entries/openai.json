@@ -1232,7 +1232,14 @@
           "base": 24,
           "multiplier": 3.3
         }
-      }
+      },
+      "qualities": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
     },
     "price": {
       "currency": "USD",
@@ -1327,7 +1334,14 @@
           "base": 24,
           "multiplier": 3.3
         }
-      }
+      },
+      "qualities": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
     },
     "price": {
       "currency": "USD",
@@ -1414,7 +1428,14 @@
         "high": 48,
         "xhigh": 64,
         "max": 96
-      }
+      },
+      "qualities": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
     },
     "price": {
       "currency": "USD",
@@ -1501,7 +1522,14 @@
         "high": 48,
         "xhigh": 64,
         "max": 96
-      }
+      },
+      "qualities": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
     },
     "price": {
       "currency": "USD",
@@ -1589,7 +1617,12 @@
         "low": 16,
         "medium": 48,
         "high": 96
-      }
+      },
+      "qualities": [
+        "low",
+        "medium",
+        "high"
+      ]
     },
     "price": {
       "currency": "USD",
