@@ -1,6 +1,6 @@
 ---
 name: model-sweep
-description: 每周巡检模型厂商与内置供应商的官方模型页、下线公告和定价页，产出一个附官方来源、自动合并的目录数据 PR。
+description: 每日巡检模型厂商与内置供应商的官方模型页、下线公告和定价页，产出一个附官方来源、自动合并的目录数据 PR。
 disable-model-invocation: true
 ---
 
