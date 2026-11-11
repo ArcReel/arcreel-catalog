@@ -56,9 +56,8 @@
 
 ```bash
 uv run python -m pytest                            # 构建脚本的测试，离线
-uv run python -m catalog_build build --check-only  # 抓取上游并完整构建、校验，不写文件
+uv run python -m catalog_build build --check-only  # 抓取上游并完整构建、校验，不写文件；PR 检查同口径
 uv run python -m catalog_build build               # 同上，有变化时写出 catalog.json 与 manifest.json
-uv run python -m catalog_build build --check-only  # PR 检查的口径，不写文件
 uv run python -m catalog_build signals             # 列出模型巡检的信号（抓取上游与 LiteLLM）
 ```
 
