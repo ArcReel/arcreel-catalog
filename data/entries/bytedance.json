@@ -1793,5 +1793,27 @@
         }
       ]
     }
+  },
+  {
+    "maker": "bytedance",
+    "name": "seed-tts-2.0",
+    "media_type": "audio",
+    "display_name": "豆包语音合成模型 2.0",
+    "facts": {},
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "characters",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 3.0
+            }
+          ]
+        }
+      ]
+    }
   }
 ]

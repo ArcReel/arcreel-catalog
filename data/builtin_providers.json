@@ -251,6 +251,10 @@
         "api_model_name": "doubao-seedance-2.5",
         "entry": "bytedance/doubao-seedance-2.5",
         "endpoint": "ark-seedance-2-5"
+      },
+      {
+        "api_model_name": "seed-tts-2.0",
+        "entry": "bytedance/seed-tts-2.0"
       }
     ],
     "defaults": {
