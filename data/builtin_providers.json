@@ -296,7 +296,8 @@
     "defaults": {
       "text": "grok-4.3",
       "image": "grok-imagine-image",
-      "video": "grok-imagine-video"
+      "video": "grok-imagine-video",
+      "audio": "grok-tts"
     }
   },
   "openai": {
@@ -338,7 +339,7 @@
     ],
     "defaults": {
       "text": "gpt-5.4-mini",
-      "image": "gpt-image-2"
+      "image": "gpt-image-2.6-flare"
     }
   },
   "vidu": {
