@@ -148,6 +148,10 @@
         "entry": "bytedance/doubao-seed-2.1-pro"
       },
       {
+        "api_model_name": "doubao-seedream-5-5-261028",
+        "entry": "bytedance/doubao-seedream-5-5"
+      },
+      {
         "api_model_name": "doubao-seedream-5-0-pro-260628",
         "entry": "bytedance/doubao-seedream-5-0-pro"
       },

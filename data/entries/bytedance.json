@@ -924,6 +924,45 @@
   },
   {
     "maker": "bytedance",
+    "name": "doubao-seedream-5-5",
+    "media_type": "image",
+    "display_name": "Seedream 5.5",
+    "aliases": [
+      "doubao-seedream-5-5-261028"
+    ],
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "max_reference_images": 10
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.23
+            }
+          ]
+        },
+        {
+          "meter": "input_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.05
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "bytedance",
     "name": "doubao-seedream-5-0-pro",
     "media_type": "image",
     "display_name": "Seedream 5.0 Pro",
