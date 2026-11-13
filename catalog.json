@@ -1,5 +1,5 @@
 {
-  "dataset_version": "2026-11-13T01:27:02Z",
+  "dataset_version": "2026-11-13T01:49:28Z",
   "entries": [
     {
       "maker": "agnes",
@@ -5902,6 +5902,45 @@
               }
             ],
             "free_allowance": 1
+          }
+        ]
+      }
+    },
+    {
+      "maker": "bytedance",
+      "name": "doubao-seedream-5-5",
+      "media_type": "image",
+      "display_name": "Seedream 5.5",
+      "aliases": [
+        "doubao-seedream-5-5-261028"
+      ],
+      "facts": {
+        "text_to_image": true,
+        "image_to_image": true,
+        "max_reference_images": 10
+      },
+      "price": {
+        "currency": "CNY",
+        "meters": [
+          {
+            "meter": "output_images",
+            "dims": [],
+            "rows": [
+              {
+                "when": {},
+                "price": 0.23
+              }
+            ]
+          },
+          {
+            "meter": "input_images",
+            "dims": [],
+            "rows": [
+              {
+                "when": {},
+                "price": 0.05
+              }
+            ]
           }
         ]
       }
@@ -17827,6 +17866,12 @@
           "api_model_name": "doubao-seed-2-1-pro-260915",
           "entry": "bytedance/doubao-seed-2.1-pro",
           "endpoint": "ark-chat"
+        },
+        {
+          "api_model_name": "doubao-seedream-5-5-261028",
+          "entry": "bytedance/doubao-seedream-5-5",
+          "endpoint": "ark-seedream-4",
+          "min_app_version": "0.35.1"
         },
         {
           "api_model_name": "doubao-seedream-5-0-pro-260628",
