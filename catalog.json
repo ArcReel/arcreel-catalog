@@ -1,5 +1,5 @@
 {
-  "dataset_version": "2026-11-15T01:27:12Z",
+  "dataset_version": "2026-11-15T01:47:24Z",
   "entries": [
     {
       "maker": "agnes",
@@ -10754,7 +10754,7 @@
       "context_length": 400000,
       "release_date": "2025-08-07",
       "shutdown_date": "2026-12-11",
-      "successor": "openai/gpt-5.6-sol",
+      "successor": "openai/gpt-6.1-sol",
       "facts": {
         "image_input": true,
         "structured_output": true,
@@ -10809,7 +10809,7 @@
       "context_length": 400000,
       "release_date": "2025-08-07",
       "shutdown_date": "2026-12-11",
-      "successor": "openai/gpt-5.6-terra",
+      "successor": "openai/gpt-6.1-terra",
       "facts": {
         "image_input": true,
         "structured_output": true,
@@ -10863,7 +10863,7 @@
       "context_length": 400000,
       "release_date": "2025-08-07",
       "shutdown_date": "2026-12-11",
-      "successor": "openai/gpt-5.6-luna",
+      "successor": "openai/gpt-6-luna",
       "facts": {
         "image_input": true,
         "structured_output": true,
@@ -10913,7 +10913,7 @@
       "context_length": 400000,
       "release_date": "2025-10-06",
       "shutdown_date": "2026-12-11",
-      "successor": "openai/gpt-5.6-sol",
+      "successor": "openai/gpt-6.1-sol",
       "facts": {
         "image_input": true,
         "structured_output": true,
@@ -13686,7 +13686,7 @@
       "context_length": 200000,
       "release_date": "2025-04-16",
       "shutdown_date": "2026-12-11",
-      "successor": "openai/gpt-5.6-sol",
+      "successor": "openai/gpt-6.1-sol",
       "facts": {
         "image_input": true,
         "structured_output": true,
@@ -13790,7 +13790,7 @@
       "context_length": 200000,
       "release_date": "2025-06-10",
       "shutdown_date": "2026-12-11",
-      "successor": "openai/gpt-5.6-sol",
+      "successor": "openai/gpt-6.1-sol",
       "facts": {
         "image_input": true,
         "structured_output": true,
