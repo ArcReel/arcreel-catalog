@@ -1,5 +1,5 @@
 {
-  "dataset_version": "2026-11-16T01:30:29Z",
+  "dataset_version": "2026-11-16T01:48:25Z",
   "entries": [
     {
       "maker": "agnes",
@@ -5734,6 +5734,103 @@
                   "input_video": true
                 },
                 "price": 46.0
+              }
+            ],
+            "defaults": {
+              "resolution": "720p",
+              "input_video": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "maker": "bytedance",
+      "name": "doubao-seedance-2.5-flash",
+      "media_type": "video",
+      "display_name": "Seedance 2.5 Flash",
+      "aliases": [
+        "doubao-seedance-2-5-flash-261115"
+      ],
+      "facts": {
+        "durations": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "resolutions": [
+          "480p",
+          "720p"
+        ],
+        "max_reference_images": 10,
+        "text_to_video": true,
+        "first_frame": true,
+        "last_frame": true,
+        "reference_audio": true,
+        "max_reference_audio_count": 5,
+        "max_reference_audio_total_seconds": 30.0
+      },
+      "price": {
+        "currency": "CNY",
+        "meters": [
+          {
+            "meter": "video_tokens",
+            "dims": [
+              "resolution",
+              "input_video"
+            ],
+            "rows": [
+              {
+                "when": {
+                  "resolution": "480p",
+                  "input_video": false
+                },
+                "price": 46.0
+              },
+              {
+                "when": {
+                  "resolution": "480p",
+                  "input_video": true
+                },
+                "price": 28.0
+              },
+              {
+                "when": {
+                  "resolution": "720p",
+                  "input_video": false
+                },
+                "price": 46.0
+              },
+              {
+                "when": {
+                  "resolution": "720p",
+                  "input_video": true
+                },
+                "price": 28.0
               }
             ],
             "defaults": {
@@ -17998,6 +18095,12 @@
           "api_model_name": "doubao-seedance-2-5-260628",
           "entry": "bytedance/doubao-seedance-2.5",
           "endpoint": "ark-seedance-2-5"
+        },
+        {
+          "api_model_name": "doubao-seedance-2-5-flash-261115",
+          "entry": "bytedance/doubao-seedance-2.5-flash",
+          "endpoint": "ark-seedance-2-5",
+          "min_app_version": "0.35.1"
         },
         {
           "api_model_name": "doubao-seed-2-0-pro-260215",
