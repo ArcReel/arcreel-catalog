@@ -193,6 +193,11 @@
         "endpoint": "ark-seedance-2-5"
       },
       {
+        "api_model_name": "doubao-seedance-2-5-flash-261115",
+        "entry": "bytedance/doubao-seedance-2.5-flash",
+        "endpoint": "ark-seedance-2-5"
+      },
+      {
         "api_model_name": "doubao-seed-2-0-pro-260215",
         "entry": "bytedance/doubao-seed-2.0-pro"
       },
