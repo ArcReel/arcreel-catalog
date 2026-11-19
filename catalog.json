@@ -1,5 +1,5 @@
 {
-  "dataset_version": "2026-11-19T01:27:00Z",
+  "dataset_version": "2026-11-19T01:43:36Z",
   "entries": [
     {
       "maker": "agnes",
@@ -1200,6 +1200,25 @@
             ]
           }
         ]
+      }
+    },
+    {
+      "maker": "alibaba",
+      "name": "qwen-image-3.0-pro",
+      "media_type": "image",
+      "display_name": "Qwen Image 3.0 Pro",
+      "release_date": "2026-07-20",
+      "facts": {
+        "text_to_image": true,
+        "image_to_image": true,
+        "resolutions": [
+          "2048*2048",
+          "2688*1536",
+          "1536*2688",
+          "2368*1728",
+          "1728*2368"
+        ],
+        "max_reference_images": 3
       }
     },
     {
@@ -7666,6 +7685,18 @@
           "1080p",
           "4k"
         ],
+        "duration_constraints": {
+          "with_end_frame": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
         "max_reference_images": 6,
         "text_to_video": true,
         "first_frame": true,
@@ -9236,6 +9267,110 @@
               }
             ],
             "free_allowance": 5
+          }
+        ]
+      }
+    },
+    {
+      "maker": "minimax",
+      "name": "MiniMax-H3-Image",
+      "media_type": "image",
+      "display_name": "MiniMax H3 Image",
+      "release_date": "2026-11-10",
+      "facts": {
+        "text_to_image": true,
+        "image_to_image": true,
+        "resolutions": [
+          "1K",
+          "2K",
+          "4K"
+        ],
+        "max_reference_images": 16
+      },
+      "price": {
+        "currency": "CNY",
+        "meters": [
+          {
+            "meter": "uncached_input_tokens",
+            "dims": [],
+            "rows": [
+              {
+                "when": {},
+                "price": 15.0
+              }
+            ]
+          },
+          {
+            "meter": "uncached_image_input_tokens",
+            "dims": [],
+            "rows": [
+              {
+                "when": {},
+                "price": 10.0
+              }
+            ]
+          },
+          {
+            "meter": "image_output_tokens",
+            "dims": [],
+            "rows": [
+              {
+                "when": {},
+                "price": 25.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "maker": "minimax",
+      "name": "MiniMax-H3-Image-Highspeed",
+      "media_type": "image",
+      "display_name": "MiniMax H3 Image Highspeed",
+      "release_date": "2026-11-10",
+      "facts": {
+        "text_to_image": true,
+        "image_to_image": true,
+        "resolutions": [
+          "1K",
+          "2K",
+          "4K"
+        ],
+        "max_reference_images": 16
+      },
+      "price": {
+        "currency": "CNY",
+        "meters": [
+          {
+            "meter": "uncached_input_tokens",
+            "dims": [],
+            "rows": [
+              {
+                "when": {},
+                "price": 15.0
+              }
+            ]
+          },
+          {
+            "meter": "uncached_image_input_tokens",
+            "dims": [],
+            "rows": [
+              {
+                "when": {},
+                "price": 20.0
+              }
+            ]
+          },
+          {
+            "meter": "image_output_tokens",
+            "dims": [],
+            "rows": [
+              {
+                "when": {},
+                "price": 50.0
+              }
+            ]
           }
         ]
       }
@@ -15598,6 +15733,210 @@
     },
     {
       "maker": "shengshu",
+      "name": "viduq3-ad",
+      "media_type": "video",
+      "display_name": "Vidu Q3 Ad",
+      "facts": {
+        "durations": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "resolutions": [
+          "720p",
+          "1080p"
+        ],
+        "duration_constraints": {
+          "with_reference_images": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "max_reference_images": 7,
+        "text_to_video": false,
+        "first_frame": false,
+        "last_frame": false,
+        "reference_audio": false
+      },
+      "price": {
+        "currency": "CNY",
+        "meters": [
+          {
+            "meter": "output_seconds",
+            "dims": [
+              "resolution"
+            ],
+            "rows": [
+              {
+                "when": {
+                  "resolution": "720p"
+                },
+                "price": 0.625
+              },
+              {
+                "when": {
+                  "resolution": "1080p"
+                },
+                "price": 0.75
+              }
+            ],
+            "defaults": {
+              "resolution": "720p"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "maker": "shengshu",
+      "name": "viduq3-drama",
+      "media_type": "video",
+      "display_name": "Vidu Q3 Drama",
+      "facts": {
+        "durations": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "resolutions": [
+          "720p",
+          "1080p"
+        ],
+        "duration_constraints": {
+          "with_reference_images": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "max_reference_images": 7,
+        "text_to_video": false,
+        "first_frame": false,
+        "last_frame": false,
+        "reference_audio": true,
+        "max_reference_audio_count": 3
+      },
+      "price": {
+        "currency": "CNY",
+        "meters": [
+          {
+            "meter": "output_seconds",
+            "dims": [
+              "resolution"
+            ],
+            "rows": [
+              {
+                "when": {
+                  "resolution": "720p"
+                },
+                "price": 0.625
+              },
+              {
+                "when": {
+                  "resolution": "1080p"
+                },
+                "price": 0.75
+              }
+            ],
+            "defaults": {
+              "resolution": "1080p"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "maker": "shengshu",
+      "name": "viduq3-mix",
+      "media_type": "video",
+      "display_name": "Vidu Q3 Mix",
+      "facts": {
+        "durations": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "resolutions": [
+          "720p",
+          "1080p"
+        ],
+        "duration_constraints": {
+          "with_reference_images": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "max_reference_images": 7,
+        "text_to_video": false,
+        "first_frame": false,
+        "last_frame": false,
+        "reference_audio": false
+      }
+    },
+    {
+      "maker": "shengshu",
       "name": "viduq3-pro",
       "media_type": "video",
       "display_name": "Vidu Q3 Pro",
@@ -18846,6 +19185,12 @@
           "endpoint": "dashscope-qwen-image"
         },
         {
+          "api_model_name": "qwen-image-3.0-pro",
+          "entry": "alibaba/qwen-image-3.0-pro",
+          "endpoint": "dashscope-qwen-image",
+          "min_app_version": "0.35.1"
+        },
+        {
           "api_model_name": "qwen-image-edit-plus",
           "entry": "alibaba/qwen-image-edit-plus",
           "endpoint": "dashscope-qwen-image-edit"
@@ -19068,8 +19413,7 @@
         {
           "api_model_name": "image-01",
           "entry": "minimax/image-01",
-          "endpoint": "minimax-image",
-          "min_app_version": "0.35.1"
+          "endpoint": "minimax-image"
         },
         {
           "api_model_name": "MiniMax-H3",
