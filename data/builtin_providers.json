@@ -385,6 +385,21 @@
         "endpoint": "vidu-video-q3-reference"
       },
       {
+        "api_model_name": "viduq3-drama",
+        "entry": "shengshu/viduq3-drama",
+        "endpoint": "vidu-video-q3-drama"
+      },
+      {
+        "api_model_name": "viduq3-mix",
+        "entry": "shengshu/viduq3-mix",
+        "endpoint": "vidu-video-q3-mix"
+      },
+      {
+        "api_model_name": "viduq3-ad",
+        "entry": "shengshu/viduq3-ad",
+        "endpoint": "vidu-video-q3-ad"
+      },
+      {
         "api_model_name": "viduq4-preview",
         "entry": "shengshu/viduq4-preview",
         "endpoint": "vidu-video-q4"
