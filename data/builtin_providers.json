@@ -588,6 +588,16 @@
         "entry": "minimax/image-01"
       },
       {
+        "api_model_name": "MiniMax-H3-Image",
+        "entry": "minimax/MiniMax-H3-Image",
+        "endpoint": "minimax-h3-image"
+      },
+      {
+        "api_model_name": "MiniMax-H3-Image-Highspeed",
+        "entry": "minimax/MiniMax-H3-Image-Highspeed",
+        "endpoint": "minimax-h3-image"
+      },
+      {
         "api_model_name": "MiniMax-H3",
         "entry": "minimax/MiniMax-H3",
         "endpoint": "minimax-h3"
