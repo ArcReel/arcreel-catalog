@@ -1,5 +1,5 @@
 {
-  "dataset_version": "2026-11-18T01:28:08Z",
+  "dataset_version": "2026-11-19T01:27:00Z",
   "entries": [
     {
       "maker": "agnes",
@@ -1992,7 +1992,7 @@
       "media_type": "text",
       "display_name": "Qwen3.6 Plus",
       "aliases": [
-        "qwen-3.6-plus"
+        "qwen-3-6-plus"
       ],
       "release_date": "2026-04-02",
       "facts": {
@@ -2761,9 +2761,9 @@
       "media_type": "text",
       "display_name": "Claude Fable 5",
       "aliases": [
-        "us.anthropic.claude-fable-5",
+        "anthropic-claude-fable-5",
         "eu.anthropic.claude-fable-5",
-        "anthropic.claude-fable-5",
+        "us.anthropic.claude-fable-5",
         "global.anthropic.claude-fable-5"
       ],
       "context_length": 1000000,
@@ -2835,9 +2835,9 @@
       "media_type": "text",
       "display_name": "Claude Fable 5.1",
       "aliases": [
-        "global.anthropic.claude-fable-5-1",
+        "anthropic-claude-fable-5.1",
         "us.anthropic.claude-fable-5-1",
-        "anthropic.claude-fable-5-1"
+        "global.anthropic.claude-fable-5-1"
       ],
       "context_length": 1000000,
       "release_date": "2026-09-01",
@@ -2908,9 +2908,9 @@
       "media_type": "text",
       "display_name": "Claude Fable 5.2",
       "aliases": [
-        "us.anthropic.claude-fable-5-2",
-        "anthropic.claude-fable-5-2",
-        "global.anthropic.claude-fable-5-2"
+        "anthropic-claude-fable-5.2",
+        "global.anthropic.claude-fable-5-2",
+        "us.anthropic.claude-fable-5-2"
       ],
       "context_length": 1000000,
       "release_date": "2026-11-09",
@@ -3054,13 +3054,13 @@
       "media_type": "text",
       "display_name": "Claude Haiku 5.5",
       "aliases": [
-        "global.anthropic.claude-haiku-5-5",
-        "au.anthropic.claude-haiku-5-5",
+        "Claude Haiku 5.5",
         "anthropic.claude-haiku-5-5",
         "us.anthropic.claude-haiku-5-5",
-        "eu.anthropic.claude-haiku-5-5",
+        "global.anthropic.claude-haiku-5-5",
         "jp.anthropic.claude-haiku-5-5",
-        "Claude Haiku 5.5"
+        "eu.anthropic.claude-haiku-5-5",
+        "au.anthropic.claude-haiku-5-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-10-07",
@@ -3329,13 +3329,13 @@
       "display_name": "Claude Opus 4.7",
       "aliases": [
         "claude-opus4-7",
-        "anthropic.claude-opus-4-7",
+        "anthropic-claude-opus-4.7",
+        "databricks-claude-opus-4-7",
         "jp.anthropic.claude-opus-4-7",
+        "global.anthropic.claude-opus-4-7",
         "au.anthropic.claude-opus-4-7",
         "us.anthropic.claude-opus-4-7",
-        "eu.anthropic.claude-opus-4-7",
-        "global.anthropic.claude-opus-4-7",
-        "databricks-claude-opus-4-7"
+        "eu.anthropic.claude-opus-4-7"
       ],
       "context_length": 1000000,
       "release_date": "2026-04-14",
@@ -3407,12 +3407,12 @@
       "display_name": "Claude Opus 4.8",
       "aliases": [
         "claude-opus4-8",
+        "anthropic-claude-opus-4.8",
+        "us.anthropic.claude-opus-4-8",
+        "eu.anthropic.claude-opus-4-8",
         "global.anthropic.claude-opus-4-8",
         "jp.anthropic.claude-opus-4-8",
-        "au.anthropic.claude-opus-4-8",
-        "eu.anthropic.claude-opus-4-8",
-        "us.anthropic.claude-opus-4-8",
-        "anthropic.claude-opus-4-8"
+        "au.anthropic.claude-opus-4-8"
       ],
       "context_length": 1000000,
       "release_date": "2026-05-28",
@@ -3483,12 +3483,12 @@
       "media_type": "text",
       "display_name": "Claude Opus 5",
       "aliases": [
+        "anthropic-claude-opus-5",
         "global.anthropic.claude-opus-5",
-        "eu.anthropic.claude-opus-5",
-        "au.anthropic.claude-opus-5",
-        "anthropic.claude-opus-5",
         "in.anthropic.claude-opus-5",
         "jp.anthropic.claude-opus-5",
+        "au.anthropic.claude-opus-5",
+        "eu.anthropic.claude-opus-5",
         "us.anthropic.claude-opus-5"
       ],
       "context_length": 1000000,
@@ -3560,12 +3560,12 @@
       "media_type": "text",
       "display_name": "Claude Opus 5.5",
       "aliases": [
-        "eu.anthropic.claude-opus-5-5",
+        "anthropic-claude-opus-5.5",
         "au.anthropic.claude-opus-5-5",
-        "us.anthropic.claude-opus-5-5",
+        "jp.anthropic.claude-opus-5-5",
         "global.anthropic.claude-opus-5-5",
-        "anthropic.claude-opus-5-5",
-        "jp.anthropic.claude-opus-5-5"
+        "us.anthropic.claude-opus-5-5",
+        "eu.anthropic.claude-opus-5-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-09-22",
@@ -3710,13 +3710,13 @@
       "media_type": "text",
       "display_name": "Claude Sonnet 4.6",
       "aliases": [
+        "databricks-claude-sonnet-4-6",
+        "eu.anthropic.claude-sonnet-4-6",
         "au.anthropic.claude-sonnet-4-6",
         "global.anthropic.claude-sonnet-4-6",
-        "eu.anthropic.claude-sonnet-4-6",
         "jp.anthropic.claude-sonnet-4-6",
-        "anthropic.claude-sonnet-4-6",
         "us.anthropic.claude-sonnet-4-6",
-        "databricks-claude-sonnet-4-6"
+        "anthropic.claude-sonnet-4-6"
       ],
       "context_length": 1000000,
       "release_date": "2026-02-17",
@@ -3787,12 +3787,12 @@
       "media_type": "text",
       "display_name": "Claude Sonnet 5",
       "aliases": [
-        "us.anthropic.claude-sonnet-5",
-        "eu.anthropic.claude-sonnet-5",
-        "global.anthropic.claude-sonnet-5",
-        "anthropic.claude-sonnet-5",
         "jp.anthropic.claude-sonnet-5",
+        "eu.anthropic.claude-sonnet-5",
+        "us.anthropic.claude-sonnet-5",
+        "anthropic.claude-sonnet-5",
         "au.anthropic.claude-sonnet-5",
+        "global.anthropic.claude-sonnet-5",
         "in.anthropic.claude-sonnet-5"
       ],
       "context_length": 1000000,
@@ -3864,11 +3864,11 @@
       "media_type": "text",
       "display_name": "Claude Sonnet 5.5",
       "aliases": [
-        "global.anthropic.claude-sonnet-5-5",
-        "eu.anthropic.claude-sonnet-5-5",
-        "anthropic.claude-sonnet-5-5",
+        "anthropic-claude-sonnet-5.5",
         "au.anthropic.claude-sonnet-5-5",
-        "us.anthropic.claude-sonnet-5-5"
+        "us.anthropic.claude-sonnet-5-5",
+        "eu.anthropic.claude-sonnet-5-5",
+        "global.anthropic.claude-sonnet-5-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-09-28",
@@ -6188,8 +6188,8 @@
       "media_type": "text",
       "display_name": "DeepSeek V4 Pro",
       "aliases": [
-        "alicloud-deepseek-v4-pro",
-        "deep-deepseek-v4-pro"
+        "deep-deepseek-v4-pro",
+        "alicloud-deepseek-v4-pro"
       ],
       "release_date": "2026-04-24",
       "facts": {
@@ -7372,6 +7372,64 @@
               {
                 "when": {},
                 "price": 1.5
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "maker": "google",
+      "name": "gemini-4-neon",
+      "media_type": "text",
+      "display_name": "Gemini 4 Neon",
+      "context_length": 1048576,
+      "release_date": "2026-11-18",
+      "facts": {
+        "image_input": true,
+        "structured_output": true,
+        "max_output_tokens": 65536
+      },
+      "price": {
+        "currency": "USD",
+        "meters": [
+          {
+            "meter": "uncached_input_tokens",
+            "dims": [],
+            "rows": [
+              {
+                "when": {},
+                "price": 3.0
+              }
+            ]
+          },
+          {
+            "meter": "cache_read_tokens",
+            "dims": [],
+            "rows": [
+              {
+                "when": {},
+                "price": 0.15
+              }
+            ]
+          },
+          {
+            "meter": "output_tokens",
+            "dims": [],
+            "rows": [
+              {
+                "when": {},
+                "price": 15.0
+              }
+            ]
+          },
+          {
+            "meter": "audio_input_tokens",
+            "dims": [],
+            "rows": [
+              {
+                "when": {},
+                "price": 3.0
               }
             ]
           }
@@ -9649,8 +9707,8 @@
       "media_type": "text",
       "display_name": "MiniMax-M2.5",
       "aliases": [
-        "minimax.minimax-m2.5",
-        "minimax-m25"
+        "minimax-m25",
+        "minimax.minimax-m2.5"
       ],
       "context_length": 204800,
       "release_date": "2026-02-12",
@@ -9771,8 +9829,8 @@
       "media_type": "text",
       "display_name": "MiniMax M2.7",
       "aliases": [
-        "coding-minimax-m2.7",
-        "minimax-m27"
+        "minimax-m27",
+        "coding-minimax-m2.7"
       ],
       "release_date": "2026-03-18",
       "facts": {
@@ -10901,8 +10959,8 @@
       "media_type": "text",
       "display_name": "GPT-5 Mini",
       "aliases": [
-        "duo-chat-gpt-5-mini",
         "openai-gpt-5-mini",
+        "duo-chat-gpt-5-mini",
         "databricks-gpt-5-mini"
       ],
       "context_length": 400000,
@@ -11060,9 +11118,9 @@
       "media_type": "text",
       "display_name": "GPT-5.1",
       "aliases": [
+        "openai-gpt-5.1",
         "duo-chat-gpt-5-1",
-        "databricks-gpt-5-1",
-        "openai-gpt-5.1"
+        "databricks-gpt-5-1"
       ],
       "context_length": 400000,
       "release_date": "2025-11-13",
@@ -11115,9 +11173,9 @@
       "media_type": "text",
       "display_name": "GPT-5.2",
       "aliases": [
+        "openai-gpt-5.2",
         "duo-chat-gpt-5-2",
         "openai-gpt-52",
-        "openai-gpt-5.2",
         "databricks-gpt-5-2"
       ],
       "context_length": 400000,
@@ -11361,7 +11419,7 @@
       "media_type": "text",
       "display_name": "GPT-5.4",
       "aliases": [
-        "openai.gpt-5.4",
+        "openai-gpt-5.4",
         "duo-chat-gpt-5-4",
         "openai-gpt-54",
         "databricks-gpt-5-4"
@@ -11810,11 +11868,11 @@
       "media_type": "text",
       "display_name": "GPT-5.5",
       "aliases": [
-        "openai.gpt-5.5",
+        "openai-gpt-5.5",
         "duo-chat-gpt-5-5",
         "openai-gpt-55",
-        "xpersona-gpt-5.5",
-        "databricks-gpt-5-5"
+        "databricks-gpt-5-5",
+        "xpersona-gpt-5.5"
       ],
       "release_date": "2026-04-23",
       "facts": {
@@ -12192,13 +12250,13 @@
       "media_type": "text",
       "display_name": "GPT-5.6 Luna",
       "aliases": [
-        "global.openai.gpt-5.6-luna",
-        "openai.gpt-5.6-luna",
-        "in.openai.gpt-5.6-luna",
-        "us.openai.gpt-5.6-luna",
+        "openai-gpt-5.6-luna",
         "duo-chat-gpt-5-6-luna",
         "openai-gpt-56-luna",
-        "databricks-gpt-5-6-luna"
+        "databricks-gpt-5-6-luna",
+        "us.openai.gpt-5.6-luna",
+        "in.openai.gpt-5.6-luna",
+        "global.openai.gpt-5.6-luna"
       ],
       "context_length": 1050000,
       "release_date": "2026-07-09",
@@ -12299,12 +12357,12 @@
       "media_type": "text",
       "display_name": "GPT-5.6 Sol",
       "aliases": [
-        "global.openai.gpt-5.6-sol",
-        "us.openai.gpt-5.6-sol",
-        "openai.gpt-5.6-sol",
+        "openai-gpt-5.6-sol",
         "duo-chat-gpt-5-6-sol",
         "openai-gpt-56-sol",
-        "databricks-gpt-5-6-sol"
+        "databricks-gpt-5-6-sol",
+        "us.openai.gpt-5.6-sol",
+        "global.openai.gpt-5.6-sol"
       ],
       "context_length": 1050000,
       "release_date": "2026-07-09",
@@ -12405,13 +12463,13 @@
       "media_type": "text",
       "display_name": "GPT-5.6 Terra",
       "aliases": [
-        "openai.gpt-5.6-terra",
-        "in.openai.gpt-5.6-terra",
-        "global.openai.gpt-5.6-terra",
-        "us.openai.gpt-5.6-terra",
+        "openai-gpt-5.6-terra",
         "duo-chat-gpt-5-6-terra",
         "openai-gpt-56-terra",
-        "databricks-gpt-5-6-terra"
+        "databricks-gpt-5-6-terra",
+        "us.openai.gpt-5.6-terra",
+        "in.openai.gpt-5.6-terra",
+        "global.openai.gpt-5.6-terra"
       ],
       "context_length": 1050000,
       "release_date": "2026-07-09",
@@ -12512,10 +12570,10 @@
       "media_type": "text",
       "display_name": "GPT-6 Astra",
       "aliases": [
-        "global.openai.gpt-6-astra",
-        "openai.gpt-6-astra",
+        "duo-chat-gpt-6-astra",
+        "openai-gpt-6-astra",
         "us.openai.gpt-6-astra",
-        "duo-chat-gpt-6-astra"
+        "global.openai.gpt-6-astra"
       ],
       "context_length": 1050000,
       "release_date": "2026-09-04",
@@ -12616,10 +12674,10 @@
       "media_type": "text",
       "display_name": "GPT-6 Luna",
       "aliases": [
-        "global.openai.gpt-6-luna",
-        "openai.gpt-6-luna",
+        "duo-chat-gpt-6-luna",
+        "openai-gpt-6-luna",
         "us.openai.gpt-6-luna",
-        "duo-chat-gpt-6-luna"
+        "global.openai.gpt-6-luna"
       ],
       "context_length": 1050000,
       "release_date": "2026-09-22",
@@ -12720,10 +12778,10 @@
       "media_type": "text",
       "display_name": "GPT-6 Sol",
       "aliases": [
+        "duo-chat-gpt-6-sol",
+        "openai-gpt-6-sol",
         "us.openai.gpt-6-sol",
-        "global.openai.gpt-6-sol",
-        "openai.gpt-6-sol",
-        "duo-chat-gpt-6-sol"
+        "global.openai.gpt-6-sol"
       ],
       "context_length": 1050000,
       "release_date": "2026-09-22",
@@ -12824,11 +12882,11 @@
       "media_type": "text",
       "display_name": "GPT-6.1 Sol",
       "aliases": [
-        "global.openai.gpt-6.1-sol",
-        "openai.gpt-6.1-sol",
-        "us.openai.gpt-6.1-sol",
         "duo-chat-gpt-6-1-sol",
-        "openai-gpt-61-sol"
+        "openai-gpt-61-sol",
+        "openai-gpt-6-1-sol",
+        "global.openai.gpt-6.1-sol",
+        "us.openai.gpt-6.1-sol"
       ],
       "context_length": 1050000,
       "release_date": "2026-09-29",
@@ -12929,10 +12987,10 @@
       "media_type": "text",
       "display_name": "GPT-6.1 Terra",
       "aliases": [
-        "openai.gpt-6.1-terra",
+        "openai-gpt-61-terra",
+        "openai-gpt-6.1-terra",
         "us.openai.gpt-6.1-terra",
-        "global.openai.gpt-6.1-terra",
-        "openai-gpt-61-terra"
+        "global.openai.gpt-6.1-terra"
       ],
       "context_length": 1050000,
       "release_date": "2026-10-26",
@@ -13033,7 +13091,10 @@
       "media_type": "text",
       "display_name": "GPT-6.2 Astra",
       "aliases": [
-        "openai-gpt-62-astra"
+        "openai-gpt-62-astra",
+        "openai-gpt-6.2-astra",
+        "us.openai.gpt-6.2-astra",
+        "global.openai.gpt-6.2-astra"
       ],
       "context_length": 1050000,
       "release_date": "2026-11-17",
@@ -13134,7 +13195,10 @@
       "media_type": "text",
       "display_name": "GPT-6.2 Sol",
       "aliases": [
-        "openai-gpt-62-sol"
+        "openai-gpt-62-sol",
+        "openai-gpt-6.2-sol",
+        "us.openai.gpt-6.2-sol",
+        "global.openai.gpt-6.2-sol"
       ],
       "context_length": 1050000,
       "release_date": "2026-11-17",
@@ -16261,9 +16325,9 @@
       "media_type": "text",
       "display_name": "Grok 4.6",
       "aliases": [
-        "global.xai.grok-4.6",
+        "xai.grok-4.6",
         "us.xai.grok-4.6",
-        "xai.grok-4.6"
+        "global.xai.grok-4.6"
       ],
       "context_length": 500000,
       "release_date": "2026-08-12",
@@ -16344,8 +16408,8 @@
       "media_type": "text",
       "display_name": "Grok 4.7",
       "aliases": [
-        "global.xai.grok-4.7",
-        "us.xai.grok-4.7"
+        "us.xai.grok-4.7",
+        "global.xai.grok-4.7"
       ],
       "context_length": 500000,
       "release_date": "2026-09-21",
@@ -17211,8 +17275,8 @@
       "media_type": "text",
       "display_name": "GLM-4.7",
       "aliases": [
-        "zai.glm-4.7",
-        "zai-org-glm-4.7"
+        "zai-org-glm-4.7",
+        "zai.glm-4.7"
       ],
       "context_length": 204800,
       "release_date": "2025-12-22",
@@ -17432,8 +17496,8 @@
       "media_type": "text",
       "display_name": "GLM-5",
       "aliases": [
-        "zai.glm-5",
-        "zai-org-glm-5"
+        "zai-org-glm-5",
+        "zai.glm-5"
       ],
       "context_length": 204800,
       "release_date": "2026-02-12",
@@ -17534,10 +17598,10 @@
       "media_type": "text",
       "display_name": "GLM-5.1",
       "aliases": [
+        "zai-org-glm-5-1",
         "coding-glm-5.1",
         "zai-glm-5.1",
-        "alicloud-glm-5.1",
-        "zai-org-glm-5-1"
+        "alicloud-glm-5.1"
       ],
       "context_length": 200000,
       "release_date": "2026-04-07",
@@ -17639,9 +17703,9 @@
       "display_name": "GLM-5.2",
       "aliases": [
         "zai-glm-5-2",
-        "glm5.2",
         "zai-org-glm-5-2",
-        "databricks-glm-5-2"
+        "databricks-glm-5-2",
+        "glm5.2"
       ],
       "context_length": 1000000,
       "release_date": "2026-06-13",
@@ -17703,13 +17767,13 @@
       "display_name": "GLM-5.3",
       "aliases": [
         "zai-glm-5-3",
-        "global.zai.glm-5.3",
-        "us.zai.glm-5.3",
-        "glm5.3",
         "z-ai-glm-5-3",
         "open-glm-5-3",
         "umans-glm-5.3",
-        "oathbreaker-glm-5.3"
+        "oathbreaker-glm-5.3",
+        "glm5.3",
+        "global.zai.glm-5.3",
+        "us.zai.glm-5.3"
       ],
       "context_length": 1000000,
       "release_date": "2026-08-14",
@@ -17772,10 +17836,10 @@
       "aliases": [
         "zai-glm-5-3-flash",
         "morph-glm53flash",
-        "glm5.3-flash",
         "z-ai-glm-5-3-flash",
         "umans-glm-5.3-flash",
-        "oathbreaker-glm-5.3-flash"
+        "oathbreaker-glm-5.3-flash",
+        "glm5.3-flash"
       ],
       "context_length": 1000000,
       "release_date": "2026-08-26",
@@ -18109,6 +18173,11 @@
           "api_model_name": "gemma-4-31b-it",
           "entry": "google/gemma-4-31b-it",
           "endpoint": "gemini-generate"
+        },
+        {
+          "api_model_name": "gemini-4-neon",
+          "entry": "google/gemini-4-neon",
+          "endpoint": "gemini-generate"
         }
       ],
       "defaults": {
@@ -18222,6 +18291,11 @@
         {
           "api_model_name": "gemini-4-hydrogen",
           "entry": "google/gemini-4-hydrogen",
+          "endpoint": "gemini-generate"
+        },
+        {
+          "api_model_name": "gemini-4-neon",
+          "entry": "google/gemini-4-neon",
           "endpoint": "gemini-generate"
         }
       ],
@@ -18412,23 +18486,18 @@
           "endpoint": "ark-chat"
         },
         {
+          "api_model_name": "kimi-k3.1-pro",
+          "entry": "moonshot/kimi-k3.1-pro",
+          "endpoint": "ark-chat"
+        },
+        {
           "api_model_name": "glm-5.3-flash",
           "entry": "zhipu/glm-5.3-flash",
           "endpoint": "ark-chat"
         },
         {
-          "api_model_name": "glm-5.3",
-          "entry": "zhipu/glm-5.3",
-          "endpoint": "ark-chat"
-        },
-        {
-          "api_model_name": "deepseek-v4-pro",
-          "entry": "deepseek/deepseek-v4-pro",
-          "endpoint": "ark-chat"
-        },
-        {
-          "api_model_name": "deepseek-v4-flash",
-          "entry": "deepseek/deepseek-v4-flash",
+          "api_model_name": "deepseek-v4.1-flash",
+          "entry": "deepseek/deepseek-flash",
           "endpoint": "ark-chat"
         },
         {
@@ -18437,13 +18506,18 @@
           "endpoint": "ark-chat"
         },
         {
-          "api_model_name": "kimi-k3.1-pro",
-          "entry": "moonshot/kimi-k3.1-pro",
+          "api_model_name": "deepseek-v4-flash",
+          "entry": "deepseek/deepseek-v4-flash",
           "endpoint": "ark-chat"
         },
         {
-          "api_model_name": "deepseek-v4.1-flash",
-          "entry": "deepseek/deepseek-flash",
+          "api_model_name": "deepseek-v4-pro",
+          "entry": "deepseek/deepseek-v4-pro",
+          "endpoint": "ark-chat"
+        },
+        {
+          "api_model_name": "glm-5.3",
+          "entry": "zhipu/glm-5.3",
           "endpoint": "ark-chat"
         }
       ],
@@ -18645,13 +18719,13 @@
           "endpoint": "openai-responses"
         },
         {
-          "api_model_name": "gpt-6.2-sol",
-          "entry": "openai/gpt-6.2-sol",
+          "api_model_name": "gpt-6.2-astra",
+          "entry": "openai/gpt-6.2-astra",
           "endpoint": "openai-responses"
         },
         {
-          "api_model_name": "gpt-6.2-astra",
-          "entry": "openai/gpt-6.2-astra",
+          "api_model_name": "gpt-6.2-sol",
+          "entry": "openai/gpt-6.2-sol",
           "endpoint": "openai-responses"
         }
       ],
@@ -18937,16 +19011,6 @@
           "endpoint": "openai-chat"
         },
         {
-          "api_model_name": "glm-5.2",
-          "entry": "zhipu/glm-5.2",
-          "endpoint": "openai-chat"
-        },
-        {
-          "api_model_name": "glm-5.3",
-          "entry": "zhipu/glm-5.3",
-          "endpoint": "openai-chat"
-        },
-        {
           "api_model_name": "glm-5",
           "entry": "zhipu/glm-5",
           "endpoint": "openai-chat"
@@ -18957,8 +19021,8 @@
           "endpoint": "openai-chat"
         },
         {
-          "api_model_name": "deepseek-v4-pro",
-          "entry": "deepseek/deepseek-v4-pro",
+          "api_model_name": "deepseek-v4.1-flash",
+          "entry": "deepseek/deepseek-flash",
           "endpoint": "openai-chat"
         },
         {
@@ -18967,8 +19031,18 @@
           "endpoint": "openai-chat"
         },
         {
-          "api_model_name": "deepseek-v4.1-flash",
-          "entry": "deepseek/deepseek-flash",
+          "api_model_name": "glm-5.2",
+          "entry": "zhipu/glm-5.2",
+          "endpoint": "openai-chat"
+        },
+        {
+          "api_model_name": "deepseek-v4-pro",
+          "entry": "deepseek/deepseek-v4-pro",
+          "endpoint": "openai-chat"
+        },
+        {
+          "api_model_name": "glm-5.3",
+          "entry": "zhipu/glm-5.3",
           "endpoint": "openai-chat"
         }
       ],
