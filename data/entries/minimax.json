@@ -564,6 +564,110 @@
   },
   {
     "maker": "minimax",
+    "name": "MiniMax-H3-Image",
+    "media_type": "image",
+    "display_name": "MiniMax H3 Image",
+    "release_date": "2026-11-10",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K",
+        "4K"
+      ],
+      "max_reference_images": 16
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 15.0
+            }
+          ]
+        },
+        {
+          "meter": "uncached_image_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 10.0
+            }
+          ]
+        },
+        {
+          "meter": "image_output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 25.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
+    "name": "MiniMax-H3-Image-Highspeed",
+    "media_type": "image",
+    "display_name": "MiniMax H3 Image Highspeed",
+    "release_date": "2026-11-10",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K",
+        "2K",
+        "4K"
+      ],
+      "max_reference_images": 16
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 15.0
+            }
+          ]
+        },
+        {
+          "meter": "uncached_image_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 20.0
+            }
+          ]
+        },
+        {
+          "meter": "image_output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 50.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "minimax",
     "name": "MiniMax-H3",
     "media_type": "video",
     "display_name": "MiniMax H3",

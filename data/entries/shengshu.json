@@ -504,6 +504,210 @@
   },
   {
     "maker": "shengshu",
+    "name": "viduq3-drama",
+    "media_type": "video",
+    "display_name": "Vidu Q3 Drama",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ],
+      "duration_constraints": {
+        "with_reference_images": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      "max_reference_images": 7,
+      "text_to_video": false,
+      "first_frame": false,
+      "last_frame": false,
+      "reference_audio": true,
+      "max_reference_audio_count": 3
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.625
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 0.75
+            }
+          ],
+          "defaults": {
+            "resolution": "1080p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "shengshu",
+    "name": "viduq3-mix",
+    "media_type": "video",
+    "display_name": "Vidu Q3 Mix",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ],
+      "duration_constraints": {
+        "with_reference_images": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      "max_reference_images": 7,
+      "text_to_video": false,
+      "first_frame": false,
+      "last_frame": false,
+      "reference_audio": false
+    }
+  },
+  {
+    "maker": "shengshu",
+    "name": "viduq3-ad",
+    "media_type": "video",
+    "display_name": "Vidu Q3 Ad",
+    "facts": {
+      "durations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "resolutions": [
+        "720p",
+        "1080p"
+      ],
+      "duration_constraints": {
+        "with_reference_images": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      "max_reference_images": 7,
+      "text_to_video": false,
+      "first_frame": false,
+      "last_frame": false,
+      "reference_audio": false
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.625
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 0.75
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "maker": "shengshu",
     "name": "viduq2-pro",
     "media_type": "video",
     "display_name": "Vidu Q2 Pro",

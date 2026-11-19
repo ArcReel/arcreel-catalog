@@ -371,6 +371,13 @@
     },
     {
       "provider": "minimax",
+      "api_model_name": "image-01",
+      "entry": "minimax/image-01",
+      "media_type": "image",
+      "endpoint": "minimax-image"
+    },
+    {
+      "provider": "minimax",
       "api_model_name": "MiniMax-H3",
       "entry": "minimax/MiniMax-H3",
       "media_type": "video",

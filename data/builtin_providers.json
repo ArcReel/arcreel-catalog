@@ -385,6 +385,21 @@
         "endpoint": "vidu-video-q3-reference"
       },
       {
+        "api_model_name": "viduq3-drama",
+        "entry": "shengshu/viduq3-drama",
+        "endpoint": "vidu-video-q3-drama"
+      },
+      {
+        "api_model_name": "viduq3-mix",
+        "entry": "shengshu/viduq3-mix",
+        "endpoint": "vidu-video-q3-mix"
+      },
+      {
+        "api_model_name": "viduq3-ad",
+        "entry": "shengshu/viduq3-ad",
+        "endpoint": "vidu-video-q3-ad"
+      },
+      {
         "api_model_name": "viduq4-preview",
         "entry": "shengshu/viduq4-preview",
         "endpoint": "vidu-video-q4"
@@ -456,6 +471,10 @@
       {
         "api_model_name": "qwen-image-3.0",
         "entry": "alibaba/qwen-image-3.0"
+      },
+      {
+        "api_model_name": "qwen-image-3.0-pro",
+        "entry": "alibaba/qwen-image-3.0-pro"
       },
       {
         "api_model_name": "qwen-image-edit-plus",
@@ -582,6 +601,16 @@
       {
         "api_model_name": "image-01",
         "entry": "minimax/image-01"
+      },
+      {
+        "api_model_name": "MiniMax-H3-Image",
+        "entry": "minimax/MiniMax-H3-Image",
+        "endpoint": "minimax-h3-image"
+      },
+      {
+        "api_model_name": "MiniMax-H3-Image-Highspeed",
+        "entry": "minimax/MiniMax-H3-Image-Highspeed",
+        "endpoint": "minimax-h3-image"
       },
       {
         "api_model_name": "MiniMax-H3",

@@ -816,6 +816,18 @@
         "1080p",
         "4k"
       ],
+      "duration_constraints": {
+        "with_end_frame": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
       "max_reference_images": 6,
       "text_to_video": true,
       "first_frame": true,
