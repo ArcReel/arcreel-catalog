@@ -871,6 +871,25 @@
   },
   {
     "maker": "alibaba",
+    "name": "qwen-image-3.0-pro",
+    "media_type": "image",
+    "display_name": "Qwen Image 3.0 Pro",
+    "release_date": "2026-07-20",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "2048*2048",
+        "2688*1536",
+        "1536*2688",
+        "2368*1728",
+        "1728*2368"
+      ],
+      "max_reference_images": 3
+    }
+  },
+  {
+    "maker": "alibaba",
     "name": "qwen-image-edit-plus",
     "media_type": "image",
     "display_name": "Qwen Image Edit Plus",

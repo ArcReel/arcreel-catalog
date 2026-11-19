@@ -458,6 +458,10 @@
         "entry": "alibaba/qwen-image-3.0"
       },
       {
+        "api_model_name": "qwen-image-3.0-pro",
+        "entry": "alibaba/qwen-image-3.0-pro"
+      },
+      {
         "api_model_name": "qwen-image-edit-plus",
         "entry": "alibaba/qwen-image-edit-plus",
         "endpoint": "dashscope-qwen-image-edit"
