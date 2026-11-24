@@ -1,5 +1,5 @@
 {
-  "dataset_version": "2026-11-24T01:26:56Z",
+  "dataset_version": "2026-11-24T01:35:14Z",
   "entries": [
     {
       "maker": "agnes",
@@ -3207,6 +3207,8 @@
       ],
       "context_length": 200000,
       "release_date": "2025-11-24",
+      "shutdown_date": "2027-01-22",
+      "successor": "anthropic/claude-opus-5-5",
       "facts": {
         "image_input": true,
         "structured_output": true,
@@ -8541,7 +8543,8 @@
         ],
         "resolutions": [
           "720p",
-          "1080p"
+          "1080p",
+          "4k"
         ],
         "max_reference_images": 0,
         "text_to_video": true,
@@ -8569,6 +8572,12 @@
                   "resolution": "1080p"
                 },
                 "price": 1.5
+              },
+              {
+                "when": {
+                  "resolution": "4k"
+                },
+                "price": 3.5
               }
             ],
             "defaults": {
@@ -19329,11 +19338,6 @@
           "endpoint": "openai-chat"
         },
         {
-          "api_model_name": "MiniMax-M2.7",
-          "entry": "minimax/MiniMax-M2.7",
-          "endpoint": "openai-chat"
-        },
-        {
           "api_model_name": "image-01",
           "entry": "minimax/image-01",
           "endpoint": "minimax-image"
@@ -19377,21 +19381,6 @@
           "api_model_name": "speech-2.8-turbo",
           "entry": "minimax/speech-2.8-turbo",
           "endpoint": "minimax-tts"
-        },
-        {
-          "api_model_name": "MiniMax-M2.5",
-          "entry": "minimax/MiniMax-M2.5",
-          "endpoint": "openai-chat"
-        },
-        {
-          "api_model_name": "MiniMax-M2.5-highspeed",
-          "entry": "minimax/MiniMax-M2.5-highspeed",
-          "endpoint": "openai-chat"
-        },
-        {
-          "api_model_name": "MiniMax-M2.7-highspeed",
-          "entry": "minimax/MiniMax-M2.7-highspeed",
-          "endpoint": "openai-chat"
         },
         {
           "api_model_name": "MiniMax-M3.1-Flash",
