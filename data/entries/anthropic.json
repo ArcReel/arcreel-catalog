@@ -139,5 +139,146 @@
         }
       ]
     }
+  },
+  {
+    "maker": "anthropic",
+    "name": "claude-opus-4-5",
+    "media_type": "text",
+    "display_name": "Claude Opus 4.5",
+    "aliases": [
+      "claude-opus-4-5-20251101"
+    ],
+    "context_length": 200000,
+    "release_date": "2025-11-24",
+    "shutdown_date": "2027-01-22",
+    "successor": "anthropic/claude-opus-5-5",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 64000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 5.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.5
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 6.25
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_1h_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 10.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 25.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "anthropic",
+    "name": "claude-opus-5-5",
+    "media_type": "text",
+    "display_name": "Claude Opus 5.5",
+    "context_length": 1000000,
+    "release_date": "2026-09-22",
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 128000
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 4.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.2
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_5m_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 5.0
+            }
+          ]
+        },
+        {
+          "meter": "cache_write_1h_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 8.0
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 20.0
+            }
+          ]
+        }
+      ]
+    }
   }
 ]

@@ -38,7 +38,8 @@
       ],
       "resolutions": [
         "720p",
-        "1080p"
+        "1080p",
+        "4k"
       ],
       "max_reference_images": 0,
       "text_to_video": true,
@@ -66,6 +67,12 @@
                 "resolution": "1080p"
               },
               "price": 1.5
+            },
+            {
+              "when": {
+                "resolution": "4k"
+              },
+              "price": 3.5
             }
           ],
           "defaults": {

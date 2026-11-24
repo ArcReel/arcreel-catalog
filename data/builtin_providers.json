@@ -589,14 +589,13 @@
     "upstream": [
       "minimax-cn"
     ],
+    "exclude": [
+      "(?i)^minimax-m2[.][57](-highspeed)?$"
+    ],
     "models": [
       {
         "api_model_name": "MiniMax-M3",
         "entry": "minimax/MiniMax-M3"
-      },
-      {
-        "api_model_name": "MiniMax-M2.7",
-        "entry": "minimax/MiniMax-M2.7"
       },
       {
         "api_model_name": "image-01",
@@ -648,18 +647,6 @@
       {
         "api_model_name": "speech-2.8-turbo",
         "entry": "minimax/speech-2.8-turbo"
-      },
-      {
-        "api_model_name": "MiniMax-M2.5",
-        "entry": "minimax/MiniMax-M2.5"
-      },
-      {
-        "api_model_name": "MiniMax-M2.5-highspeed",
-        "entry": "minimax/MiniMax-M2.5-highspeed"
-      },
-      {
-        "api_model_name": "MiniMax-M2.7-highspeed",
-        "entry": "minimax/MiniMax-M2.7-highspeed"
       }
     ],
     "defaults": {
