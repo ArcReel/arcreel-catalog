@@ -31,7 +31,7 @@
 - 供应商模型省略 `endpoint` 时补成格式包里该供应商、媒体类型的默认端点；偏离默认的端点写在 `data/builtin_providers.json`。发布入口拒绝缺失端点的数据，端点名、媒体类型和可选范围由格式包严格校验。
 - 最低应用版本取手写值、端点起始版本、多端点供应商的声明读取版本中的最高值（按数字版本比较）。`data/upstream.json` 的 `endpoint_version_exemptions` 固定记录首次过渡时已逐条核对的供应商、API 模型名、条目、媒体类型和端点，只豁免声明读取版本；改绑条目或端点后不再豁免。不要把新模型加入这份历史清单。声明读取版本尚为 `None` 时，新加入的多端点模型拒绝构建，待 ArcReel 确定该版本后自动按版本门槛发布，避免旧实例按名字误路由。
 - 按 ArcReel 发布版本放出：构建先读取 `ArcReel/ArcReel` 的 latest release 版本，最低应用版本高于它的供应商模型这次不发布，构建输出列出这些模型（`withheld:`）。ArcReel 正式版的 GitHub release 一发布就触发一次构建（预发布版本不触发），与镜像构建并行，放出这些模型；ArcReel 的镜像发布不依赖这次构建。读不到最新发布版本时构建失败，上一次的发布数据保持不变。被暂缓的是供应商默认模型时构建不失败：这个媒体类型沿用上一次发布的默认模型；上一次没有，或者它已不在清单里、已下线或带关停日期时，这次不发布这一项。构建输出列出每一处的结果（`withheld default:`），ArcReel 发版后的构建再放出新的默认模型。
-- 默认模型（`defaults`）在 0.36 之后的 ArcReel 里只作推荐：首次配置供应商时写进用户设置，之后的变化只提示。0.36 及更早的版本运行时仍按它挑选模型，没有设置默认模型的实例会随数据改用新的默认模型。默认模型宣布退役时按校验规则改为后继或删除；除此之外改值或新增默认模型，合入 main 前确认能接受对这些实例的影响（见 ArcReel 的 `docs/adr/0103`）。
+- 默认模型（`defaults`）在 0.36 之后的 ArcReel 里只作推荐：首次配置供应商时写进用户设置，之后的变化只提示。0.36 及更早的版本运行时仍按它挑选模型，没有设置默认模型的实例会随数据改用新的默认模型。默认模型宣布退役时按[巡检规则](.claude/skills/model-sweep/SKILL.md#默认模型与清单)处理。其他推荐变更或新增推荐合入 main 前，确认能接受对旧实例的影响（见 ArcReel 的 `docs/adr/0103`）。
 - 生命周期按构建当天（UTC）落实：
   - 关停日期不晚于构建当天的条目，发布时 `discontinued` 为真。
   - 关停未满 90 天的条目与清单项照常发布；满 90 天后，条目和引用它的清单项都不再发布，人工数据也一样。过了保留期的人工条目请继续留在 `data/` 里：上游仍有这个模型时，构建靠它认出模型已过保留期，不会重新生成条目和清单项。
@@ -41,7 +41,7 @@
 
 ## 模型巡检
 
-厂商的上新、下线与价格变化，由每日一次的模型巡检跟进：新模型、关停日期、后继、上线日期、价格，以及过期人工数据的清理。巡检是 Claude 按 [`.claude/skills/model-sweep/SKILL.md`](.claude/skills/model-sweep/SKILL.md) 执行的无人值守任务。它读 [LiteLLM](https://github.com/BerriAI/litellm)、models.dev、basellm 的信号与各厂商的官方页面，只做有官方来源的改动。产出一个数据 PR，`Check catalog` 通过后合并；需要新调用端点的模型和需要人裁决的事项，在 ArcReel 仓库开 `needs-triage` issue。
+厂商的上新、下线与价格变化，由每日一次的模型巡检跟进：新模型、关停日期、后继、上线日期、价格，以及过期人工数据的清理。巡检是 Claude 按 [`.claude/skills/model-sweep/SKILL.md`](.claude/skills/model-sweep/SKILL.md) 执行的无人值守任务。它读 [LiteLLM](https://github.com/BerriAI/litellm)、models.dev、basellm 的信号，用官方资料核实事实并按[后继规则](.claude/skills/model-sweep/SKILL.md#后继)推荐替代模型。产出一个数据 PR，`Check catalog` 通过后合并；需要新调用端点的模型和需要人裁决的事项，在 ArcReel 仓库开 `needs-triage` issue。
 
 定时任务：
 

@@ -17,6 +17,10 @@
         "entry": "google/gemini-3.6-flash"
       },
       {
+        "api_model_name": "gemini-3.8-flash",
+        "entry": "google/gemini-3.8-flash"
+      },
+      {
         "api_model_name": "gemini-3-pro-image",
         "entry": "google/gemini-3-pro-image"
       },
@@ -66,8 +70,9 @@
       }
     ],
     "defaults": {
-      "text": "gemini-3-flash-preview",
-      "image": "gemini-3.1-flash-image",
+      "text": "gemini-3.8-flash",
+      "image": "gemini-nano-banana-2.1",
+      "video": "gemini-omni-1.2-flash",
       "audio": "gemini-3.8-flash-tts"
     }
   },
@@ -88,6 +93,10 @@
         "entry": "google/gemini-3.6-flash"
       },
       {
+        "api_model_name": "gemini-3.8-flash",
+        "entry": "google/gemini-3.8-flash"
+      },
+      {
         "api_model_name": "gemini-3-pro-image",
         "entry": "google/gemini-3-pro-image"
       },
@@ -104,6 +113,11 @@
         "api_model_name": "gemini-3.1-flash-lite-image",
         "entry": "google/gemini-3.1-flash-lite-image",
         "min_app_version": "0.35.1"
+      },
+      {
+        "api_model_name": "gemini-omni-1.2-flash",
+        "entry": "google/gemini-omni-1.2-flash",
+        "endpoint": "gemini-vertex-interactions-video"
       },
       {
         "api_model_name": "veo-3.1-generate-001",
@@ -128,9 +142,9 @@
       }
     ],
     "defaults": {
-      "text": "gemini-3-flash-preview",
-      "image": "gemini-3.1-flash-image",
-      "video": "veo-3.1-fast-generate-001",
+      "text": "gemini-3.8-flash",
+      "image": "gemini-nano-banana-2.1",
+      "video": "gemini-omni-1.2-flash",
       "audio": "gemini-3.8-flash-tts"
     }
   },
@@ -208,7 +222,7 @@
     ],
     "defaults": {
       "text": "doubao-seed-2-1-lite-260915",
-      "image": "doubao-seedream-5-0-pro-260628",
+      "image": "doubao-seedream-5-5-261028",
       "video": "doubao-seedance-2-0-mini-260615"
     }
   },
@@ -267,7 +281,9 @@
       }
     ],
     "defaults": {
-      "video": "doubao-seedance-2.0-mini"
+      "image": "doubao-seedream-5.0-flash",
+      "video": "doubao-seedance-2.0-mini",
+      "audio": "seed-tts-2.0"
     }
   },
   "grok": {
@@ -449,6 +465,10 @@
         "entry": "alibaba/qwen3-max"
       },
       {
+        "api_model_name": "qwen3.8-flash",
+        "entry": "alibaba/qwen3.8-flash"
+      },
+      {
         "api_model_name": "qwen-long",
         "entry": "alibaba/qwen-long"
       },
@@ -579,8 +599,8 @@
       }
     ],
     "defaults": {
-      "text": "qwen-plus",
-      "image": "qwen-image-2.0",
+      "text": "qwen3.8-flash",
+      "image": "qwen-image-2.1-pro",
       "video": "happyhorse-1.1-i2v",
       "audio": "qwen3-tts-flash"
     }
