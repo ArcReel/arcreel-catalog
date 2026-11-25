@@ -8,7 +8,7 @@
       "doubao-seed-2-0-pro-260215"
     ],
     "release_date": "2026-02-14",
-    "shutdown_date": "2026-11-24",
+    "shutdown_date": "2027-01-22",
     "successor": "bytedance/doubao-seed-2.1-lite",
     "facts": {
       "image_input": true,
