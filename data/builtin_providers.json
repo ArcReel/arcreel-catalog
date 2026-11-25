@@ -152,6 +152,10 @@
     "upstream": [
       "volcengine"
     ],
+    "exclude": [
+      "^glm-5-1-260428$",
+      "^deepseek-v4-pro-260425$"
+    ],
     "models": [
       {
         "api_model_name": "doubao-seed-2-1-lite-260915",

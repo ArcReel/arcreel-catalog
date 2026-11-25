@@ -49,6 +49,8 @@
     "name": "agnes-2.5-flash",
     "media_type": "text",
     "display_name": "Agnes 2.5 Flash",
+    "shutdown_date": "2026-11-30",
+    "successor": "agnes/agnes-3.0-flash",
     "facts": {
       "structured_output": true,
       "max_output_tokens": 65536
