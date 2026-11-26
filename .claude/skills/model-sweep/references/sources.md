@@ -27,6 +27,7 @@
 ## ark-agent-plan
 
 - 支持的模型：https://ark.volcengine.com/region:cn-beijing/docs/agent-plan-personal-plan-overview.md
+- 模型发布记录：https://ark.volcengine.com/region:cn-beijing/docs/agent-plan-personal-model-release.md
 - 模型下线公告：https://ark.volcengine.com/region:cn-beijing/docs/agent-plan-personal-model-deprecation-announcement.md
 - 全文文本（含下线公告与价格表）：https://ark.volcengine.com/llms-full/agent-coding-plan-subscriptions.txt
 
@@ -34,6 +35,7 @@
 
 - 模型与价格：https://docs.x.ai/developers/models
 - 分档价和输入图价只在各型号页的价格展开区里，要进型号页读
+- 官方聚合定价：https://docs.x.ai/developers/pricing
 - 发布说明：https://docs.x.ai/developers/release-notes
 - 退役迁移说明在 `https://docs.x.ai/developers/migration/<批次>` 下，每批一页（例如 <https://docs.x.ai/developers/migration/may-15-retirement>），索引页本身是 404，从发布说明里的链接进入
 - 新闻页 https://x.ai/news 抓不到时，以模型页与发布说明为准
@@ -49,6 +51,7 @@
 
 - 模型下线：<https://help.aliyun.com/zh/model-studio/model-depreciation>（逐批公告在 <https://www.aliyun.com/notice/> 下）
 - 模型列表：https://help.aliyun.com/zh/model-studio/getting-started/models
+- 新发布模型：https://help.aliyun.com/zh/model-studio/newly-released-models
 - 定价：https://help.aliyun.com/zh/model-studio/model-pricing（WebFetch 会截断正文，用 `curl` 读原文）
 
 ## minimax

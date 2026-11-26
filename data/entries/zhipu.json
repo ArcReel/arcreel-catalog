@@ -58,5 +58,16 @@
         }
       ]
     }
+  },
+  {
+    "maker": "zhipu",
+    "name": "glm-5.4",
+    "media_type": "text",
+    "display_name": "GLM-5.4",
+    "context_length": 1048576,
+    "facts": {
+      "image_input": true,
+      "max_output_tokens": 131072
+    }
   }
 ]

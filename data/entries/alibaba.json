@@ -755,7 +755,8 @@
           ]
         }
       ]
-    }
+    },
+    "release_date": "2026-04-23"
   },
   {
     "maker": "alibaba",
@@ -1891,7 +1892,8 @@
           "cjk_double": true
         }
       ]
-    }
+    },
+    "release_date": "2025-11-27"
   },
   {
     "maker": "alibaba",
@@ -2012,7 +2014,10 @@
       "image_input": true,
       "structured_output": true,
       "max_output_tokens": 65536
-    }
+    },
+    "aliases": [
+      "qwen3.5-plus-2026-02-15"
+    ]
   },
   {
     "maker": "alibaba",

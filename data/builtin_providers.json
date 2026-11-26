@@ -139,6 +139,18 @@
       {
         "api_model_name": "gemini-3.8-flash-lite-tts",
         "entry": "google/gemini-3.8-flash-lite-tts"
+      },
+      {
+        "api_model_name": "gemini-2.5-flash-tts",
+        "entry": "google/gemini-2.5-flash-tts"
+      },
+      {
+        "api_model_name": "gemini-2.5-pro-tts",
+        "entry": "google/gemini-2.5-pro-tts"
+      },
+      {
+        "api_model_name": "gemini-2.5-flash-lite-preview-tts",
+        "entry": "google/gemini-2.5-flash-lite-preview-tts"
       }
     ],
     "defaults": {
@@ -191,7 +203,7 @@
       },
       {
         "api_model_name": "doubao-seedream-4-0-250828",
-        "entry": "bytedance/doubao-seedream-4-0"
+        "entry": "bytedance/doubao-seedream-4-0-250828"
       },
       {
         "api_model_name": "doubao-seedance-2-0-260128",
@@ -222,6 +234,14 @@
       {
         "api_model_name": "doubao-seed-2-0-code-preview-260215",
         "entry": "bytedance/doubao-seed-2-0-code-preview-260215"
+      },
+      {
+        "api_model_name": "doubao-seedream-4-0-260415",
+        "entry": "bytedance/doubao-seedream-4-0"
+      },
+      {
+        "api_model_name": "deepseek-v4-1-flash-economy-261017",
+        "entry": "deepseek/deepseek-v4.1-flash-economy"
       }
     ],
     "defaults": {
@@ -283,6 +303,27 @@
       {
         "api_model_name": "seed-tts-2.0",
         "entry": "bytedance/seed-tts-2.0"
+      },
+      {
+        "api_model_name": "doubao-seedream-5.5",
+        "entry": "bytedance/doubao-seedream-5-5"
+      },
+      {
+        "api_model_name": "doubao-seedance-2.5-flash",
+        "entry": "bytedance/doubao-seedance-2.5-flash",
+        "endpoint": "ark-seedance-2-5"
+      },
+      {
+        "api_model_name": "glm-5.4",
+        "entry": "zhipu/glm-5.4"
+      },
+      {
+        "api_model_name": "kimi-k2.8-preview",
+        "entry": "moonshot/kimi-k2.8-preview"
+      },
+      {
+        "api_model_name": "deepseek-v4.1-flash-economy",
+        "entry": "deepseek/deepseek-v4.1-flash-economy"
       }
     ],
     "defaults": {
@@ -784,6 +825,18 @@
         "api_model_name": "agnes-video-v2.0",
         "entry": "agnes/agnes-video-v2.0",
         "endpoint": "agnes-video-2"
+      },
+      {
+        "api_model_name": "agnes-3.0-pro",
+        "entry": "agnes/agnes-3.0-pro"
+      },
+      {
+        "api_model_name": "agnes-2.5-pro-beta",
+        "entry": "agnes/agnes-2.5-pro-beta"
+      },
+      {
+        "api_model_name": "agnes-2.5-pro-theta",
+        "entry": "agnes/agnes-2.5-pro-theta"
       }
     ],
     "defaults": {

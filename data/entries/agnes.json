@@ -478,5 +478,135 @@
         }
       ]
     }
+  },
+  {
+    "maker": "agnes",
+    "name": "agnes-3.0-pro",
+    "media_type": "text",
+    "display_name": "Agnes 3.0 Pro",
+    "facts": {
+      "max_output_tokens": 262144
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.1
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.01
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "context_length": 1048576
+  },
+  {
+    "maker": "agnes",
+    "name": "agnes-2.5-pro-beta",
+    "media_type": "text",
+    "display_name": "Agnes 2.5 Pro Beta",
+    "facts": {},
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.1
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.01
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "context_length": 1048576
+  },
+  {
+    "maker": "agnes",
+    "name": "agnes-2.5-pro-theta",
+    "media_type": "text",
+    "display_name": "Agnes 2.5 Pro Theta",
+    "facts": {},
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.1
+            }
+          ]
+        },
+        {
+          "meter": "cache_read_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.01
+            }
+          ]
+        },
+        {
+          "meter": "output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.3
+            }
+          ]
+        }
+      ]
+    }
   }
 ]
