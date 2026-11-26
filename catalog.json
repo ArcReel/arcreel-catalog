@@ -1,5 +1,5 @@
 {
-  "dataset_version": "2026-11-26T01:27:03Z",
+  "dataset_version": "2026-11-26T01:33:11Z",
   "entries": [
     {
       "maker": "agnes",
@@ -19239,11 +19239,6 @@
         {
           "api_model_name": "deepseek-v4.1-flash",
           "entry": "deepseek/deepseek-flash",
-          "endpoint": "ark-chat"
-        },
-        {
-          "api_model_name": "kimi-k3",
-          "entry": "moonshot/kimi-k3",
           "endpoint": "ark-chat"
         }
       ],
