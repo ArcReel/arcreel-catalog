@@ -1100,9 +1100,9 @@
     "media_type": "image",
     "display_name": "Seedream 4.0",
     "aliases": [
-      "doubao-seedream-4-0-250828"
+      "doubao-seedream-4-0-260415",
+      "doubao-seedream-4-0-20260415"
     ],
-    "shutdown_date": "2026-11-24",
     "facts": {
       "text_to_image": true,
       "image_to_image": true,
@@ -1951,5 +1951,33 @@
         }
       ]
     }
+  },
+  {
+    "maker": "bytedance",
+    "name": "doubao-seedream-4-0-250828",
+    "media_type": "image",
+    "display_name": "Seedream 4.0 (250828)",
+    "shutdown_date": "2026-11-24",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "max_reference_images": 14
+    },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.2
+            }
+          ]
+        }
+      ]
+    },
+    "successor": "bytedance/doubao-seedream-4-0"
   }
 ]

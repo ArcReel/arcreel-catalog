@@ -500,7 +500,8 @@
           }
         }
       ]
-    }
+    },
+    "release_date": "2026-04-13"
   },
   {
     "maker": "shengshu",
@@ -627,7 +628,8 @@
       "first_frame": false,
       "last_frame": false,
       "reference_audio": false
-    }
+    },
+    "release_date": "2026-04-13"
   },
   {
     "maker": "shengshu",

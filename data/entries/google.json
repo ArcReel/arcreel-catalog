@@ -1381,5 +1381,133 @@
         }
       ]
     }
+  },
+  {
+    "maker": "google",
+    "name": "gemini-2.5-flash-image",
+    "media_type": "image",
+    "display_name": "Gemini 2.5 Flash Image",
+    "release_date": "2025-10-02",
+    "shutdown_date": "2027-03-15",
+    "successor": "google/gemini-3.1-flash-lite-image",
+    "facts": {
+      "text_to_image": true,
+      "image_to_image": true,
+      "resolutions": [
+        "1K"
+      ],
+      "max_reference_images": 3
+    },
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "output_images",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.039
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "gemini-2.5-flash-tts",
+    "media_type": "audio",
+    "display_name": "Gemini 2.5 Flash TTS",
+    "facts": {},
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.5
+            }
+          ]
+        },
+        {
+          "meter": "audio_output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 10
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "gemini-2.5-pro-tts",
+    "media_type": "audio",
+    "display_name": "Gemini 2.5 Pro TTS",
+    "facts": {},
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 1
+            }
+          ]
+        },
+        {
+          "meter": "audio_output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 20
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "maker": "google",
+    "name": "gemini-2.5-flash-lite-preview-tts",
+    "media_type": "audio",
+    "display_name": "Gemini 2.5 Flash-Lite Preview TTS",
+    "facts": {},
+    "price": {
+      "currency": "USD",
+      "meters": [
+        {
+          "meter": "uncached_input_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 0.5
+            }
+          ]
+        },
+        {
+          "meter": "audio_output_tokens",
+          "dims": [],
+          "rows": [
+            {
+              "when": {},
+              "price": 10
+            }
+          ]
+        }
+      ]
+    }
   }
 ]

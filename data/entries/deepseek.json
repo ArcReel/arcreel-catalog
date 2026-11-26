@@ -156,5 +156,20 @@
       "structured_output": true,
       "max_output_tokens": 393216
     }
+  },
+  {
+    "maker": "deepseek",
+    "name": "deepseek-v4.1-flash-economy",
+    "media_type": "text",
+    "display_name": "DeepSeek V4.1 Flash Economy",
+    "context_length": 1048576,
+    "facts": {
+      "image_input": true,
+      "structured_output": true,
+      "max_output_tokens": 393216
+    },
+    "aliases": [
+      "deepseek-v4-1-flash-economy-261017"
+    ]
   }
 ]

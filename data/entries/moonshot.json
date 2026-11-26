@@ -42,5 +42,15 @@
         }
       ]
     }
+  },
+  {
+    "maker": "moonshot",
+    "name": "kimi-k2.8-preview",
+    "media_type": "text",
+    "display_name": "Kimi K2.8 Preview",
+    "context_length": 1048576,
+    "facts": {
+      "max_output_tokens": 1048576
+    }
   }
 ]
