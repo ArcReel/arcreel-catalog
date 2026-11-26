@@ -235,6 +235,7 @@
       "volcengine-coding-plan"
     ],
     "exclude": [
+      "^kimi-k3$",
       "^kimi-k2\\.7-code$",
       "^minimax-m3$",
       "^glm-5\\.1$",
