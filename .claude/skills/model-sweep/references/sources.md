@@ -71,7 +71,8 @@
 
 - 文档索引：https://platform.vidu.cn/docs/llms.txt
 - 模型对照：https://platform.vidu.cn/docs/overview/model-map.md
-- 定价：https://platform.vidu.cn/docs/overview/pricing
+- 定价：https://platform.vidu.cn/docs/overview/pricing （另核对 Markdown 版 https://platform.vidu.cn/docs/overview/pricing.md，两版口径可能不同）
+- 更新公告：https://platform.vidu.cn/docs/api-reference/updates.md
 
 ## agnes
 
