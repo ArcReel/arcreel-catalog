@@ -629,6 +629,34 @@
       "last_frame": false,
       "reference_audio": false
     },
+    "price": {
+      "currency": "CNY",
+      "meters": [
+        {
+          "meter": "output_seconds",
+          "dims": [
+            "resolution"
+          ],
+          "rows": [
+            {
+              "when": {
+                "resolution": "720p"
+              },
+              "price": 0.75
+            },
+            {
+              "when": {
+                "resolution": "1080p"
+              },
+              "price": 0.90625
+            }
+          ],
+          "defaults": {
+            "resolution": "720p"
+          }
+        }
+      ]
+    },
     "release_date": "2026-04-13"
   },
   {
