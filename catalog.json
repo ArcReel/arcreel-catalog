@@ -1,5 +1,5 @@
 {
-  "dataset_version": "2026-11-27T01:26:38Z",
+  "dataset_version": "2026-11-28T01:27:18Z",
   "entries": [
     {
       "maker": "agnes",
@@ -2212,7 +2212,7 @@
       "media_type": "text",
       "display_name": "Qwen3.6 Plus",
       "aliases": [
-        "qwen-3.6-plus"
+        "qwen-3-6-plus"
       ],
       "release_date": "2026-04-02",
       "facts": {
@@ -2997,10 +2997,10 @@
       "media_type": "text",
       "display_name": "Claude Fable 5",
       "aliases": [
-        "databricks-claude-fable-5",
+        "anthropic-claude-fable-5",
         "us.anthropic.claude-fable-5",
-        "anthropic.claude-fable-5",
-        "global.anthropic.claude-fable-5"
+        "global.anthropic.claude-fable-5",
+        "databricks-claude-fable-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-06-07",
@@ -3071,10 +3071,10 @@
       "media_type": "text",
       "display_name": "Claude Fable 5.1",
       "aliases": [
-        "databricks-claude-fable-5-1",
+        "anthropic-claude-fable-5.1",
+        "us.anthropic.claude-fable-5-1",
         "global.anthropic.claude-fable-5-1",
-        "anthropic.claude-fable-5-1",
-        "us.anthropic.claude-fable-5-1"
+        "databricks-claude-fable-5-1"
       ],
       "context_length": 1000000,
       "release_date": "2026-09-01",
@@ -3145,10 +3145,10 @@
       "media_type": "text",
       "display_name": "Claude Fable 5.2",
       "aliases": [
-        "system.ai.claude-fable-5-2",
+        "anthropic-claude-fable-5.2",
+        "us.anthropic.claude-fable-5-2",
         "global.anthropic.claude-fable-5-2",
-        "anthropic.claude-fable-5-2",
-        "us.anthropic.claude-fable-5-2"
+        "system.ai.claude-fable-5-2"
       ],
       "context_length": 1000000,
       "release_date": "2026-11-09",
@@ -3220,8 +3220,8 @@
       "display_name": "Claude Haiku 4.5",
       "aliases": [
         "claude-haiku-4-5-20251001",
-        "databricks-claude-haiku-4-5",
-        "anthropic-claude-haiku-4.5"
+        "anthropic-claude-haiku-4.5",
+        "databricks-claude-haiku-4-5"
       ],
       "context_length": 200000,
       "release_date": "2025-10-15",
@@ -3293,14 +3293,14 @@
       "display_name": "Claude Haiku 5.5",
       "aliases": [
         "Claude Haiku 5.5",
-        "databricks-claude-haiku-5-5",
-        "eu.anthropic.claude-haiku-5-5",
-        "us.anthropic.claude-haiku-5-5",
-        "au.anthropic.claude-haiku-5-5",
         "jp.anthropic.claude-haiku-5-5",
         "anthropic.claude-haiku-5-5",
+        "ca.anthropic.claude-haiku-5-5",
+        "us.anthropic.claude-haiku-5-5",
+        "eu.anthropic.claude-haiku-5-5",
+        "au.anthropic.claude-haiku-5-5",
         "global.anthropic.claude-haiku-5-5",
-        "ca.anthropic.claude-haiku-5-5"
+        "databricks-claude-haiku-5-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-10-07",
@@ -3422,9 +3422,9 @@
       "display_name": "Claude Opus 4.5",
       "aliases": [
         "claude-opus-4-5-20251101",
-        "claude-opus4-5",
+        "anthropic-claude-opus-4.5",
         "databricks-claude-opus-4-5",
-        "anthropic-claude-opus-4.5"
+        "claude-opus4-5"
       ],
       "context_length": 200000,
       "release_date": "2025-11-24",
@@ -3497,9 +3497,9 @@
       "media_type": "text",
       "display_name": "Claude Opus 4.6",
       "aliases": [
-        "claude-opus4-6",
+        "anthropic-claude-opus-4.6",
         "databricks-claude-opus-4-6",
-        "anthropic-claude-opus-4.6"
+        "claude-opus4-6"
       ],
       "context_length": 1000000,
       "release_date": "2026-02-04",
@@ -3570,14 +3570,14 @@
       "media_type": "text",
       "display_name": "Claude Opus 4.7",
       "aliases": [
-        "claude-opus4-7",
-        "databricks-claude-opus-4-7",
+        "anthropic-claude-opus-4.7",
         "eu.anthropic.claude-opus-4-7",
-        "au.anthropic.claude-opus-4-7",
-        "us.anthropic.claude-opus-4-7",
         "global.anthropic.claude-opus-4-7",
+        "us.anthropic.claude-opus-4-7",
         "jp.anthropic.claude-opus-4-7",
-        "anthropic.claude-opus-4-7"
+        "au.anthropic.claude-opus-4-7",
+        "databricks-claude-opus-4-7",
+        "claude-opus4-7"
       ],
       "context_length": 1000000,
       "release_date": "2026-04-14",
@@ -3648,14 +3648,14 @@
       "media_type": "text",
       "display_name": "Claude Opus 4.8",
       "aliases": [
-        "claude-opus4-8",
-        "databricks-claude-opus-4-8",
-        "anthropic.claude-opus-4-8",
-        "eu.anthropic.claude-opus-4-8",
+        "anthropic-claude-opus-4.8",
         "global.anthropic.claude-opus-4-8",
-        "jp.anthropic.claude-opus-4-8",
         "au.anthropic.claude-opus-4-8",
-        "us.anthropic.claude-opus-4-8"
+        "jp.anthropic.claude-opus-4-8",
+        "eu.anthropic.claude-opus-4-8",
+        "us.anthropic.claude-opus-4-8",
+        "databricks-claude-opus-4-8",
+        "claude-opus4-8"
       ],
       "context_length": 1000000,
       "release_date": "2026-05-28",
@@ -3726,13 +3726,13 @@
       "media_type": "text",
       "display_name": "Claude Opus 5",
       "aliases": [
-        "databricks-claude-opus-5",
-        "au.anthropic.claude-opus-5",
+        "anthropic-claude-opus-5",
         "in.anthropic.claude-opus-5",
-        "anthropic.claude-opus-5",
-        "us.anthropic.claude-opus-5",
+        "au.anthropic.claude-opus-5",
         "eu.anthropic.claude-opus-5",
-        "global.anthropic.claude-opus-5"
+        "global.anthropic.claude-opus-5",
+        "us.anthropic.claude-opus-5",
+        "databricks-claude-opus-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-07-24",
@@ -3803,13 +3803,13 @@
       "media_type": "text",
       "display_name": "Claude Opus 5.5",
       "aliases": [
-        "databricks-claude-opus-5-5",
-        "au.anthropic.claude-opus-5-5",
-        "anthropic.claude-opus-5-5",
+        "anthropic-claude-opus-5.5",
+        "jp.anthropic.claude-opus-5-5",
         "eu.anthropic.claude-opus-5-5",
         "global.anthropic.claude-opus-5-5",
-        "jp.anthropic.claude-opus-5-5",
-        "us.anthropic.claude-opus-5-5"
+        "us.anthropic.claude-opus-5-5",
+        "au.anthropic.claude-opus-5-5",
+        "databricks-claude-opus-5-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-09-22",
@@ -3954,13 +3954,13 @@
       "media_type": "text",
       "display_name": "Claude Sonnet 4.6",
       "aliases": [
-        "databricks-claude-sonnet-4-6",
         "anthropic.claude-sonnet-4-6",
-        "au.anthropic.claude-sonnet-4-6",
         "global.anthropic.claude-sonnet-4-6",
         "us.anthropic.claude-sonnet-4-6",
         "eu.anthropic.claude-sonnet-4-6",
-        "jp.anthropic.claude-sonnet-4-6"
+        "jp.anthropic.claude-sonnet-4-6",
+        "au.anthropic.claude-sonnet-4-6",
+        "databricks-claude-sonnet-4-6"
       ],
       "context_length": 1000000,
       "release_date": "2026-02-17",
@@ -4031,13 +4031,13 @@
       "media_type": "text",
       "display_name": "Claude Sonnet 5",
       "aliases": [
-        "databricks-claude-sonnet-5",
         "eu.anthropic.claude-sonnet-5",
-        "in.anthropic.claude-sonnet-5",
+        "au.anthropic.claude-sonnet-5",
         "anthropic.claude-sonnet-5",
-        "us.anthropic.claude-sonnet-5",
         "global.anthropic.claude-sonnet-5",
-        "au.anthropic.claude-sonnet-5"
+        "us.anthropic.claude-sonnet-5",
+        "in.anthropic.claude-sonnet-5",
+        "databricks-claude-sonnet-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-06-29",
@@ -4108,13 +4108,13 @@
       "media_type": "text",
       "display_name": "Claude Sonnet 5.5",
       "aliases": [
-        "databricks-claude-sonnet-5-5",
-        "ca.anthropic.claude-sonnet-5-5",
-        "us.anthropic.claude-sonnet-5-5",
+        "anthropic-claude-sonnet-5.5",
+        "eu.anthropic.claude-sonnet-5-5",
         "au.anthropic.claude-sonnet-5-5",
-        "anthropic.claude-sonnet-5-5",
+        "us.anthropic.claude-sonnet-5-5",
+        "ca.anthropic.claude-sonnet-5-5",
         "global.anthropic.claude-sonnet-5-5",
-        "eu.anthropic.claude-sonnet-5-5"
+        "databricks-claude-sonnet-5-5"
       ],
       "context_length": 1000000,
       "release_date": "2026-09-28",
@@ -6401,8 +6401,8 @@
       "media_type": "text",
       "display_name": "DeepSeek V4 Flash",
       "aliases": [
-        "alicloud-deepseek-v4-flash",
-        "deep-deepseek-v4-flash"
+        "deep-deepseek-v4-flash",
+        "alicloud-deepseek-v4-flash"
       ],
       "release_date": "2026-04-24",
       "successor": "deepseek/deepseek-flash",
@@ -6467,8 +6467,8 @@
       "media_type": "text",
       "display_name": "DeepSeek V4 Pro",
       "aliases": [
-        "deep-deepseek-v4-pro",
-        "alicloud-deepseek-v4-pro"
+        "alicloud-deepseek-v4-pro",
+        "deep-deepseek-v4-pro"
       ],
       "release_date": "2026-04-24",
       "facts": {
@@ -10279,8 +10279,8 @@
       "media_type": "text",
       "display_name": "MiniMax-M2.5",
       "aliases": [
-        "minimax-m25",
-        "minimax.minimax-m2.5"
+        "minimax.minimax-m2.5",
+        "minimax-m25"
       ],
       "context_length": 204800,
       "release_date": "2026-02-12",
@@ -10401,8 +10401,8 @@
       "media_type": "text",
       "display_name": "MiniMax M2.7",
       "aliases": [
-        "minimax-m27",
-        "coding-minimax-m2.7"
+        "coding-minimax-m2.7",
+        "minimax-m27"
       ],
       "release_date": "2026-03-18",
       "facts": {
@@ -10928,10 +10928,10 @@
       "aliases": [
         "morph-kimik3",
         "fw-kimi-k3",
-        "databricks-kimi-k3",
-        "us.moonshotai.kimi-k3",
+        "global.moonshotai.kimi-k3",
         "in.moonshotai.kimi-k3",
-        "global.moonshotai.kimi-k3"
+        "us.moonshotai.kimi-k3",
+        "databricks-kimi-k3"
       ],
       "context_length": 1048576,
       "release_date": "2026-07-16",
@@ -10992,9 +10992,9 @@
       "media_type": "text",
       "display_name": "Kimi K3.1 Pro",
       "aliases": [
+        "umans-kimi-k3.1-pro",
         "fw-kimi-k3.1-pro",
-        "databricks-kimi-k3-1-pro",
-        "umans-kimi-k3.1-pro"
+        "databricks-kimi-k3-1-pro"
       ],
       "context_length": 1048576,
       "release_date": "2026-10-23",
@@ -11489,8 +11489,8 @@
       "media_type": "text",
       "display_name": "GPT-5",
       "aliases": [
-        "databricks-gpt-5",
-        "openai-gpt-5"
+        "openai-gpt-5",
+        "databricks-gpt-5"
       ],
       "context_length": 400000,
       "release_date": "2025-08-07",
@@ -11543,9 +11543,9 @@
       "media_type": "text",
       "display_name": "GPT-5 Mini",
       "aliases": [
-        "duo-chat-gpt-5-mini",
+        "openai-gpt-5-mini",
         "databricks-gpt-5-mini",
-        "openai-gpt-5-mini"
+        "duo-chat-gpt-5-mini"
       ],
       "context_length": 400000,
       "release_date": "2025-08-07",
@@ -11598,8 +11598,8 @@
       "media_type": "text",
       "display_name": "GPT-5 Nano",
       "aliases": [
-        "databricks-gpt-5-nano",
-        "openai-gpt-5-nano"
+        "openai-gpt-5-nano",
+        "databricks-gpt-5-nano"
       ],
       "context_length": 400000,
       "release_date": "2025-08-07",
@@ -11702,9 +11702,9 @@
       "media_type": "text",
       "display_name": "GPT-5.1",
       "aliases": [
-        "duo-chat-gpt-5-1",
         "databricks-gpt-5-1",
-        "openai-gpt-5.1"
+        "openai-gpt-5.1",
+        "duo-chat-gpt-5-1"
       ],
       "context_length": 400000,
       "release_date": "2025-11-13",
@@ -11757,10 +11757,10 @@
       "media_type": "text",
       "display_name": "GPT-5.2",
       "aliases": [
-        "duo-chat-gpt-5-2",
-        "databricks-gpt-5-2",
         "openai-gpt-5.2",
-        "openai-gpt-52"
+        "openai-gpt-52",
+        "databricks-gpt-5-2",
+        "duo-chat-gpt-5-2"
       ],
       "context_length": 400000,
       "release_date": "2025-12-11",
@@ -11862,10 +11862,10 @@
       "media_type": "text",
       "display_name": "GPT-5.3-Codex",
       "aliases": [
-        "duo-chat-gpt-5-3-codex",
-        "databricks-gpt-5-3-codex",
+        "openai-gpt-5.3-codex",
         "openai-gpt-53-codex",
-        "openai-gpt-5.3-codex"
+        "databricks-gpt-5-3-codex",
+        "duo-chat-gpt-5-3-codex"
       ],
       "release_date": "2026-02-05",
       "shutdown_date": "2027-04-01",
@@ -11956,10 +11956,10 @@
       "media_type": "text",
       "display_name": "GPT-5.4",
       "aliases": [
-        "duo-chat-gpt-5-4",
-        "databricks-gpt-5-4",
         "openai-gpt-5.4",
-        "openai-gpt-54"
+        "openai-gpt-54",
+        "databricks-gpt-5-4",
+        "duo-chat-gpt-5-4"
       ],
       "release_date": "2026-03-05",
       "facts": {
@@ -12120,10 +12120,10 @@
       "media_type": "text",
       "display_name": "GPT-5.4 Mini",
       "aliases": [
-        "duo-chat-gpt-5-4-mini",
-        "databricks-gpt-5-4-mini",
+        "openai-gpt-5.4-mini",
         "openai-gpt-54-mini",
-        "openai-gpt-5.4-mini"
+        "databricks-gpt-5-4-mini",
+        "duo-chat-gpt-5-4-mini"
       ],
       "release_date": "2026-03-17",
       "facts": {
@@ -12230,9 +12230,9 @@
       "media_type": "text",
       "display_name": "GPT-5.4 Nano",
       "aliases": [
-        "duo-chat-gpt-5-4-nano",
+        "openai-gpt-5.4-nano",
         "databricks-gpt-5-4-nano",
-        "openai-gpt-5.4-nano"
+        "duo-chat-gpt-5-4-nano"
       ],
       "release_date": "2026-03-17",
       "shutdown_date": "2027-04-01",
@@ -12323,8 +12323,8 @@
       "media_type": "text",
       "display_name": "GPT-5.4 Pro",
       "aliases": [
-        "openai-gpt-54-pro",
-        "openai-gpt-5.4-pro"
+        "openai-gpt-5.4-pro",
+        "openai-gpt-54-pro"
       ],
       "context_length": 1050000,
       "release_date": "2026-03-05",
@@ -12405,11 +12405,11 @@
       "media_type": "text",
       "display_name": "GPT-5.5",
       "aliases": [
-        "xpersona-gpt-5.5",
-        "duo-chat-gpt-5-5",
-        "databricks-gpt-5-5",
         "openai-gpt-5.5",
-        "openai-gpt-55"
+        "openai-gpt-55",
+        "databricks-gpt-5-5",
+        "xpersona-gpt-5.5",
+        "duo-chat-gpt-5-5"
       ],
       "release_date": "2026-04-23",
       "facts": {
@@ -12570,8 +12570,8 @@
       "media_type": "text",
       "display_name": "GPT-5.5 Pro",
       "aliases": [
-        "databricks-gpt-5-5-pro",
-        "openai-gpt-55-pro"
+        "openai-gpt-55-pro",
+        "databricks-gpt-5-5-pro"
       ],
       "release_date": "2026-04-23",
       "facts": {
@@ -12788,13 +12788,13 @@
       "media_type": "text",
       "display_name": "GPT-5.6 Luna",
       "aliases": [
-        "duo-chat-gpt-5-6-luna",
-        "databricks-gpt-5-6-luna",
         "openai-gpt-5.6-luna",
-        "us.openai.gpt-5.6-luna",
-        "in.openai.gpt-5.6-luna",
         "global.openai.gpt-5.6-luna",
-        "openai-gpt-56-luna"
+        "in.openai.gpt-5.6-luna",
+        "us.openai.gpt-5.6-luna",
+        "openai-gpt-56-luna",
+        "databricks-gpt-5-6-luna",
+        "duo-chat-gpt-5-6-luna"
       ],
       "context_length": 1050000,
       "release_date": "2026-07-09",
@@ -12895,12 +12895,12 @@
       "media_type": "text",
       "display_name": "GPT-5.6 Sol",
       "aliases": [
-        "duo-chat-gpt-5-6-sol",
-        "databricks-gpt-5-6-sol",
         "openai-gpt-5.6-sol",
         "us.openai.gpt-5.6-sol",
         "global.openai.gpt-5.6-sol",
-        "openai-gpt-56-sol"
+        "openai-gpt-56-sol",
+        "databricks-gpt-5-6-sol",
+        "duo-chat-gpt-5-6-sol"
       ],
       "context_length": 1050000,
       "release_date": "2026-07-09",
@@ -13001,13 +13001,13 @@
       "media_type": "text",
       "display_name": "GPT-5.6 Terra",
       "aliases": [
-        "duo-chat-gpt-5-6-terra",
-        "databricks-gpt-5-6-terra",
         "openai-gpt-5.6-terra",
-        "us.openai.gpt-5.6-terra",
-        "global.openai.gpt-5.6-terra",
         "in.openai.gpt-5.6-terra",
-        "openai-gpt-56-terra"
+        "global.openai.gpt-5.6-terra",
+        "us.openai.gpt-5.6-terra",
+        "openai-gpt-56-terra",
+        "databricks-gpt-5-6-terra",
+        "duo-chat-gpt-5-6-terra"
       ],
       "context_length": 1050000,
       "release_date": "2026-07-09",
@@ -13108,11 +13108,11 @@
       "media_type": "text",
       "display_name": "GPT-6 Astra",
       "aliases": [
-        "duo-chat-gpt-6-astra",
-        "databricks-gpt-6-astra",
-        "openai.gpt-6-astra",
+        "openai-gpt-6-astra",
+        "us.openai.gpt-6-astra",
         "global.openai.gpt-6-astra",
-        "us.openai.gpt-6-astra"
+        "databricks-gpt-6-astra",
+        "duo-chat-gpt-6-astra"
       ],
       "context_length": 1050000,
       "release_date": "2026-09-04",
@@ -13291,11 +13291,11 @@
       "media_type": "text",
       "display_name": "GPT-6 Luna",
       "aliases": [
-        "duo-chat-gpt-6-luna",
-        "databricks-gpt-6-luna",
+        "openai-gpt-6-luna",
         "global.openai.gpt-6-luna",
-        "openai.gpt-6-luna",
-        "us.openai.gpt-6-luna"
+        "us.openai.gpt-6-luna",
+        "databricks-gpt-6-luna",
+        "duo-chat-gpt-6-luna"
       ],
       "context_length": 1050000,
       "release_date": "2026-09-22",
@@ -13396,11 +13396,11 @@
       "media_type": "text",
       "display_name": "GPT-6 Sol",
       "aliases": [
-        "duo-chat-gpt-6-sol",
-        "databricks-gpt-6-sol",
+        "openai-gpt-6-sol",
         "global.openai.gpt-6-sol",
-        "openai.gpt-6-sol",
-        "us.openai.gpt-6-sol"
+        "us.openai.gpt-6-sol",
+        "databricks-gpt-6-sol",
+        "duo-chat-gpt-6-sol"
       ],
       "context_length": 1050000,
       "release_date": "2026-09-22",
@@ -13501,12 +13501,12 @@
       "media_type": "text",
       "display_name": "GPT-6.1 Sol",
       "aliases": [
-        "duo-chat-gpt-6-1-sol",
-        "databricks-gpt-6-1-sol",
-        "us.openai.gpt-6.1-sol",
+        "openai-gpt-6-1-sol",
         "global.openai.gpt-6.1-sol",
-        "openai.gpt-6.1-sol",
-        "openai-gpt-61-sol"
+        "us.openai.gpt-6.1-sol",
+        "openai-gpt-61-sol",
+        "databricks-gpt-6-1-sol",
+        "duo-chat-gpt-6-1-sol"
       ],
       "context_length": 1050000,
       "release_date": "2026-09-29",
@@ -13685,11 +13685,11 @@
       "media_type": "text",
       "display_name": "GPT-6.1 Terra",
       "aliases": [
-        "databricks-gpt-6-1-terra",
-        "us.openai.gpt-6.1-terra",
+        "openai-gpt-6.1-terra",
         "global.openai.gpt-6.1-terra",
-        "openai.gpt-6.1-terra",
-        "openai-gpt-61-terra"
+        "us.openai.gpt-6.1-terra",
+        "openai-gpt-61-terra",
+        "databricks-gpt-6-1-terra"
       ],
       "context_length": 1050000,
       "release_date": "2026-10-26",
@@ -13790,11 +13790,11 @@
       "media_type": "text",
       "display_name": "GPT-6.2 Astra",
       "aliases": [
-        "system.ai.gpt-6-2-astra",
-        "us.openai.gpt-6.2-astra",
+        "openai-gpt-6.2-astra",
         "global.openai.gpt-6.2-astra",
-        "openai.gpt-6.2-astra",
-        "openai-gpt-62-astra"
+        "us.openai.gpt-6.2-astra",
+        "openai-gpt-62-astra",
+        "system.ai.gpt-6-2-astra"
       ],
       "context_length": 1050000,
       "release_date": "2026-11-17",
@@ -13993,11 +13993,11 @@
       "media_type": "text",
       "display_name": "GPT-6.2 Sol",
       "aliases": [
-        "system.ai.gpt-6-2-sol",
-        "openai.gpt-6.2-sol",
+        "openai-gpt-6.2-sol",
         "global.openai.gpt-6.2-sol",
         "us.openai.gpt-6.2-sol",
-        "openai-gpt-62-sol"
+        "openai-gpt-62-sol",
+        "system.ai.gpt-6-2-sol"
       ],
       "context_length": 1050000,
       "release_date": "2026-11-17",
@@ -17422,10 +17422,10 @@
       "media_type": "text",
       "display_name": "Grok 4.6",
       "aliases": [
+        "us.xai.grok-4.6",
         "xai.grok-4.6",
-        "databricks-grok-4-6",
         "global.xai.grok-4.6",
-        "us.xai.grok-4.6"
+        "databricks-grok-4-6"
       ],
       "context_length": 500000,
       "release_date": "2026-08-12",
@@ -17506,10 +17506,10 @@
       "media_type": "text",
       "display_name": "Grok 4.7",
       "aliases": [
-        "xai.grok-4.7",
-        "databricks-grok-4-7",
         "global.xai.grok-4.7",
-        "us.xai.grok-4.7"
+        "us.xai.grok-4.7",
+        "databricks-grok-4-7",
+        "xai.grok-4.7"
       ],
       "context_length": 500000,
       "release_date": "2026-09-21",
@@ -18620,10 +18620,10 @@
       "media_type": "text",
       "display_name": "GLM-5.1",
       "aliases": [
-        "zai-org-glm-5-1",
-        "zai-glm-5.1",
+        "zai-glm-5-1",
+        "alicloud-glm-5.1",
         "coding-glm-5.1",
-        "alicloud-glm-5.1"
+        "zai-org-glm-5-1"
       ],
       "context_length": 200000,
       "release_date": "2026-04-07",
@@ -18725,9 +18725,9 @@
       "display_name": "GLM-5.2",
       "aliases": [
         "zai-glm-5-2",
-        "databricks-glm-5-2",
+        "glm5.2",
         "zai-org-glm-5-2",
-        "glm5.2"
+        "databricks-glm-5-2"
       ],
       "context_length": 1000000,
       "release_date": "2026-06-13",
@@ -18790,14 +18790,14 @@
       "aliases": [
         "zai-glm-5-3",
         "glm5.3",
-        "open-glm-5-3",
-        "fw-glm-5.3",
-        "oathbreaker-glm-5.3",
-        "databricks-glm-5-3",
         "umans-glm-5.3",
-        "global.zai.glm-5.3",
+        "fw-glm-5.3",
         "us.zai.glm-5.3",
-        "z-ai-glm-5-3"
+        "global.zai.glm-5.3",
+        "open-glm-5-3",
+        "z-ai-glm-5-3",
+        "databricks-glm-5-3",
+        "oathbreaker-glm-5.3"
       ],
       "context_length": 1000000,
       "release_date": "2026-08-14",
@@ -18861,11 +18861,11 @@
         "zai-glm-5-3-flash",
         "morph-glm53flash",
         "glm5.3-flash",
+        "umans-glm-5.3-flash",
         "z-ai-glm-5-3-flash",
         "fw-glm-5.3-flash",
-        "oathbreaker-glm-5.3-flash",
         "databricks-glm-5-3-flash",
-        "umans-glm-5.3-flash"
+        "oathbreaker-glm-5.3-flash"
       ],
       "context_length": 1000000,
       "release_date": "2026-08-26",
@@ -19597,8 +19597,8 @@
           "endpoint": "ark-chat"
         },
         {
-          "api_model_name": "glm-5.3",
-          "entry": "zhipu/glm-5.3",
+          "api_model_name": "deepseek-v4-flash",
+          "entry": "deepseek/deepseek-v4-flash",
           "endpoint": "ark-chat"
         },
         {
@@ -19607,13 +19607,13 @@
           "endpoint": "ark-chat"
         },
         {
-          "api_model_name": "deepseek-v4.1-flash",
-          "entry": "deepseek/deepseek-flash",
+          "api_model_name": "deepseek-v4-pro",
+          "entry": "deepseek/deepseek-v4-pro",
           "endpoint": "ark-chat"
         },
         {
-          "api_model_name": "deepseek-v4-pro",
-          "entry": "deepseek/deepseek-v4-pro",
+          "api_model_name": "deepseek-v4.1-flash",
+          "entry": "deepseek/deepseek-flash",
           "endpoint": "ark-chat"
         },
         {
@@ -19622,8 +19622,8 @@
           "endpoint": "ark-chat"
         },
         {
-          "api_model_name": "deepseek-v4-flash",
-          "entry": "deepseek/deepseek-v4-flash",
+          "api_model_name": "glm-5.3",
+          "entry": "zhipu/glm-5.3",
           "endpoint": "ark-chat"
         }
       ],
@@ -20140,18 +20140,8 @@
           "endpoint": "openai-chat"
         },
         {
-          "api_model_name": "glm-5.3",
-          "entry": "zhipu/glm-5.3",
-          "endpoint": "openai-chat"
-        },
-        {
-          "api_model_name": "kimi-k3",
-          "entry": "moonshot/kimi-k3",
-          "endpoint": "openai-chat"
-        },
-        {
-          "api_model_name": "kimi-k2.6",
-          "entry": "moonshot/kimi-k2.6",
+          "api_model_name": "glm-5",
+          "entry": "zhipu/glm-5",
           "endpoint": "openai-chat"
         },
         {
@@ -20160,8 +20150,8 @@
           "endpoint": "openai-chat"
         },
         {
-          "api_model_name": "deepseek-v4.1-flash",
-          "entry": "deepseek/deepseek-flash",
+          "api_model_name": "kimi-k2.6",
+          "entry": "moonshot/kimi-k2.6",
           "endpoint": "openai-chat"
         },
         {
@@ -20170,8 +20160,13 @@
           "endpoint": "openai-chat"
         },
         {
-          "api_model_name": "glm-5",
-          "entry": "zhipu/glm-5",
+          "api_model_name": "kimi-k3",
+          "entry": "moonshot/kimi-k3",
+          "endpoint": "openai-chat"
+        },
+        {
+          "api_model_name": "deepseek-v4.1-flash",
+          "entry": "deepseek/deepseek-flash",
           "endpoint": "openai-chat"
         },
         {
@@ -20182,6 +20177,11 @@
         {
           "api_model_name": "glm-5.1",
           "entry": "zhipu/glm-5.1",
+          "endpoint": "openai-chat"
+        },
+        {
+          "api_model_name": "glm-5.3",
+          "entry": "zhipu/glm-5.3",
           "endpoint": "openai-chat"
         }
       ],
