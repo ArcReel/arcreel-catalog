@@ -34,10 +34,10 @@
 ## grok
 
 - 模型与价格：https://docs.x.ai/developers/models
-- 分档价和输入图价只在各型号页的价格展开区里，要进型号页读
+- 分档价和输入图价只在各型号页的价格展开区里，要进型号页读（[Grok Imagine Image](https://docs.x.ai/developers/models/grok-imagine-image)、[Grok Imagine Image 2.0](https://docs.x.ai/developers/models/grok-imagine-image-2.0)）
 - 官方聚合定价：https://docs.x.ai/developers/pricing
 - 发布说明：https://docs.x.ai/developers/release-notes
-- 退役迁移说明在 `https://docs.x.ai/developers/migration/<批次>` 下，每批一页（例如 <https://docs.x.ai/developers/migration/may-15-retirement>），索引页本身是 404，从发布说明里的链接进入
+- 退役迁移说明在 `https://docs.x.ai/developers/migration/<批次>` 下，每批一页（例如 <https://docs.x.ai/developers/migration/may-15-retirement>、<https://docs.x.ai/developers/migration/imagine-image-quality-nov-2>），索引页本身是 404，从发布说明里的链接进入
 - 新闻页 https://x.ai/news 抓不到时，以模型页与发布说明为准
 
 ## openai
@@ -52,6 +52,7 @@
 - 模型下线：<https://help.aliyun.com/zh/model-studio/model-depreciation>（逐批公告在 <https://www.aliyun.com/notice/> 下）
 - 模型列表：https://help.aliyun.com/zh/model-studio/getting-started/models
 - 新发布模型：https://help.aliyun.com/zh/model-studio/newly-released-models
+- 第三方媒体接口：[PixVerse 文生视频](https://help.aliyun.com/zh/model-studio/pixverse-text-to-video-api-reference)、[PixVerse 图生视频](https://help.aliyun.com/zh/model-studio/pixverse-image-to-video-api-reference)、[Vidu 图像生成](https://help.aliyun.com/zh/model-studio/vidu-image-generation-api-reference)
 - 定价：https://help.aliyun.com/zh/model-studio/model-pricing（WebFetch 会截断正文，用 `curl` 读原文）
 
 ## minimax
