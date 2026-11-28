@@ -14,6 +14,7 @@
 - 模型版本与退役日期：https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions
 - 发布说明：https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes
 - 定价：https://cloud.google.com/model-garden/pricing
+- Veo 3.1 Fast 4K 规格交叉核对：型号卡片（https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate）仅列 720p/1080p，而官方示例（https://googlecloudplatform.github.io/genmedia-creative-studio/core/foundation-models/veo/）、型号级吞吐量规格（https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/provisioned-throughput/supported-models）与官方定价页均包含 4K（8 秒，$0.30/s 含音频、$0.25/s 无音频）；目录以三份官方资料为准，保留此差异说明
 
 ## ark
 
@@ -72,7 +73,7 @@
 
 - 文档索引：https://platform.vidu.cn/docs/llms.txt
 - 模型对照：https://platform.vidu.cn/docs/overview/model-map.md
-- 定价：https://platform.vidu.cn/docs/overview/pricing （另核对 Markdown 版 https://platform.vidu.cn/docs/overview/pricing.md，两版口径可能不同）
+- 定价：https://platform.vidu.cn/docs/overview/pricing （另核对 Markdown 版 https://platform.vidu.cn/docs/overview/pricing.md，两版口径可能不同；中国区官方 API 计价以 `pricing.md` 为准）
 - 更新公告：https://platform.vidu.cn/docs/api-reference/updates.md
 
 ## agnes

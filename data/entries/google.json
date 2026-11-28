@@ -663,11 +663,15 @@
       ],
       "resolutions": [
         "720p",
-        "1080p"
+        "1080p",
+        "4k"
       ],
       "duration_constraints": {
         "by_resolution": {
           "1080p": [
+            8
+          ],
+          "4k": [
             8
           ]
         },
@@ -718,6 +722,20 @@
                 "audio": false
               },
               "price": 0.1
+            },
+            {
+              "when": {
+                "resolution": "4k",
+                "audio": true
+              },
+              "price": 0.3
+            },
+            {
+              "when": {
+                "resolution": "4k",
+                "audio": false
+              },
+              "price": 0.25
             }
           ],
           "defaults": {
